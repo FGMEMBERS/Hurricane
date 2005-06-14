@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+  <!-- undercarriage indicator -->
+  <PropertyList> 
+    <path>flaps.ac</path>
+    <animation> 
+      <type>translate</type>
+      <object-name>pointer</object-name>
+      <property>surface-positions/flap-pos-norm</property>
+      <interpolation> 
+        <entry> 
+          <ind>0</ind>
+          <dep>0.02</dep>
+        </entry>
+        <entry> 
+          <ind>1</ind>
+          <dep>-0.02</dep>
+        </entry>
+      </interpolation>
+      <axis> 
+        <x>0</x>
+        <y>0</y>
+        <z>1</z>
+      </axis>
+    </animation>
+	<animation> 
+      <type>material</type>
+      <emission> 
+        <factor-prop>/controls/lighting/panel-norm</factor-prop>
+        <red>0.5</red>
+        <green>0.2</green>
+        <blue>0.2</blue>
+      </emission>
+      
+    </animation>
+    <!-- *** LoD *** -->
+    <animation> 
+      <type>range</type>
+      <min-m>0</min-m>
+      <max-m>5</max-m>
+    </animation>
+  </PropertyList>
