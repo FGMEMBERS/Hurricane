@@ -639,13 +639,5 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
         <module>fuel</module>
         <file>Aircraft/Hurricane/Models/fuel-cocks.nas</file>
       </hurricane-fuel>
-      <local> 
-        <script>
-          <![CDATA[ INIT = func { setprop("/ai/models/ship/controls/glide-path", 
-            0); setprop("/sim/sound/volume", 0.6); setprop("/sim/rendering/clouds3d-cache-size", 
-            4096); } settimer(INIT, 0); ]]>
-                
-        </script>
-      </local>
     </nasal>
   </PropertyList>
