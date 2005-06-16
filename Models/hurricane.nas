@@ -549,4 +549,7 @@ toggleCutout = func{
 
 # =============================== end boost cutoff ===========================================
 
+controls.gearDown = func { hydraulicLever(-1, arg[0] ? -1 : 1) }
+controls.stepFlaps = func { hydraulicLever(1, -arg[0]) }
+
 # end 
