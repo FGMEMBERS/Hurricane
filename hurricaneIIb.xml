@@ -1,13 +1,16 @@
 <?xml version="1.0"?>
   <!--
+
 ************************************************************************
+
 YASim aerodynamic model for a Hurricane IIb 
 
 Author: Vivian Meazza
 
-
 The reference datum for measurements is the nose.
+
 ************************************************************************
+
 -->
   <!-- Weight of everything but fuel  (5590lbs empty) -->
   <airplane mass="6780"> 
@@ -34,7 +37,7 @@ The reference datum for measurements is the nose.
     <!-- pilot's eyepoint -->
     <cockpit x="-3.86" y="0" z="0.55"/>
     <fuselage 
-		ax="0.0" ay="0.0" az="0.0"
+				ax="0.0" ay="0.0" az="0.0"
 		bx="-9.10" by="0.0" bz="0.0"
 		width="0.99" taper="0.38" midpoint="0.4"
 />
@@ -73,12 +76,10 @@ The reference datum for measurements is the nose.
       <stall aoa="20" width="4" peak="1.5"/>
       <flap0 start="0" end="1" lift="1.4" drag="1.4"/>
       <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
-      <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm"
-		 />
+      <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm"/>
       <flap1 start="0.3" end="0.65" lift="1.4" drag="1.4"/>
       <control-input axis="/controls/flight/rudder-trim" control="FLAP1" invert="true"/>
-      <control-output control="FLAP1" prop="/surface-positions/rudder-trim-pos-norm"
-		  />
+      <control-output control="FLAP1" prop="/surface-positions/rudder-trim-pos-norm"/>
     </vstab>
     <!-- stub wing left -->
     <vstab x="-2.99" y="0.44" z="-0.57" taper="0" incidence="-2" twist="0"
@@ -117,7 +118,7 @@ The reference datum for measurements is the nose.
 -->
     <propeller   x="-1.35" y="0" z="-0.0"
             mass="2055" 
-			moment="75" 
+		    moment="75" 
 			radius="1.638" 
 			cruise-speed="295"
 			cruise-rpm="1431"
@@ -136,15 +137,16 @@ The reference datum for measurements is the nose.
 					compression="6"
      				turbo-mul="5.0" 
 					wastegate-mp="54.35"
-     				> 
+					supercharger="1"
+					> 
         <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
+        <control-input axis="/controls/engines/engine[0]/boost-control"
+                           src0="-1" src1="1" dst0="-1" dst1="1" control="THROTTLE"/>
         <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
         <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
         <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
         <control-input axis="/controls/engines/engine[0]/boost" control="BOOST"/>
-<!--        <control-input axis="/controls/engines/engine[0]/cutout" control="CUTOUT"/>-->
       </piston-engine>
-      <!---->
     </propeller>
     <!-- left main spring="0.7" damp="3.0" dfric="0.5" sfric="0.6"dfric="0.5" sfric="0.6"-->
     <gear x="-2.64" y="1.21" z="-2.07" compression="0.25"  > 
@@ -166,8 +168,7 @@ The reference datum for measurements is the nose.
     </gear>
     <!-- Tail wheel -->
     <!-- tail wheel casters freely in Hurricane -->
-    <gear x="-8.57" y="0" z="-0.94" compression="0.15" 
-	castering="1"> 
+    <gear x="-8.57" y="0" z="-0.94" compression="0.15" castering="1"> 
       <control-input axis="/controls/gear/tailwheel-lock" 
 				src0="0" src1="1" dst0="1" dst1="0" control="CASTERING"/>
     </gear>
@@ -192,15 +193,17 @@ The reference datum for measurements is the nose.
         <control-speed control="HEXTEND" transition-time="5"/>
       </hook>-->
     <!-- Launch-bar 
+
 Note: the Seafire was not fitted with a catpult launch-bar - it used a catapult strop, 
 if at all. It usually did a free take-off.
 the launch-bar is included here as a workable substitute. 
       <launchbar x="-2.30" y="0.0" z="-1.25" length="1.0"> 
-        <control-input axis="/controls/gear/launchbar" control="LEXTEND"/>
+       <control-input axis="/controls/gear/launchbar" control="LEXTEND"/>
         <control-speed control="LEXTEND" transition-time="1"/>
       </launchbar>-->
     <!-- Wing and Fuselage tanks. 
 Weight of contents calculated using 100 octane AVGAS density of 695 kg/m3 @ 15degC
+
 -->
     <tank x="-3.41" y="0.99" z="-0.5" capacity="229"/>
     <!-- left 33 imp gals -->
