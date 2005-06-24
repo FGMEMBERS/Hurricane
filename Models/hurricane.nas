@@ -16,6 +16,58 @@ registerTimer = func {
 
 # =============================== end timer stuff ===========================================
 
+# =============================== Boost Controller stuff======================================
+
+BOOST_CONTROL_AUTHORITY = 0.99; # How much can it move the throttle?
+#BOOST_CONTROL_RANGE = 1;         When does it start to engage? (psig)
+BOOST_CONTROL_LIMIT = 11.9;       # Maximum MP (psig)
+
+boost_control = props.globals.getNode("/controls/engines/engine/boost-control", 1);
+boost_pressure = props.globals.getNode("/engines/engine/boost-pressure-psi-gauge", 1);
+boost_control_damp = props.globals.getNode("/controls/engines/engine/boost-control-damp", 1);
+boost_control_range = props.globals.getNode("/controls/engines/engine/boost-control-range", 1);
+boost_control_cutout = props.globals.getNode("/controls/engines/engine/boost-control-cutout", 1);
+
+boost_control.setDoubleValue(0); 
+boost_pressure.setDoubleValue(0); 
+boost_control_damp.setDoubleValue(0.015); 
+boost_control_range.setDoubleValue(0.5); 
+boost_control_cutout.setBoolValue(0); 
+
+damp = 0;
+
+updateBoostControl = func {
+        var n = boost_control_damp.getValue(); 
+		var BOOST_CONTROL_RANGE = boost_control_range.getValue();
+        
+		var mp = boost_pressure.getValue();
+		var cutout = boost_control_cutout.getValue();
+		var val = (mp - BOOST_CONTROL_LIMIT) / BOOST_CONTROL_RANGE;
+        var in = val;
+        if(! cutout){		
+			if (val < 0  ) {
+					val = 0;                             # Can't increase throttle
+			} elsif (val < -BOOST_CONTROL_AUTHORITY) {
+					val = -BOOST_CONTROL_AUTHORITY        # limit by authority
+			} else {
+					val = -val;
+			}
+			damp = (val * n) + (damp * (1 - n));
+		} else {
+			damp = 0;
+		}
+ #       print(sprintf("mp=%0.5f, in=%0.5f, raw=%0.5f, out=%0.5f", mp, in, val, damp));
+
+        boost_control.setDoubleValue(damp);
+        settimer(updateBoostControl, 0.1);
+}
+
+updateBoostControl();
+
+# ======================================= end Boost Controller f ============================
+
+
+
 # =============================== set the aircraft type =====================================
 
 spitfireIIa = 0;
@@ -258,6 +310,8 @@ pullCutoff = func{
 } # end function
 
 # =================================== end Cutoff ============================================
+
+
 
 # ======================================= fuel tank stuff ===================================
 
