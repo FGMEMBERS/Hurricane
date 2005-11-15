@@ -1,665 +1,918 @@
 <?xml version="1.0"?>
- <!--    <!DOCTYPE PropertyList SYSTEM "panel.dtd">
+  <!--    <!DOCTYPE PropertyList SYSTEM "panel.dtd">
+
     This part should be the same for any 3D panel.  Customize the actions section -->
-    <PropertyList> 
-      <name>Hurricane Panel Hotspots</name>
-      <background>Aircraft/Hurricane/Models/transparent-bg.rgb</background>
-      <w>1024</w>
-      <h>768</h>
-      <y-offset>0</y-offset>
-      <instruments> 
-        <instrument> 
-          <name>Frnot Panel Controls</name>
-          <x>512</x>
-          <y>384</y>
-          <w>1024</w>
-          <h>768</h>
-          <w-base>1024</w-base>
-          <h-base>1024</h-base>
-          <layers> 
-            <layer> 
-              <name>background</name>
-              <texture> 
-                <path>Aircraft/Hurricane/Models/transparent-bg.rgb</path>
-                <x1>0.0</x1>
-                <y1>0.0</y1>
-                <x2>1.0</x2>
-                <y2>1.0</y2>
-              </texture>
-            </layer>
-            <!--            <layer> 
+  <PropertyList> 
+    <name>Hurricane Panel Hotspots</name>
+    <background>Aircraft/Hurricane/Models/transparent-bg.rgb</background>
+    <w>1024</w>
+    <h>768</h>
+    <y-offset>0</y-offset>
+    <instruments> 
+      <instrument> 
+        <name>Front Panel Controls</name>
+        <x>512</x>
+        <y>384</y>
+        <w>1024</w>
+        <h>768</h>
+        <w-base>1024</w-base>
+        <h-base>1024</h-base>
+        <layers> 
+          <layer> 
+            <name>background</name>
+            <texture> 
+              <path>Aircraft/Hurricane/Models/transparent-bg.rgb</path>
+              <x1>0.0</x1>
+              <y1>0.0</y1>
+              <x2>1.0</x2>
+              <y2>1.0</y2>
+            </texture>
+          </layer>
+          <!--            <layer> 
+
               <name>grid</name>
+
               <texture> 
+
                 <path>Aircraft/Hurricane/Models/hotspotgrid.rgb</path>
+
                 <x1>0.0</x1>
+
                 <y1>0.0</y1>
+
                 <x2>1.0</x2>
+
                 <y2>1.0</y2>
+
               </texture>
+
             </layer> -->
-          </layers>
-          <actions> 
-            <!-- gyro compass hotspots 
-  <action>
-   <name></name>
-   <button>0</button>
-   <x>-190</x>
-   <y>125</y>
-   <w>20</w>
-   <h>32</h>
-   <binding>
-    <command>property-adjust</command>
-    <property>/instrumentation/heading-indicator/offset-deg</property>
-    <step>-1</step>
-    <min>0</min>
-    <max>360</max>
-    <wrap>true</wrap>
-   </binding>
-  </action>
-  
-  <action>
-   <name></name>
-   <button>1</button>
-   <x>-190</x>
-   <y>125</y>
-   <w>20</w>
-   <h>32</h>
-   <binding>
-    <command>property-adjust</command>
-    <property>/instrumentation/heading-indicator/offset-deg</property>
-    <step>-5</step>
-    <min>0</min>
-    <max>360</max>
-    <wrap>1</wrap>
-   </binding>
-  </action>
+        </layers>
+        <actions> 
+          <!-- gyro compass hotspots 
 
   <action>
+
    <name></name>
+
    <button>0</button>
-   <x>-170</x>
+
+   <x>-190</x>
+
    <y>125</y>
+
    <w>20</w>
+
    <h>32</h>
+
    <binding>
+
     <command>property-adjust</command>
+
     <property>/instrumentation/heading-indicator/offset-deg</property>
-    <step>1</step>
-    <min>0</min>
-    <max>360</max>
-    <wrap>true</wrap>
-   </binding>
-  </action>
-  
-  <action>
-   <name></name>
-   <button>1</button>
-   <x>-170</x>
-   <y>125</y>
-   <w>20</w>
-   <h>32</h>
-   <binding>
-    <command>property-adjust</command>
-    <property>/instrumentation/heading-indicator/offset-deg</property>
-    <step>5</step>
-    <min>0</min>
-    <max>360</max>
-    <wrap>1</wrap>
-   </binding>
-  </action>
--->
-            <!-- remote compass hotspots 
-  <action>
-   <name></name>
-   <button>0</button>
-   <x>-360</x>
-   <y>240</y>
-   <w>20</w>
-   <h>32</h>
-   <binding>
-    <command>property-adjust</command>
-    <property>/instrumentation/magnetic-compass/bookmark-heading-deg</property>
+
     <step>-1</step>
+
     <min>0</min>
+
     <max>360</max>
+
     <wrap>true</wrap>
+
    </binding>
-  </action>
-  
-  <action>
-   <name></name>
-   <button>1</button>
-   <x>-360</x>
-   <y>240</y>
-   <w>20</w>
-   <h>32</h>
-   <binding>
-    <command>property-adjust</command>
-    <property>/instrumentation/magnetic-compass/bookmark-heading-deg</property>
-    <step>-5</step>
-    <min>0</min>
-    <max>360</max>
-    <wrap>1</wrap>
-   </binding>
+
   </action>
 
-  <action>
-   <name></name>
-   <button>0</button>
-   <x>-340</x>
-   <y>240</y>
-   <w>20</w>
-   <h>32</h>
-   <binding>
-    <command>property-adjust</command>
-    <property>/instrumentation/magnetic-compass/bookmark-heading-deg</property>
-    <step>1</step>
-    <min>0</min>
-    <max>360</max>
-    <wrap>true</wrap>
-   </binding>
-  </action>
   
+
   <action>
+
    <name></name>
+
    <button>1</button>
-   <x>-340</x>
-   <y>240</y>
+
+   <x>-190</x>
+
+   <y>125</y>
+
    <w>20</w>
+
    <h>32</h>
+
    <binding>
+
     <command>property-adjust</command>
-    <property>/instrumentation/magnetic-compass/bookmark-heading-deg</property>
-    <step>5</step>
+
+    <property>/instrumentation/heading-indicator/offset-deg</property>
+
+    <step>-5</step>
+
     <min>0</min>
+
     <max>360</max>
+
     <wrap>1</wrap>
+
    </binding>
+
   </action>
+
+
+
+  <action>
+
+   <name></name>
+
+   <button>0</button>
+
+   <x>-170</x>
+
+   <y>125</y>
+
+   <w>20</w>
+
+   <h>32</h>
+
+   <binding>
+
+    <command>property-adjust</command>
+
+    <property>/instrumentation/heading-indicator/offset-deg</property>
+
+    <step>1</step>
+
+    <min>0</min>
+
+    <max>360</max>
+
+    <wrap>true</wrap>
+
+   </binding>
+
+  </action>
+
+  
+
+  <action>
+
+   <name></name>
+
+   <button>1</button>
+
+   <x>-170</x>
+
+   <y>125</y>
+
+   <w>20</w>
+
+   <h>32</h>
+
+   <binding>
+
+    <command>property-adjust</command>
+
+    <property>/instrumentation/heading-indicator/offset-deg</property>
+
+    <step>5</step>
+
+    <min>0</min>
+
+    <max>360</max>
+
+    <wrap>1</wrap>
+
+   </binding>
+
+  </action>
+
 -->
-            <!-- altimeter hotspots -->
-            <action> 
-              <name>calibrate fine</name>
-              <button>0</button>
-              <x>-145</x>
-              <y>-130</y>
-              <w>20</w>
-              <h>30</h>
-              <binding> 
-                <command>property-adjust</command>
-                <property>/instrumentation/altimeter/setting-inhg</property>
-                <step>-0.01</step>
-                <min>26.0</min>
-                <max>33.0</max>
-                <wrap>false</wrap>
-              </binding>
-            </action>
-            <action> 
-              <name>calibrate coarse</name>
-              <button>1</button>
-              <x>-145</x>
-              <y>-130</y>
-              <w>20</w>
-              <h>30</h>
-              <binding> 
-                <command>property-adjust</command>
-                <property>/instrumentation/altimeter/setting-inhg</property>
-                <step>-0.1</step>
-                <min>26.0</min>
-                <max>33.0</max>
-                <wrap>false</wrap>
-              </binding>
-            </action>
-            <action> 
-              <name>calibrate fine</name>
-              <button>0</button>
-              <x>-125</x>
-              <y>-130</y>
-              <w>20</w>
-              <h>30</h>
-              <binding> 
-                <command>property-adjust</command>
-                <property>/instrumentation/altimeter/setting-inhg</property>
-                <step>0.01</step>
-                <min>26.0</min>
-                <max>33.0</max>
-                <wrap>false</wrap>
-              </binding>
-            </action>
-            <action> 
-              <name>calibrate coarse</name>
-              <button>1</button>
-              <x>-125</x>
-              <y>-130</y>
-              <w>20</w>
-              <h>30</h>
-              <binding> 
-                <command>property-adjust</command>
-                <property>/instrumentation/altimeter/setting-inhg</property>
-                <step>0.1</step>
-                <min>26.0</min>
-                <max>33.0</max>
-                <wrap>false</wrap>
-              </binding>
-            </action>
-            <!-- magneto switch hotspots -->
-            <action> 
-              <name>switch up left</name>
-              <button>0</button>
-              <x>-355</x>
-              <y>-95</y>
-              <w>30</w>
-              <h>30</h>
-              <binding> 
-                <command>nasal</command>
-                <script>
+          <!-- remote compass hotspots 
+
+  <action>
+
+   <name></name>
+
+   <button>0</button>
+
+   <x>-360</x>
+
+   <y>240</y>
+
+   <w>20</w>
+
+   <h>32</h>
+
+   <binding>
+
+    <command>property-adjust</command>
+
+    <property>/instrumentation/magnetic-compass/bookmark-heading-deg</property>
+
+    <step>-1</step>
+
+    <min>0</min>
+
+    <max>360</max>
+
+    <wrap>true</wrap>
+
+   </binding>
+
+  </action>
+
+  
+
+  <action>
+
+   <name></name>
+
+   <button>1</button>
+
+   <x>-360</x>
+
+   <y>240</y>
+
+   <w>20</w>
+
+   <h>32</h>
+
+   <binding>
+
+    <command>property-adjust</command>
+
+    <property>/instrumentation/magnetic-compass/bookmark-heading-deg</property>
+
+    <step>-5</step>
+
+    <min>0</min>
+
+    <max>360</max>
+
+    <wrap>1</wrap>
+
+   </binding>
+
+  </action>
+
+
+
+  <action>
+
+   <name></name>
+
+   <button>0</button>
+
+   <x>-340</x>
+
+   <y>240</y>
+
+   <w>20</w>
+
+   <h>32</h>
+
+   <binding>
+
+    <command>property-adjust</command>
+
+    <property>/instrumentation/magnetic-compass/bookmark-heading-deg</property>
+
+    <step>1</step>
+
+    <min>0</min>
+
+    <max>360</max>
+
+    <wrap>true</wrap>
+
+   </binding>
+
+  </action>
+
+  
+
+  <action>
+
+   <name></name>
+
+   <button>1</button>
+
+   <x>-340</x>
+
+   <y>240</y>
+
+   <w>20</w>
+
+   <h>32</h>
+
+   <binding>
+
+    <command>property-adjust</command>
+
+    <property>/instrumentation/magnetic-compass/bookmark-heading-deg</property>
+
+    <step>5</step>
+
+    <min>0</min>
+
+    <max>360</max>
+
+    <wrap>1</wrap>
+
+   </binding>
+
+  </action>
+
+-->
+          <!-- altimeter hotspots -->
+          <action> 
+            <name>calibrate fine</name>
+            <button>0</button>
+            <x>-145</x>
+            <y>-130</y>
+            <w>20</w>
+            <h>30</h>
+            <binding> 
+              <command>property-adjust</command>
+              <property>/instrumentation/altimeter/setting-inhg</property>
+              <step>-0.01</step>
+              <min>26.0</min>
+              <max>33.0</max>
+              <wrap>false</wrap>
+            </binding>
+          </action>
+          <action> 
+            <name>calibrate coarse</name>
+            <button>1</button>
+            <x>-145</x>
+            <y>-130</y>
+            <w>20</w>
+            <h>30</h>
+            <binding> 
+              <command>property-adjust</command>
+              <property>/instrumentation/altimeter/setting-inhg</property>
+              <step>-0.1</step>
+              <min>26.0</min>
+              <max>33.0</max>
+              <wrap>false</wrap>
+            </binding>
+          </action>
+          <action> 
+            <name>calibrate fine</name>
+            <button>0</button>
+            <x>-125</x>
+            <y>-130</y>
+            <w>20</w>
+            <h>30</h>
+            <binding> 
+              <command>property-adjust</command>
+              <property>/instrumentation/altimeter/setting-inhg</property>
+              <step>0.01</step>
+              <min>26.0</min>
+              <max>33.0</max>
+              <wrap>false</wrap>
+            </binding>
+          </action>
+          <action> 
+            <name>calibrate coarse</name>
+            <button>1</button>
+            <x>-125</x>
+            <y>-130</y>
+            <w>20</w>
+            <h>30</h>
+            <binding> 
+              <command>property-adjust</command>
+              <property>/instrumentation/altimeter/setting-inhg</property>
+              <step>0.1</step>
+              <min>26.0</min>
+              <max>33.0</max>
+              <wrap>false</wrap>
+            </binding>
+          </action>
+          <!-- magneto switch hotspots -->
+          <action> 
+            <name>switch up left</name>
+            <button>0</button>
+            <x>-355</x>
+            <y>-95</y>
+            <w>30</w>
+            <h>30</h>
+            <binding> 
+              <command>nasal</command>
+              <script>
+
 				hurricane.setleftMagswitch(1);
+
 				</script>
-              </binding>
-            </action>
-            <action> 
-              <name>switch down left</name>
-              <button>0</button>
-              <x>-355</x>
-              <y>-125</y>
-              <w>30</w>
-              <h>30</h>
-              <binding> 
-                <command>nasal</command>
-                <script>
+            </binding>
+          </action>
+          <action> 
+            <name>switch down left</name>
+            <button>0</button>
+            <x>-355</x>
+            <y>-125</y>
+            <w>30</w>
+            <h>30</h>
+            <binding> 
+              <command>nasal</command>
+              <script>
+
 				hurricane.setleftMagswitch(0);
+
 			  </script>
-              </binding>
-            </action>
+            </binding>
+          </action>
+          <action> 
+            <name>switch up right</name>
+            <button>0</button>
+            <x>-325</x>
+            <y>-95</y>
+            <w>30</w>
+            <h>30</h>
+            <binding> 
+              <command>nasal</command>
+              <script>
+
+				hurricane.setrightMagswitch(1);
+
+			    </script>
+            </binding>
+          </action>
+          <action> 
+            <name>switch down right</name>
+            <button>0</button>
+            <x>-325</x>
+            <y>-125</y>
+            <w>30</w>
+            <h>30</h>
+            <binding> 
+              <command>nasal</command>
+              <script>
+
+				hurricane.setrightMagswitch(0);
+
+				</script>
+            </binding>
+          </action>
+		   <!-- navigation light switch -->
             <action> 
-              <name>switch up right</name>
+              <name>nav light up</name>
               <button>0</button>
-              <x>-325</x>
+              <x>-270</x>
               <y>-95</y>
               <w>30</w>
               <h>30</h>
               <binding> 
-                <command>nasal</command>
-                <script>
-				hurricane.setrightMagswitch(1);
-			    </script>
+                <command>property-assign</command>
+                <property>/controls/lighting/nav-lights</property>
+                <value type="bool">1</value>
               </binding>
             </action>
             <action> 
-              <name>switch down right</name>
+              <name>nav light down</name>
               <button>0</button>
-              <x>-325</x>
+              <x>-270</x>
               <y>-125</y>
               <w>30</w>
               <h>30</h>
               <binding> 
-                <command>nasal</command>
-                <script>
-				hurricane.setrightMagswitch(0);
-				</script>
+                <command>property-assign</command>
+                <property>/controls/lighting/nav-lights</property>
+                <value type="bool">0</value>
               </binding>
             </action>
-            <!-- clock hotspots -->
-            <action> 
-              <name>adjust left fine</name>
-              <button>0</button>
-              <x>-330</x>
-              <y>-60</y>
-              <w>20</w>
-              <h>20</h>
-              <binding> 
-                <command>property-adjust</command>
-                <property>/instrumentation/clock/offset-sec</property>
-                <step>-60</step>
-                <min>0</min>
-                <max>43200</max>
-                <wrap>true</wrap>
-              </binding>
-            </action>
-            <action> 
-              <name>adjust left coarse</name>
-              <button>1</button>
-              <x>-330</x>
-              <y>-60</y>
-              <w>20</w>
-              <h>20</h>
-              <binding> 
-                <command>property-adjust</command>
-                <property>/instrumentation/clock/offset-sec</property>
-                <step>-900</step>
-                <min>0</min>
-                <max>43200</max>
-                <wrap>1</wrap>
-              </binding>
-            </action>
-            <action> 
-              <name>adjust right fine</name>
-              <button>0</button>
-              <x>-310</x>
-              <y>-60</y>
-              <w>20</w>
-              <h>20</h>
-              <binding> 
-                <command>property-adjust</command>
-                <property>/instrumentation/clock/offset-sec</property>
-                <step>60</step>
-                <min>0</min>
-                <max>43200</max>
-                <wrap>true</wrap>
-              </binding>
-            </action>
-            <action> 
-              <name>adjust right coarse</name>
-              <button>1</button>
-              <x>-310</x>
-              <y>-60</y>
-              <w>20</w>
-              <h>20</h>
-              <binding> 
-                <command>property-adjust</command>
-                <property>/instrumentation/clock/offset-sec</property>
-                <step>900</step>
-                <min>0</min>
-                <max>43200</max>
-                <wrap>1</wrap>
-              </binding>
-            </action>
-            <!-- starter push -->
-            <action> 
-              <name>starter push</name>
-              <button>0</button>
-              <x>-440</x>
-              <y>-125</y>
-              <w>35</w>
-              <h>35</h>
-              <binding> 
-                <command>nasal</command>
-                <script>
+          <!-- clock hotspots -->
+          <action> 
+            <name>adjust left fine</name>
+            <button>0</button>
+            <x>-330</x>
+            <y>-60</y>
+            <w>20</w>
+            <h>20</h>
+            <binding> 
+              <command>property-adjust</command>
+              <property>/instrumentation/clock/offset-sec</property>
+              <step>-60</step>
+              <min>0</min>
+              <max>43200</max>
+              <wrap>true</wrap>
+            </binding>
+          </action>
+          <action> 
+            <name>adjust left coarse</name>
+            <button>1</button>
+            <x>-330</x>
+            <y>-60</y>
+            <w>20</w>
+            <h>20</h>
+            <binding> 
+              <command>property-adjust</command>
+              <property>/instrumentation/clock/offset-sec</property>
+              <step>-900</step>
+              <min>0</min>
+              <max>43200</max>
+              <wrap>1</wrap>
+            </binding>
+          </action>
+          <action> 
+            <name>adjust right fine</name>
+            <button>0</button>
+            <x>-310</x>
+            <y>-60</y>
+            <w>20</w>
+            <h>20</h>
+            <binding> 
+              <command>property-adjust</command>
+              <property>/instrumentation/clock/offset-sec</property>
+              <step>60</step>
+              <min>0</min>
+              <max>43200</max>
+              <wrap>true</wrap>
+            </binding>
+          </action>
+          <action> 
+            <name>adjust right coarse</name>
+            <button>1</button>
+            <x>-310</x>
+            <y>-60</y>
+            <w>20</w>
+            <h>20</h>
+            <binding> 
+              <command>property-adjust</command>
+              <property>/instrumentation/clock/offset-sec</property>
+              <step>900</step>
+              <min>0</min>
+              <max>43200</max>
+              <wrap>1</wrap>
+            </binding>
+          </action>
+          <!-- starter push -->
+          <action> 
+            <name>starter push</name>
+            <button>0</button>
+            <x>-440</x>
+            <y>-125</y>
+            <w>35</w>
+            <h>35</h>
+            <binding> 
+              <command>nasal</command>
+              <script>
+
 				hurricane.startCof(1);
+
+				</script>
+            </binding>
+            <mod-up> 
+              <binding> 
+                <command>nasal</command>
+                <script>
+
+				  hurricane.startCof(0);
+
+				
+
 				</script>
               </binding>
-              <mod-up> 
-                <binding> 
-                  <command>nasal</command>
-                  <script>
-				  hurricane.startCof(0);
-				
-				</script>
-                </binding>
-              </mod-up>
-            </action>
-           
-            <!-- fuel gauge switches -->
-            <action> 
-              <name>push to read fuel</name>
-              <button>0</button>
-              <x>345</x>
-              <y>75</y>
-              <w>20</w>
-              <h>20</h>
+            </mod-up>
+          </action>
+          <!-- fuel gauge switches -->
+          <action> 
+            <name>push to read fuel</name>
+            <button>0</button>
+            <x>345</x>
+            <y>75</y>
+            <w>20</w>
+            <h>20</h>
+            <binding> 
+              <command>property-assign</command>
+              <property>/controls/switches/fuel-gauge</property>
+              <value type="bool">1</value>
+            </binding>
+            <mod-up> 
               <binding> 
                 <command>property-assign</command>
                 <property>/controls/switches/fuel-gauge</property>
-                <value type="bool">1</value>
-              </binding>
-              <mod-up> 
-                <binding> 
-                  <command>property-assign</command>
-                  <property>/controls/switches/fuel-gauge</property>
-                  <value type="bool">0</value>
-                </binding>
-              </mod-up>
-            </action>
-			<action> 
-              <name>select tank[2]</name>
-              <button>0</button>
-              <x>345</x>
-              <y>95</y>
-              <w>20</w>
-              <h>20</h>
-              <binding> 
-                <command>property-assign</command>
-                <property>/controls/switches/fuel-gauge-sel</property>
-                <value type="int">2</value>
-              </binding>
-              
-            </action>
-			<action> 
-              <name>select tank[0]</name>
-              <button>0</button>
-              <x>325</x>
-              <y>75</y>
-              <w>20</w>
-              <h>20</h>
-              <binding> 
-                <command>property-assign</command>
-                <property>/controls/switches/fuel-gauge-sel</property>
-                <value type="int">0</value>
-              </binding>
-			  </action>
-			  <action> 
-              <name>select tank[1]</name>
-              <button>0</button>
-              <x>365</x>
-              <y>75</y>
-              <w>20</w>
-              <h>20</h>
-              <binding> 
-                <command>property-assign</command>
-                <property>/controls/switches/fuel-gauge-sel</property>
-                <value type="int">1</value>
-              </binding>
-              
-            </action>
-            <!-- gunsight switches -->
-            <action> 
-              <name>gun sight main up</name>
-              <button>0</button>
-              <x>240</x>
-              <y>220</y>
-              <w>30</w>
-              <h>30</h>
-              <binding> 
-                <command>property-assign</command>
-                <property>/controls/switches/gun-sight-main</property>
-                <value type="bool">1</value>
-              </binding>
-            </action>
-            <action> 
-              <name>gun sight main down</name>
-              <button>0</button>
-              <x>240</x>
-              <y>190</y>
-              <w>30</w>
-              <h>30</h>
-              <binding> 
-                <command>property-assign</command>
-                <property>/controls/switches/gun-sight-main</property>
                 <value type="bool">0</value>
               </binding>
-            </action>
-            <!--            <action> 
+            </mod-up>
+          </action>
+          <action> 
+            <name>select tank[2]</name>
+            <button>0</button>
+            <x>345</x>
+            <y>95</y>
+            <w>20</w>
+            <h>20</h>
+            <binding> 
+              <command>property-assign</command>
+              <property>/controls/switches/fuel-gauge-sel</property>
+              <value type="int">2</value>
+            </binding>
+          </action>
+          <action> 
+            <name>select tank[0]</name>
+            <button>0</button>
+            <x>325</x>
+            <y>75</y>
+            <w>20</w>
+            <h>20</h>
+            <binding> 
+              <command>property-assign</command>
+              <property>/controls/switches/fuel-gauge-sel</property>
+              <value type="int">0</value>
+            </binding>
+          </action>
+          <action> 
+            <name>select tank[1]</name>
+            <button>0</button>
+            <x>365</x>
+            <y>75</y>
+            <w>20</w>
+            <h>20</h>
+            <binding> 
+              <command>property-assign</command>
+              <property>/controls/switches/fuel-gauge-sel</property>
+              <value type="int">1</value>
+            </binding>
+          </action>
+          <!-- gunsight switches -->
+          <action> 
+            <name>gun sight main up</name>
+            <button>0</button>
+            <x>240</x>
+            <y>220</y>
+            <w>30</w>
+            <h>30</h>
+            <binding> 
+              <command>property-assign</command>
+              <property>/controls/switches/gun-sight-main</property>
+              <value type="bool">1</value>
+            </binding>
+          </action>
+          <action> 
+            <name>gun sight main down</name>
+            <button>0</button>
+            <x>240</x>
+            <y>190</y>
+            <w>30</w>
+            <h>30</h>
+            <binding> 
+              <command>property-assign</command>
+              <property>/controls/switches/gun-sight-main</property>
+              <value type="bool">0</value>
+            </binding>
+          </action>
+          <!--            <action> 
+
               <name>dimmer up fine</name>
+
               <button>0</button>
+
               <x>-90</x>
+
               <y>280</y>
+
               <w>20</w>
+
               <h>50</h>
+
               <binding> 
+
                 <command>property-adjust</command>
+
                 <property>/controls/switches/gun-sight-dimmer</property>
+
                 <step>0.10</step>
+
                 <min>0</min>
+
                 <max>0.9</max>
+
                 <wrap>false</wrap>
+
               </binding>
+
             </action>
+
             <action> 
+
               <name>dimmer up coarse</name>
+
               <button>1</button>
+
               <x>-90</x>
+
               <y>280</y>
+
               <w>20</w>
+
               <h>50</h>
+
               <binding> 
+
                 <command>property-adjust</command>
+
                 <property>/controls/switches/gun-sight-dimmer</property>
+
                 <step>0.20</step>
+
                 <min>0</min>
+
                 <max>0.9</max>
+
                 <wrap>false</wrap>
+
               </binding>
+
             </action>
+
             <action> 
+
               <name>dimmer down fine</name>
+
               <button>0</button>
+
               <x>-70</x>
+
               <y>280</y>
+
               <w>20</w>
+
               <h>50</h>
+
               <binding> 
+
                 <command>property-adjust</command>
+
                 <property>/controls/switches/gun-sight-dimmer</property>
+
                 <step>-0.10</step>
+
                 <min>0</min>
+
                 <max>0.9</max>
+
                 <wrap>false</wrap>
+
               </binding>
+
             </action>
+
             <action> 
+
               <name>dimmer down coarse</name>
+
               <button>1</button>
+
               <x>-70</x>
+
               <y>-280</y>
+
               <w>20</w>
+
               <h>50</h>
+
               <binding> 
+
                 <command>property-adjust</command>
+
                 <property>/controls/switches/gun-sight-dimmer</property>
+
                 <step>-0.20</step>
+
                 <min>0</min>
+
                 <max>0.9</max>
+
                 <wrap>false</wrap>
+
               </binding>
+
             </action>-->
-            <!-- gear indicator switches -->
-            <action> 
-              <name>gear indicator main up</name>
-              <button>0</button>
-              <x>-260</x>
-              <y>220</y>
-              <w>30</w>
-              <h>30</h>
-              <binding> 
-                <command>property-assign</command>
-                <property>/controls/switches/gear-indicator-main</property>
-                <value type="bool">1</value>
-              </binding>
-              <binding> 
-                <command>property-assign</command>
-                <property>/controls/switches/gear-indicator-alt</property>
-                <value type="bool">0</value>
-              </binding>
-            </action>
-            <action> 
-              <name>gear indicator alt down</name>
-              <button>0</button>
-              <x>-260</x>
-              <y>190</y>
-              <w>30</w>
-              <h>30</h>
-              <binding> 
-                <command>property-assign</command>
-                <property>/controls/switches/gear-indicator-alt</property>
-                <value type="bool">1</value>
-              </binding>
-              <binding> 
-                <command>property-assign</command>
-                <property>/controls/switches/gear-indicator-main</property>
-                <value type="bool">0</value>
-              </binding>
-            </action>
-            <action> 
-              <name>gear indicator up</name>
-              <button>0</button>
-              <x>-290</x>
-              <y>220</y>
-              <w>30</w>
-              <h>30</h>
-              <binding> 
-                <command>property-assign</command>
-                <property>/controls/switches/gear-indicator</property>
-                <value type="bool">1</value>
-              </binding>
-            </action>
-            <action> 
-              <name>gear indicator down</name>
-              <button>0</button>
-              <x>-290</x>
-              <y>190</y>
-              <w>30</w>
-              <h>30</h>
-              <binding> 
-                <command>property-assign</command>
-                <property>/controls/switches/gear-indicator</property>
-                <value type="bool">0</value>
-              </binding>
-            </action>
-            <!-- boost control cutout -->
-            <action> 
-              <name>toggle cutout</name>
-              <button>0</button>
-              <x>-420</x>
-              <y>-60</y>
-              <w>50</w>
-              <h>55</h>
-              <binding> 
-                <command>nasal</command>
-                <script>
+          <!-- gear indicator switches -->
+          <action> 
+            <name>gear indicator main up</name>
+            <button>0</button>
+            <x>-260</x>
+            <y>220</y>
+            <w>30</w>
+            <h>30</h>
+            <binding> 
+              <command>property-assign</command>
+              <property>/controls/switches/gear-indicator-main</property>
+              <value type="bool">1</value>
+            </binding>
+            <binding> 
+              <command>property-assign</command>
+              <property>/controls/switches/gear-indicator-alt</property>
+              <value type="bool">0</value>
+            </binding>
+          </action>
+          <action> 
+            <name>gear indicator alt down</name>
+            <button>0</button>
+            <x>-260</x>
+            <y>190</y>
+            <w>30</w>
+            <h>30</h>
+            <binding> 
+              <command>property-assign</command>
+              <property>/controls/switches/gear-indicator-alt</property>
+              <value type="bool">1</value>
+            </binding>
+            <binding> 
+              <command>property-assign</command>
+              <property>/controls/switches/gear-indicator-main</property>
+              <value type="bool">0</value>
+            </binding>
+          </action>
+          <action> 
+            <name>gear indicator up</name>
+            <button>0</button>
+            <x>-290</x>
+            <y>220</y>
+            <w>30</w>
+            <h>30</h>
+            <binding> 
+              <command>property-assign</command>
+              <property>/controls/switches/gear-indicator</property>
+              <value type="bool">1</value>
+            </binding>
+          </action>
+          <action> 
+            <name>gear indicator down</name>
+            <button>0</button>
+            <x>-290</x>
+            <y>190</y>
+            <w>30</w>
+            <h>30</h>
+            <binding> 
+              <command>property-assign</command>
+              <property>/controls/switches/gear-indicator</property>
+              <value type="bool">0</value>
+            </binding>
+          </action>
+          <!-- boost control cutout -->
+          <action> 
+            <name>toggle cutout</name>
+            <button>0</button>
+            <x>-420</x>
+            <y>-60</y>
+            <w>50</w>
+            <h>55</h>
+            <binding> 
+              <command>nasal</command>
+              <script>
+
 				hurricane.toggleCutout();
+
 				</script>
-              </binding>
-            </action>
-            <!-- supercharger control -->
-            <action> 
-              <name>supercharger control</name>
-              <button>0</button>
-              <x>-370</x>
-              <y>-282</y>
-              <w>45</w>
-              <h>60</h>
-              <binding> 
-                <command>nasal</command>
-                <script>
+            </binding>
+          </action>
+          <!-- supercharger control -->
+          <action> 
+            <name>supercharger control</name>
+            <button>0</button>
+            <x>-370</x>
+            <y>-282</y>
+            <w>45</w>
+            <h>60</h>
+            <binding> 
+              <command>nasal</command>
+              <script>
+
 				hurricane.toggleBoost();
+
 				</script>
-              </binding>
-            </action>
-			<!-- primer pump -->
-            <action> 
-              <name>primer pump</name>
-              <button>0</button>
-              <x>360</x>
-              <y>-270</y>
-              <w>45</w>
-              <h>45</h>
+            </binding>
+          </action>
+          <!-- primer pump -->
+          <action> 
+            <name>primer pump</name>
+            <button>0</button>
+            <x>360</x>
+            <y>-270</y>
+            <w>45</w>
+            <h>45</h>
+            <binding> 
+              <command>nasal</command>
+              <script>
+
+				hurricane.pumpPrimer(1);
+
+				</script>
+            </binding>
+            <mod-up> 
               <binding> 
                 <command>nasal</command>
                 <script>
-				hurricane.pumpPrimer(1);
+
+				   hurricane.pumpPrimer(0);
+
 				</script>
               </binding>
-              <mod-up> 
-                <binding> 
-                  <command>nasal</command>
-                  <script>
-				   hurricane.pumpPrimer(0);
-				</script>
-                </binding>
-              </mod-up>
-            </action>
-          </actions>
-        </instrument>
-      </instruments>
-    </PropertyList>
-  
+            </mod-up>
+          </action>
+        </actions>
+      </instrument>
+    </instruments>
+  </PropertyList>

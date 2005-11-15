@@ -1,10 +1,12 @@
 <?xml version="1.0"?>
   <PropertyList> 
-    <path>cutout.ac</path>
-    <animation> 
+    
+	<path>cutout.ac</path>
+    
+	<animation> 
       <type>translate</type>
       <object-name>knob</object-name>
-      <property>controls/engines/engine/cutout</property>
+      <property>controls/engines/engine/boost-control-cutout</property>
       <factor>0.025</factor>
       <axis> 
         <x>1</x>
@@ -12,7 +14,8 @@
         <z>0</z>
       </axis>
     </animation>
-    <animation> 
+    
+	<animation> 
       <type>material</type>
       <emission> 
         <factor-prop>/controls/lighting/panel-norm</factor-prop>
@@ -22,7 +25,8 @@
       </emission>
       <shininess>10</shininess>
     </animation>
-    <!-- *** LoD *** -->
+    
+	<!-- *** LoD *** -->
     <animation> 
       <type>range</type>
       <min-m>0</min-m>

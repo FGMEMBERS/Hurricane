@@ -92,20 +92,16 @@
       <type>select</type>
       <object-name>Main</object-name>
       <condition> 
-        <greater-than> 
-          <property>/systems/electrical/outputs/gear-indicator-main</property>
-          <value>20</value>
-        </greater-than>
+          <property>controls/switches/gear-indicator-main</property>
+          <property>controls/switches/gear-indicator</property>
       </condition>
     </animation>
     <animation> 
       <type>select</type>
       <object-name>Spare</object-name>
       <condition> 
-        <greater-than> 
-          <property>/systems/electrical/outputs/gear-indicator-alt</property>
-          <value>20</value>
-        </greater-than>
+          <property>controls/switches/gear-indicator-alt</property>
+          <property>controls/switches/gear-indicator</property>
       </condition>
     </animation>
 	<!-- lighting -->

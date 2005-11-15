@@ -4,7 +4,7 @@
     <animation> 
       <type>rotate</type>
       <object-name>boost-Needle1</object-name>
-      <property>engines/engine/boost-pressure-psi-gauge</property>
+      <property>engines/engine/boost-gauge-psi</property>
       <!--    <factor>0.4911</factor>
      <offset>-29.92</offset> -->
       <interpolation> 

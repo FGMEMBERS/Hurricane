@@ -1,74 +1,77 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
- <PropertyList> 
-<help>
-        <title>Hurricane IIb</title>
-        <key>
-          <name>Space</name>
-          <desc>Start</desc>
-        </key>
-        <key>
-          <name>Ctrl-B</name>
-          <desc>toggle supercharger speed</desc>
-        </key>
-        <key>
-          <name>d/D</name>
-          <desc>fold step up/down</desc>
-        </key>
-        <key>
-          <name>Ctrl-D</name>
-          <desc>toggle step</desc>
-        </key>
-        <key>
-          <name>f/F</name>
-          <desc>close/open canopy</desc>
-        </key>
-        <key>
-          <name>h/H</name>
-          <desc>radiator flap up/down</desc>
-        </key>
-        <key>
-          <name>k/K</name>
-          <desc>toggle gear warning</desc>
-        </key>
-        <key>
-          <name>u/U</name>
-          <desc>seat down/up</desc>
-        </key>
-        <key>
-          <name>Ctrl-U</name>
-          <desc>seat default</desc>
-        </key>
-        <key>
-          <name>n/N</name>
-          <desc>propeller fine/coarse</desc>
-        </key>
-        <key>
-          <name>I</name>
-          <desc>operate priming pump</desc>
-        </key>
-        <key>
-          <name>( )</name>
-          <desc> rotate fuel cock left/right </desc>
-        </key>
-        <key>
-          <name>&lt; &gt;</name>
-          <desc>trim rudder left/right</desc>
-        </key>
-        <key>
-          <name>{ }</name>
-          <desc>toggle left/right magneto switch</desc>
-        </key>
-		<line>Start Routine</line>
-        <line>1. switch both magnetos to ON</line>
-        <line>2. increase throttle to one third</line>
-        <line>3. operate primer pump five times</line>
-        <line>4. start</line>
-		<line></line>
-		<line>Approach</line>
-		<line>flap 60 deg></line>
-		<line>speed 95-100 MPH IAS</line>
-		<line>rpm 3000</line>
-		<line>boost(approx) -4</line>
-        <line>touchdown speed: 90-95 MPH IAS</line>
-      </help>
- </PropertyList> 
+  <PropertyList> 
+    <help> 
+      <title>Hurricane IIb</title>
+      <key> 
+        <name>Space</name>
+        <desc>Start</desc>
+      </key>
+      <key> 
+        <name>Ctrl-B</name>
+        <desc>toggle supercharger speed</desc>
+      </key>
+      <key> 
+        <name>d/D</name>
+        <desc>fold step up/down</desc>
+      </key>
+      <key> 
+        <name>Ctrl-D</name>
+        <desc>toggle step</desc>
+      </key>
+      <key> 
+        <name>f/F</name>
+        <desc>close/open canopy</desc>
+      </key>
+      <key> 
+        <name>h/H</name>
+        <desc>radiator flap up/down</desc>
+      </key>
+      <key> 
+        <name>k/K</name>
+        <desc>toggle gear warning</desc>
+      </key>
+      <key> 
+        <name>u/U</name>
+        <desc>seat down/up</desc>
+      </key>
+      <key> 
+        <name>Ctrl-U</name>
+        <desc>seat default</desc>
+      </key>
+      <key> 
+        <name>n/N</name>
+        <desc>propeller fine/coarse</desc>
+      </key>
+      <key> 
+        <name>I</name>
+        <desc>operate priming pump</desc>
+      </key>
+      <key> 
+        <name>( )</name>
+        <desc> rotate fuel cock left/right </desc>
+      </key>
+      <key> 
+        <name>&lt; &gt;</name>
+        <desc>trim rudder left/right</desc>
+      </key>
+      <key> 
+        <name>{ }</name>
+        <desc>toggle left/right magneto switch</desc>
+      </key>
+      <line>Start Routine</line>
+      <line>1. switch both magnetos to ON</line>
+      <line>2. increase throttle to one third</line>
+      <line>3. operate primer pump five times</line>
+      <line>4. start</line>
+      <line></line>
+      <line>Approach</line>
+      <line>flap 60 deg></line>
+      <line>speed 95-100 MPH IAS</line>
+      <line>rpm 3000</line>
+      <line>boost(approx) -4</line>
+      <line>touchdown speed: 90-95 MPH IAS</line>
+	  <line>NOTE:</line>
+	  <line> the gear can only be operated by the</line>
+	  <line> in-cockpit lever</line>
+    </help>
+  </PropertyList>

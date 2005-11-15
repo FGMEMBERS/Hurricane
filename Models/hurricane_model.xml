@@ -90,6 +90,7 @@
     </model>
     <model> 
       <path>Aircraft/Hurricane/Models/attitude.xml</path>
+	  <name>Attitude</name>
       <offsets> 
         <x-m>3.105</x-m>
         <y-m>0.0</y-m>
@@ -99,13 +100,14 @@
     <model> 
       <path>Aircraft/Hurricane/Models/vsi.xml</path>
       <offsets> 
-        <x-m>3.104</x-m>
+        <x-m>3.105</x-m>
         <y-m>0.11</y-m>
         <z-m>0.312</z-m>
       </offsets>
     </model>
     <model> 
       <path>Aircraft/Hurricane/Models/altimeter.xml</path>
+	  <name>Altimeter</name>
       <offsets> 
         <x-m>3.104</x-m>
         <y-m>-0.11</y-m>
@@ -237,6 +239,14 @@
         <z-m>0.154</z-m>
       </offsets>
     </model>
+	<model> 
+      <path>Aircraft/Hurricane/Models/nav-light-switch.xml</path>
+      <offsets> 
+        <x-m>3.104</x-m>
+        <y-m>-0.225</y-m>
+        <z-m>0.154</z-m>
+      </offsets>
+    </model>
     <model> 
       <path>Aircraft/Hurricane/Models/gear-switch.xml</path>
       <offsets> 
@@ -263,6 +273,7 @@
     </model>
     <model> 
       <path>Aircraft/Hurricane/Models/gear.xml</path>
+	  <name>Gear-Indicator</name>
       <offsets> 
         <x-m>3.104</x-m>
         <y-m>-0.1525</y-m>
@@ -400,15 +411,57 @@
     </model>
     <model> 
       <path>Aircraft/Hurricane/Models/rgs.xml</path>
+	  <name>Gunsight</name>
       <offsets> 
         <x-m>3.30</x-m>
         <y-m>-0.0</y-m>
         <z-m>0.69</z-m>
       </offsets>
     </model>
-    <!-- hide all of the model not visible from the cockpit -->
+	<model> 
+      <path>Aircraft/Hurricane/Models/blackout.xml</path>
+	  <name>Blackout</name>
+      <offsets> 
+        <x-m>3.88</x-m>
+        <y-m>0</y-m>
+        <z-m>0.72</z-m>
+      </offsets>
+    </model>
+	
+	<!-- ***** Navigation Lights ****** -->
+    <model> 
+      <path>Aircraft/Hurricane/Models/light-green.xml</path>
+      <name>Stbd-Light</name>
+      <offsets> 
+        <x-m>2.675</x-m>
+        <y-m>5.7</y-m>
+        <z-m>-0.321788</z-m>
+      </offsets>
+    </model>
+    
+	<model> 
+      <path>Aircraft/Hurricane/Models/light-red.xml</path>
+      <name>Port-Light</name>
+      <offsets> 
+        <x-m>2.675</x-m>
+        <y-m>-5.7</y-m>
+        <z-m>-0.321788</z-m>
+      </offsets>
+    </model>
+   
+	<model>  
+      <path>Aircraft/Hurricane/Models/light-white.xml</path>
+      <name>Tail-Light</name>
+      <offsets> 
+        <x-m>9.85</x-m>
+        <y-m>0.0</y-m>
+        <z-m>0.632783</z-m>
+      </offsets>
+    </model>
+    
+	<!-- hide all of the model not visible from the cockpit -->
     <animation> 
-      <type>select</type>
+      <!--<type>select</type>-->
       <object-name>Covers</object-name>
       <object-name>Pitot</object-name>
       <object-name>Flap-Inner-R</object-name>
@@ -417,20 +470,20 @@
       <object-name>Flap-Outer-L</object-name>
       <object-name>UC-Tail</object-name>
       <object-name>UC-Doors</object-name>
-      <condition> 
+	  <object-name>Stub-Wing-B</object-name>
+      <object-name>Fuselage</object-name>
+      <object-name>Empennage</object-name>
+      <!--<condition> 
         <not> 
           <equals> 
             <property>/sim/current-view/view-number</property>
             <value>0</value>
           </equals>
         </not>
-      </condition>
+      </condition>-->
     </animation>
     <animation> 
-      <type>select</type>
-      <object-name>Stub-Wing-B</object-name>
-      <object-name>Fuselage</object-name>
-      <object-name>Empennage</object-name>
+      <!--<type>select</type>-->
       <object-name>Spinner</object-name>
       <object-name>Exhausts</object-name>
       <object-name>Wing-B-L</object-name>
@@ -441,35 +494,55 @@
       <object-name>Wing-Tip-B-R</object-name>
       <object-name>Radiator</object-name>
       <object-name>Carb-Air-Intake</object-name>
-      <!--  
-      
-      <object-name>Oil-Cooler</object-name>-->
-      <condition> 
+	  <object-name>Tail-Light</object-name>
+	  <object-name>Port-Light</object-name>
+      <object-name>Stbd-Light</object-name>
+<!--  <condition> 
         <not> 
           <equals> 
             <property>/sim/current-view/view-number</property>
             <value>0</value>
           </equals>
         </not>
-      </condition>
+      </condition>-->
     </animation>
-    <!-- make sure that all the rest of the aircraft is visible
-    
+   
+   <!-- make sure that all the rest of the aircraft is visible-->
     <animation> 
-      <object-name>Cover-Engine-T</object-name>
+	  <type>select</type> 
+	  
+	  <object-name>Cover-Engine-T</object-name>
       <object-name>Cover-Tank-T</object-name>
       <object-name>Escape-Hatch</object-name>
+	  <object-name>Gunsight</object-name>
+	  <object-name>Altimeter</object-name>
+	  <object-name>Attitude</object-name>
+	  <object-name>Gear-Indicator</object-name>
       <object-name>Pilot</object-name>
 	  <object-name>Propeller</object-name>
-	  <object-name>PropellerDisk</object-name>
-	  <object-name>Canopy-Front</object-name>
-	  <object-name>Canopy-Main</object-name>
-    </animation> -->
+	  <object-name>Stbd-Nav-Lt-Cover</object-name>
+	  <object-name>Port-Nav-Lt-Cover</object-name>
+	  <object-name>noshadow.PropellerDisk</object-name>
+	  <object-name>noshadow.Front-Panel-O</object-name>
+	  <object-name>noshadow.Front-Panel-I</object-name>
+	  <object-name>noshadow.Canopy-Front</object-name>
+	  <object-name>noshadow.Canopy-Main</object-name>
+	  <object-name>Blackout</object-name>
+	  <condition> 
+        <greater-than-equals> 
+          <property>/sim/current-view/view-number</property>
+          <value>0</value>
+        </greater-than-equals>
+      </condition>
+    </animation> 
     <!-- **************************** Pilot ******************************* -->
-    <!--  conceal Pilot Head etc in Cockpit View-->
+    <!--  conceal Pilot Head etc in Cockpit View -->
     <animation> 
       <type>select</type>
-      <object-name>Head</object-name>
+      <object-name>Helmet</object-name>
+	  <object-name>Mask</object-name>
+	  <object-name>Face</object-name>
+	  <object-name>Goggles</object-name>
       <condition> 
         <not> 
           <equals> 
@@ -611,6 +684,9 @@
     <animation> 
       <type>rotate</type>
       <object-name>Rudder</object-name>
+	  <object-name>Tail-Lt-Fairing</object-name>
+	  <object-name>Tail-Lt-Cover</object-name>
+	  <object-name>Tail-Light</object-name>
       <property>surface-positions/rudder-pos-norm</property>
       <factor>30</factor>
       <axis> 
@@ -667,7 +743,7 @@
     </animation>
     <animation> 
       <type>select</type>
-      <object-name>PropellerDisk</object-name>
+      <object-name>noshadow.PropellerDisk</object-name>
       <condition> 
         <greater-than> 
           <property>/engines/engine[0]/rpm</property>
@@ -677,7 +753,7 @@
     </animation>
     <animation> 
       <type>blend</type>
-      <object-name>PropellerDisk</object-name>
+      <object-name>noshadow.PropellerDisk</object-name>
       <property>/engines/engine[0]/rpm</property>
       <factor>0.00015</factor>
       <offset>-0.5</offset>
@@ -1000,7 +1076,8 @@
     <!-- ***************** Canopy *********************** -->
     <animation> 
       <type>translate</type>
-      <object-name>Canopy-Main</object-name>
+      <object-name>Canopy-Main-Frame</object-name>
+	  <object-name>noshadow.Canopy-Main</object-name>
       <property>gear/canopy/position-norm</property>
       <factor>0.575</factor>
       <axis> 
@@ -1092,16 +1169,7 @@
         <z2-m>-0.80</z2-m>
       </axis>
     </animation>
-    <!-- 
-<animation>
-  <type>select</type>
-  <object-name>TailNavLightOn</object-name>
-  <condition>
-    <property>/controls/lighting/nav-lights</property>
-  </condition>
- </animation>
-
--->
+ 
     <animation> 
       <type>material</type>
       <object-name>Panels</object-name>

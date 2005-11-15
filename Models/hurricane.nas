@@ -9,10 +9,10 @@ UPDATE_PERIOD = 0.3;
 # set the timer for the selected function
 
 registerTimer = func {
-
+	
     settimer(arg[0], UPDATE_PERIOD);
 
-} # end function
+} # end function 
 
 # =============================== end timer stuff ===========================================
 
@@ -20,49 +20,86 @@ registerTimer = func {
 
 BOOST_CONTROL_AUTHORITY = 0.99; # How much can it move the throttle?
 #BOOST_CONTROL_RANGE = 1;         When does it start to engage? (psig)
-BOOST_CONTROL_LIMIT = 11.9;       # Maximum MP (psig)
+BOOST_CONTROL_LIMIT_RATED = 11.9;       # Maximum MP (psig)
+BOOST_CONTROL_LIMIT_COMBAT = 18;    # Combat limit (5 mins)
 
 boost_control = props.globals.getNode("/controls/engines/engine/boost-control", 1);
-boost_pressure = props.globals.getNode("/engines/engine/boost-pressure-psi-gauge", 1);
+boost_pressure = props.globals.getNode("/engines/engine/boost-gauge-inhg", 1);
+boost_pressure_psi = props.globals.getNode("/engines/engine/boost-gauge-psi", 1);
 boost_control_damp = props.globals.getNode("/controls/engines/engine/boost-control-damp", 1);
 boost_control_range = props.globals.getNode("/controls/engines/engine/boost-control-range", 1);
 boost_control_cutout = props.globals.getNode("/controls/engines/engine/boost-control-cutout", 1);
+mp_inhg = props.globals.getNode("/engines/engine/mp-inhg", 1);
 
-boost_control.setDoubleValue(0);
-boost_pressure.setDoubleValue(0);
-boost_control_damp.setDoubleValue(0.015);
-boost_control_range.setDoubleValue(0.5);
-boost_control_cutout.setBoolValue(0);
+boost_control.setDoubleValue(1); 
+boost_pressure.setDoubleValue(0); 
+boost_pressure_psi.setDoubleValue(0); 
+boost_control_damp.setDoubleValue(0.015); 
+boost_control_range.setDoubleValue(0.5); 
+boost_control_cutout.setBoolValue(0); 
+mp_inhg.setDoubleValue(0);
+
 
 damp = 0;
 
-updateBoostControl = func {
-        var n = boost_control_damp.getValue();
-		var BOOST_CONTROL_RANGE = boost_control_range.getValue();
+toggleBoost = func{
+    b = getprop("controls/engines/engine/boost");
 
-		var mp = boost_pressure.getValue();
-		var cutout = boost_control_cutout.getValue();
-		var val = (mp - BOOST_CONTROL_LIMIT) / BOOST_CONTROL_RANGE;
-        var in = val;
-        if(! cutout){
-			if (val < 0  ) {
-					val = 0;                             # Can't increase throttle
-			} elsif (val < -BOOST_CONTROL_AUTHORITY) {
-					val = -BOOST_CONTROL_AUTHORITY        # limit by authority
-			} else {
-					val = -val;
-			}
-			damp = (val * n) + (damp * (1 - n));
-		} else {
-			damp = 0;
+    if (b == 1) {
+	  b = 0.79; }
+	else  {
+	  b = 1;
 		}
- #       print(sprintf("mp=%0.5f, in=%0.5f, raw=%0.5f, out=%0.5f", mp, in, val, damp));
 
+   setprop("controls/engines/engine/boost",b);
+#  print("b: " , b );
+
+} # end function toggleBoost
+
+toggleCutout = func{
+	var c = boost_control_cutout.getValue();
+	
+	c = !c;
+	boost_control_cutout.setBoolValue(c);
+	 	    
+	print("c: " , c );
+    
+} # end function toggleCutout
+
+updateBoostControl = func {
+        var n = boost_control_damp.getValue(); 
+		var BOOST_CONTROL_RANGE = boost_control_range.getValue();
+        var mp = (mp_inhg.getValue() * 0.491154077497) - 14.6959487755 ;
+		var cutout = boost_control_cutout.getValue();
+		var val = 0;
+		
+		if(! cutout){		
+			val = (mp - BOOST_CONTROL_LIMIT_RATED) / BOOST_CONTROL_RANGE;
+		} else {
+		    val = (mp - BOOST_CONTROL_LIMIT_COMBAT) / BOOST_CONTROL_RANGE;
+		}	
+			
+		var in = val;
+			
+		if (val < 0  ) {
+				val = 0;                             # Can't increase throttle
+		} elsif (val < -BOOST_CONTROL_AUTHORITY) {
+				val = -BOOST_CONTROL_AUTHORITY        # limit by authority
+		} else {
+				val = -val;
+		}
+			
+		damp = (val * n) + (damp * (1 - n)); # apply low pass filter
+      
+#        print(sprintf("mp=%0.5f, in=%0.5f, raw=%0.5f, out=%0.5f", mp, in, val, damp));
+		boost_pressure_psi.setDoubleValue(mp);
         boost_control.setDoubleValue(damp);
+#		boost_control_cutout.setBoolValue(cutout);
         settimer(updateBoostControl, 0.1);
 }
 
 updateBoostControl();
+
 
 # ======================================= end Boost Controller f ============================
 
@@ -110,12 +147,12 @@ indexCof = func{
 startCof = func{
 	Start = arg[0];
 	max_run = 4;
-
+	
 	if (Start) {
 		LastStartTime = nowN.getValue();
 		if (!starterN.getValue()) { 			# not started yet: do it now
 			setprop("controls/engines/engine/coffman-starter/starter-push-norm", 1);
-
+			
 			ready = !hurricane.spitfireIIa;		# seafires are always ready
 
 			if (!ready) {						# must be a spitfire
@@ -127,7 +164,7 @@ startCof = func{
 					settimer(func {             # nameless out-of-gas watcher
 					           	starterN.setValue(0);
 								primerN.setValue(0);
-					           	print ("starter stopping, out of gas!");
+					           	print ("starter stopping, out of gas!"); 
 					            }, max_run)};
      		}
 
@@ -165,9 +202,9 @@ stopCof = func {
 # ================================= priming pump stuff =======================================
 
 pumpPrimer = func{
-
+    
     push = arg[0];
-
+    
     if (push){
         pump = getprop("controls/engines/engine/primer") + 1;
         setprop("controls/engines/engine/primer", pump);
@@ -181,16 +218,16 @@ pumpPrimer = func{
 } # end function
 
 primerMixture = func{
-
+    
 	mixture = 0;
     primer = arg[0];
-
+    
     if(primer >3 and primer <7) {
         mixture = 1;
     }
-
+    
     return mixture;
-
+	   
 } # end function
 
 # ================================== end priming pump stuff =================================
@@ -202,7 +239,7 @@ setMagnetos = func{     # set the magneto value according to the switch position
     right = getprop("controls/engines/engine/mag-switch-right");
     left = getprop("controls/engines/engine/mag-switch-left");
     if (left and right){                                 # both
-        setprop("controls/engines/engine/magnetos",3);
+        setprop("controls/engines/engine/magnetos",3); 
         }
         elsif (left and !right) {                         # left
             setprop("controls/engines/engine/magnetos",1)
@@ -210,14 +247,14 @@ setMagnetos = func{     # set the magneto value according to the switch position
         elsif (!left and right) {                         # right
             setprop("controls/engines/engine/magnetos",2)
         }
-    else{
+    else{    
         setprop("controls/engines/engine/magnetos",0); # none
         }
-
+    
 } # end function
 
 setleftMagswitch = func{
-
+    
     left = arg[0];
     setprop("controls/engines/engine/mag-switch-left",left);
     hurricane.setMagnetos();
@@ -226,7 +263,7 @@ setleftMagswitch = func{
 
 
 setrightMagswitch = func{
-
+    
     right = arg[0];
     setprop("controls/engines/engine/mag-switch-right",right);
     hurricane.setMagnetos();
@@ -235,7 +272,7 @@ setrightMagswitch = func{
 
 
 toggleleftMagswitch = func{
-
+    
     left = getprop("controls/engines/engine/mag-switch-left");
     left = !left;
     setprop("controls/engines/engine/mag-switch-left",left);
@@ -244,7 +281,7 @@ toggleleftMagswitch = func{
 } # end function
 
 togglerightMagswitch = func{
-
+    
     right = getprop("controls/engines/engine/mag-switch-right");
     right = !right;
     setprop("controls/engines/engine/mag-switch-right",right);
@@ -257,28 +294,28 @@ togglerightMagswitch = func{
 # ====================================== door and canopy stuff ==============================
 
 openDoor = func{ # open the door if canopy is open
-
+    
     dooropen = arg[0];
     canopyopen = getprop("gear/canopy/position-norm");
     if (canopyopen) {
         setprop("controls/flight/door-position-norm",dooropen)
     }
-
+    
 } # end function
 
 toggleDoor = func{ # toggle the door if canopy is open
-
+    
     dooropen = getprop("controls/flight/door-position-norm");
     canopyopen = getprop("gear/canopy/position-norm");
     if (canopyopen) {
         dooropen = !dooropen;
         setprop("controls/flight/door-position-norm",dooropen);
     }
-
+    
 } # end function
 
 openCanopy = func{ # open the canopy if door is closed
-
+    
     canopyopen = arg[0];
     dooropen = getprop("controls/flight/door-position-norm");
     if (!dooropen) {
@@ -295,7 +332,7 @@ pullCutoff = func{
 
     pull=arg[0];
     mixturelever = getprop("controls/engines/engine/mixture-lever");
-
+    
     if(pull) {
         setprop("controls/engines/engine/cutoff-pull-norm",1);
         setprop("controls/engines/engine/cutoff",0);
@@ -324,7 +361,7 @@ setTankContents=func{
 	setprop("instrumentation/fuel/contents-gal_us",contents);
 #	print("contents: " , contents, " tank: " , tank);
     registerTimer(setTankContents);
-
+	
 }#end func
 
 registerTimer(setTankContents);
@@ -334,25 +371,25 @@ registerTimer(setTankContents);
 openCock=func{
 
     cock=getprop("controls/engines/engine/fuel-cock/lever");
-
+   
     if (cock < 2){
 	    cock = cock +1;
 		setprop("controls/engines/engine/fuel-cock/lever",cock);
 		adjustCock()
 		}
-
+        
 }#end func
 
 closeCock=func{
 
     cock=getprop("controls/engines/engine/fuel-cock/lever");
-
+   
     if (cock > 0){
 	    cock = cock - 1;
 		setprop("controls/engines/engine/fuel-cock/lever",cock);
 		adjustCock()
 		}
-
+        
 }#end func
 
 
@@ -361,7 +398,7 @@ closeCock=func{
 adjustCock=func{
 
     lever=getprop("controls/engines/engine/fuel-cock/lever");
-
+    
     if (lever == 0){
         setprop("consumables/fuel/tank[0]/selected",0);
 		setprop("consumables/fuel/tank[1]/selected",0);
@@ -377,7 +414,7 @@ adjustCock=func{
 		setprop("consumables/fuel/tank[1]/selected",0);
 		setprop("consumables/fuel/tank[2]/selected",1);
     }
-
+    
 }#end func
 
 # ========================== end fuel stuff ======================================
@@ -387,17 +424,17 @@ adjustCock=func{
 
 hydraulicLever = func{             #sets the lever up-down, right-left or neutral
 
-    right = arg[0];
+    right = arg[0]; 
 	up = arg[1];
 	lever=[0,1];
-
+	
 #	print("input: ",right,up);
-
+	
 	lever[0]= getprop("controls/hydraulic/lever[0]"); #right/left
 	lever[1]= getprop("controls/hydraulic/lever[1]"); #up/down
-
+    
 #	print ("lever in: ", lever[0],lever[1]);
-
+		
     if ( lever[0] == 0 or lever[0] == right) {     #
 	    if (up == 1  and lever[1] < 1){
 			lever[1] = lever[1] + 1;
@@ -408,26 +445,26 @@ hydraulicLever = func{             #sets the lever up-down, right-left or neutra
 		elsif (up == 0) {
 			lever[1] = 0;
 		}
-
+	    
 		if (lever[1] == 0) {
 			lever[0] = 0;
 		} else {
 			lever[0] = right;
 		}
 	}
-
+	
 #	print ("lever out: ", lever[0],lever[1]);
-
+	
 	setprop("controls/hydraulic/lever[1]",lever[1]);
 	setprop("controls/hydraulic/lever[0]",lever[0]);
-
-	if (lever[0] == 1 and lever[1] == -1)
-	 	{ registerTimer (flapBlowin)}   # run the timer
-
-	if (lever[0] == -1 and lever[1] != 0)
-	 	{ registerTimer (wheelsMove)}   # run the timer
-
-} # end function
+	
+	if (lever[0] == 1 and lever[1] == -1) 
+	 	{ registerTimer (flapBlowin)}   # run the timer 
+		
+	if (lever[0] == -1 and lever[1] != 0) 
+	 	{ registerTimer (wheelsMove)}   # run the timer                    
+	    
+} # end function 
 
 flapBlowin = func{
     flap = 0;
@@ -438,34 +475,34 @@ flapBlowin = func{
 	flap_pos = getprop("surface-positions/flap-pos-norm");
 
 #    print("lever: " , lever[1] , " airspeed (kts): " , airspeed , " flap pos: " , flap_pos);
-
+    
 	if (lever[0] == 1){
-     if (lever[1] == -1 and airspeed < 105) {
+     if (lever[1] == -1 and airspeed < 105) { 
         setprop("controls/flight/flaps" , flap_pos + 0.05);    # increase the flap
-        return registerTimer(flapBlowin);                      # run the timer
+        return registerTimer(flapBlowin);                      # run the timer                
         }
 		elsif (lever[1] == -1 and airspeed >= 110 and airspeed <= 120) {
             flap = -0.08*airspeed + 9.4;
             if(flap_pos < flap)
 				{
-            	setprop("controls/flight/flaps" , flap_pos + 0.05); # flap partially blown in
-				}
-            return registerTimer(flapBlowin);                    # run the timer
+            	setprop("controls/flight/flaps" , flap_pos + 0.05); # flap partially blown in 
+				} 
+            return registerTimer(flapBlowin);                    # run the timer                        
         }
         elsif (lever[1] == -1 and airspeed > 120) {
             flap = 0.2;
             if(flap_pos < flap)
 				{
-            	setprop("controls/flight/flaps" , flap_pos + 0.05); # flap partially blown in
-				}
+            	setprop("controls/flight/flaps" , flap_pos + 0.05); # flap partially blown in 
+				} 
 		    return registerTimer(flapBlowin);                  # run timer
-		}
+		}                    
     if ( lever[1] == 1) {
 			setprop("controls/flight/flaps" , flap_pos - 0.05);
-		return registerTimer(flapBlowin);
+		return registerTimer(flapBlowin); 
 		}
 	}
-
+	 
 	if (flap_pos != 0 and airspeed < 110){
 	        return registerTimer(flapBlowin);
         }
@@ -474,49 +511,49 @@ flapBlowin = func{
 			if (flap_pos > flap){
 #            	print("flap: " , "flap 1");
 				setprop("controls/flight/flaps", flap);    		# flap partially blown in
-			}
+			}  
 			return registerTimer(flapBlowin);
 		}
 		elsif (flap_pos != 0 and airspeed > 120) {
             flap = 0.2;
             if (flap_pos > flap){
 #            	print("flap: " , "flap 2");
-				setprop("controls/flight/flaps", flap);       # flap blown in
+				setprop("controls/flight/flaps", flap);       # flap blown in                                         
             }
 #			print("flap: " , "flap 2");
 			return registerTimer(flapBlowin);                  # run the timer
-		}
+		}                    
 	else
-		{                    # stop flap movement, don't run the timer
+		{                    # stop flap movement, don't run the timer                    
         return;
-		}
+		}   
 } # end function
 
 wheelsMove = func{
-
+    	
 	lever=[0,1];
     lever[0] = getprop("controls/hydraulic/lever[0]");
 	lever[1] = getprop("controls/hydraulic/lever[1]");
 	wheel_pos = getprop("gear/gear/position-norm[0]");
-
-
+    
+    
 	if (lever[0] == -1){
      if (lever[1] == -1 ) {
-#	    print("levers1: " ,lever[0], lever[1] , " wheel pos: " , wheel_pos);
+#	    print("levers1: " ,lever[0], lever[1] , " wheel pos: " , wheel_pos); 
         setprop("controls/hydraulic/wheels" , wheel_pos + 0.05);     # lower wheels
-        return registerTimer(wheelsMove);                        # run the timer
+        return registerTimer(wheelsMove);                        # run the timer                
         }
 	 elsif ( lever[1] == 1) {
 #		print("levers2: " ,lever[0], lever[1] , " wheel pos: " , wheel_pos);
 		setprop("controls/hydraulic/wheels" , wheel_pos - 0.05); # raise wheels
-		return registerTimer(wheelsMove);
+		return registerTimer(wheelsMove); 
 		}
 	else
-		{                    # stop wheel movement, don't run the timer
+		{                    # stop wheel movement, don't run the timer                    
         return;
 		}
-	}
-} # end function
+	}   
+} # end function  
 
 # =============================== end flap stuff =========================================
 
@@ -529,23 +566,23 @@ toggleGearWarn = func{                                         # toggle the gear
 #   print("cancel :", cancel);
     setprop("sim/alarms/gear-warn",cancel);
     if (cancel) {registerTimer(resetWarn)}                    # run the timer
-
-} # end function
+        
+} # end function 
 
 resetWarn = func{
 
     throttle = getprop("controls/engines/engine/throttle");
     gearwarn = getprop("sim/alarms/gear-warn");
 #   print("throttle " , throttle , " gearwarn: " , gearwarn);
-    if (gearwarn and throttle >= 0.25 ) {
+    if (gearwarn and throttle >= 0.25 ) { 
         setprop("sim/alarms/gear-warn",0);                    # reset the gear warning
         }
         else
         {
-        return registerTimer(resetWarn);                      # run the timer
+        return registerTimer(resetWarn);                      # run the timer                
         }
-
-} # end function
+        
+} # end function 
 
 
 # =========================== end gear warning stuff =========================================
@@ -567,43 +604,44 @@ negGCutoff = func{
 			else  {                                    # mixture set by - ve g
 				mixture = 0;
 		}
-    }
-
+    } 
+	    
 #    print("g: " , g , " mixture: " , mixture);
-
+    
     return mixture;
 
-} # end function
+} # end function 
 
 # =============================== end -ve g cutoff ===========================================
 
-# =============================== boost stuff =========================================
+# =============================== Pilot G stuff======================================
 
-toggleBoost = func{
+pilot_g = props.globals.getNode("accelerations/pilot-g", 1);
+timeratio = props.globals.getNode("accelerations/timeratio", 1);
+pilot_g_damped = props.globals.getNode("accelerations/pilot-g-damped", 1);
 
-    b = getprop("controls/engines/engine/boost");
-    if (b == 1) {
-	  b = 0.79; }
-	else  {
-	  b = 1;
-		}
-   setprop("controls/engines/engine/boost",b);
-#  print("b: " , b );
+pilot_g.setDoubleValue(0);
+pilot_g_damped.setDoubleValue(0); 
+timeratio.setDoubleValue(0.03); 
 
-} # end function
+g_damp = 0;
 
-toggleCutout = func{
+updatePilotG = func {
+        var n = timeratio.getValue(); 
+		var g = pilot_g.getValue() ;
+		#if (g == nil) { g = 0; }
+		g_damp = ( g * n) + (g_damp * (1 - n));
+		
+		pilot_g_damped.setDoubleValue(g_damp);
 
-    c = getprop("controls/engines/engine/cutout");
-    c = !c;
-    setprop("controls/engines/engine/cutout",c);
-#   print("c: " , c );
+# print(sprintf("pilot_g_damped in=%0.5f, out=%0.5f", g, g_damp));
+        
+        settimer(updatePilotG, 0.1);
 
-} # end function
+} #end updatePilotG()
 
-# =============================== end boost cutoff ===========================================
+updatePilotG();
 
-controls.gearDown = func { if (arg[0] != 0) { hydraulicLever(-1, -arg[0]) } }
-controls.flapsDown = func { if (arg[0] != 0) { hydraulicLever(1, -arg[0]) } }
+# ======================================= end Pilot G stuff ============================
 
-# end
+# end 
