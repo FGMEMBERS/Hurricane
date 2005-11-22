@@ -22,6 +22,10 @@
         <name>f/F</name>
         <desc>close/open canopy</desc>
       </key>
+      <key>
+        <name>g/G</name>
+        <desc>gear up/down</desc>
+      </key>
       <key> 
         <name>h/H</name>
         <desc>radiator flap up/down</desc>
@@ -48,7 +52,11 @@
       </key>
       <key> 
         <name>( )</name>
-        <desc> rotate fuel cock left/right </desc>
+        <desc>rotate fuel cock left/right</desc>
+      </key>
+      <key>
+        <name>[ ]</name>
+        <desc>flaps up/down</desc>
       </key>
       <key> 
         <name>&lt; &gt;</name>

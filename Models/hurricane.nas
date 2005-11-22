@@ -422,6 +422,9 @@ adjustCock=func{
 
 # =========================== hydraulic stuff =========================================
 
+controls.gearDown = func(x) { if (x) { hydraulicLever(-1, -x) } }
+controls.flapsDown = func(x) { if (x) { hydraulicLever(1, -x) } }
+
 hydraulicLever = func{             #sets the lever up-down, right-left or neutral
 
     right = arg[0]; 
