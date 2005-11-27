@@ -5,9 +5,9 @@ MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.2 0.2 0.2  emis 0 0 0
 OBJECT world
 kids 6
 OBJECT poly
-name "Face"
+name "face"
 loc -0.00280584 6.67274e-008 6.13402e-008
-texture "spitfire-turn.rgb"
+texture "hurricane-turn-a.rgb"
 crease 61.000000
 numvert 17
 0.00394517 3.14048e-007 -0.0491641
