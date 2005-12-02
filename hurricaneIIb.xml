@@ -43,7 +43,7 @@ The reference datum for measurements is the nose.
     />
     <wing  
 		x="-3.48" y="1.34" z="-0.57"
-		taper="0.5" incidence="-2" twist="2.0"
+		taper="0.5" incidence="2" twist="-2.0"
 		length="4.314" chord="2.497" sweep="-3"
 		dihedral="3.5" effectiveness="1.0" > 
       <stall aoa="24" width="4" peak="1.5"/>
@@ -84,20 +84,20 @@ The reference datum for measurements is the nose.
 		  />
     </vstab>
     <!-- stub wing left -->
-    <vstab x="-2.99" y="0.44" z="-0.57" taper="0" incidence="2" twist="0"
-       chord="2.497" sweep="0"  dihedral="90" 
+    <vstab x="-2.99" y="0.44" z="-0.57" taper="0" incidence="-2" twist="0"
+       chord="2.497" sweep="0"  dihedral="-90" 
        length="0.897"  > 
-      <stall aoa="20" width="4" peak="1.5"/>
+      <stall aoa="15" width="4" peak="1.5"/>
       <flap0 start="0.00" end="1" lift="1.45" drag="1.5"/>
       <control-input axis="/controls/flight/flaps" control="FLAP0"/>
       <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
       <control-speed control="FLAP0" transition-time="10"/>
     </vstab>
     <!-- stub wing right -->
-    <vstab x="-2.99" y="-0.44" z="-0.57" taper="0" incidence="-2" twist="0"
-       chord="2.497" sweep="0"  dihedral="-90" 
+    <vstab x="-2.99" y="-0.44" z="-0.57" taper="0" incidence="2" twist="0"
+       chord="2.497" sweep="0"  dihedral="90" 
        length="0.897"  > 
-      <stall aoa="20" width="4" peak="1.5"/>
+      <stall aoa="15" width="4" peak="1.5"/>
       <flap0 start="0.00" end="1" lift="1.45" drag="1.5"/>
       <control-input axis="/controls/flight/flaps" control="FLAP0"/>
       <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
@@ -105,7 +105,7 @@ The reference datum for measurements is the nose.
     </vstab>
     <!-- radiator 'wing' centre -->
     <vstab x="-3.93" y="-0.34" z="-1.09" taper="0" incidence="0" twist="0"
-       chord="1.00" sweep="0" dihedral="-90" 
+       chord="1.00" sweep="0" dihedral="90" 
        length="0.68"  > 
       <stall aoa="25" width="4" peak="1.5"/>
       <flap0 start="0.00" end="1" lift="1.1" drag="1.3"/>
