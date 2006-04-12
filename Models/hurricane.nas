@@ -62,7 +62,7 @@ toggleCutout = func{
 	c = !c;
 	boost_control_cutout.setBoolValue(c);
 	 	    
-	print("c: " , c );
+#	print("c: " , c );
     
 } # end function toggleCutout
 
@@ -91,10 +91,10 @@ updateBoostControl = func {
 			
 		damp = (val * n) + (damp * (1 - n)); # apply low pass filter
       
-#        print(sprintf("mp=%0.5f, in=%0.5f, raw=%0.5f, out=%0.5f", mp, in, val, damp));
-		boost_pressure_psi.setDoubleValue(mp);
+#  print(sprintf("mp=%0.5f, in=%0.5f, raw=%0.5f, out=%0.5f", mp, in, val, damp));
+				boost_pressure_psi.setDoubleValue(mp);
         boost_control.setDoubleValue(damp);
-#		boost_control_cutout.setBoolValue(cutout);
+				boost_control_cutout.setBoolValue(cutout);
         settimer(updateBoostControl, 0.1);
 }
 
@@ -427,7 +427,7 @@ controls.flapsDown = func(x) { if (x) { hydraulicLever(1, -x) } }
 
 hydraulicLever = func{             #sets the lever up-down, right-left or neutral
 
-    right = arg[0]; 
+	right = arg[0]; 
 	up = arg[1];
 	lever=[0,1];
 	
@@ -470,9 +470,9 @@ hydraulicLever = func{             #sets the lever up-down, right-left or neutra
 } # end function 
 
 flapBlowin = func{
-    flap = 0;
+	flap = 0;
 	lever=[0,1];
-    lever[0] = getprop("controls/hydraulic/lever[0]");
+	lever[0] = getprop("controls/hydraulic/lever[0]");
 	lever[1] = getprop("controls/hydraulic/lever[1]");
 	airspeed = getprop("velocities/airspeed-kt");
 	flap_pos = getprop("surface-positions/flap-pos-norm");
@@ -535,7 +535,7 @@ flapBlowin = func{
 wheelsMove = func{
     	
 	lever=[0,1];
-    lever[0] = getprop("controls/hydraulic/lever[0]");
+	lever[0] = getprop("controls/hydraulic/lever[0]");
 	lever[1] = getprop("controls/hydraulic/lever[1]");
 	wheel_pos = getprop("gear/gear/position-norm[0]");
     
@@ -543,8 +543,8 @@ wheelsMove = func{
 	if (lever[0] == -1){
      if (lever[1] == -1 ) {
 #	    print("levers1: " ,lever[0], lever[1] , " wheel pos: " , wheel_pos); 
-        setprop("controls/hydraulic/wheels" , wheel_pos + 0.05);     # lower wheels
-        return registerTimer(wheelsMove);                        # run the timer                
+			setprop("controls/hydraulic/wheels" , wheel_pos + 0.05);     # lower wheels
+			return registerTimer(wheelsMove);                            # run the timer                
         }
 	 elsif ( lever[1] == 1) {
 #		print("levers2: " ,lever[0], lever[1] , " wheel pos: " , wheel_pos);
