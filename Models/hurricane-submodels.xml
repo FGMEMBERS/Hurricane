@@ -40,7 +40,7 @@
     <submodel> 
       <name>Browning L inner</name>
       <model>Models/Geometry/tracer.ac</model>
-      <trigger>ai/submodels/trigger</trigger>
+      <trigger>controls/armament/trigger</trigger>
       <speed>2444.2</speed>
       <repeat>true</repeat>
       <delay>0.0526</delay>
@@ -58,7 +58,7 @@
     <submodel> 
       <name>Browning L inner smoke</name>
       <model>Aircraft/Hurricane/Models/smoke.xml</model>
-      <trigger>ai/submodels/trigger</trigger>
+      <trigger>controls/armament/trigger</trigger>
       <speed>10</speed>
       <repeat>true</repeat>
       <delay>0.052631579</delay>
@@ -76,7 +76,7 @@
     <submodel> 
       <name>Browning R inner</name>
       <model>Models/Geometry/tracer.ac</model>
-      <trigger>ai/submodels/trigger</trigger>
+      <trigger>controls/armament/trigger</trigger>
       <speed>2444.2</speed>
       <repeat>true</repeat>
       <delay>0.0526</delay>
@@ -95,7 +95,7 @@
     <submodel> 
       <name>Browning R inner smoke</name>
       <model>Aircraft/Hurricane/Models/smoke.xml</model>
-      <trigger>ai/submodels/trigger</trigger>
+      <trigger>controls/armament/trigger</trigger>
       <speed>10</speed>
       <repeat>true</repeat>
       <delay>0.052631579</delay>
@@ -114,7 +114,7 @@
     <submodel> 
       <name>browning L inner centre smoke</name>
       <model>Aircraft/Hurricane/Models/smoke.xml</model>
-      <trigger>ai/submodels/trigger</trigger>
+      <trigger>controls/armament/trigger</trigger>
       <speed>10</speed>
       <repeat>true</repeat>
       <delay>0.052631579</delay>
@@ -132,7 +132,7 @@
     <submodel> 
       <name>browning R inner centre smoke</name>
       <model>Aircraft/Hurricane/Models/smoke.xml</model>
-      <trigger>ai/submodels/trigger</trigger>
+      <trigger>controls/armament/trigger</trigger>
       <speed>10</speed>
       <repeat>true</repeat>
       <delay>0.052631579</delay>
@@ -150,7 +150,7 @@
     <submodel> 
       <name>browning L outer centre smoke</name>
       <model>Aircraft/Hurricane/Models/smoke.xml</model>
-      <trigger>ai/submodels/trigger</trigger>
+      <trigger>controls/armament/trigger</trigger>
       <speed>10</speed>
       <repeat>true</repeat>
       <delay>0.052631579</delay>
@@ -168,7 +168,7 @@
     <submodel> 
       <name>browning R outer centre smoke</name>
       <model>Aircraft/Hurricane/Models/smoke.xml</model>
-      <trigger>ai/submodels/trigger</trigger>
+      <trigger>controls/armament/trigger</trigger>
       <speed>10</speed>
       <repeat>true</repeat>
       <delay>0.052631579</delay>
@@ -186,7 +186,7 @@
     <submodel> 
       <name>browning L outer smoke</name>
       <model>Aircraft/Hurricane/Models/smoke.xml</model>
-      <trigger>ai/submodels/trigger</trigger>
+      <trigger>controls/armament/trigger</trigger>
       <speed>10</speed>
       <repeat>true</repeat>
       <delay>0.08</delay>
@@ -204,7 +204,7 @@
     <submodel> 
       <name>browning R center inner smoke</name>
       <model>Aircraft/Hurricane/Models/smoke.xml</model>
-      <trigger>ai/submodels/trigger</trigger>
+      <trigger>controls/armament/trigger</trigger>
       <speed>10</speed>
       <repeat>true</repeat>
       <delay>0.08</delay>
@@ -222,7 +222,7 @@
     <submodel> 
       <name>browning L outer L smoke</name>
       <model>Aircraft/Hurricane/Models/smoke.xml</model>
-      <trigger>ai/submodels/trigger</trigger>
+      <trigger>controls/armament/trigger</trigger>
       <speed>10</speed>
       <repeat>true</repeat>
       <delay>0.08</delay>
@@ -240,7 +240,7 @@
     <submodel> 
       <name>browning R outer L smoke</name>
       <model>Aircraft/Hurricane/Models/smoke.xml</model>
-      <trigger>ai/submodels/trigger</trigger>
+      <trigger>controls/armament/trigger</trigger>
       <speed>10</speed>
       <repeat>true</repeat>
       <delay>0.08</delay>
@@ -258,7 +258,7 @@
     <submodel> 
       <name>browning L outer R smoke</name>
       <model>Aircraft/Hurricane/Models/smoke.xml</model>
-      <trigger>ai/submodels/trigger</trigger>
+      <trigger>controls/armament/trigger</trigger>
       <speed>10</speed>
       <repeat>true</repeat>
       <delay>0.08</delay>
@@ -276,7 +276,7 @@
     <submodel> 
       <name>browning R outer R smoke</name>
       <model>Aircraft/Hurricane/Models/smoke.xml</model>
-      <trigger>ai/submodels/trigger</trigger>
+      <trigger>controls/armament/trigger</trigger>
       <speed>10</speed>
       <repeat>true</repeat>
       <delay>0.08</delay>
