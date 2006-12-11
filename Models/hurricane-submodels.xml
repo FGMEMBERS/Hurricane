@@ -40,7 +40,7 @@
     <submodel> 
       <name>Browning L inner</name>
       <model>Models/Geometry/tracer.ac</model>
-      <trigger>controls/armament/trigger</trigger>
+      <trigger>ai/submodels/trigger</trigger>
       <speed>2444.2</speed>
       <repeat>true</repeat>
       <delay>0.0526</delay>
@@ -58,7 +58,7 @@
     <submodel> 
       <name>Browning L inner smoke</name>
       <model>Aircraft/Hurricane/Models/smoke.xml</model>
-      <trigger>controls/armament/trigger</trigger>
+      <trigger>ai/submodels/trigger</trigger>
       <speed>10</speed>
       <repeat>true</repeat>
       <delay>0.052631579</delay>
@@ -76,7 +76,7 @@
     <submodel> 
       <name>Browning R inner</name>
       <model>Models/Geometry/tracer.ac</model>
-      <trigger>controls/armament/trigger</trigger>
+      <trigger>ai/submodels/trigger</trigger>
       <speed>2444.2</speed>
       <repeat>true</repeat>
       <delay>0.0526</delay>
@@ -95,7 +95,7 @@
     <submodel> 
       <name>Browning R inner smoke</name>
       <model>Aircraft/Hurricane/Models/smoke.xml</model>
-      <trigger>controls/armament/trigger</trigger>
+      <trigger>ai/submodels/trigger</trigger>
       <speed>10</speed>
       <repeat>true</repeat>
       <delay>0.052631579</delay>
@@ -114,7 +114,7 @@
     <submodel> 
       <name>browning L inner centre smoke</name>
       <model>Aircraft/Hurricane/Models/smoke.xml</model>
-      <trigger>controls/armament/trigger</trigger>
+      <trigger>ai/submodels/trigger</trigger>
       <speed>10</speed>
       <repeat>true</repeat>
       <delay>0.052631579</delay>
@@ -132,7 +132,7 @@
     <submodel> 
       <name>browning R inner centre smoke</name>
       <model>Aircraft/Hurricane/Models/smoke.xml</model>
-      <trigger>controls/armament/trigger</trigger>
+      <trigger>ai/submodels/trigger</trigger>
       <speed>10</speed>
       <repeat>true</repeat>
       <delay>0.052631579</delay>
@@ -150,7 +150,7 @@
     <submodel> 
       <name>browning L outer centre smoke</name>
       <model>Aircraft/Hurricane/Models/smoke.xml</model>
-      <trigger>controls/armament/trigger</trigger>
+      <trigger>ai/submodels/trigger</trigger>
       <speed>10</speed>
       <repeat>true</repeat>
       <delay>0.052631579</delay>
@@ -168,7 +168,7 @@
     <submodel> 
       <name>browning R outer centre smoke</name>
       <model>Aircraft/Hurricane/Models/smoke.xml</model>
-      <trigger>controls/armament/trigger</trigger>
+      <trigger>ai/submodels/trigger</trigger>
       <speed>10</speed>
       <repeat>true</repeat>
       <delay>0.052631579</delay>
@@ -186,7 +186,7 @@
     <submodel> 
       <name>browning L outer smoke</name>
       <model>Aircraft/Hurricane/Models/smoke.xml</model>
-      <trigger>controls/armament/trigger</trigger>
+      <trigger>ai/submodels/trigger</trigger>
       <speed>10</speed>
       <repeat>true</repeat>
       <delay>0.08</delay>
@@ -204,7 +204,7 @@
     <submodel> 
       <name>browning R center inner smoke</name>
       <model>Aircraft/Hurricane/Models/smoke.xml</model>
-      <trigger>controls/armament/trigger</trigger>
+      <trigger>ai/submodels/trigger</trigger>
       <speed>10</speed>
       <repeat>true</repeat>
       <delay>0.08</delay>
@@ -222,7 +222,7 @@
     <submodel> 
       <name>browning L outer L smoke</name>
       <model>Aircraft/Hurricane/Models/smoke.xml</model>
-      <trigger>controls/armament/trigger</trigger>
+      <trigger>ai/submodels/trigger</trigger>
       <speed>10</speed>
       <repeat>true</repeat>
       <delay>0.08</delay>
@@ -240,7 +240,7 @@
     <submodel> 
       <name>browning R outer L smoke</name>
       <model>Aircraft/Hurricane/Models/smoke.xml</model>
-      <trigger>controls/armament/trigger</trigger>
+      <trigger>ai/submodels/trigger</trigger>
       <speed>10</speed>
       <repeat>true</repeat>
       <delay>0.08</delay>
@@ -258,7 +258,7 @@
     <submodel> 
       <name>browning L outer R smoke</name>
       <model>Aircraft/Hurricane/Models/smoke.xml</model>
-      <trigger>controls/armament/trigger</trigger>
+      <trigger>ai/submodels/trigger</trigger>
       <speed>10</speed>
       <repeat>true</repeat>
       <delay>0.08</delay>
@@ -276,7 +276,7 @@
     <submodel> 
       <name>browning R outer R smoke</name>
       <model>Aircraft/Hurricane/Models/smoke.xml</model>
-      <trigger>controls/armament/trigger</trigger>
+      <trigger>ai/submodels/trigger</trigger>
       <speed>10</speed>
       <repeat>true</repeat>
       <delay>0.08</delay>
@@ -292,39 +292,112 @@
       <life>5</life>
     </submodel>
     <submodel> 
-      <name>exhaust smoke r</name>
+      <name>exhaust smoke r f</name>
       <model>Aircraft/Hurricane/Models/exhaust.xml</model>
       <trigger>engines/engine/cranking</trigger>
-      <speed>50</speed>
+      <speed>25</speed>
       <repeat>true</repeat>
       <delay>0.001</delay>
       <count>-1</count>
-      <x-offset>-4</x-offset>
-      <y-offset>2.8</y-offset>
-      <z-offset>0.5</z-offset>
-      <yaw-offset>-160</yaw-offset>
+      <x-offset>-4.408</x-offset>
+      <y-offset>1.73</y-offset>
+      <z-offset>0.2194</z-offset>
+      <yaw-offset>160</yaw-offset>
       <pitch-offset>0.0</pitch-offset>
       <eda>10</eda>
-      <life>1</life>
+      <life>5</life>
       <buoyancy>34</buoyancy>
       <wind>true</wind>
     </submodel>
     <submodel> 
-      <name>exhaust smoke l</name>
+      <name>exhaust smoke l f</name>
       <model>Aircraft/Hurricane/Models/exhaust.xml</model>
       <trigger>engines/engine/cranking</trigger>
-      <speed>50</speed>
+      <speed>25</speed>
       <repeat>true</repeat>
       <delay>0.001</delay>
       <count>-1</count>
-      <x-offset>-4</x-offset>
-      <y-offset>-2.8</y-offset>
-      <z-offset>0.5</z-offset>
-      <yaw-offset>160</yaw-offset>
+      <x-offset>-4.408</x-offset>
+      <y-offset>-1.73</y-offset>
+      <z-offset>0.2194</z-offset>
+      <yaw-offset>-160</yaw-offset>
       <pitch-offset>0.0</pitch-offset>
       <eda>10</eda>
-      <life>1</life>
+      <life>5</life>
       <buoyancy>34</buoyancy>
       <wind>true</wind>
     </submodel>
+		<submodel> 
+      <name>exhaust smoke r c</name>
+      <model>Aircraft/Hurricane/Models/exhaust.xml</model>
+      <trigger>engines/engine/cranking</trigger>
+      <speed>25</speed>
+      <repeat>true</repeat>
+      <delay>0.001</delay>
+      <count>-1</count>
+      <x-offset>-5.4347</x-offset>
+      <y-offset>1.73</y-offset>
+      <z-offset>0.2194</z-offset>
+      <yaw-offset>160</yaw-offset>
+      <pitch-offset>0.0</pitch-offset>
+      <eda>10</eda>
+      <life>5</life>
+      <buoyancy>34</buoyancy>
+      <wind>true</wind>
+    </submodel>
+    <submodel> 
+      <name>exhaust smoke l c</name>
+      <model>Aircraft/Hurricane/Models/exhaust.xml</model>
+      <trigger>engines/engine/cranking</trigger>
+      <speed>25</speed>
+      <repeat>true</repeat>
+      <delay>0.001</delay>
+      <count>-1</count>
+      <x-offset>-5.4347</x-offset>
+      <y-offset>-1.73</y-offset>
+      <z-offset>0.2194</z-offset>
+      <yaw-offset>-160</yaw-offset>
+      <pitch-offset>0.0</pitch-offset>
+      <eda>10</eda>
+      <life>5</life>
+      <buoyancy>34</buoyancy>
+      <wind>true</wind>
+    </submodel>
+		<submodel> 
+      <name>exhaust smoke r r</name>
+      <model>Aircraft/Hurricane/Models/exhaust.xml</model>
+      <trigger>engines/engine/cranking</trigger>
+      <speed>25</speed>
+      <repeat>true</repeat>
+      <delay>0.001</delay>
+      <count>-1</count>
+      <x-offset>-6.4655</x-offset>
+      <y-offset>1.73</y-offset>
+      <z-offset>0.2194</z-offset>
+      <yaw-offset>160</yaw-offset>
+      <pitch-offset>0.0</pitch-offset>
+      <eda>10</eda>
+      <life>5</life>
+      <buoyancy>34</buoyancy>
+      <wind>true</wind>
+    </submodel>
+    <submodel> 
+      <name>exhaust smoke l r</name>
+      <model>Aircraft/Hurricane/Models/exhaust.xml</model>
+      <trigger>engines/engine/cranking</trigger>
+      <speed>25</speed>
+      <repeat>true</repeat>
+      <delay>0.001</delay>
+      <count>-1</count>
+      <x-offset>-6.4655</x-offset>
+      <y-offset>-1.73</y-offset>
+      <z-offset>0.2194</z-offset>
+      <yaw-offset>-160</yaw-offset>
+      <pitch-offset>0.0</pitch-offset>
+      <eda>10</eda>
+      <life>5</life>
+      <buoyancy>34</buoyancy>
+      <wind>true</wind>
+    </submodel>
+		
   </PropertyList>

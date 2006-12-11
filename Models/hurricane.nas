@@ -182,7 +182,7 @@ startCof = func{
 
 stopCof = func {
 
-    min_run = 2;
+    min_run = 1.0;
 	if (!Start and starterN.getValue()) {
 		if (nowN.getValue() - LastStartTime < min_run) {
 			settimer(stopCof, 0.2);			# too soon; let's try again later

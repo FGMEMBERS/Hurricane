@@ -19,7 +19,7 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
   <PropertyList> 
     <sim include="help.xml"> 
       <description type="string">Hawker Hurricane IIb</description>
-      <author>Vivian Meazza</author>
+      <author type="string">Vivian Meazza</author>
       <status>early-production</status>
       <flight-model>yasim</flight-model>
       <aero>hurricaneIIb</aero>
@@ -129,6 +129,9 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
     </consumables>
     <!-- set up control properties for YASim... -->
     <controls> 
+		<fuel>
+			<crossfeed type ="int">1</crossfeed>
+		</fuel>
       <engines> 
         <engine n="0"> 
           <mag-switch-left type="bool">0</mag-switch-left>
@@ -690,13 +693,14 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
       </weights>
     </yasim>
     <!-- nasal stuff -->
-    <nasal> 
+    <nasal>
+		<hurricane-fuel> 
+			<module>fuel</module>
+        <file>Aircraft/Hurricane/Models/fuel-cocks.nas</file>
+      </hurricane-fuel> 
       <hurricane> 
         <file>Aircraft/Hurricane/Models/hurricane.nas</file>
       </hurricane>
-      <hurricane-fuel> 
-        <module>fuel</module>
-        <file>Aircraft/Hurricane/Models/fuel-cocks.nas</file>
-      </hurricane-fuel>
+      
     </nasal>
   </PropertyList>
