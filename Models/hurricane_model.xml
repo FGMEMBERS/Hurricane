@@ -771,11 +771,11 @@
     <animation> 
       <type>blend</type>
       <object-name>noshadow.PropellerDisk</object-name>
-      <property>/engines/engine[0]/rpm</property>
-      <factor>0.00015</factor>
+      <property>engines/engine[0]/rpm</property>
+      <factor>0.0005</factor>
       <offset>-0.5</offset>
-      <min>0.0</min>
-      <max>0.5</max>
+      <min>0.5</min>
+      <max>1.0</max>
     </animation>
     <!-- ********* Undercarriage ********* -->
     <!-- Main Doors -->
