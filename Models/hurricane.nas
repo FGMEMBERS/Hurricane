@@ -867,46 +867,7 @@ headShake();
 
 # ================================== Steering ==========================================
 
-rudder_pos_node = props.globals.getNode("/controls/flight/rudder", 1);
-brake_left_node = props.globals.getNode("/controls/gear/brake-left", 1);
-brake_right_node = props.globals.getNode("/controls/gear/brake-right", 1);
-braking_node = props.globals.getNode("sim/model/controls/gear/braking", 1);
-
-controls.applyBrakes = func(v, which=0){
-
-	if (which == 0){braking_node.setDoubleValue(v);}
-	elsif (which < 0) {brake_left_node.setDoubleValue(v);}
-	elsif (which > 0) {brake_right_node.setDoubleValue(v);}
- 
-} # end function
-
-steering = func{
-
-	applied = cmdarg().getValue();
-
-	if (applied == 0 ) {
-		brake_left_node.setDoubleValue(0);
-		brake_right_node.setDoubleValue(0);	# Release brakes
-	}
-	elsif (rudder_pos_node.getValue() > 0.3 ) {
-		brake_left_node.setDoubleValue(0);
-		brake_right_node.setDoubleValue(rudder_pos_node.getValue());
-		return settimer(steering, 0); 	# Brake right and continue watching 
-	}
-	elsif (rudder_pos_node.getValue() < -0.3 ) {
-		brake_left_node.setDoubleValue(-rudder_pos_node.getValue());
-		brake_right_node.setDoubleValue(0);
-		return settimer(steering, 0); 	# Brake left and continue watching 
-	}
-	else {
-		brake_left_node.setDoubleValue(1);
-		brake_right_node.setDoubleValue(1);
-		return settimer(steering, 0); 	# Brake centrally and continue watching 
-	}	
-		
-} # end function
-
-setlistener("sim/model/controls/gear/braking", steering);
+aircraft.steering.init();
 
 # end 
 
