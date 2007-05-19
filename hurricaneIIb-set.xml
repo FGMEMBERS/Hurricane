@@ -107,6 +107,9 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
       <alarms> 
         <gear-warn type="double">0</gear-warn>
       </alarms>
+      <tutorials>
+        <tutorial include="Tutorials/startup_tutorial.xml"/>
+      </tutorials>
     </sim>
     <engines> 
       <engine> 

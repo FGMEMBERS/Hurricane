@@ -464,7 +464,12 @@
         <z-m>0.632783</z-m>
       </offsets>
     </model>
-    
+
+    <!-- Tutorial Marker -->
+    <model>
+      <path>Models/Aircraft/marker.xml</path>
+    </model>
+
 	<!-- hide all of the model not visible from the cockpit -->
     <animation> 
       <!--<type>select</type>-->
