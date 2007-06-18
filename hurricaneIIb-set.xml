@@ -643,13 +643,15 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
     </yasim>
     <!-- nasal stuff -->
     <nasal>
-		<hurricane-fuel> 
-			<module>fuel</module>
-        <file>Aircraft/Hurricane/Models/fuel-cocks.nas</file>
-      </hurricane-fuel> 
-      <hurricane> 
-        <file>Aircraft/Hurricane/Models/hurricane.nas</file>
-      </hurricane>
-      
+			<hurricane-fuel> 
+				<module>fuel</module>
+					<file>Aircraft/Hurricane/Models/fuel-cocks.nas</file>
+				</hurricane-fuel> 
+				<hurricane> 
+					<file>Aircraft/Hurricane/Models/hurricane.nas</file>
+				</hurricane>
+				<recoil>
+					<file>Aircraft/Hurricane/Models/recoil.nas</file>
+				</recoil>
     </nasal>
   </PropertyList>

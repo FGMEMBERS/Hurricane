@@ -39,7 +39,7 @@
   <PropertyList> 
     <submodel> 
       <name>Browning L inner</name>
-      <model>Models/Geometry/tracer.ac</model>
+      <model>Models/Geometry/tracer.xml</model>
       <trigger>ai/submodels/trigger</trigger>
       <speed>2444.2</speed>
       <repeat>true</repeat>
@@ -75,7 +75,7 @@
     </submodel>
     <submodel> 
       <name>Browning R inner</name>
-      <model>Models/Geometry/tracer.ac</model>
+      <model>Models/Geometry/tracer.xml</model>
       <trigger>ai/submodels/trigger</trigger>
       <speed>2444.2</speed>
       <repeat>true</repeat>
