@@ -4,7 +4,7 @@
     <animation> 
       <type>rotate</type>
       <object-name>Knob</object-name>
-      <property>/controls/flight/rudder-trim</property>
+      <property>controls/flight/rudder-trim</property>
       <factor>1440</factor>
       <axis> 
         <x>0</x>
@@ -15,7 +15,7 @@
 	<animation> 
       <type>material</type>
       <emission> 
-        <factor-prop>/controls/lighting/panel-norm</factor-prop>
+        <factor-prop>controls/lighting/panel-norm</factor-prop>
         <red>0.3</red>
         <green>0.025</green>
         <blue>0.025</blue>
