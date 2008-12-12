@@ -869,5 +869,27 @@ headShake();
 
 aircraft.steering.init();
 
+
+# ==================================  Engine Hobbs Meter ================================
+
+var hobbs_engine = aircraft.timer.new("sim/time/hobbs/engine[0]", 60, 0);
+var engine_running_Node = props.globals.initNode("engines/engine[0]/running", 1, "BOOL");
+
+hobbs_engine.reset();
+
+updateHobbs = func{
+	var running = engine_running_Node.getValue();
+
+	if(running){
+		hobbs_engine.start();
+	} else {
+		hobbs_engine.stop();
+	}
+
+	settimer(updateHobbs,0)
+}
+
+updateHobbs();
+
 # end 
 

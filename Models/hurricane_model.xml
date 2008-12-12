@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
   <!-- Hurricane IIb by Vivian Meazza -->
   <PropertyList> 
-    <path>hurricane-ver-25.ac</path>
+    <path>hurricane-ver-26.ac</path>
     <!-- Front hotspots -->
     <panel> 
       <path>Aircraft/Hurricane/Models/panel-hotspots.xml</path>
@@ -1212,6 +1212,22 @@
         <blue>0.025</blue>
       </emission>
     </animation>
+
+		
+		
+		<animation>
+		<type>material</type>
+		<object-name>Exhaust-Dirt</object-name>
+		<transparency>
+			<alpha-prop>sim/time/hobbs/engine[0]</alpha-prop>
+			<factor>0.00027</factor>
+			<offset>0</offset>
+			<max>0.7</max>
+			<min>0.0075</min>
+		</transparency>
+		<!--<threshold>0.001</threshold>-->
+	</animation>
+
 	<animation> 
       <type>select</type>
       <object-name>markers</object-name>
