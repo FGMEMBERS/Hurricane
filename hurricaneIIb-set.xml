@@ -650,8 +650,8 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 				<hurricane> 
 					<file>Aircraft/Hurricane/Models/hurricane.nas</file>
 				</hurricane>
-				<recoil>
+				<!--<recoil>
 					<file>Aircraft/Hurricane/Models/recoil.nas</file>
-				</recoil>
+				</recoil>-->
     </nasal>
   </PropertyList>
