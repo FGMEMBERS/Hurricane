@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!-- Hurricane IIb by Vivian Meazza -->
 <PropertyList>
-	<path>hurricane-ver-25.ac</path>
+	<path>hurricane-ver-26.ac</path>
 	<!-- Front hotspots -->
 	<panel>
 		<path>Aircraft/Hurricane/Models/panel-hotspots.xml</path>
