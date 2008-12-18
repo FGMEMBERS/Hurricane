@@ -9,7 +9,7 @@
       <object-name>disk-P-R</object-name>
       <condition> 
         <equals> 
-          <property>gear/gear[0]/position-norm</property>
+          <property>gear/gear[1]/position-norm</property>
           <value>0</value>
         </equals>
       </condition>
@@ -19,7 +19,7 @@
       <object-name>disk-P-R2</object-name>
       <condition> 
         <equals> 
-          <property>gear/gear[0]/position-norm</property>
+          <property>gear/gear[1]/position-norm</property>
           <value>0</value>
         </equals>
       </condition>
@@ -51,7 +51,7 @@
       <object-name>disk-P-G</object-name>
       <condition> 
         <equals> 
-          <property>gear/gear[0]/position-norm</property>
+          <property>gear/gear[1]/position-norm</property>
           <value>1</value>
         </equals>
       </condition>
@@ -61,7 +61,7 @@
       <object-name>disk-P-G2</object-name>
       <condition> 
         <equals> 
-          <property>gear/gear[0]/position-norm</property>
+          <property>gear/gear[1]/position-norm</property>
           <value>1</value>
         </equals>
       </condition>

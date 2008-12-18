@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!-- Hurricane IIb by Vivian Meazza -->
 <PropertyList>
-	<path>hurricane-ver-26.ac</path>
+	<path>hurricane-ver-25.ac</path>
 	<!-- Front hotspots -->
 	<panel>
 		<path>Aircraft/Hurricane/Models/panel-hotspots.xml</path>
@@ -560,6 +560,77 @@
 			</greater-than-equals>
 		</condition>
 	</animation>
+
+	<animation>
+		<type>select</type>
+		<nopreview/>
+		<object-name>Front-Panel-O-Rain</object-name>
+		<condition>
+			<greater-than>
+				<property>sim/model/rain/raining-norm</property>
+				<value>0.01</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>noshadow.Front-Panel-O</object-name>
+		<condition>
+			<less-than-equals>
+				<property>sim/model/rain/raining-norm</property>
+				<value>0.01</value>
+			</less-than-equals>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<nopreview/>
+		<object-name>Canopy-Front-Rain-S</object-name>
+		<condition>
+			<greater-than>
+				<property>sim/model/rain/raining-norm</property>
+				<value>0.01</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<nopreview/>
+		<object-name>Canopy-Front-Rain-P</object-name>
+		<condition>
+			<greater-than>
+				<property>sim/model/rain/raining-norm</property>
+				<value>0.01</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<nopreview/>
+		<object-name>Canopy-Main-Rain</object-name>
+		<condition>
+			<greater-than>
+				<property>sim/model/rain/raining-norm</property>
+				<value>0.01</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>noshadow.Canopy-Main</object-name>
+		<condition>
+			<less-than-equals>
+				<property>sim/model/rain/raining-norm</property>
+				<value>0.01</value>
+			</less-than-equals>
+		</condition>
+	</animation>
+
 	<!-- **************************** Pilot ******************************* -->
 	<!--  conceal Pilot Head etc in Cockpit View -->
 	<animation>
@@ -787,7 +858,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Door-L</object-name>
-		<property>gear/gear[0]/position-norm</property>
+		<property>gear/gear[1]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -816,7 +887,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Door-R</object-name>
-		<property>gear/gear[1]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -845,7 +916,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Door-L</object-name>
-		<property>gear/gear[0]/position-norm</property>
+		<property>gear/gear[1]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -870,7 +941,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Door-R</object-name>
-		<property>gear/gear[1]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -895,7 +966,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Door-L-Aux</object-name>
-		<property>gear/gear[0]/position-norm</property>
+		<property>gear/gear[1]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -924,7 +995,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Door-R-Aux</object-name>
-		<property>gear/gear[1]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -953,7 +1024,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Leg-Assembly-L</object-name>
-		<property>gear/gear/position-norm</property>
+		<property>gear/gear[1]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -976,7 +1047,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Leg-Assembly-R</object-name>
-		<property>gear/gear[1]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -999,7 +1070,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Leg-Assembly-L</object-name>
-		<property>gear/gear/position-norm</property>
+		<property>gear/gear[1]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -1024,7 +1095,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Leg-Assembly-R</object-name>
-		<property>gear/gear[1]/position-norm</property>
+		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -1050,7 +1121,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>Leg-Lower-Assembly-L</object-name>
-		<property>gear/gear/compression-norm</property>
+		<property>gear/gear[1]/compression-norm</property>
 		<factor>0.2</factor>
 		<axis>
 			<x>0</x>
@@ -1061,7 +1132,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>Leg-Lower-Assembly-R</object-name>
-		<property>gear/gear[1]/compression-norm</property>
+		<property>gear/gear[2]/compression-norm</property>
 		<factor>0.2</factor>
 		<axis>
 			<x>0</x>
@@ -1084,7 +1155,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>UC-Tail</object-name>
-		<property>gear/gear[2]/caster-angle-deg</property>
+		<property>gear/gear[0]/caster-angle-deg</property>
 		<factor>1</factor>
 		<axis>
 			<x1-m>8.41</x1-m>
@@ -1157,7 +1228,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Flap</object-name>
-		<property>engines/engine/cowl-flaps-norm</property>
+		<property>engines/engine/rad-flap-norm</property>
 		<factor>90</factor>
 		<axis>
 			<x1-m>4.19</x1-m>
@@ -1168,7 +1239,8 @@
 			<z2-m>-1.11</z2-m>
 		</axis>
 	</animation>
-	<animation>
+	
+	<!--<animation>
 		<type>rotate</type>
 		<object-name>Lever-Rad-Flap</object-name>
 		<property>controls/engines/engine/cowl-flaps-norm</property>
@@ -1190,7 +1262,7 @@
 			<y2-m>-0.19</y2-m>
 			<z2-m>-0.80</z2-m>
 		</axis>
-	</animation>
+	</animation>-->
 
 	<animation>
 		<type>material</type>
@@ -1212,6 +1284,8 @@
 			<blue>0.025</blue>
 		</emission>
 	</animation>
+	
+	<!-- ========== Dirt textures ========= -->
 
 	<animation>
 		<type>material</type>
@@ -1234,6 +1308,138 @@
 			<factor>0.00027</factor>
 			<offset>0</offset>
 			<max>0.9</max>
+			<min>0.0075</min>
+		</transparency>
+		<!--<threshold>0.001</threshold>-->
+	</animation>
+
+ <!-- ============= Rain Animations ============= -->
+
+	<model>
+		<path>Aircraft/Generic/Effects/tyre-smoke-port.xml</path>
+		<name>tyre-smoke-p</name>
+		<offsets>
+			<x-m>2.63754</x-m>
+			<y-m>-1.17333</y-m>
+			<z-m>-2.03148</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/Generic/Effects/tyre-smoke-stbd.xml</path>
+		<name>tyre-smoke-s</name>
+		<offsets>
+			<x-m>2.63754</x-m>
+			<y-m>1.17333</y-m>
+			<z-m>-2.03148</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/Generic/Effects/rain-port.xml</path>
+		<name>rain-p</name>
+		<offsets>
+			<x-m>2.63754</x-m>
+			<y-m>-1.17333</y-m>
+			<z-m>-2.03148</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/Generic/Effects/rain-stbd.xml</path>
+		<name>rain-s</name>
+		<offsets>
+			<x-m>2.63754</x-m>
+			<y-m>1.17333</y-m>
+			<z-m>-2.03148</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/Generic/Effects/rain-tail.xml</path>
+		<name>rain-t</name>
+		<offsets>
+			<x-m>8.56606</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.94651</z-m>
+		</offsets>
+	</model>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>Front-Panel-O-Rain</object-name>
+		<property>sim/model/rain/flow-mps</property>
+		<factor>1</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>textranslate</type>
+		<object-name>Canopy-Front-Rain-S</object-name>
+		<property>sim/model/rain/flow-mps</property>
+		<factor>1</factor>
+		<offset>0.33</offset>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>Canopy-Front-Rain-P</object-name>
+		<property>sim/model/rain/flow-mps</property>
+		<factor>1</factor>
+		<offset>0.66</offset>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>Canopy-Main-Rain</object-name>
+		<property>sim/model/rain/flow-mps</property>
+		<factor>1</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>Front-Panel-O-Rain</object-name>
+		<object-name>Canopy-Front-Rain-P</object-name>
+		<object-name>Canopy-Front-Rain-S</object-name>
+		<object-name>Canopy-Main-Rain</object-name>	<transparency>
+			<alpha-prop>velocities/airspeed-kt</alpha-prop>
+			<factor>-0.00333</factor>
+			<offset>1</offset>
+			<max>0.3</max>
+			<min>0.0075</min>
+		</transparency>
+		<!--<threshold>0.001</threshold>-->
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<object-name>Front-Panel-O-Rain</object-name>
+		<object-name>Canopy-Front-Rain-P</object-name>
+		<object-name>Canopy-Front-Rain-S</object-name>
+		<object-name>Canopy-Main-Rain</object-name>
+		<transparency>
+			<alpha-prop>sim/model/rain/raining-norm</alpha-prop>
+			<factor>0.7</factor>
+			<offset>0</offset>
+			<max>0.3</max>
 			<min>0.0075</min>
 		</transparency>
 		<!--<threshold>0.001</threshold>-->

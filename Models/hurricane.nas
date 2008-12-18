@@ -16,6 +16,14 @@ registerTimer = func {
 
 # =============================== end timer stuff ===========================================
 
+var cloud_visibilityNode = props.globals.initNode("/sim/rendering/clouds3d-vis-range", 25000, "DOUBLE");
+
+setlistener("environment/visibility-m", func (n) {
+	cloud_visibilityNode.setValue(n.getValue());
+	},
+	1,
+	0);
+
 # =============================== Boost Controller stuff======================================
 
 BOOST_CONTROL_AUTHORITY = 0.99; # How much can it move the throttle?
@@ -171,7 +179,7 @@ startCof = func{
 			if (ready) {
 				primerMixture(primerN.getValue());
 				starterN.setValue(1);
-#				print ("starter running!");
+#				print ("starter running!", primerN.getValue());
 			}
 		}
 	} else{
@@ -537,7 +545,7 @@ wheelsMove = func{
 	lever=[0,1];
 	lever[0] = getprop("controls/hydraulic/lever[0]");
 	lever[1] = getprop("controls/hydraulic/lever[1]");
-	wheel_pos = getprop("gear/gear/position-norm[0]");
+	wheel_pos = getprop("gear/gear[1]/position-norm[0]");
 	
 	
 	if (lever[0] == -1){
@@ -890,6 +898,110 @@ updateHobbs = func{
 }
 
 updateHobbs();
+
+# ================================== End Engine Hobbs Meter ================================
+
+# ==================================  Tyresmoke /Spray ================================
+var run_tyresmoke0 = 0;
+var run_tyresmoke1 = 0;
+var run_tyresmoke2 = 0;
+
+var tyresmoke_0 = aircraft.tyresmoke.new(0);
+var tyresmoke_1 = aircraft.tyresmoke.new(1);
+var tyresmoke_2 = aircraft.tyresmoke.new(2);
+
+# =============================== listeners ===============================
+#
+
+setlistener( "controls/lighting/nav-lights", func {
+	var nav_lights_node = props.globals.getNode("controls/lighting/nav-lights", 1);
+	var generic_node = props.globals.getNode("sim/multiplay/generic/int[0]", 1);
+	generic_node.setIntValue(nav_lights_node.getValue());
+	print("nav_lights ", nav_lights_node.getValue(), "generic_node ", generic_node.getValue());
+	}
+); 
+
+setlistener("gear/gear[0]/position-norm", func {
+	var gear = getprop("gear/gear[0]/position-norm");
+	
+	if (gear == 1 ){
+		run_tyresmoke0 = 1;
+	}else{
+		run_tyresmoke0 = 0;
+	}
+
+	},
+	1,
+	0);
+
+setlistener("gear/gear[1]/position-norm", func {
+	var gear = getprop("gear/gear[1]/position-norm");
+	
+	if (gear == 1 ){
+		run_tyresmoke1 = 1;
+	}else{
+		run_tyresmoke1 = 0;
+	}
+
+	},
+	1,
+	0);
+
+setlistener("gear/gear[2]/position-norm", func {
+	var gear = getprop("gear/gear[2]/position-norm");
+	
+	if (gear == 1 ){
+		run_tyresmoke2 = 1;
+	}else{
+		run_tyresmoke2 = 0;
+	}
+
+	},
+	1,
+	0);
+
+#============================ Tyre Smoke ===================================
+
+var tyresmoke = func {
+
+#print ("run_tyresmoke ",run_tyresmoke0,run_tyresmoke1,run_tyresmoke2);
+
+	if (run_tyresmoke0)
+		tyresmoke_0.update();
+
+	if (run_tyresmoke1)
+		tyresmoke_1.update();
+
+	if (run_tyresmoke2)
+		tyresmoke_2.update();
+
+	settimer(tyresmoke, 0);
+}# end tyresmoke
+
+# == fire it up ===
+
+tyresmoke();
+
+#============================ Rain ===================================
+
+aircraft.rain.init();
+
+var rain = func {
+	var running = engine_running_Node.getValue();
+	aircraft.rain.update();
+#	print("running ", running);
+
+	if(running){
+		setprop("sim/model/rain/flow-threshold-kt", 0);
+	} else {
+		setprop("sim/model/rain/flow-threshold-kt", 15);
+	}
+	
+	settimer(rain, 0);
+}
+
+# == fire it up ===
+rain()
 
 # end 
 
