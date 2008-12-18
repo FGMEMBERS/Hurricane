@@ -87,7 +87,7 @@ The reference datum for measurements is the nose.
 					 drag="1.5"/>
 		<flap1 start="0.457"
 					 end="1.0"
-					 lift="1.35"
+					 lift="1.2"
 					 drag="1.35"/>
 		<control-input axis="/controls/flight/flaps"
 									 control="FLAP0"/>
@@ -104,7 +104,7 @@ The reference datum for measurements is the nose.
 										 side="right"
 										 prop="/surface-positions/right-aileron-pos-norm"/>
 		<control-speed control="FLAP1"
-									 transition-time="1"/>
+									 transition-time="2"/>
 	</wing>
 	<!-- tailplane -->
 	<hstab
@@ -121,8 +121,8 @@ The reference datum for measurements is the nose.
 					 peak="1.5"/>
 		<flap0 start="0.0"
 					 end="1.1"
-					 lift="1.7"
-					 drag="1.6"/>
+					 lift="1.4"
+					 drag="1.4"/>
 		<control-input axis="/controls/flight/elevator"
 									 control="FLAP0"/>
 		<control-input axis="/controls/flight/elevator-trim"
@@ -130,7 +130,7 @@ The reference datum for measurements is the nose.
 		<control-output control="FLAP0"
 										prop="/surface-positions/elevator-pos-norm"/>
 		<control-speed control="FLAP0"
-									 transition-time="1"/>
+									 transition-time="2"/>
 	</hstab>
 	<!-- tail -->
 	<vstab x="-8.88"
@@ -155,7 +155,7 @@ The reference datum for measurements is the nose.
 		<control-output control="FLAP0"
 										prop="/surface-positions/rudder-pos-norm"/>
 		<control-speed control="FLAP0"
-									 transition-time="1"/>
+									 transition-time="2"/>
 		<flap1 start="0.3"
 					 end="0.65"
 					 lift="1.4"
@@ -234,10 +234,10 @@ The reference datum for measurements is the nose.
 					 end="1"
 					 lift="1.1"
 					 drag="1.3"/>
-		<control-input axis="/controls/engines/engine/cowl-flaps-norm"
+		<control-input axis="/controls/engines/engine/rad-flap-norm"
 									 control="FLAP0"/>
 		<control-output control="FLAP0"
-										prop="/engines/engine/cowl-flaps-norm"/>
+										prop="/engines/engine/rad-flap-norm"/>
 		<control-speed control="FLAP0"
 									 transition-time="3" />
 	</vstab>
@@ -323,6 +323,20 @@ The reference datum for measurements is the nose.
 									 dst0="0"
 									 dst1="1"/>
 	</thruster>
+	<!-- Tail wheel -->
+	<!-- tail wheel casters freely in Hurricane -->
+	<gear x="-8.57"
+				y="0"
+				z="-0.94"
+				compression="0.15"
+				castering="1">
+		<control-input axis="/controls/gear/tailwheel-lock"
+									 src0="0"
+									 src1="1"
+									 dst0="1"
+									 dst1="1"
+									 control="CASTERING"/>
+	</gear>
 	<!-- left main spring="0.7" damp="3.0" dfric="0.5" sfric="0.6"dfric="0.5" sfric="0.6"-->
 	<gear x="-2.64"
 				y="1.21"
@@ -343,7 +357,7 @@ The reference datum for measurements is the nose.
 		<control-speed control="EXTEND"
 									 transition-time="9"/>
 		<control-output control="EXTEND"
-										prop="/gear/gear/position-norm"/>
+										prop="/gear/gear[1]/position-norm"/>
 	</gear>
 	<!-- right main spring="0.7" damp="3.0" -->
 	<gear x="-2.64"
@@ -365,22 +379,9 @@ The reference datum for measurements is the nose.
 		<control-speed control="EXTEND"
 									 transition-time="7"/>
 		<control-output control="EXTEND"
-										prop="/gear/gear[1]/position-norm"/>
+										prop="/gear/gear[2]/position-norm"/>
 	</gear>
-	<!-- Tail wheel -->
-	<!-- tail wheel casters freely in Hurricane -->
-	<gear x="-8.57"
-				y="0"
-				z="-0.94"
-				compression="0.15"
-				castering="1">
-		<control-input axis="/controls/gear/tailwheel-lock"
-									 src0="0"
-									 src1="1"
-									 dst0="1"
-									 dst1="1"
-									 control="CASTERING"/>
-	</gear>
+
 	<!-- dummy Tail wheel - add a little friction to make it flyable! -->
 	<gear x="-8.57"
 				y="0"
