@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!-- Hurricane IIb by Vivian Meazza -->
 <PropertyList>
-	<path>hurricane-ver-26.ac</path>
+	<path>hurricane-ver-25.ac</path>
 	<!-- Front hotspots -->
 	<panel>
 		<path>Aircraft/Hurricane/Models/panel-hotspots.xml</path>
@@ -1169,7 +1169,7 @@
 	<!-- ***************** Canopy *********************** -->
 	<animation>
 		<type>translate</type>
-		<object-name>Canopy-Main-Frame</object-name>
+		<object-name>noshadow.Canopy-Main-Frame</object-name>
 		<object-name>noshadow.Canopy-Main</object-name>
 		<property>gear/canopy/position-norm</property>
 		<factor>0.575</factor>
