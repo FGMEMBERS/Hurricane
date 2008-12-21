@@ -78984,7 +78984,7 @@ refs 3
 5 0.503156 0.0466779
 kids 0
 OBJECT poly
-name "noshadow.PropellerDisk"
+name "PropellerDisk"
 loc -0.091974 0.0834453 -0.0203751
 texture "seafire-tx-05.rgb"
 crease 61.000000
@@ -80977,7 +80977,7 @@ refs 3
 54 0.0600493 0.400292
 kids 0
 OBJECT poly
-name "noshadow.Front-Panel-O"
+name "Front-Panel-O"
 loc 0.0303376 0.0514317 0.0325004
 crease 61.000000
 numvert 14
@@ -81070,7 +81070,7 @@ refs 3
 11 0 0
 kids 0
 OBJECT poly
-name "noshadow.Front-Panel-I"
+name "Front-Panel-I"
 loc 0.0303376 0.0514317 0.0293478
 crease 61.000000
 numvert 14
@@ -81163,7 +81163,7 @@ refs 3
 11 0 0
 kids 0
 OBJECT poly
-name "noshadow.Canopy-Front"
+name "Canopy-Front"
 loc -0.0940804 0.235125 -0.0205715
 crease 180.000000
 numvert 26
@@ -81320,7 +81320,7 @@ name "Canopy-Main-Assmbly"
 loc 0.202549 0.0233053 0
 kids 2
 OBJECT poly
-name "noshadow.Canopy-Main-Frame"
+name "Canopy-Main-Frame"
 loc -0.11351 0.262218 0
 texture "hurricane-tx-00.rgb"
 crease 87.000000
@@ -84640,7 +84640,7 @@ refs 3
 237 0.0283179 0.538655
 kids 0
 OBJECT poly
-name "noshadow.Canopy-Main"
+name "Canopy-Main"
 loc -0.11351 0.262218 0
 crease 180.000000
 numvert 78

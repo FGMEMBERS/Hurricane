@@ -424,7 +424,8 @@
 			<z-m>0.69</z-m>
 		</offsets>
 	</model>
-	<model>
+	
+	<!--<model>
 		<path>Aircraft/Hurricane/Models/blackout.xml</path>
 		<name>Blackout</name>
 		<offsets>
@@ -432,7 +433,7 @@
 			<y-m>0</y-m>
 			<z-m>0.72</z-m>
 		</offsets>
-	</model>
+	</model>-->
 
 	<!-- ***** Navigation Lights ****** -->
 	<model>
@@ -547,12 +548,12 @@
 		<type>select</type>
 		<object-name>Pilot</object-name>
 		<object-name>Propeller</object-name>
-		<object-name>noshadow.PropellerDisk</object-name>
-		<object-name>noshadow.Front-Panel-O</object-name>
-		<object-name>noshadow.Front-Panel-I</object-name>
-		<object-name>noshadow.Canopy-Front</object-name>
-		<object-name>noshadow.Canopy-Main</object-name>
-		<object-name>Blackout</object-name>
+		<object-name>PropellerDisk</object-name>
+		<object-name>Front-Panel-O</object-name>
+		<object-name>Front-Panel-I</object-name>
+		<object-name>Canopy-Front</object-name>
+		<object-name>Canopy-Main</object-name>
+		<!--<object-name>Blackout</object-name>-->
 		<condition>
 			<greater-than-equals>
 				<property>/sim/current-view/view-number</property>
@@ -575,7 +576,7 @@
 
 	<animation>
 		<type>select</type>
-		<object-name>noshadow.Front-Panel-O</object-name>
+		<object-name>Front-Panel-O</object-name>
 		<condition>
 			<less-than-equals>
 				<property>sim/model/rain/raining-norm</property>
@@ -622,7 +623,7 @@
 
 	<animation>
 		<type>select</type>
-		<object-name>noshadow.Canopy-Main</object-name>
+		<object-name>Canopy-Main</object-name>
 		<condition>
 			<less-than-equals>
 				<property>sim/model/rain/raining-norm</property>
@@ -836,7 +837,7 @@
 	</animation>
 	<animation>
 		<type>select</type>
-		<object-name>noshadow.PropellerDisk</object-name>
+		<object-name>PropellerDisk</object-name>
 		<condition>
 			<greater-than>
 				<property>engines/engine[0]/rpm</property>
@@ -846,7 +847,7 @@
 	</animation>
 	<animation>
 		<type>blend</type>
-		<object-name>noshadow.PropellerDisk</object-name>
+		<object-name>PropellerDisk</object-name>
 		<property>engines/engine[0]/rpm</property>
 		<factor>0.0005</factor>
 		<offset>-0.5</offset>
@@ -1169,8 +1170,8 @@
 	<!-- ***************** Canopy *********************** -->
 	<animation>
 		<type>translate</type>
-		<object-name>noshadow.Canopy-Main-Frame</object-name>
-		<object-name>noshadow.Canopy-Main</object-name>
+		<object-name>Canopy-Main-Frame</object-name>
+		<object-name>Canopy-Main</object-name>
 		<property>gear/canopy/position-norm</property>
 		<factor>0.575</factor>
 		<axis>
@@ -1290,6 +1291,7 @@
 	<animation>
 		<type>material</type>
 		<object-name>Exhaust-Dirt</object-name>
+		<nopreview/>
 		<transparency>
 			<alpha-prop>sim/time/hobbs/engine[0]</alpha-prop>
 			<factor>0.00027</factor>
@@ -1303,6 +1305,7 @@
 	<animation>
 		<type>material</type>
 		<object-name>Bottom-Oil-Streak</object-name>
+		<nopreview/>
 		<transparency>
 			<alpha-prop>sim/time/hobbs/engine[0]</alpha-prop>
 			<factor>0.00027</factor>
