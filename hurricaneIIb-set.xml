@@ -34,7 +34,7 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 			<path>Aircraft/Hurricane/Models/hurricane-submodels.xml</path>
 		</submodels>
 		<virtual-cockpit archive="y">true</virtual-cockpit>
-		<allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
+		<allow-toggle-cockpit archive="y">false</allow-toggle-cockpit>
 		<sound>
 			<audible>true</audible>
 			<path>Aircraft/Hurricane/Sounds/hurricane-sound.xml</path>
@@ -46,6 +46,11 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 		<model>
 			<path>Aircraft/Hurricane/Models/hurricane_model.xml</path>
 		</model>
+		<rendering>
+			<camera-group>
+				<znear type="double">0.1</znear>
+			</camera-group>
+		</rendering>
 		<view n="0">
 			<internal archive="y">true</internal>
 			<config>
