@@ -231,50 +231,7 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 					</script>
 				</binding>
 			</key>
-			<!--map keys for Boost Control Cutout 
-
-		<key n="3"> 
-
-          <name>Ctrl-C</name>
-
-          <desc>Toggle engine boost cutout.</desc>
-
-          <binding> 
-
-            <command>nasal</command>
-
-            <script>
-
-				hurricane.toggleCutout();
-
-				</script>
-
-          </binding>
-
-        </key>-->
-			<!--map keys for  starter -->
-			<key n="32">
-				<name>space bar</name>
-				<desc>Coffman Starter.</desc>
-				<binding>
-					<command>nasal</command>
-					<script>
-
-						hurricane.startCof(1);
-
-					</script>
-				</binding>
-				<mod-up>
-					<binding>
-						<command>nasal</command>
-						<script>
-
-							hurricane.startCof(0);
-
-						</script>
-					</binding>
-				</mod-up>
-			</key>
+			
 			<!-- map keys for rudder trim -->
 			<key n="60">
 				<name>&lt;</name>
@@ -287,6 +244,7 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 					<step type="double">-0.01</step>
 				</binding>
 			</key>
+			
 			<key n="62">
 				<name>&gt;</name>
 				<desc>Rudder Trim Right</desc>
@@ -298,7 +256,8 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 					<step type="double">0.01</step>
 				</binding>
 			</key>
-			<!--map keys for door open -->
+			
+			<!--map keys for foot/handhold open/close -->
 			<key n="68">
 				<name>D</name>
 				<desc>Door Fold Down.</desc>
@@ -335,6 +294,7 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 					</script>
 				</binding>
 			</key>
+			
 			<key n="6">
 				<name>Ctrl-F</name>
 				<desc>Toggle Wingfold.</desc>
@@ -342,19 +302,7 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 					<command>property-toggle</command>
 					<property>controls/flight/wing-fold</property>
 				</binding>
-				<!-- <mod-up> 
 
-            <binding> 
-
-              <command>property-assign</command>
-
-              <property>controls/flight/wing-fold</property>
-
-              <value type="bool">false</value>
-
-            </binding>
-
-          </mod-up>-->
 			</key>
 			<key n="12">
 				<name>Ctrl-L</name>
@@ -363,19 +311,6 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 					<command>property-toggle</command>
 					<property>controls/gear/tailwheel-lock</property>
 				</binding>
-				<!-- <mod-up> 
-
-            <binding> 
-
-              <command>property-assign</command>
-
-              <property>controls/flight/wing-fold</property>
-
-              <value type="bool">false</value>
-
-            </binding>
-
-          </mod-up>-->
 			</key>
 			<!--     map keys for wing fold - used for canopy control -->
 			<key n="70">
@@ -402,6 +337,7 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 					</script>
 				</binding>
 			</key>
+			
 			<!-- map keys for radiator flap -->
 			<key n="72">
 				<name>H</name>
@@ -421,6 +357,7 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 					<value type="double">0.0</value>
 				</binding>
 			</key>
+			
 			<!-- map keys for Cancel Gear Warning  -->
 			<key n="107">
 				<name>k</name>
@@ -541,6 +478,7 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 					</script>
 				</binding>
 			</key>
+			
 			<!-- map keys for fuel cocks  -->
 			<key n="40">
 				<name>(</name>
@@ -589,7 +527,8 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 					</binding>
 				</mod-up>
 			</key>
-			<!-- map keys for catapult launch -->
+			
+			<!-- map keys for catapult launch Sea hurrcane to come someday-->
 			<key n="67">
 				<name>C</name>
 				<desc>Catapult Launch Command.</desc>
