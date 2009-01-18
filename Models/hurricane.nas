@@ -16,14 +16,6 @@ registerTimer = func {
 
 # =============================== end timer stuff ===========================================
 
-var cloud_visibilityNode = props.globals.initNode("/sim/rendering/clouds3d-vis-range", 25000, "DOUBLE");
-
-setlistener("environment/visibility-m", func (n) {
-	cloud_visibilityNode.setValue(n.getValue());
-	},
-	1,
-	0);
-
 # =============================== Boost Controller stuff======================================
 
 BOOST_CONTROL_AUTHORITY = 0.99; # How much can it move the throttle?
