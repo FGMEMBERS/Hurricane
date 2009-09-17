@@ -1,5 +1,6 @@
 AC3Db
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.925 0.925 0.925  emis 0 0 0  spec 0.4 0.4 0.4  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.949 0.949 0.949  emis 0 0 0  spec 0.502 0.502 0.502  shi 10  trans 0
 OBJECT world
 kids 2
 OBJECT poly
@@ -13,13 +14,13 @@ numvert 4
 0 0.0357776 -0.0159268
 numsurf 2
 SURF 0x0
-mat 0
+mat 1
 refs 3
 3 0.0474861 0.667599
 1 0.952474 0.338272
 0 0.952474 0.667599
 SURF 0x0
-mat 0
+mat 1
 refs 3
 1 0.952474 0.338272
 3 0.0474861 0.667599

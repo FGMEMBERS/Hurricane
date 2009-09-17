@@ -1,13 +1,17 @@
 AC3Db
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.5 0.5 0.5  shi 10  trans 0
-MATERIAL "ac3dmat14" rgb 0.8 0.8 0.8  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.949 0.949 0.949  emis 0 0 0  spec 0.502 0.502 0.502  shi 10  trans 0
+MATERIAL "ac3dmat14" rgb 0.8 0.8 0.8  amb 0.75 0.75 0.75  emis 0 0 0  spec 0 0 0  shi 10  trans 0
 MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat3" rgb 1 0 0  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.5 0.5 0.5  shi 10  trans 0
+MATERIAL "ac3dmat3" rgb 1 0 0  amb 0.949 0.2 0.2  emis 0 0 0  spec 0.5 0.5 0.5  shi 10  trans 0
 OBJECT world
+kids 1
+OBJECT group
+name "clock"
+loc 0.00316426 -0.00125533 0.0121012
 kids 7
 OBJECT poly
 name "Face"
-loc 0.00209136 -0.000175518 1.38323e-005
+loc -0.0010729 0.00107982 -0.0120874
 texture "clock.rgb"
 crease 61.000000
 numvert 17
@@ -128,7 +132,7 @@ refs 3
 kids 0
 OBJECT poly
 name "MinuteHand"
-loc 0.00360951 0.012558 0.018247
+loc 0.000445253 0.0138133 0.00614582
 crease 61.000000
 numvert 8
 0 0.0184531 -0.0176692
@@ -173,7 +177,7 @@ refs 3
 kids 0
 OBJECT poly
 name "HourHand"
-loc 0.00469657 0.00919606 0.0188341
+loc 0.00153231 0.0104514 0.00673291
 crease 61.000000
 numvert 8
 0 0.0131719 -0.0182046
@@ -218,7 +222,7 @@ refs 3
 kids 0
 OBJECT poly
 name "SecondHand"
-loc 0.0054333 0.00624267 0.0121028
+loc 0.00226904 0.007498 1.61491e-006
 crease 61.000000
 numvert 8
 0 0.0257479 -0.011723
@@ -263,7 +267,7 @@ refs 3
 kids 0
 OBJECT poly
 name "AdjustKnob"
-loc 0.00524963 -0.0364638 0.0357948
+loc 0.00208537 -0.0352085 0.0236936
 texture "large-bezel.rgb"
 crease 61.000000
 numvert 32
@@ -579,7 +583,7 @@ refs 3
 kids 0
 OBJECT poly
 name "bezel"
-loc 0.00106943 4.94719e-006 -9.35775e-005
+loc -0.00209483 0.00126028 -0.0121948
 texture "large-bezel.rgb"
 crease 61.000000
 numvert 96
@@ -1451,7 +1455,7 @@ refs 3
 kids 0
 OBJECT poly
 name "Plate"
-loc -3.72529e-009 -0.0001497 -0.000190652
+loc -0.00316426 0.00110563 -0.0122918
 texture "large-bezel.rgb"
 crease 61.000000
 numvert 4
