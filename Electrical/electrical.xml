@@ -168,7 +168,7 @@
     <output>Landing Light Power</output>
     <switch>
       <prop>/controls/switches/landing-light</prop>
-	  <initial-state>off</initial-state>
+	  <initial-state>on</initial-state>
     </switch>
   </connector>
 
