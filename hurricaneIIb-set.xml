@@ -211,7 +211,8 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 		</switches>
 		<lighting>
 			<nav-lights>false</nav-lights>
-		</lighting>
+      <landing-light type="int">0</landing-light>
+    </lighting>
 	</controls>
 	<surface-positions>
 		<wing-fold-pos-norm type="double">1</wing-fold-pos-norm>

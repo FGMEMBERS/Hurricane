@@ -336,6 +336,13 @@ The reference datum for measurements is the nose.
 									 dst0="1"
 									 dst1="1"
 									 control="CASTERING"/>
+		<control-input axis="/controls/gear/brake-parking"
+									 control="BRAKE"
+									 transition-time="0"
+									 src0="0"
+									 src1="0.33"
+									 dst0="1"
+									 dst1="0.33"/>
 	</gear>
 	<!-- left main spring="0.7" damp="3.0" dfric="0.5" sfric="0.6"dfric="0.5" sfric="0.6"-->
 	<gear x="-2.64"
@@ -388,7 +395,14 @@ The reference datum for measurements is the nose.
 				z="-0.94"
 				compression="0.15"
 				dfric="0.50"
-				sfric ="0.60"	>
+				sfric ="0.60">
+		<control-input axis="/controls/gear/brake-parking"
+									 control="BRAKE"
+									 transition-time="0"
+									 src0="0"
+									 src1="0.33"
+									 dst0="1"
+									 dst1="0.33"/>
 	</gear>
 	<!-- Canopy -->
 	<gear x="-3.90"
