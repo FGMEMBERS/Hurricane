@@ -374,6 +374,18 @@
 			<z-m>0.030</z-m>
 		</offsets>
 	</model>
+
+
+
+	<model>
+		<path>Aircraft/Hurricane/Models/landing-light-switch.xml</path>
+		<offsets>
+			<x-m>3.12972</x-m>
+			<y-m>-0.424871</y-m>
+			<z-m>0.108272</z-m>
+			<heading-deg>-90</heading-deg>
+		</offsets>
+	</model>
 	<model>
 		<path>Aircraft/Hurricane/Models/flaps.xml</path>
 		<name>Flaps</name>
@@ -424,7 +436,7 @@
 			<z-m>0.69</z-m>
 		</offsets>
 	</model>
-	
+
 	<!--<model>
 		<path>Aircraft/Hurricane/Models/blackout.xml</path>
 		<name>Blackout</name>
@@ -1240,7 +1252,7 @@
 			<z2-m>-1.11</z2-m>
 		</axis>
 	</animation>
-	
+
 	<!--<animation>
 		<type>rotate</type>
 		<object-name>Lever-Rad-Flap</object-name>
@@ -1285,7 +1297,7 @@
 			<blue>0.025</blue>
 		</emission>
 	</animation>
-	
+
 	<!-- ========== Dirt textures ========= -->
 
 	<animation>
@@ -1316,7 +1328,7 @@
 		<!--<threshold>0.001</threshold>-->
 	</animation>
 
- <!-- ============= Rain Animations ============= -->
+	<!-- ============= Rain Animations ============= -->
 
 	<model>
 		<path>Aircraft/Generic/Effects/tyre-smoke-port.xml</path>
@@ -1422,7 +1434,8 @@
 		<object-name>Front-Panel-O-Rain</object-name>
 		<object-name>Canopy-Front-Rain-P</object-name>
 		<object-name>Canopy-Front-Rain-S</object-name>
-		<object-name>Canopy-Main-Rain</object-name>	<transparency>
+		<object-name>Canopy-Main-Rain</object-name>
+		<transparency>
 			<alpha-prop>velocities/airspeed-kt</alpha-prop>
 			<factor>-0.00333</factor>
 			<offset>1</offset>
@@ -1452,4 +1465,63 @@
 		<type>select</type>
 		<object-name>markers</object-name>
 	</animation>
+
+
+	<model>
+		<path>Aircraft/Hurricane/Models/Effects/light-cone.xml</path>
+		<offsets>
+			<x-m>  2.46 </x-m>
+			<y-m>  3.18673 </y-m>
+			<z-m> -0.444083</z-m>
+			<pitch-deg>-15</pitch-deg>
+			<heading-deg>2.5</heading-deg>
+		</offsets>
+		<name>Landing-Light-Stbd</name>
+	</model>
+
+	<model>
+		<path>Aircraft/Hurricane/Models/Effects/light-cone.xml</path>
+		<offsets>
+			<x-m>  2.46 </x-m>
+			<y-m> -3.18673 </y-m>
+			<z-m> -0.444083</z-m>
+			<pitch-deg>-15</pitch-deg>
+			<heading-deg>-2.5</heading-deg>
+		</offsets>
+		<name>Landing-Light-Port</name>
+	</model>
+
+	<animation>
+		<nopreview/>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>controls/lighting/landing-light</property>
+				<value>1</value>
+			</equals>
+			<greater-than-equals>
+				<property>systems/electrical/outputs/landing-light</property>
+				<value>10</value>
+			</greater-than-equals>
+		</condition>
+		<object-name>Landing-Light-Port</object-name>
+	</animation>
+
+	<animation>
+		<nopreview/>
+		<type>select</type>
+		<condition>
+			<equals>
+				<property>controls/lighting/landing-light</property>
+				<value>-1</value>
+			</equals>
+			<greater-than-equals>
+				<property>systems/electrical/outputs/landing-light</property>
+				<value>10</value>
+			</greater-than-equals>
+		</condition>
+		<object-name>Landing-Light-Stbd</object-name>
+	</animation>
+
+
 </PropertyList>
