@@ -262,6 +262,8 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 						 alias="/gear/canopy/position-norm"/>
 			<float n="10"
 						 alias="/controls/flight/door-position-norm"/>
+			<float n="11"
+						 alias="/sim/time/hobbs/engine[0]"/>
 		</generic>
 	</multiplay>
 
