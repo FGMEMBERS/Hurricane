@@ -264,6 +264,8 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 						 alias="/controls/flight/door-position-norm"/>
 			<float n="11"
 						 alias="/sim/time/hobbs/engine[0]"/>
+			<float n="12"
+						 alias="/engines/engine/rad-flap-norm"/>
 		</generic>
 	</multiplay>
 
