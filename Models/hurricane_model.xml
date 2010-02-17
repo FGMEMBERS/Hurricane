@@ -1202,6 +1202,7 @@
 		<type>translate</type>
 		<object-name>Canopy-Main-Frame</object-name>
 		<object-name>Canopy-Main</object-name>
+		<object-name>Canopy-Handle</object-name>
 		<property>gear/canopy/position-norm</property>
 		<factor>0.575</factor>
 		<axis>
@@ -1209,6 +1210,20 @@
 			<y>0</y>
 			<z>0</z>
 		</axis>
+	</animation>
+	
+	<animation>
+		<type>pick</type>
+		<object-name>Canopy-Handle</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/flight/canopy-slide</property>
+			</binding>
+		</action>
 	</animation>
 	<!-- ***************** Step *********************** -->
 	<animation>
@@ -1253,6 +1268,20 @@
 			<y2-m>-0.3745</y2-m>
 			<z2-m>0.3303</z2-m>
 		</axis>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>Handhold</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-toggle</command>
+				<property>controls/flight/door-position-norm</property>
+			</binding>
+		</action>
 	</animation>
 	<!-- ***************** Radiator *********************** -->
 	<!-- Radiator Flap -->
