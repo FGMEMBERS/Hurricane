@@ -645,6 +645,24 @@
 	</animation>
 
 	<!-- **************************** Pilot ******************************* -->
+
+	<animation>
+		<type>select</type>
+		<object-name>Pilot</object-name>
+		<condition>
+			<or>
+				<not>
+					<property>sim/model/hurricane/show-pilot</property>
+				</not>
+				<not>
+					<equals>
+						<property>sim/current-view/view-number</property>
+						<value>0</value>
+					</equals>
+				</not>
+			</or>
+		</condition>
+	</animation>
 	<!--  conceal Pilot Head etc in Cockpit View -->
 	<animation>
 		<type>select</type>
@@ -1513,7 +1531,7 @@
 		<condition>
 			<equals>
 				<property>controls/lighting/landing-light</property>
-				<value>-1</value>
+				<value>2</value>
 			</equals>
 			<greater-than-equals>
 				<property>systems/electrical/outputs/landing-light</property>
