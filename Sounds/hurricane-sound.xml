@@ -101,6 +101,7 @@
 				<type>log</type>
 				<min>1.0</min>
 				<max>1.5</max>
+				<reference-dist>10000</reference-dist>
 			</volume>
 			<volume>
 				<property>/sim/current-view/internal</property>
@@ -131,6 +132,7 @@
 				<type>log</type>
 				<min>1.0</min>
 				<max>1.5</max>
+				<reference-dist>10000</reference-dist>
 			</volume>
 			<volume>
 				<property>/sim/current-view/internal</property>
@@ -520,5 +522,27 @@
 				<max>0.9</max>
 			</volume>
 		</click>
+		<birds>
+			<name>birdsong</name>
+			<mode>looped</mode>
+			<path>Aircraft/sopwithCamel/Sounds/yasim/birdsong.wav</path>
+			<condition>
+				<equals>
+					<property>/sim/startup/season</property>
+					<value>summer</value>
+				</equals>
+				<equals>
+					<property>controls/flight/canopy-slide</property>
+					<value>1</value>
+				</equals>
+			</condition>
+			<volume>
+				<property>/position/altitude-ft</property>
+				<factor>-0.0010</factor>
+				<offset>0.4</offset>
+				<min>0.01</min>
+				<max>0.4</max>
+			</volume>
+		</birds>
 	</fx>
 </PropertyList>
