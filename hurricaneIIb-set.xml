@@ -221,6 +221,26 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 		<tutorials>
 			<tutorial include="Tutorials/startup_tutorial.xml"/>
 		</tutorials>
+		
+		<menubar>
+			<default>
+				<menu n="10">
+					<label>Hurricane</label>
+					<enabled type="bool">true</enabled>
+					<item>
+						<label>Toggle pilot model</label>
+						<binding>
+							<command>property-toggle</command>
+							<property>sim/model/hurricane/show-pilot</property>
+						</binding>
+					</item>
+				</menu>
+			</default>
+		</menubar>
+		<hurricane>
+			<show-pilot archive="y"
+									type="bool">true</show-pilot>
+		</hurricane>
 
 	<multiplay>
 		<generic>
