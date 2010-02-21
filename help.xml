@@ -3,7 +3,7 @@
     <help> 
       <title>Hurricane IIb</title>
       <key> 
-        <name>Space</name>
+        <name>s</name>
         <desc>Start</desc>
       </key>
       <key> 
