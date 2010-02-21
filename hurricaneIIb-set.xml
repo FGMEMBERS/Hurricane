@@ -632,6 +632,20 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 					<value type="double">1.0</value>
 				</binding>
 			</key>
+			<key n="115">
+				<name>s</name>
+				<desc>Fire starter.</desc>
+				<binding>
+					<command>nasal</command>
+					<script>hurricane.startCof(1);</script>
+				</binding>
+				<mod-up>
+					<binding>
+						<command>nasal</command>
+						<script>hurricane.startCof(0);</script>
+					</binding>
+				</mod-up>
+			</key>
 			<!--        <key n="111"> 
 
           <name>o</name>

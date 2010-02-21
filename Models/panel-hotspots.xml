@@ -893,6 +893,7 @@
             <y>-270</y>
             <w>45</w>
             <h>45</h>
+            <repeatable type="bool">false</repeatable>
             <binding> 
               <command>nasal</command>
               <script>
