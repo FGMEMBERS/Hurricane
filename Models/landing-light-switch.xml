@@ -7,7 +7,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>switch</object-name>
-		<property>controls/lighting/landing-light</property>
+		<property>controls/switches/landing-lights</property>
 		<offset-deg>0</offset-deg>
 		<factor>-30</factor>
 		<axis>
@@ -33,6 +33,11 @@
 				<property>controls/lighting/landing-light</property>
 				<value>1</value>
 			</binding>
+			<binding>
+				<command>property-assign</command>
+				<property>controls/switches/landing-lights</property>
+				<value>1</value>
+			</binding>
 		</action>
 	</animation>
 	<animation>
@@ -47,6 +52,11 @@
 				<property>controls/lighting/landing-light</property>
 				<value>0</value>
 			</binding>
+			<binding>
+				<command>property-assign</command>
+				<property>controls/switches/landing-lights</property>
+				<value>0</value>
+			</binding>
 		</action>
 	</animation>
 	<animation>
@@ -59,6 +69,11 @@
 			<binding>
 				<command>property-assign</command>
 				<property>controls/lighting/landing-light</property>
+				<value>2</value>
+			</binding>
+			<binding>
+				<command>property-assign</command>
+				<property>controls/switches/landing-lights</property>
 				<value>-1</value>
 			</binding>
 		</action>
