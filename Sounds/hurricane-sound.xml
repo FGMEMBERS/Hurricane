@@ -488,7 +488,7 @@
 			<mode>looped</mode>
 			<path>Aircraft/Hurricane/Sounds/gunfire_1.wav</path>
 			<condition>
-				<property>ai/submodels/trigger</property>
+				<property>controls/armament/trigger</property>
 				<property>ai/submodels/submodel[1]/count[0]</property>
 			</condition>
 			<volume>
