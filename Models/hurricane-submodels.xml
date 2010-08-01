@@ -40,40 +40,44 @@
 
   <cannon>
     <model>Models/Geometry/tracer.xml</model>
-    <speed>2755.9</speed>
+    <speed>2444.2</speed>
     <cd>0.193</cd>
-    <weight>0.286600941</weight>
-    <eda>0.00338158219</eda>
-    <!--<pitch-offset>0</pitch-offset>-->
+    <weight>0.0249122356</weight>
+    <eda>0.000500740417</eda>
+    <pitch-offset>0</pitch-offset>
     <fuse-range>0</fuse-range>
-    <life>40</life>
+    <life>10</life>
     <trigger>controls/armament/trigger</trigger>
+    <repeat>true</repeat>
+    <delay>0.0526</delay>
+    <count>300</count>
   </cannon>
   
 	<submodel>
 		<name>Browning L inner</name>
-		<model>Models/Geometry/tracer.xml</model>
+    <model alias="../../cannon/model"/>
     <trigger alias="../../cannon/trigger"/>
-		<speed>2444.2</speed>
-		<repeat>true</repeat>
-		<delay>0.0526</delay>
-		<count>300</count>
+		<speed alias="../../cannon/speed"/>
+    <cd alias="../../cannon/cd"/>
+    <weight alias="../../cannon/weight"/>
+		<eda alias="../../cannon/eda"/>
+    <life alias="../../cannon/life"/>
+    <repeat alias="../../cannon/repeat"/>
+    <delay alias="../../cannon/delay"/>
+    <count alias="../../cannon/count"/>
+    <pitch-offset alias="../../cannon/pitch-offset"/>
+		<yaw-offset>1.5</yaw-offset>
 		<x-offset>-7.41</x-offset>
 		<y-offset>-5.97</y-offset>
 		<z-offset>-1.80</z-offset>
-		<yaw-offset>1.5</yaw-offset>
-		<pitch-offset>1.0</pitch-offset>
-		<cd>0.193</cd>
-		<weight>0.0249122356</weight>
-		<eda>0.000500740417</eda>
-		<life>10</life>
+    <wind>false</wind>
 		<collision>true</collision>
-		<collision-report>sim/ai/aircraft/collision/cannon</collision-report>
+		<collision-report>sim/ai/aircraft/collision/gun</collision-report>
 		<impact>true</impact>
-		<impact-report>sim/ai/aircraft/impact/droptank</impact-report>
-		<!--<submodel-path>Aircraft/seahawk/Models/seahawk-subsubmodels.xml</submodel-path>-->
+		<impact-report>sim/ai/aircraft/impact/gun</impact-report>
 		<submodel-path>Aircraft/Hurricane/Models/hurricane-subsubmodels.xml</submodel-path>
 	</submodel>
+  
 	<submodel>
 		<name>Browning L inner smoke</name>
 		<model>Aircraft/Hurricane/Models/smoke.xml</model>
@@ -94,29 +98,29 @@
 	</submodel>
 	<submodel>
 		<name>Browning R inner</name>
-		<model>Models/Geometry/tracer.xml</model>
-		<trigger alias="../../cannon/trigger"/>
-		<speed>2444.2</speed>
-		<repeat>true</repeat>
-		<delay>0.0526</delay>
-		<count>300</count>
-		<x-offset>-7.41</x-offset>
-		<y-offset>5.97</y-offset>
-		<z-offset>-1.80</z-offset>
-		<yaw-offset>-1.5</yaw-offset>
-		<pitch-offset>1.0</pitch-offset>
-		<wind>false</wind>
-		<cd>0.193</cd>
-		<weight>0.0249122356</weight>
-		<eda>0.000500740417</eda>
-		<life>10</life>
-		<collision>true</collision>
-		<collision-report>sim/ai/aircraft/collision/cannon</collision-report>
-		<impact>true</impact>
-		<impact-report>sim/ai/aircraft/impact/droptank</impact-report>
-		<!--<submodel-path>Aircraft/seahawk/Models/seahawk-subsubmodels.xml</submodel-path>-->
-		<submodel-path>Aircraft/Hurricane/Models/hurricane-subsubmodels.xml</submodel-path>
-	</submodel>
+    <model alias="../../cannon/model"/>
+    <trigger alias="../../cannon/trigger"/>
+    <speed alias="../../cannon/speed"/>
+    <cd alias="../../cannon/cd"/>
+    <weight alias="../../cannon/weight"/>
+    <eda alias="../../cannon/eda"/>
+    <life alias="../../cannon/life"/>
+    <repeat alias="../../cannon/repeat"/>
+    <delay alias="../../cannon/delay"/>
+    <count alias="../../cannon/count"/>
+    <pitch-offset alias="../../cannon/pitch-offset"/>
+    <yaw-offset>-1.5</yaw-offset>
+    <x-offset>-7.41</x-offset>
+    <y-offset>5.97</y-offset>
+    <z-offset>-1.80</z-offset>
+    <wind>false</wind>
+    <collision>true</collision>
+    <collision-report>sim/ai/aircraft/collision/gun</collision-report>
+    <impact>true</impact>
+    <impact-report>sim/ai/aircraft/impact/gun</impact-report>
+    <submodel-path>Aircraft/Hurricane/Models/hurricane-subsubmodels.xml</submodel-path>	
+  </submodel>
+  
 	<submodel>
 		<name>Browning R inner smoke</name>
 		<model>Aircraft/Hurricane/Models/smoke.xml</model>

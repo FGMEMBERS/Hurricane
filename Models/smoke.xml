@@ -2,8 +2,12 @@
 
 <PropertyList>
 	<path>puff.ac</path>
+  
+  <animation>
+    <enable-hot type="bool">false</enable-hot>
+  </animation>
 
-	<animation>
+  <animation>
 		<type>billboard</type>
 		<spherical>true</spherical>
 	</animation>
