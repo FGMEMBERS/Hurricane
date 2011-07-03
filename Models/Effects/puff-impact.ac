@@ -6,7 +6,7 @@ kids 60
 OBJECT poly
 name "puff"
 loc 3.83281 -0.00802538 14.9455
-texture "puff.png"
+texture "puff-new.rgb"
 crease 61.000000
 numvert 4
 -1 1 0
@@ -14,23 +14,23 @@ numvert 4
 1 -1 0
 -1 -1 0
 numsurf 2
-SURF 0x30
+SURF 0x10
 mat 0
 refs 3
-3 0 0
-1 1 1
 2 1 0
-SURF 0x30
-mat 0
-refs 3
 1 1 1
 3 0 0
+SURF 0x10
+mat 0
+refs 3
 0 0 1
+3 0 0
+1 1 1
 kids 0
 OBJECT poly
 name "puff"
 loc 4.42768 0.00802532 12.5072
-texture "puff.png"
+texture "puff-new.rgb"
 crease 61.000000
 numvert 4
 -1 -1 0
@@ -38,23 +38,23 @@ numvert 4
 1 1 0
 -1 1 0
 numsurf 2
-SURF 0x30
+SURF 0x10
 mat 0
 refs 3
-2 1 1
-0 0 0
 3 0 1
-SURF 0x30
-mat 0
-refs 3
 0 0 0
 2 1 1
+SURF 0x10
+mat 0
+refs 3
 1 1 0
+2 1 1
+0 0 0
 kids 0
 OBJECT poly
 name "puff"
 loc 5.61782 0.00802532 8.07877
-texture "puff.png"
+texture "puff-new.rgb"
 crease 61.000000
 numvert 4
 -1 -1 0
@@ -62,23 +62,23 @@ numvert 4
 1 1 0
 -1 1 0
 numsurf 2
-SURF 0x30
+SURF 0x10
 mat 0
 refs 3
-2 1 1
-0 0 0
 3 0 1
-SURF 0x30
-mat 0
-refs 3
 0 0 0
 2 1 1
+SURF 0x10
+mat 0
+refs 3
 1 1 0
+2 1 1
+0 0 0
 kids 0
 OBJECT poly
 name "puff"
 loc 5.14881 0.00802535 4.06064
-texture "puff.png"
+texture "puff-new.rgb"
 crease 61.000000
 numvert 4
 -1 1 0
@@ -86,23 +86,23 @@ numvert 4
 1 -1 0
 -1 -1 0
 numsurf 2
-SURF 0x30
+SURF 0x10
 mat 0
 refs 3
-3 0 0
-1 1 1
 2 1 0
-SURF 0x30
-mat 0
-refs 3
 1 1 1
 3 0 0
+SURF 0x10
+mat 0
+refs 3
 0 0 1
+3 0 0
+1 1 1
 kids 0
 OBJECT poly
 name "puff"
 loc 4.99143 0.00802535 0.702019
-texture "puff.png"
+texture "puff-new.rgb"
 crease 61.000000
 numvert 4
 -1 -1 0
@@ -110,23 +110,23 @@ numvert 4
 1 1 0
 -1 1 0
 numsurf 2
-SURF 0x30
+SURF 0x10
 mat 0
 refs 3
-2 1 1
-0 0 0
 3 0 1
-SURF 0x30
-mat 0
-refs 3
 0 0 0
 2 1 1
+SURF 0x10
+mat 0
+refs 3
 1 1 0
+2 1 1
+0 0 0
 kids 0
 OBJECT poly
 name "puff"
 loc -3.84001 0.00802538 0.252111
-texture "puff.png"
+texture "puff-new.rgb"
 crease 61.000000
 numvert 4
 -1 1 0
@@ -134,23 +134,23 @@ numvert 4
 1 -1 0
 -1 -1 0
 numsurf 2
-SURF 0x30
+SURF 0x10
 mat 0
 refs 3
-3 0 0
-1 1 1
 2 1 0
-SURF 0x30
-mat 0
-refs 3
 1 1 1
 3 0 0
+SURF 0x10
+mat 0
+refs 3
 0 0 1
+3 0 0
+1 1 1
 kids 0
 OBJECT poly
 name "puff"
 loc -4.67106 0.00802532 3.82682
-texture "puff.png"
+texture "puff-new.rgb"
 crease 61.000000
 numvert 4
 -1 -1 0
@@ -158,23 +158,23 @@ numvert 4
 1 1 0
 -1 1 0
 numsurf 2
-SURF 0x30
+SURF 0x10
 mat 0
 refs 3
-2 1 1
-0 0 0
 3 0 1
-SURF 0x30
-mat 0
-refs 3
 0 0 0
 2 1 1
+SURF 0x10
+mat 0
+refs 3
 1 1 0
+2 1 1
+0 0 0
 kids 0
 OBJECT poly
 name "puff"
 loc -5.61782 0.00802532 7.84494
-texture "puff.png"
+texture "puff-new.rgb"
 crease 61.000000
 numvert 4
 -1 1 0
@@ -182,23 +182,23 @@ numvert 4
 1 -1 0
 -1 -1 0
 numsurf 2
-SURF 0x30
+SURF 0x10
 mat 0
 refs 3
-3 0 0
-1 1 1
 2 1 0
-SURF 0x30
-mat 0
-refs 3
 1 1 1
 3 0 0
+SURF 0x10
+mat 0
+refs 3
 0 0 1
+3 0 0
+1 1 1
 kids 0
 OBJECT poly
 name "puff"
 loc -4.77958 0.00802532 16.101
-texture "puff.png"
+texture "puff-new.rgb"
 crease 61.000000
 numvert 4
 -1 -1 0
@@ -206,23 +206,23 @@ numvert 4
 1 1 0
 -1 1 0
 numsurf 2
-SURF 0x30
+SURF 0x10
 mat 0
 refs 3
-2 1 1
-0 0 0
 3 0 1
-SURF 0x30
-mat 0
-refs 3
 0 0 0
 2 1 1
+SURF 0x10
+mat 0
+refs 3
 1 1 0
+2 1 1
+0 0 0
 kids 0
 OBJECT poly
 name "puff"
 loc -5.21461 0.00802532 12.306
-texture "puff.png"
+texture "puff-new.rgb"
 crease 61.000000
 numvert 4
 -1 1 0
@@ -230,23 +230,23 @@ numvert 4
 1 -1 0
 -1 -1 0
 numsurf 2
-SURF 0x30
+SURF 0x10
 mat 0
 refs 3
-3 0 0
-1 1 1
 2 1 0
-SURF 0x30
-mat 0
-refs 3
 1 1 1
 3 0 0
+SURF 0x10
+mat 0
+refs 3
 0 0 1
+3 0 0
+1 1 1
 kids 0
 OBJECT poly
 name "puff"
 loc -3.77599 0.00802532 12.9543
-texture "puff.png"
+texture "puff-new.rgb"
 crease 61.000000
 numvert 4
 -1 -1 0
@@ -254,23 +254,23 @@ numvert 4
 1 1 0
 -1 1 0
 numsurf 2
-SURF 0x30
+SURF 0x10
 mat 0
 refs 3
-2 1 1
-0 0 0
 3 0 1
-SURF 0x30
-mat 0
-refs 3
 0 0 0
 2 1 1
+SURF 0x10
+mat 0
+refs 3
 1 1 0
+2 1 1
+0 0 0
 kids 0
 OBJECT poly
 name "puff"
 loc -3.34098 0.00802532 16.7492
-texture "puff.png"
+texture "puff-new.rgb"
 crease 61.000000
 numvert 4
 -1 1 0
@@ -278,23 +278,23 @@ numvert 4
 1 -1 0
 -1 -1 0
 numsurf 2
-SURF 0x30
+SURF 0x10
 mat 0
 refs 3
-3 0 0
-1 1 1
 2 1 0
-SURF 0x30
-mat 0
-refs 3
 1 1 1
 3 0 0
+SURF 0x10
+mat 0
+refs 3
 0 0 1
+3 0 0
+1 1 1
 kids 0
 OBJECT poly
 name "puff"
 loc 2.71582 0.00802535 1.30702
-texture "puff.png"
+texture "puff-new.rgb"
 crease 61.000000
 numvert 4
 -1 1 0
@@ -302,23 +302,23 @@ numvert 4
 1 -1 0
 -1 -1 0
 numsurf 2
-SURF 0x30
+SURF 0x10
 mat 0
 refs 3
-3 0 0
-1 1 1
 2 1 0
-SURF 0x30
-mat 0
-refs 3
 1 1 1
 3 0 0
+SURF 0x10
+mat 0
+refs 3
 0 0 1
+3 0 0
+1 1 1
 kids 0
 OBJECT poly
 name "puff"
 loc 2.87319 0.00802535 4.66565
-texture "puff.png"
+texture "puff-new.rgb"
 crease 61.000000
 numvert 4
 -1 -1 0
@@ -326,23 +326,23 @@ numvert 4
 1 1 0
 -1 1 0
 numsurf 2
-SURF 0x30
+SURF 0x10
 mat 0
 refs 3
-2 1 1
-0 0 0
 3 0 1
-SURF 0x30
-mat 0
-refs 3
 0 0 0
 2 1 1
+SURF 0x10
+mat 0
+refs 3
 1 1 0
+2 1 1
+0 0 0
 kids 0
 OBJECT poly
 name "puff"
 loc 3.34221 0.00802532 8.68378
-texture "puff.png"
+texture "puff-new.rgb"
 crease 61.000000
 numvert 4
 -1 1 0
@@ -350,23 +350,23 @@ numvert 4
 1 -1 0
 -1 -1 0
 numsurf 2
-SURF 0x30
+SURF 0x10
 mat 0
 refs 3
-3 0 0
-1 1 1
 2 1 0
-SURF 0x30
-mat 0
-refs 3
 1 1 1
 3 0 0
+SURF 0x10
+mat 0
+refs 3
 0 0 1
+3 0 0
+1 1 1
 kids 0
 OBJECT poly
 name "puff"
 loc 2.15207 0.00802532 13.1122
-texture "puff.png"
+texture "puff-new.rgb"
 crease 61.000000
 numvert 4
 -1 1 0
@@ -374,23 +374,23 @@ numvert 4
 1 -1 0
 -1 -1 0
 numsurf 2
-SURF 0x30
+SURF 0x10
 mat 0
 refs 3
-3 0 0
-1 1 1
 2 1 0
-SURF 0x30
-mat 0
-refs 3
 1 1 1
 3 0 0
+SURF 0x10
+mat 0
+refs 3
 0 0 1
+3 0 0
+1 1 1
 kids 0
 OBJECT poly
 name "puff"
 loc 1.55719 -0.00802538 15.5505
-texture "puff.png"
+texture "puff-new.rgb"
 crease 61.000000
 numvert 4
 -1 -1 0
@@ -398,23 +398,23 @@ numvert 4
 1 1 0
 -1 1 0
 numsurf 2
-SURF 0x30
+SURF 0x10
 mat 0
 refs 3
-2 1 1
-0 0 0
 3 0 1
-SURF 0x30
-mat 0
-refs 3
 0 0 0
 2 1 1
+SURF 0x10
+mat 0
+refs 3
 1 1 0
+2 1 1
+0 0 0
 kids 0
 OBJECT poly
 name "puff"
 loc -4.17922 0.00802532 8.49317
-texture "puff.png"
+texture "puff-new.rgb"
 crease 61.000000
 numvert 4
 -1 -1 0
@@ -422,23 +422,23 @@ numvert 4
 1 1 0
 -1 1 0
 numsurf 2
-SURF 0x30
+SURF 0x10
 mat 0
 refs 3
-2 1 1
-0 0 0
 3 0 1
-SURF 0x30
-mat 0
-refs 3
 0 0 0
 2 1 1
+SURF 0x10
+mat 0
+refs 3
 1 1 0
+2 1 1
+0 0 0
 kids 0
 OBJECT poly
 name "puff"
 loc -3.23246 0.00802532 4.47503
-texture "puff.png"
+texture "puff-new.rgb"
 crease 61.000000
 numvert 4
 -1 1 0
@@ -446,23 +446,23 @@ numvert 4
 1 -1 0
 -1 -1 0
 numsurf 2
-SURF 0x30
+SURF 0x10
 mat 0
 refs 3
-3 0 0
-1 1 1
 2 1 0
-SURF 0x30
-mat 0
-refs 3
 1 1 1
 3 0 0
+SURF 0x10
+mat 0
+refs 3
 0 0 1
+3 0 0
+1 1 1
 kids 0
 OBJECT poly
 name "puff"
 loc -2.40139 0.00802538 0.900342
-texture "puff.png"
+texture "puff-new.rgb"
 crease 61.000000
 numvert 4
 -1 -1 0
@@ -470,23 +470,23 @@ numvert 4
 1 1 0
 -1 1 0
 numsurf 2
-SURF 0x30
+SURF 0x10
 mat 0
 refs 3
-2 1 1
-0 0 0
 3 0 1
-SURF 0x30
-mat 0
-refs 3
 0 0 0
 2 1 1
+SURF 0x10
+mat 0
+refs 3
 1 1 0
+2 1 1
+0 0 0
 kids 0
 OBJECT poly
 name "puff"
 loc -0.159677 0.00802532 16.5085
-texture "puff.png"
+texture "puff-new.rgb"
 crease 61.000000
 numvert 4
 -1 -1 0
@@ -494,23 +494,23 @@ numvert 4
 1 1 0
 -1 1 0
 numsurf 2
-SURF 0x30
+SURF 0x10
 mat 0
 refs 3
-2 1 1
-0 0 0
 3 0 1
-SURF 0x30
-mat 0
-refs 3
 0 0 0
 2 1 1
+SURF 0x10
+mat 0
+refs 3
 1 1 0
+2 1 1
+0 0 0
 kids 0
 OBJECT poly
 name "puff"
 loc 0.216153 0.00802532 12.6809
-texture "puff.png"
+texture "puff-new.rgb"
 crease 61.000000
 numvert 4
 -1 1 0
@@ -518,23 +518,23 @@ numvert 4
 1 -1 0
 -1 -1 0
 numsurf 2
-SURF 0x30
+SURF 0x10
 mat 0
 refs 3
-3 0 0
-1 1 1
 2 1 0
-SURF 0x30
-mat 0
-refs 3
 1 1 1
 3 0 0
+SURF 0x10
+mat 0
+refs 3
 0 0 1
+3 0 0
+1 1 1
 kids 0
 OBJECT poly
 name "puff"
 loc 1.03154 0.00802532 8.25248
-texture "puff.png"
+texture "puff-new.rgb"
 crease 61.000000
 numvert 4
 -1 1 0
@@ -542,23 +542,23 @@ numvert 4
 1 -1 0
 -1 -1 0
 numsurf 2
-SURF 0x30
+SURF 0x10
 mat 0
 refs 3
-3 0 0
-1 1 1
 2 1 0
-SURF 0x30
-mat 0
-refs 3
 1 1 1
 3 0 0
+SURF 0x10
+mat 0
+refs 3
 0 0 1
+3 0 0
+1 1 1
 kids 0
 OBJECT poly
 name "puff"
 loc 0.466708 0.00802532 4.23435
-texture "puff.png"
+texture "puff-new.rgb"
 crease 61.000000
 numvert 4
 -1 -1 0
@@ -566,23 +566,23 @@ numvert 4
 1 1 0
 -1 1 0
 numsurf 2
-SURF 0x30
+SURF 0x10
 mat 0
 refs 3
-2 1 1
-0 0 0
 3 0 1
-SURF 0x30
-mat 0
-refs 3
 0 0 0
 2 1 1
+SURF 0x10
+mat 0
+refs 3
 1 1 0
+2 1 1
+0 0 0
 kids 0
 OBJECT poly
 name "puff"
 loc 0.779901 0.00802538 0.27072
-texture "puff.png"
+texture "puff-new.rgb"
 crease 61.000000
 numvert 4
 -1 1 0
@@ -590,23 +590,23 @@ numvert 4
 1 -1 0
 -1 -1 0
 numsurf 2
-SURF 0x30
+SURF 0x10
 mat 0
 refs 3
-3 0 0
-1 1 1
 2 1 0
-SURF 0x30
-mat 0
-refs 3
 1 1 1
 3 0 0
+SURF 0x10
+mat 0
+refs 3
 0 0 1
+3 0 0
+1 1 1
 kids 0
 OBJECT poly
 name "puff"
 loc -2.01853 -0.00800869 16.3112
-texture "puff.png"
+texture "puff-new.rgb"
 crease 61.000000
 numvert 4
 -1 1 0
@@ -614,23 +614,23 @@ numvert 4
 1 -1 0
 -1 -1 0
 numsurf 2
-SURF 0x30
+SURF 0x10
 mat 0
 refs 3
-3 0 0
-1 1 1
 2 1 0
-SURF 0x30
-mat 0
-refs 3
 1 1 1
 3 0 0
+SURF 0x10
+mat 0
+refs 3
 0 0 1
+3 0 0
+1 1 1
 kids 0
 OBJECT poly
 name "puff"
 loc -1.64271 -0.00800869 12.4836
-texture "puff.png"
+texture "puff-new.rgb"
 crease 61.000000
 numvert 4
 -1 -1 0
@@ -638,23 +638,23 @@ numvert 4
 1 1 0
 -1 1 0
 numsurf 2
-SURF 0x30
+SURF 0x10
 mat 0
 refs 3
-2 1 1
-0 0 0
 3 0 1
-SURF 0x30
-mat 0
-refs 3
 0 0 0
 2 1 1
+SURF 0x10
+mat 0
+refs 3
 1 1 0
+2 1 1
+0 0 0
 kids 0
 OBJECT poly
 name "puff"
 loc -1.80814 -0.00800869 8.05516
-texture "puff.png"
+texture "puff-new.rgb"
 crease 61.000000
 numvert 4
 -1 -1 0
@@ -662,23 +662,23 @@ numvert 4
 1 1 0
 -1 1 0
 numsurf 2
-SURF 0x30
+SURF 0x10
 mat 0
 refs 3
-2 1 1
-0 0 0
 3 0 1
-SURF 0x30
-mat 0
-refs 3
 0 0 0
 2 1 1
+SURF 0x10
+mat 0
+refs 3
 1 1 0
+2 1 1
+0 0 0
 kids 0
 OBJECT poly
 name "puff"
 loc -1.39215 -0.00800869 4.03703
-texture "puff.png"
+texture "puff-new.rgb"
 crease 61.000000
 numvert 4
 -1 1 0
@@ -686,23 +686,23 @@ numvert 4
 1 -1 0
 -1 -1 0
 numsurf 2
-SURF 0x30
+SURF 0x10
 mat 0
 refs 3
-3 0 0
-1 1 1
 2 1 0
-SURF 0x30
-mat 0
-refs 3
 1 1 1
 3 0 0
+SURF 0x10
+mat 0
+refs 3
 0 0 1
+3 0 0
+1 1 1
 kids 0
 OBJECT poly
 name "puff"
 loc -1.07895 -0.00800866 0.0734081
-texture "puff.png"
+texture "puff-new.rgb"
 crease 61.000000
 numvert 4
 -1 -1 0
@@ -710,18 +710,18 @@ numvert 4
 1 1 0
 -1 1 0
 numsurf 2
-SURF 0x30
+SURF 0x10
 mat 0
 refs 3
-2 1 1
-0 0 0
 3 0 1
-SURF 0x30
-mat 0
-refs 3
 0 0 0
 2 1 1
+SURF 0x10
+mat 0
+refs 3
 1 1 0
+2 1 1
+0 0 0
 kids 0
 OBJECT poly
 name "disk"

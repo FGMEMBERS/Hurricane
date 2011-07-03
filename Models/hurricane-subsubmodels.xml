@@ -43,9 +43,9 @@
 
 	<submodel>
 		<name>Browning impact smoke</name>
-		<model>Aircraft/Hurricane/Models/smoke-impact.xml</model>
+		<model>Aircraft/Hurricane/Models/Effects/smoke-impact.xml</model>
 		<!--<model>Models/Geometry/tracer.xml</model>-->
-		<trigger>ai/submodels[1]/trigger</trigger>
+		<!--<trigger>ai/submodels[1]/trigger</trigger>-->
 		<speed>0</speed>
 		<repeat>false</repeat>
 		<delay>0</delay>

@@ -42,6 +42,14 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 				<selected type="bool">0</selected>
 			</tank>
 		</fuel>
+		<oxygen>
+			<tank n="0">
+				<name type="string">1</name>
+				<capacity-cu-ft type="double">0.4</capacity-cu-ft>
+				<level-cu-ft type="double">54</level-cu-ft>
+				<selected type="bool">1</selected>
+			</tank>
+		</oxygen>
 	</consumables>
 	<!-- set up control properties ... -->
 	<controls>
@@ -53,17 +61,6 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 				<mag-switch-left type="bool">0</mag-switch-left>
 				<mag-switch-right type="bool">0</mag-switch-right>
 				<magnetos>0</magnetos>
-				<!--<coffman-starter>
-					<cartridge type="bool">1</cartridge>
-					<cartridge type="bool">1</cartridge>
-					<cartridge type="bool">1</cartridge>
-					<cartridge type="bool">1</cartridge>
-					<cartridge type="bool">1</cartridge>
-					<cartridge type="bool">1</cartridge>
-					<index type="double">5</index>
-					<index-pull-norm type="double">0</index-pull-norm>
-					<starter-push-norm type="double">0</starter-push-norm>
-				</coffman-starter>-->
 				<cutoff-pull-norm type="double">0</cutoff-pull-norm>
 				<fuel-cock>
 					<lever type="double">1</lever>
@@ -117,15 +114,18 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 	<sim include="help.xml">
 		<description type="string">Hawker Hurricane IIb</description>
 		<author type="string">Vivian Meazza</author>
-		<status>early-production</status>
+		<status>production</status>
 		<flight-model>yasim</flight-model>
 		<aero>hurricaneIIb</aero>
 		<fuel-fraction>1</fuel-fraction>
 		<systems>
 			<electrical>
-				<path>Aircraft/Hurricane/Electrical/electrical.xml</path>
+				<path>Aircraft/Hurricane/Systems/electrical.xml</path>
 			</electrical>
 		</systems>
+		<instrumentation>
+			<path>Aircraft/Hurricane/Systems/instrumentation.xml</path>
+		</instrumentation>
 		<submodels>
 			<serviceable type="bool">true</serviceable>
 			<path>Aircraft/Hurricane/Models/hurricane-submodels.xml</path>
@@ -136,6 +136,38 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 			<audible>true</audible>
 			<path>Aircraft/Hurricane/Sounds/hurricane-sound.xml</path>
 		</sound>
+		<hud>
+			<path n="1">Aircraft/Hurricane/Systems/hurricane-sight.xml</path>
+			<visibility n="1">true</visibility>
+			<font>
+				<size type="float">10.0</size>
+			</font>
+			<palette>
+				<color n="0">
+					<!-- day -->
+					<red type="float">1.0</red>
+					<green type="float">0.4</green>
+					<blue type="float">0.0</blue>
+				</color>
+			</palette>
+		</hud>
+		<aim>
+			<active type="bool">false</active>
+			<tachy type="bool">true</tachy>
+			<align type="bool">false</align>
+			<radius type="float">1</radius>
+			<speed-fps type="float">2755.9</speed-fps>
+			<range-yds type="float">550</range-yds>
+			<arc>
+				<start-deg type="float">10</start-deg>
+				<stop-deg type="float">270</stop-deg>
+			</arc>
+			<offsets>
+				<x type="float">0</x>
+				<y type="float">10</y>
+			</offsets>
+			<compression-factor type ="float">2</compression-factor>
+		</aim>
 		<panel>
 			<path>Aircraft/Generic/Panels/generic-vfr-panel.xml</path>
 			<visibility>false</visibility>
@@ -143,6 +175,7 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 		<model>
 			<path>Aircraft/Hurricane/Models/hurricane_model.xml</path>
 		</model>
+
 		<rendering>
 			<camera-group>
 				<znear type="double">0.1</znear>
@@ -154,10 +187,23 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 				<x-offset-m archive="y"
 										type="double">0.0</x-offset-m>
 				<y-offset-m archive="y"
-										type="double">0.72</y-offset-m>
+										type="double">0.69</y-offset-m>
 				<z-offset-m archive="y"
-										type="double">3.88</z-offset-m>
-				<pitch-offset-deg>-12.5</pitch-offset-deg>
+										type="double">3.83251</z-offset-m>
+				<pitch-offset-deg>-10</pitch-offset-deg>
+				<limits>
+					<enabled type="bool">true</enabled>
+					<left>
+						<heading-max-deg type="double">145</heading-max-deg>
+						<x-offset-max-m type="double">0.16</x-offset-max-m>
+						<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+					</left>
+					<right>
+						<heading-max-deg type="double">145</heading-max-deg>
+						<x-offset-max-m type="double">0.16</x-offset-max-m>
+						<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+					</right>
+				</limits>
 			</config>
 		</view>
 		<view n="1">
@@ -196,28 +242,16 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 													 type="double">3.4</target-z-offset-m>
 			</config>
 		</view>
-		<autopilot>
-			<config>
-				<min-climb-speed-kt type="float">70.0</min-climb-speed-kt>
-				<best-climb-speed-kt type="float">75.0</best-climb-speed-kt>
-				<target-climb-rate-fpm type="float">500.0</target-climb-rate-fpm>
-				<target-descent-rate-fpm type="float">1000.0</target-descent-rate-fpm>
-				<elevator-adj-factor type="float">4000.0</elevator-adj-factor>
-				<integral-contribution type="float">0.01</integral-contribution>
-				<zero-pitch-throttle type="float">0.45</zero-pitch-throttle>
-				<zero-pitch-trim-full-throttle type="float">0.14</zero-pitch-trim-full-throttle>
-			</config>
-		</autopilot>
-		<hud>
-			<enable3d>false</enable3d>
-		</hud>
+		
 		<flaps>
 			<setting>0.00</setting>
 			<setting>1.00</setting>
 		</flaps>
+		
 		<alarms>
 			<gear-warn type="double">0</gear-warn>
 		</alarms>
+		
 		<tutorials>
 			<tutorial include="Tutorials/startup_tutorial.xml"/>
 		</tutorials>
@@ -478,7 +512,7 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 					</condition>
 					<command>property-assign</command>
 					<property>sim/current-view/y-offset-m</property>
-					<value type="double">0.71</value>
+					<value type="double">0.69</value>
 				</binding>
 			</key>
 			<key n="85">
@@ -501,8 +535,8 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 					<command>property-adjust</command>
 					<property>sim/current-view/y-offset-m</property>
 					<step type="double">-0.01</step>
-					<min type="double">0.66</min>
-					<max type="double">0.76</max>
+					<min type="double">0.64</min>
+					<max type="double">0.74</max>
 				</binding>
 			</key>
 			<key n="117">
@@ -525,8 +559,8 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 					<command>property-adjust</command>
 					<property>sim/current-view/y-offset-m</property>
 					<step type="double">0.01</step>
-					<min type="double">0.66</min>
-					<max type="double">0.76</max>
+					<min type="double">0.64</min>
+					<max type="double">0.74</max>
 				</binding>
 			</key>
 			<!-- map keys for mag switches  -->
@@ -682,11 +716,14 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 	<nasal>
 		<hurricane-fuel>
 			<module>fuel</module>
-			<file>Aircraft/Hurricane/Models/fuel-cocks.nas</file>
+			<file>Aircraft/Hurricane/Nasal/fuel-cocks.nas</file>
 		</hurricane-fuel>
 		<hurricane>
-			<file>Aircraft/Hurricane/Models/hurricane.nas</file>
+			<file>Aircraft/Hurricane/Nasal/hurricane.nas</file>
 		</hurricane>
+		<oxygen>
+			<file>Aircraft/Generic/Oxygen/oxygen.nas</file>
+		</oxygen>
 		<!--<recoil>
 					<file>Aircraft/Hurricane/Models/recoil.nas</file>
 				</recoil>-->

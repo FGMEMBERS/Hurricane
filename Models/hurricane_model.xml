@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!-- Hurricane IIb by Vivian Meazza -->
 <PropertyList>
-	<path>hurricane-ver-25.ac</path>
+	<path>hurricane-ver-26.ac</path>
 	<!-- Front hotspots -->
 	<panel>
 		<path>Aircraft/Hurricane/Models/panel-hotspots.xml</path>
@@ -81,7 +81,7 @@
       <path>Aircraft/Hurricane/Models/panel.ac</path>
     </model>-->
 	<model>
-		<path>Aircraft/Hurricane/Models/asi.xml</path>
+		<path>Aircraft/Hurricane/Models/Instrumentation/asi.xml</path>
 		<offsets>
 			<x-m>3.104</x-m>
 			<y-m>-0.11</y-m>
@@ -89,7 +89,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Hurricane/Models/attitude.xml</path>
+		<path>Aircraft/Hurricane/Models/Instrumentation/attitude.xml</path>
 		<name>Attitude</name>
 		<offsets>
 			<x-m>3.105</x-m>
@@ -98,7 +98,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Hurricane/Models/vsi.xml</path>
+		<path>Aircraft/Hurricane/Models/Instrumentation/vsi.xml</path>
 		<offsets>
 			<x-m>3.105</x-m>
 			<y-m>0.11</y-m>
@@ -106,7 +106,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Hurricane/Models/altimeter.xml</path>
+		<path>Aircraft/Hurricane/Models/Instrumentation/altimeter.xml</path>
 		<name>Altimeter</name>
 		<offsets>
 			<x-m>3.104</x-m>
@@ -115,7 +115,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Hurricane/Models/compass.xml</path>
+		<path>Aircraft/Hurricane/Models/Instrumentation/compass.xml</path>
 		<offsets>
 			<x-m>3.104</x-m>
 			<y-m>0</y-m>
@@ -123,7 +123,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Hurricane/Models/turn.xml</path>
+		<path>Aircraft/Hurricane/Models/Instrumentation/turn.xml</path>
 		<name>Turn</name>
 		<offsets>
 			<x-m>3.105</x-m>
@@ -151,7 +151,7 @@
     </model> -->
 	<!-- engine instruments -->
 	<model>
-		<path>Aircraft/Hurricane/Models/rpm.xml</path>
+		<path>Aircraft/Hurricane/Models/Instrumentation/rpm.xml</path>
 		<offsets>
 			<x-m>3.104</x-m>
 			<y-m>0.16</y-m>
@@ -159,7 +159,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Hurricane/Models/boost.xml</path>
+		<path>Aircraft/Hurricane/Models/Instrumentation/boost.xml</path>
 		<offsets>
 			<x-m>3.104</x-m>
 			<y-m>0.23</y-m>
@@ -167,7 +167,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Hurricane/Models/oil-pressure.xml</path>
+		<path>Aircraft/Hurricane/Models/Instrumentation/oil-pressure.xml</path>
 		<offsets>
 			<x-m>3.104</x-m>
 			<y-m>0.2184</y-m>
@@ -175,7 +175,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Hurricane/Models/fuel.xml</path>
+		<path>Aircraft/Hurricane/Models/Instrumentation/fuel.xml</path>
 		<offsets>
 			<x-m>3.104</x-m>
 			<y-m>0.3425</y-m>
@@ -183,7 +183,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Hurricane/Models/fuel-pressure.xml</path>
+		<path>Aircraft/Hurricane/Models/Instrumentation/fuel-pressure.xml</path>
 		<offsets>
 			<x-m>3.104</x-m>
 			<y-m>0.2769</y-m>
@@ -191,7 +191,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Hurricane/Models/oil-temp.xml</path>
+		<path>Aircraft/Hurricane/Models/Instrumentation/oil-temp.xml</path>
 		<offsets>
 			<x-m>3.104</x-m>
 			<y-m>0.221</y-m>
@@ -199,7 +199,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Hurricane/Models/rad-temp.xml</path>
+		<path>Aircraft/Hurricane/Models/Instrumentation/rad-temp.xml</path>
 		<offsets>
 			<x-m>3.104</x-m>
 			<y-m>0.297</y-m>
@@ -225,7 +225,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Hurricane/Models/clock.xml</path>
+		<path>Aircraft/Hurricane/Models/Instrumentation/clock.xml</path>
 		<offsets>
 			<x-m>3.104</x-m>
 			<y-m>-0.237</y-m>
@@ -273,12 +273,21 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Hurricane/Models/gear.xml</path>
+		<path>Aircraft/Hurricane/Models/Instrumentation/gear.xml</path>
 		<name>Gear-Indicator</name>
 		<offsets>
 			<x-m>3.104</x-m>
 			<y-m>-0.1525</y-m>
 			<z-m>0.465</z-m>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/Hurricane/Models/Instrumentation/oxygen-control.xml</path>
+		<!--3.26664	0.229527	0.25126-->
+		<offsets>
+			<x-m>3.104</x-m>
+			<y-m>-0.255</y-m>
+			<z-m>0.3175</z-m>
 		</offsets>
 	</model>
 	<model>
@@ -320,7 +329,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Hurricane/Models/triple.xml</path>
+		<path>Aircraft/Hurricane/Models/Instrumentation/triple.xml</path>
 		<name>Triple</name>
 		<offsets>
 			<x-m>3.0</x-m>
@@ -428,12 +437,12 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/Hurricane/Models/rgs.xml</path>
+		<path>Aircraft/Hurricane/Models/rgs-mk2.xml</path>
 		<name>Gunsight</name>
 		<offsets>
-			<x-m>3.30</x-m>
+			<x-m>3.35</x-m>
 			<y-m>-0.0</y-m>
-			<z-m>0.69</z-m>
+			<z-m>0.70</z-m>
 		</offsets>
 	</model>
 
