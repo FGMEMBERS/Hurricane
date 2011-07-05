@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!-- Hurricane IIb by Vivian Meazza -->
 <PropertyList>
-	<path>hurricane-ver-26.ac</path>
+	<path>hurricane-ver-27.ac</path>
 	<!-- Front hotspots -->
 	<panel>
 		<path>Aircraft/Hurricane/Models/panel-hotspots.xml</path>
@@ -675,7 +675,7 @@
 	<!--  conceal Pilot Head etc in Cockpit View -->
 	<animation>
 		<type>select</type>
-		<object-name>Head</object-name>
+		<object-name>Pilot-Head</object-name>
 		<condition>
 			<not>
 				<equals>

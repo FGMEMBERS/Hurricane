@@ -88,13 +88,16 @@ The reference datum for measurements is the nose.
 		<flap1 start="0.457"
 					 end="1.0"
 					 lift="1.2"
-					 drag="1.35"/>
+					 drag="1.45"/>
 		<control-input axis="/controls/flight/flaps"
 									 control="FLAP0"/>
 		<control-output control="FLAP0"
 										prop="/surface-positions/flap-pos-norm"/>
 		<!--<control-speed control="FLAP0" transition-time="10"/> -->
 		<control-input axis="/controls/flight/aileron"
+									 control="FLAP1"
+									 split="true"/>
+		<control-input axis="/controls/flight/aileron-trim"
 									 control="FLAP1"
 									 split="true"/>
 		<control-output control="FLAP1"
@@ -104,7 +107,7 @@ The reference datum for measurements is the nose.
 										 side="right"
 										 prop="/surface-positions/right-aileron-pos-norm"/>
 		<control-speed control="FLAP1"
-									 transition-time="2"/>
+									 transition-time="1"/>
 	</wing>
 	<!-- tailplane -->
 	<hstab
@@ -130,7 +133,7 @@ The reference datum for measurements is the nose.
 		<control-output control="FLAP0"
 										prop="/surface-positions/elevator-pos-norm"/>
 		<control-speed control="FLAP0"
-									 transition-time="2"/>
+									 transition-time="1"/>
 	</hstab>
 	<!-- tail -->
 	<vstab x="-8.88"
@@ -152,19 +155,13 @@ The reference datum for measurements is the nose.
 		<control-input axis="/controls/flight/rudder"
 									 control="FLAP0"
 									 invert="true"/>
+		<control-input axis="/controls/flight/rudder-trim"
+									 control="FLAP0"
+									 invert="true"/>
 		<control-output control="FLAP0"
 										prop="/surface-positions/rudder-pos-norm"/>
 		<control-speed control="FLAP0"
-									 transition-time="2"/>
-		<flap1 start="0.3"
-					 end="0.65"
-					 lift="1.4"
-					 drag="1.4"/>
-		<control-input axis="/controls/flight/rudder-trim"
-									 control="FLAP1"
-									 invert="true"/>
-		<control-output control="FLAP1"
-										prop="/surface-positions/rudder-trim-pos-norm"/>
+									 transition-time="1"/>
 	</vstab>
 	<!-- stub wing left -->
 	<vstab x="-2.99"

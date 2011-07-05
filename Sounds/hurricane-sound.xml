@@ -291,6 +291,10 @@
 					<property>gear/canopy/position-norm</property>
 					<value>0</value>
 				</equals>
+				<equals>
+					<property>sim/current-view/view-number</property>
+					<value>0</value>
+				</equals>
 			</condition>
 			<property>/velocities/airspeed-kt</property>
 			<volume>
@@ -321,6 +325,10 @@
 					<property>gear/canopy/position-norm</property>
 					<value>0.01</value>
 				</greater-than>
+				<equals>
+					<property>sim/current-view/view-number</property>
+					<value>0</value>
+				</equals>
 			</condition>
 			<property>/velocities/airspeed-kt</property>
 			<volume>

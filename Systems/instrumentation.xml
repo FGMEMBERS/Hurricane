@@ -54,10 +54,10 @@ file, these values will be used (they are hardcoded).
 		<vacuum-system>/systems/vacuum</vacuum-system>
 	</attitude-indicator>
 
-	<!--<clock>
+	<clock>
 		<name>clock</name>
 		<number>0</number>
-	</clock>-->
+	</clock>
 
 	<!--<dme>
     <name>dme</name>

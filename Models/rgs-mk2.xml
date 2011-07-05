@@ -4,11 +4,6 @@
 	<path>rgs.ac</path>
 	
 	<animation>
-		<type>select</type>
-		<object-name>disk</object-name>
-	</animation>
-
-	<animation>
 		<type>material</type>
 		<object-name>disk</object-name>
 		<transparency>
@@ -70,6 +65,11 @@
 				<property>/controls/switches/gun-sight-main</property>
 			</and>
 		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>disk</object-name>
 	</animation>
 
 	<animation>
