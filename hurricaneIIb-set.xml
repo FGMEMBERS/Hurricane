@@ -117,11 +117,20 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 		<status>production</status>
 		<flight-model>yasim</flight-model>
 		<aero>hurricaneIIb</aero>
+		<startup>
+			<splash-texture>Aircraft/Hurricane/Hurricane-splash.png</splash-texture>
+		</startup>
 		<fuel-fraction>1</fuel-fraction>
 		<systems>
+			<autopilot>
+				<path>Aircraft/Hurricane/Systems/hurricane-autopilot.xml</path>
+			</autopilot>
 			<electrical>
 				<path>Aircraft/Hurricane/Systems/electrical.xml</path>
 			</electrical>
+			<vacuum>
+				<serviceable>true</serviceable>
+			</vacuum>
 		</systems>
 		<instrumentation>
 			<path>Aircraft/Hurricane/Systems/instrumentation.xml</path>
