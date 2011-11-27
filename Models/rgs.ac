@@ -343,7 +343,7 @@ kids 0
 OBJECT poly
 name "disk"
 loc 0.00978009 0.0214533 -3.40515e-010
-texture "D:/Git_New/fgdata/Aircraft/Spitfire/Models/rgs.png"
+texture "rgs.png"
 crease 61.000000
 numvert 13
 0.00652437 -0.0217112 -9.92732e-009
@@ -440,7 +440,7 @@ kids 2
 OBJECT poly
 name "mount"
 loc -0.0334315 -0.0238921 0.0156595
-texture "D:/Git_New/fgdata/Aircraft/Spitfire/Models/Reflector-Gun-Sight.png"
+texture "Reflector-Gun-Sight.png"
 crease 61.000000
 numvert 41
 0.0133833 -0.000954568 -0.0280411
@@ -801,7 +801,7 @@ kids 0
 OBJECT poly
 name "glass-round"
 loc 0.0334315 0.0238921 -0.0156595
-texture "reflector_gun_sight.rgb"
+texture "rgs.png"
 crease 61.000000
 numvert 50
 -0.0384933 -0.0459009 0.0510671
@@ -1439,7 +1439,7 @@ kids 4
 OBJECT poly
 name "bolts-hex-small"
 loc -0.00845022 0.0027296 0.0156822
-texture "D:/Git_New/fgdata/Aircraft/Spitfire/Models/Reflector-Gun-Sight.png"
+texture "Reflector-Gun-Sight.png"
 crease 61.000000
 numvert 84
 -0.00175297 -0.0311462 0.0381848
@@ -2211,7 +2211,7 @@ kids 0
 OBJECT poly
 name "support"
 loc -0.0206475 -0.0228578 -0.0307616
-texture "D:/Git_New/fgdata/Aircraft/Spitfire/Models/Reflector-Gun-Sight.png"
+texture "Reflector-Gun-Sight.png"
 crease 61.000000
 numvert 256
 0.00268354 -0.0298617 0
@@ -4587,7 +4587,7 @@ kids 0
 OBJECT poly
 name "clamp"
 loc 0.00674921 0.0121611 0.00745343
-texture "D:/Git_New/fgdata/Aircraft/Spitfire/Models/Reflector-Gun-Sight.png"
+texture "Reflector-Gun-Sight.png"
 crease 61.000000
 numvert 40
 0.00190514 -0.0320473 0.0445549
@@ -4859,7 +4859,7 @@ kids 0
 OBJECT poly
 name "glass-rect"
 loc 0.0223485 0.00796709 0.00762596
-texture "reflector_gun_sight.rgb"
+texture "rgs.png"
 crease 61.000000
 numvert 41
 0.0356184 0.0212088 0.0383643
@@ -6547,7 +6547,7 @@ kids 0
 OBJECT poly
 name "crash-pad-lower"
 loc 0.0329596 -0.00589455 0.0171514
-texture "D:/Git_New/fgdata/Aircraft/Spitfire/Models/Reflector-Gun-Sight.png"
+texture "Reflector-Gun-Sight.png"
 crease 61.000000
 numvert 78
 -0.0184078 -0.0549545 0.0336594
@@ -8378,7 +8378,7 @@ kids 0
 OBJECT poly
 name "cylinder-lower-back"
 loc -0.0317616 0.0338243 0.0722343
-texture "D:/Git_New/fgdata/Aircraft/Spitfire/Models/Reflector-Gun-Sight.png"
+texture "Reflector-Gun-Sight.png"
 crease 61.000000
 numvert 31
 0.0310252 -0.122485 -0.07763
@@ -8575,7 +8575,7 @@ kids 0
 OBJECT poly
 name "cylinder-lower"
 loc -0.0280357 0.00934595 0.0677515
-texture "D:/Git_New/fgdata/Aircraft/Spitfire/Models/Reflector-Gun-Sight.png"
+texture "Reflector-Gun-Sight.png"
 crease 61.000000
 numvert 26
 0.005771 -0.10125 -0.0442929
@@ -8693,7 +8693,7 @@ kids 0
 OBJECT poly
 name "mounting-screw"
 loc 0.034981 -0.0105451 -0.0668975
-texture "D:/Git_New/fgdata/Aircraft/Spitfire/Models/Reflector-Gun-Sight.png"
+texture "Reflector-Gun-Sight.png"
 crease 61.000000
 numvert 44
 -0.0050806 -0.046121 0.0809796
@@ -9088,7 +9088,7 @@ kids 0
 OBJECT poly
 name "pad-upper"
 loc 0.00481365 0.0971475 0.0175682
-texture "D:/Git_New/fgdata/Aircraft/Spitfire/Models/Reflector-Gun-Sight.png"
+texture "Reflector-Gun-Sight.png"
 crease 61.000000
 numvert 57
 0.0288817 -0.0786145 -0.0461867
@@ -9571,7 +9571,7 @@ kids 0
 OBJECT poly
 name "cylinder-lower"
 loc 0.0370533 0.0256522 -0.0332178
-texture "D:/Git_New/fgdata/Aircraft/Spitfire/Models/Reflector-Gun-Sight.png"
+texture "Reflector-Gun-Sight.png"
 crease 61.000000
 numvert 195
 -0.0159145 -0.118687 0.062014
@@ -11070,7 +11070,7 @@ kids 0
 OBJECT poly
 name "cylinder-upper"
 loc 0.0370987 -0.00498974 -0.0332888
-texture "D:/Git_New/fgdata/Aircraft/Spitfire/Models/Reflector-Gun-Sight.png"
+texture "Reflector-Gun-Sight.png"
 crease 61.000000
 numvert 110
 -0.0357463 0.0249794 0.0503447
@@ -11980,7 +11980,7 @@ kids 0
 OBJECT poly
 name "block"
 loc -0.0164771 -0.0645151 0.00181555
-texture "D:/Git_New/fgdata/Aircraft/Spitfire/Models/Reflector-Gun-Sight.png"
+texture "Reflector-Gun-Sight.png"
 crease 61.000000
 numvert 75
 -0.000923619 -0.0299511 -0.00514596
@@ -12457,7 +12457,7 @@ kids 3
 OBJECT poly
 name "cylinder-lower-back"
 loc 0.0427863 0.0469332 -0.0342281
-texture "D:/Git_New/fgdata/Aircraft/Spitfire/Models/Reflector-Gun-Sight.png"
+texture "Reflector-Gun-Sight.png"
 crease 61.000000
 numvert 195
 -0.0360842 -0.118687 0.0270794
@@ -13956,7 +13956,7 @@ kids 0
 OBJECT poly
 name "mount-back"
 loc -0.00919953 0.0786869 -0.00360628
-texture "D:/Git_New/fgdata/Aircraft/Spitfire/Models/Reflector-Gun-Sight.png"
+texture "Reflector-Gun-Sight.png"
 crease 61.000000
 numvert 26
 0.0133833 -0.000954568 -0.0280411
@@ -14134,7 +14134,7 @@ kids 0
 OBJECT poly
 name "cylinder-upper-back"
 loc 0.0428317 0.0162914 -0.0342991
-texture "D:/Git_New/fgdata/Aircraft/Spitfire/Models/Reflector-Gun-Sight.png"
+texture "Reflector-Gun-Sight.png"
 crease 61.000000
 numvert 26
 -0.0361295 -0.00308277 0.0982412
@@ -14643,7 +14643,7 @@ kids 0
 OBJECT poly
 name "knurled-ring-range"
 loc -0.0446379 -0.0845607 8.02617e-005
-texture "D:/Git_New/fgdata/Aircraft/Spitfire/Models/Reflector-Gun-Sight.png"
+texture "Reflector-Gun-Sight.png"
 crease 61.000000
 numvert 147
 -0.00323367 -0.0459398 1.68451e-005
@@ -15748,7 +15748,7 @@ kids 0
 OBJECT poly
 name "knurled-ring-base"
 loc -0.0446379 -0.0945407 8.02617e-005
-texture "D:/Git_New/fgdata/Aircraft/Spitfire/Models/Reflector-Gun-Sight.png"
+texture "Reflector-Gun-Sight.png"
 crease 61.000000
 numvert 147
 0.0313812 -0.0524796 -0.00762107
