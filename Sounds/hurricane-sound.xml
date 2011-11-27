@@ -518,7 +518,7 @@
 		</click>
 		<click>
 			<name>nav lights click up</name>
-			<path>Aircraft/Spitfire/Sounds/click.wav</path>
+			<path>Aircraft/Hurricane/Sounds/click.wav</path>
 			<condition>
 				<not>
 					<property>controls/lighting/nav-lights</property>
@@ -533,7 +533,7 @@
 		<birds>
 			<name>birdsong</name>
 			<mode>looped</mode>
-			<path>Aircraft/sopwithCamel/Sounds/yasim/birdsong.wav</path>
+			<path>Aircraft/Hurricane/Sounds/birdsong.wav</path>
 			<condition>
 				<equals>
 					<property>/sim/startup/season</property>
