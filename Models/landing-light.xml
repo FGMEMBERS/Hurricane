@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<!-- Light - White Flare-->
+<!-- Light - Landing -->
 <PropertyList>
 
-  <path>light-white-flare.ac</path>
+  <path>landing-light.ac</path>
 
   <animation>
     <type>alpha-test</type>
@@ -20,11 +20,11 @@
     <object-name>White-Light-Flare</object-name>
   </animation>
 
-  <animation>
+  <!--<animation>
     <type>billboard</type>
     <spherical>true</spherical>
     <object-name>White-Light-Flare</object-name>
-  </animation>
+  </animation>-->
 
   <animation>
     <type>dist-scale</type>
@@ -57,87 +57,57 @@
   <animation>
     <type>light</type>
     <light-type>spot</light-type>
-    <name>LightNavTail</name>
-    <object-name>LightVolNavTail</object-name>
+    <name>LandingLight</name>
+    <object-name>LandingLightVol</object-name>
     <position>
       <x> 0 </x>
       <y> 0 </y>
       <z> 0 </z>
     </position>
     <direction>
-      <x> 1.0</x>
+      <x>-1.0</x>
       <y> 0.0</y>
       <z> 0.0</z>
     </direction>
     <ambient>
-      <r>0.01</r>
-      <g>0.01</g>
-      <b>0.01</b>
+      <r>0.03</r>
+      <g>0.03</g>
+      <b>0.03</b>
       <a>1.0</a>
     </ambient>
     <diffuse>
-      <r>0.7</r>
-      <g>0.7</g>
-      <b>0.7</b>
+      <r>1.0</r>
+      <g>1.0</g>
+      <b>0.8</b>
       <a>1.0</a>
     </diffuse>
     <specular>
-      <r>0.7</r>
-      <g>0.7</g>
-      <b>0.7</b>
+      <r>0.9</r>
+      <g>0.9</g>
+      <b>0.9</b>
       <a>1.0</a>
     </specular>
     <attenuation>
       <c>1.0</c>
       <l>0.002</l>
-      <q>0.0005</q>
+      <q>0.00005</q>
     </attenuation>
-    <exponent>2.0</exponent>
-    <near-m>0.0001</near-m>
-    <far-m>50</far-m>
-    <cutoff>90</cutoff>
+    <exponent>20.0</exponent>
+    <cutoff>10</cutoff>
+    <near-m>3.0</near-m>
+    <far-m>250</far-m>
   </animation>
 
-  <animation>
+   <animation>
     <type>select</type>
-    <object-name>White-Light-Flare</object-name>
+    <object-name>LandingLight</object-name>
     <condition>
-      <or>
-        <equals>
-          <property>/controls/lighting/nav-lights</property>
-          <value>1</value>
-        </equals>
-        <equals>
-          <property>/controls/lighting/nav-lights[1]</property>
-          <value>1</value>
-        </equals>
-      </or>
-    </condition>
-  </animation>
-
-  <animation>
-    <type>select</type>
-    <object-name>LightNavTail</object-name>
-    <condition>
-      <and>
-        <or>
-          <equals>
-            <property>/controls/lighting/nav-lights</property>
-            <value>1</value>
-          </equals>
-          <equals>
-            <property>/controls/lighting/nav-lights[1]</property>
-            <value>1</value>
-          </equals>
-        </or>
         <greater-than>
           <property>/sim/time/sun-angle-rad</property>
           <value>1.4</value>
         </greater-than>
-      </and>
-    </condition>
+     </condition>
   </animation>
-
 
   <!--    *** LoD *** 
     <animation> 
