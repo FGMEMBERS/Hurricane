@@ -8,6 +8,12 @@
 		<spherical>true</spherical>
 	</animation>
 
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>puff</object-name>
+    <object-name>disk</object-name>
+  </effect>
+
 	<animation>
 		<type>dist-scale</type>
 		<object-name>disk</object-name>

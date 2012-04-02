@@ -5,14 +5,19 @@
 
 	<animation>
 		<enable-hot type="bool">false</enable-hot>
-	</animation>
+	</animation> 
+  
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>puff</object-name>
+  </effect>
 
 	<animation>
 		<type>billboard</type>
 		<spherical>true</spherical>
 	</animation>
 
-	<animation>
+  <animation>
 		<type>scale</type>
 		<object-name>puff</object-name>
 		<use-personality>true</use-personality>
