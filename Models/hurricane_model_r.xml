@@ -92,7 +92,7 @@
     <path>Aircraft/Hurricane/Models/Instrumentation/attitude.xml</path>
     <name>Attitude</name>
     <offsets>
-      <x-m>3.105</x-m>
+      <x-m>3.102</x-m>
       <y-m>0.0</y-m>
       <z-m>0.312</z-m>
     </offsets>
@@ -117,7 +117,7 @@
   <model>
     <path>Aircraft/Hurricane/Models/Instrumentation/compass.xml</path>
     <offsets>
-      <x-m>3.104</x-m>
+      <x-m>3.10158</x-m>
       <y-m>0</y-m>
       <z-m>0.21</z-m>
     </offsets>

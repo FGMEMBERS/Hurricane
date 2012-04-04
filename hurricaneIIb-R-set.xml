@@ -162,7 +162,7 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 		</hud>
 		<aim>
 			<active type="bool">false</active>
-			<tachy type="bool">true</tachy>
+			<tachy type="bool">false</tachy>
 			<align type="bool">false</align>
 			<radius type="float">1</radius>
 			<speed-fps type="float">2755.9</speed-fps>
