@@ -15,28 +15,95 @@
     <object-name>Red-Light-Flare</object-name>
   </effect>
 
-	<animation>
+	<!--<animation>
 		<type>billboard</type>
 		<spherical>true</spherical>
 		<object-name>Red-Light-Flare</object-name>
-	</animation>
+	</animation>-->
 
-	<animation>
-		<type>dist-scale</type>
-		<object-name>Red-Light-Flare</object-name>
-		<interpolation>
-			<entry>
-				<ind>0.001</ind>
-				<dep>2</dep>
-			</entry>
-			<entry>
-				<ind>40000</ind>
-				<dep>100</dep>
-			</entry>
-		</interpolation>
-	</animation>
+  <animation>
+    <type>flash</type>
+    <object-name>Red-Light-Flare-0</object-name>
+    <offset>0.0</offset>
+    <factor>1.0</factor>
+    <power>2.0</power>
+    <two-sides type="bool">false</two-sides>
+    <min>0.0</min>
+    <max>2.0</max>
+    <center>
+      <x-m>0.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+    <axis>
+      <x>-1.0</x>
+      <y>-0.25</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
 
-	<animation>
+  <animation>
+    <type>flash</type>
+    <object-name>Red-Light-Flare-1</object-name>
+    <offset>0.0</offset>
+    <factor>1.0</factor>
+    <power>2.0</power>
+    <two-sides type="bool">false</two-sides>
+    <min>0.0</min>
+    <max>2.0</max>
+    <center>
+      <x-m>0.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+    <axis>
+      <x>-0.3</x>
+      <y>-1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>flash</type>
+    <object-name>Red-Light-Flare-2</object-name>
+    <offset>0.0</offset>
+    <factor>1.0</factor>
+    <power>1.0</power>
+    <two-sides type="bool">true</two-sides>
+    <min>0.0</min>
+    <max>2.0</max>
+    <center>
+      <x-m>0.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>0.0</y>
+      <z>1.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>dist-scale</type>
+    <object-name>Red-Light-Flare</object-name>
+    <interpolation>
+      <entry>
+        <ind>0.001</ind>
+        <dep>1</dep>
+      </entry>
+      <entry>
+        <ind>40000</ind>
+        <dep>150</dep>
+      </entry>
+      <entry>
+        <ind>80000</ind>
+        <dep>300</dep>
+      </entry>
+    </interpolation>
+  </animation>
+
+  <animation>
 		<type>scale</type>
 		<object-name>Red-Light-Flare</object-name>
 		<property>/sim/time/sun-angle-rad</property>
@@ -136,7 +203,7 @@
 	<!--    *** LoD *** 
     <animation> 
       <type>range</type>
-      <object-name>Green-Flare</object-name>
+      <object-name>Red-Flare</object-name>
       <min-m>0</min-m>
       <max-m>5000</max-m>
     </animation>-->

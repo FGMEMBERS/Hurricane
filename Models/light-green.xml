@@ -19,7 +19,7 @@
 
   <animation>
     <type>noshadow</type>
-    <object-name>>Green-Light-Flare</object-name>
+    <object-name>Green-Light-Flare</object-name>
    </animation>
 
 	<!--<animation>
@@ -64,7 +64,7 @@
       <z-m>0.0</z-m>
     </center>
     <axis>
-      <x>-0.25</x>
+      <x>-0.3</x>
       <y>1.0</y>
       <z>0.0</z>
     </axis>

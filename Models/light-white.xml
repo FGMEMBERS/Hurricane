@@ -20,10 +20,73 @@
     <object-name>White-Light-Flare</object-name>
   </animation>
 
-  <animation>
+  <!--<animation>
     <type>billboard</type>
     <spherical>true</spherical>
     <object-name>White-Light-Flare</object-name>
+  </animation>-->
+
+  <animation>
+    <type>flash</type>
+    <object-name>White-Light-Flare-0</object-name>
+    <offset>0.0</offset>
+    <factor>1.0</factor>
+    <power>2.0</power>
+    <two-sides type="bool">false</two-sides>
+    <min>0.5</min>
+    <max>2.0</max>
+    <center>
+      <x-m>0.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+    <axis>
+      <x>0.5</x>
+      <y>0.4</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>flash</type>
+    <object-name>White-Light-Flare-1</object-name>
+    <offset>0.0</offset>
+    <factor>1.0</factor>
+    <power>2.0</power>
+    <two-sides type="bool">false</two-sides>
+    <min>0.0</min>
+    <max>2.0</max>
+    <center>
+      <x-m>0.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+    <axis>
+      <x>0.5</x>
+      <y>-0.4</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>flash</type>
+    <object-name>White-Light-Flare-2</object-name>
+    <offset>0.0</offset>
+    <factor>1.0</factor>
+    <power>1.0</power>
+    <two-sides type="bool">true</two-sides>
+    <min>0.0</min>
+    <max>2.0</max>
+    <center>
+      <x-m>0.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>0.0</y>
+      <z>1.0</z>
+    </axis>
   </animation>
 
   <animation>
@@ -32,11 +95,15 @@
     <interpolation>
       <entry>
         <ind>0.001</ind>
-        <dep>2</dep>
+        <dep>1</dep>
       </entry>
       <entry>
         <ind>40000</ind>
-        <dep>100</dep>
+        <dep>150</dep>
+      </entry>
+      <entry>
+        <ind>80000</ind>
+        <dep>300</dep>
       </entry>
     </interpolation>
   </animation>
