@@ -579,16 +579,6 @@
 
   <!-- hide all of the model not visible from the cockpit -->
 
-  <effect>
-    <inherits-from>Effects/model-transparent</inherits-from>
-    <object-name>PropellerDisk</object-name>
-    <object-name>Stbd-Nav-Lt-Cover</object-name>
-    <object-name>Port-Nav-Lt-Cover</object-name>
-    <object-name>Tail-Lt-Cover</object-name>
-    <object-name>Glass-Port</object-name>
-    <object-name>Glass-Stbd</object-name>
-  </effect>
-
   <animation>
     <!--<type>select</type>-->
     <object-name>Covers</object-name>
@@ -680,6 +670,30 @@
       </greater-than-equals>
     </condition>
   </animation>
+  
+  <!-- transparencies -->
+
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>Exhaust-Dirt</object-name>
+    <object-name>Bottom-Oil-Streak</object-name>
+    <object-name>Antenna-HF</object-name><object-name>Canopy-Front</object-name>
+    <object-name>Canopy-Main</object-name> 
+    <object-name>Front-Panel-O</object-name>
+    <object-name>Front-Panel-I</object-name>
+  </effect>
+
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>PropellerDisk</object-name>
+    <object-name>Stbd-Nav-Lt-Cover</object-name>
+    <object-name>Port-Nav-Lt-Cover</object-name>
+    <object-name>Tail-Lt-Cover</object-name>
+    <object-name>Glass-Port</object-name>
+    <object-name>Glass-Stbd</object-name>
+  </effect>
+  
+  <!-- rain effects -->
 
   <animation>
     <type>select</type>
@@ -1434,23 +1448,76 @@
   <animation>
     <type>material</type>
     <object-name>Panels</object-name>
-    <emission>
-      <factor-prop>controls/lighting/panel-norm</factor-prop>
-      <red>0.6</red>
-      <green>0.20</green>
-      <blue>0.20</blue>
-    </emission>
-  </animation>
+     <condition>
+        <greater-than>
+          <property>/controls/lighting/panel-norm[1]</property>
+          <value>0</value>
+        </greater-than>
+        <property>/sim/rendering/rembrandt</property>
+      </condition>
+      <emission>
+        <factor-prop>/controls/lighting/panel-norm</factor-prop>
+        <red>0.0</red>
+        <green>0.0</green>
+        <blue>0.0</blue>
+      </emission>
+    </animation>
+
+    <animation>
+      <type>material</type>
+      <condition>
+        <greater-than>
+          <property>/controls/lighting/panel-norm</property>
+          <value>0</value>
+        </greater-than>
+        <not>
+          <property>/sim/rendering/rembrandt</property>
+        </not>
+      </condition>
+      <emission>
+        <factor-prop>/controls/lighting/panel-norm</factor-prop>
+        <red>0.75</red>
+        <green>0.25</green>
+        <blue>0.25</blue>
+      </emission>
+    </animation>
+  
   <animation>
     <type>material</type>
     <object-name>Member-F-C-U</object-name>
-    <emission>
-      <factor-prop>controls/lighting/panel-norm</factor-prop>
-      <red>0.3</red>
-      <green>0.025</green>
-      <blue>0.025</blue>
-    </emission>
-  </animation>
+      <condition>
+        <greater-than>
+          <property>/controls/lighting/panel-norm[1]</property>
+          <value>0</value>
+        </greater-than>
+        <property>/sim/rendering/rembrandt</property>
+      </condition>
+      <emission>
+        <factor-prop>/controls/lighting/panel-norm</factor-prop>
+        <red>0.0</red>
+        <green>0.0</green>
+        <blue>0.0</blue>
+      </emission>
+    </animation>
+
+    <animation>
+      <type>material</type>
+      <condition>
+        <greater-than>
+          <property>/controls/lighting/panel-norm</property>
+          <value>0</value>
+        </greater-than>
+        <not>
+          <property>/sim/rendering/rembrandt</property>
+        </not>
+      </condition>
+      <emission>
+        <factor-prop>/controls/lighting/panel-norm</factor-prop>
+        <red>0.75</red>
+        <green>0.25</green>
+        <blue>0.25</blue>
+      </emission>
+    </animation>
 
   <!-- ========== Dirt textures ========= -->
 
@@ -1458,6 +1525,7 @@
     <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>Exhaust-Dirt</object-name>
     <object-name>Bottom-Oil-Streak</object-name>
+    <object-name>Antenna-HF</object-name>
   </effect>
 
   <animation>

@@ -151,6 +151,7 @@
     <light-type>spot</light-type>
     <name>LightNavStbd</name>
     <object-name>LightVolNavStbd</object-name>
+    <nopreview/>
     <position>
       <x> 0 </x>
       <y> 0 </y>

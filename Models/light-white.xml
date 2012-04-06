@@ -126,6 +126,7 @@
     <light-type>spot</light-type>
     <name>LightNavTail</name>
     <object-name>LightVolNavTail</object-name>
+    <nopreview/>
     <position>
       <x> 0 </x>
       <y> 0 </y>
