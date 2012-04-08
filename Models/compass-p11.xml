@@ -188,39 +188,41 @@
 		</axis>
 	</animation>
 
-	<animation>
-		<type>material</type>
-		<object-name>bracket-support</object-name>
-		<condition>
-			<or>
-			<equals>
-				<property>sim/aircraft</property>
-				<value>seafireIIIc</value>
-			</equals>	
-				<equals>
-				<property>sim/aircraft</property>
-				<value>spitfireVb</value>
-			</equals>
-			</or>
-		</condition>
-		<texture>seafire-tx-00.png</texture>
-	</animation>
+  <animation>
+    <type>material</type>
+    <condition>
+      <greater-than>
+        <property>/controls/lighting/panel-norm[1]</property>
+        <value>0</value>
+      </greater-than>
+      <property>/sim/rendering/rembrandt</property>
+    </condition>
+    <emission>
+      <factor-prop>/controls/lighting/panel-norm</factor-prop>
+      <red>0.0</red>
+      <green>0.0</green>
+      <blue>0.0</blue>
+    </emission>
+  </animation>
 
-	<animation>
-		<type>material</type>
-		<condition>
-			<greater-than>
-				<property>/controls/lighting/panel-norm</property>
-				<value>0</value>
-			</greater-than>
-		</condition>
-		<emission>
-			<factor-prop>/controls/lighting/panel-norm</factor-prop>
-			<red>0.75</red>
-			<green>0.25</green>
-			<blue>0.25</blue>
-		</emission>
-	</animation>
+  <animation>
+    <type>material</type>
+    <condition>
+      <greater-than>
+        <property>/controls/lighting/panel-norm</property>
+        <value>0</value>
+      </greater-than>
+      <not>
+        <property>/sim/rendering/rembrandt</property>
+      </not>
+    </condition>
+    <emission>
+      <factor-prop>/controls/lighting/panel-norm</factor-prop>
+      <red>0.75</red>
+      <green>0.25</green>
+      <blue>0.25</blue>
+    </emission>
+  </animation>
 
 	<animation>
 		<type>noshadow</type>

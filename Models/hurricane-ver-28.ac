@@ -8,7 +8,7 @@ MATERIAL "ac3dmat14" rgb 0.8 0.8 0.8  amb 0.8 0.8 0.8  emis 0 0 0  spec 1 1 1  s
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 1 1 1  shi 5  trans 0
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.902 0.902 0.902  emis 0 0 0  spec 1 1 1  shi 5  trans 0
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.925 0.925 0.925  emis 0 0 0  spec 0.4 0.4 0.4  shi 10  trans 0
-MATERIAL "ac3dmat14" rgb 0.8 0.8 0.8  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat14" rgb 0.8 0.8 0.8  amb 0.8 0.8 0.8  emis 0 0 0  spec 0.8 0.8 0.8  shi 10  trans 0
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.5 0.5 0.5  shi 10  trans 0
 MATERIAL "ac3dmat4" rgb 1 0.466667 0  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
 MATERIAL "ac3dmat6" rgb 0 1 0  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
@@ -65998,21 +65998,21 @@ refs 4
 SURF 0x0
 mat 9
 refs 3
-85 0.936472 0.165873
-81 0.584295 0.322999
 83 0.415892 0.322999
+81 0.584295 0.322999
+85 0.936472 0.165873
 SURF 0x0
 mat 9
 refs 3
+85 0.936472 0.165873
+81 0.584295 0.322999
 86 0.960971 0.185245
-81 0.584295 0.322999
-85 0.936472 0.165873
 SURF 0x0
 mat 9
 refs 3
-85 0.936472 0.165873
-83 0.415892 0.322999
 95 0.0575909 0.167905
+83 0.415892 0.322999
+85 0.936472 0.165873
 SURF 0x0
 mat 9
 refs 3

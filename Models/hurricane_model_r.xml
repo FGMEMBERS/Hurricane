@@ -449,7 +449,7 @@
     <path>Aircraft/Hurricane/Models/compass-p11.xml</path>
     <name>Compass-p11</name>
     <offsets>
-      <x-m>3.18078</x-m>
+      <x-m>3.15</x-m>
       <y-m>-0.0</y-m>
       <z-m>0.00153</z-m>
     </offsets>
@@ -540,10 +540,10 @@
     <path>Aircraft/Hurricane/Models/panel-light.xml</path>
     <name>Cockpit-Light-2</name>
     <offsets>
-      <x-m>  3.20 </x-m>
-      <y-m> -0.307 </y-m>
-      <z-m>  0.42 </z-m>
-      <pitch-deg>-53</pitch-deg>
+      <x-m>  3.25 </x-m>
+      <y-m> -0.31 </y-m>
+      <z-m>  0.40 </z-m>
+      <pitch-deg>-45</pitch-deg>
       <heading-deg>-5</heading-deg>
     </offsets>
   </model>
@@ -552,10 +552,10 @@
     <path>Aircraft/Hurricane/Models/panel-light.xml</path>
     <name>Cockpit-Light-3</name>
     <offsets>
-      <x-m>  3.20 </x-m>
-      <y-m>  0.307 </y-m>
-      <z-m>  0.42 </z-m>
-      <pitch-deg>-53</pitch-deg>
+      <x-m>  3.25 </x-m>
+      <y-m>  0.31 </y-m>
+      <z-m>  0.40 </z-m>
+      <pitch-deg>-45</pitch-deg>
       <heading-deg>5</heading-deg>
     </offsets>
   </model>
