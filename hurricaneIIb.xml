@@ -5,7 +5,35 @@
 
 YASim aerodynamic model for a Hurricane IIb
 
-Author: Vivian Meazza
+Sources: 
+
+  Hurricane Mk II Performance
+  Aeroplane and Armament Experimental Establishment 
+  Boscombe Down 
+  21st October 1941
+
+ 
+  NATIONAL ADVISORY COMMITTEE FOR AERONAUTICS
+  WARTIME REPORT
+  ORIGINALLY ISSUED
+  April 1942 as
+  Memorandum Report
+
+  MEASUREMENT OF THE FLYING QUALITIES OF
+  A HAWKER HURRICANE AIRPLANE
+
+  by J M.Nissen and W. H. Phillips
+  Langley Field Memorial Aeronautical Laboratory
+  Langley Field, Va.
+  NACA
+  WASHINGTON
+
+This configuration has been developed with a great deal of assistance
+by Emilian Huminiuc and includes many of his ideas and suggestions for
+improvements. He has also contributed many hours testing to tune the
+results.
+
+© Vivian Meazza & Emilian Huminiuc 2012
 
 The reference datum for measurements is the nose.
 
