@@ -115,6 +115,12 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 		<description type="string">Hawker Hurricane IIb (Rembrandt)</description>
 		<author type="string">Vivian Meazza</author>
 		<status>production</status>
+    <rating>
+      <FDM type="int">4</FDM>
+      <systems type="int">4</systems>
+      <cockpit type="int">5</cockpit>
+      <model type="int">5</model>
+    </rating>
 		<flight-model>yasim</flight-model>
 		<aero>hurricaneIIb</aero>
 		<startup>
@@ -278,9 +284,17 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 							<property>sim/model/hurricane/show-pilot</property>
 						</binding>
 					</item>
+          <item>
+            <label>Flashlight</label>
+            <binding>
+              <command>property-toggle</command>
+              <property>controls/lighting/flashlight</property>
+            </binding>
+          </item>
 				</menu>
 			</default>
 		</menubar>
+    
 		<hurricane>
 			<show-pilot archive="y"
 									type="bool">true</show-pilot>
