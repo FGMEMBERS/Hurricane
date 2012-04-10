@@ -1,141 +1,141 @@
 <?xml version="1.0"?>
-  <!-- undercarriage indicator -->
-  <PropertyList> 
-    <path>gear.ac</path>
+<!-- undercarriage indicator -->
+<PropertyList>
+  <path>gear.ac</path>
 
-    <effect>
-      <inherits-from>Effects/model-transparent</inherits-from>
-      <object-name>lenses</object-name>
-    </effect>
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>lenses</object-name>
+  </effect>
 
-    <!-- **************** lamps **************** -->
-    
-    <!-- Port locked down -->
-    <animation> 
-      <type>select</type>
-      <object-name>disk-P-R</object-name>
-      <condition> 
-        <equals> 
-          <property>gear/gear[1]/position-norm</property>
-          <value>0</value>
-        </equals>
-      </condition>
-    </animation>
-    <animation> 
-      <type>select</type>
-      <object-name>disk-P-R2</object-name>
-      <condition> 
-        <equals> 
-          <property>gear/gear[1]/position-norm</property>
-          <value>0</value>
-        </equals>
-      </condition>
-    </animation>
-    <!-- Stbd locked down -->
-    <animation> 
-      <type>select</type>
-      <object-name>disk-S-R</object-name>
-      <condition> 
-        <equals> 
-          <property>gear/gear[1]/position-norm</property>
-          <value>0</value>
-        </equals>
-      </condition>
-    </animation>
-    <animation> 
-      <type>select</type>
-      <object-name>disk-S-R2</object-name>
-      <condition> 
-        <equals> 
-          <property>gear/gear[1]/position-norm</property>
-          <value>0</value>
-        </equals>
-      </condition>
-    </animation>
-    <!-- Port locked up -->
-    <animation> 
-      <type>select</type>
-      <object-name>disk-P-G</object-name>
-      <condition> 
-        <equals> 
-          <property>gear/gear[1]/position-norm</property>
-          <value>1</value>
-        </equals>
-      </condition>
-    </animation>
-    <animation> 
-      <type>select</type>
-      <object-name>disk-P-G2</object-name>
-      <condition> 
-        <equals> 
-          <property>gear/gear[1]/position-norm</property>
-          <value>1</value>
-        </equals>
-      </condition>
-    </animation>
-    <!-- Stbd locked up -->
-    <animation> 
-      <type>select</type>
-      <object-name>disk-S-G</object-name>
-      <condition> 
-        <equals> 
-          <property>gear/gear[1]/position-norm</property>
-          <value>1</value>
-        </equals>
-      </condition>
-    </animation>
-    <animation> 
-      <type>select</type>
-      <object-name>disk-S-G2</object-name>
-      <condition> 
-        <equals> 
-          <property>gear/gear[1]/position-norm</property>
-          <value>1</value>
-        </equals>
-      </condition>
-    </animation>
-    <!-- main/alt selection -->
-    <animation> 
-      <type>select</type>
-      <object-name>Main</object-name>
-      <condition> 
-          <property>controls/switches/gear-indicator-main</property>
-          <property>controls/switches/gear-indicator</property>
-      </condition>
-    </animation>
-    <animation> 
-      <type>select</type>
-      <object-name>Spare</object-name>
-      <condition> 
-          <property>controls/switches/gear-indicator-alt</property>
-          <property>controls/switches/gear-indicator</property>
-      </condition>
-    </animation>
-    
-	<!-- lighting -->
-    <animation>
-      <type>material</type>
-      <condition>
-        <greater-than>
-          <property>/controls/lighting/panel-norm</property>
-          <value>0</value>
-        </greater-than>
-        <not>
-          <property>/sim/rendering/rembrandt</property>
-        </not>
-      </condition>
-      <emission>
-        <factor-prop>/controls/lighting/panel-norm</factor-prop>
-        <red>0.75</red>
-        <green>0.25</green>
-        <blue>0.25</blue>
-      </emission>
-    </animation>
-    
-    <!-- *** LoD *** -->
-    <animation> 
-      <type>range</type>
-      <min-m>0</min-m>
-      <max-m>5</max-m>
-    </animation>
-  </PropertyList>
+  <!-- **************** lamps **************** -->
+
+  <!-- Port locked down -->
+  <animation>
+    <type>select</type>
+    <object-name>disk-P-R</object-name>
+    <condition>
+      <equals>
+        <property>gear/gear[1]/position-norm</property>
+        <value>0</value>
+      </equals>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>disk-P-R2</object-name>
+    <condition>
+      <equals>
+        <property>gear/gear[1]/position-norm</property>
+        <value>0</value>
+      </equals>
+    </condition>
+  </animation>
+  <!-- Stbd locked down -->
+  <animation>
+    <type>select</type>
+    <object-name>disk-S-R</object-name>
+    <condition>
+      <equals>
+        <property>gear/gear[1]/position-norm</property>
+        <value>0</value>
+      </equals>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>disk-S-R2</object-name>
+    <condition>
+      <equals>
+        <property>gear/gear[1]/position-norm</property>
+        <value>0</value>
+      </equals>
+    </condition>
+  </animation>
+  <!-- Port locked up -->
+  <animation>
+    <type>select</type>
+    <object-name>disk-P-G</object-name>
+    <condition>
+      <equals>
+        <property>gear/gear[1]/position-norm</property>
+        <value>1</value>
+      </equals>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>disk-P-G2</object-name>
+    <condition>
+      <equals>
+        <property>gear/gear[1]/position-norm</property>
+        <value>1</value>
+      </equals>
+    </condition>
+  </animation>
+  <!-- Stbd locked up -->
+  <animation>
+    <type>select</type>
+    <object-name>disk-S-G</object-name>
+    <condition>
+      <equals>
+        <property>gear/gear[1]/position-norm</property>
+        <value>1</value>
+      </equals>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>disk-S-G2</object-name>
+    <condition>
+      <equals>
+        <property>gear/gear[1]/position-norm</property>
+        <value>1</value>
+      </equals>
+    </condition>
+  </animation>
+  <!-- main/alt selection -->
+  <animation>
+    <type>select</type>
+    <object-name>Main</object-name>
+    <condition>
+      <property>controls/switches/gear-indicator-main</property>
+      <property>controls/switches/gear-indicator</property>
+    </condition>
+  </animation>
+  <animation>
+    <type>select</type>
+    <object-name>Spare</object-name>
+    <condition>
+      <property>controls/switches/gear-indicator-alt</property>
+      <property>controls/switches/gear-indicator</property>
+    </condition>
+  </animation>
+
+  <!-- lighting -->
+  <animation>
+    <type>material</type>
+    <condition>
+      <greater-than>
+        <property>/controls/lighting/panel-norm</property>
+        <value>0</value>
+      </greater-than>
+      <not>
+        <property>/sim/rendering/rembrandt</property>
+      </not>
+    </condition>
+    <emission>
+      <factor-prop>/controls/lighting/panel-norm</factor-prop>
+      <red>0.75</red>
+      <green>0.25</green>
+      <blue>0.25</blue>
+    </emission>
+  </animation>
+
+  <!-- *** LoD *** -->
+  <animation>
+    <type>range</type>
+    <min-m>0</min-m>
+    <max-m>5</max-m>
+  </animation>
+</PropertyList>
