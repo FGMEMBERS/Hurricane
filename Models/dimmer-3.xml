@@ -20,11 +20,16 @@
       <blue>0.25</blue>
     </emission>
   </animation>
+
+  <animation>
+    <object-name>Knob</object-name>
+    <name>Knob-3</name>
+  </animation>
   
 	<animation>
 		<type>rotate</type>
-		<object-name>Knob</object-name>
-		<property>controls/lighting/panel-norm</property>
+		<object-name>Knob-3</object-name>
+		<property>controls/lighting/panel-norm[4]</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -59,7 +64,7 @@
 			</binding>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/lighting/panel-norm[1]</property>
+        <property>/controls/lighting/panel-norm[4]</property>
         <step>0.1</step>
         <min>0</min>
         <max>1</max>
@@ -85,7 +90,7 @@
 			</binding>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/lighting/panel-norm[1]</property>
+        <property>/controls/lighting/panel-norm[4]</property>
         <step>-0.1</step>
         <min>0</min>
         <max>1</max>

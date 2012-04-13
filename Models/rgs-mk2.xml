@@ -78,7 +78,7 @@
     <object-name>disk</object-name>
   </animation>
 
-  <animation>
+  <!--<animation>
     <type>material</type>
     <condition>
       <greater-than>
@@ -93,7 +93,7 @@
       <green>0.0</green>
       <blue>0.0</blue>
     </emission>
-  </animation>
+  </animation>-->
 
   <animation>
     <type>material</type>

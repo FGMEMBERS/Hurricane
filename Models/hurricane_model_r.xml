@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!-- Hurricane IIb by Vivian Meazza -->
 <PropertyList>
-  <path>hurricane-ver-28.ac</path>
+  <path>hurricane-ver-29.ac</path>
   <!-- Front hotspots -->
   <panel>
     <path>Aircraft/Hurricane/Models/panel-hotspots.xml</path>
@@ -299,15 +299,7 @@
     </offsets>
   </model>
   <!-- non-panel models -->
-  <model>
-    <path>Aircraft/Hurricane/Models/dimmer.xml</path>
-    <offsets>
-      <x-m>3.7</x-m>
-      <y-m>-0.44</y-m>
-      <z-m>0.2</z-m>
-      <roll-deg>-9</roll-deg>
-    </offsets>
-  </model>
+
   <model>
     <path>Aircraft/Hurricane/Models/cut-off.xml</path>
     <offsets>
@@ -332,7 +324,7 @@
     <path>Aircraft/Hurricane/Models/Instrumentation/triple.xml</path>
     <name>Triple</name>
     <offsets>
-      <x-m>3.0</x-m>
+      <x-m>3.25</x-m>
       <y-m>-0.0</y-m>
       <z-m>-0.25</z-m>
       <pitch-deg>-45</pitch-deg>
@@ -369,18 +361,18 @@
   <model>
     <path>Aircraft/Hurricane/Models/pitch.xml</path>
     <offsets>
-      <x-m>3.453</x-m>
-      <y-m>-0.44</y-m>
-      <z-m>0.194</z-m>
+      <x-m>3.38</x-m>
+      <y-m>-0.415</y-m>
+      <z-m>0.24</z-m>
       <roll-deg>-9</roll-deg>
     </offsets>
   </model>
   <model>
     <path>Aircraft/Hurricane/Models/throttle.xml</path>
     <offsets>
-      <x-m>3.538</x-m>
-      <y-m>-0.425</y-m>
-      <z-m>0.030</z-m>
+      <x-m>3.38</x-m>
+      <y-m>-0.415</y-m>
+      <z-m>0.032</z-m>
     </offsets>
   </model>
 
@@ -529,46 +521,125 @@
     <name>Cockpit-Light-1</name>
     <offsets>
       <x-m>  3.80 </x-m>
-      <y-m> -0.300 </y-m>
+      <y-m> -0.275 </y-m>
       <z-m>  0.410 </z-m>
-      <pitch-deg>-6.0</pitch-deg>
+      <pitch-deg>-7.0</pitch-deg>
       <heading-deg>-21</heading-deg>
+     </offsets>
+  </model>
+  <model>
+    <path>Aircraft/Hurricane/Models/panel-light-mount.ac</path>
+    <name>Cockpit-Light-Mount-1</name>
+    <offsets>
+      <x-m>  3.80 </x-m>
+      <y-m> -0.275 </y-m>
+      <z-m>  0.410 </z-m>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>0</heading-deg>
+      <roll-deg>-120</roll-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/Hurricane/Models/dimmer.xml</path>
+    <offsets>
+      <x-m>3.7</x-m>
+      <y-m>-0.44</y-m>
+      <z-m>0.2</z-m>
+      <roll-deg>-9</roll-deg>
     </offsets>
   </model>
 
   <model>
-    <path>Aircraft/Hurricane/Models/panel-light.xml</path>
+    <path>Aircraft/Hurricane/Models/panel-light-1.xml</path>
     <name>Cockpit-Light-2</name>
     <offsets>
-      <x-m>  3.25 </x-m>
-      <y-m> -0.31 </y-m>
-      <z-m>  0.40 </z-m>
-      <pitch-deg>-45</pitch-deg>
-      <heading-deg>-5</heading-deg>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Hurricane/Models/panel-light.xml</path>
-    <name>Cockpit-Light-3</name>
-    <offsets>
-      <x-m>  3.25 </x-m>
-      <y-m>  0.31 </y-m>
-      <z-m>  0.40 </z-m>
-      <pitch-deg>-45</pitch-deg>
+      <x-m>  3.32607 </x-m>
+      <y-m> -0.25 </y-m>
+      <z-m>  0.45</z-m>
+      <pitch-deg>-40</pitch-deg>
       <heading-deg>5</heading-deg>
     </offsets>
   </model>
+  <model>
+    <path>Aircraft/Hurricane/Models/panel-light-mount.ac</path>
+    <name>Cockpit-Light-Mount-2</name>
+    <offsets>
+      <x-m> 3.32607 </x-m>
+      <y-m>-0.25    </y-m>
+      <z-m> 0.45    </z-m>
+      <pitch-deg>   0   </pitch-deg>
+      <heading-deg>-5   </heading-deg>
+      <roll-deg>   -110 </roll-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/Hurricane/Models/dimmer-1.xml</path>
+    <name>Cockpit-Light-Dimmer-2</name>
+    <offsets>
+      <x-m> 3.32607 </x-m>
+      <y-m>-0.35   </y-m>
+      <z-m> 0.39   </z-m>
+      <roll-deg>   -15 </roll-deg>
+      <heading-deg>-5  </heading-deg>
+    </offsets>
+  </model>
 
   <model>
-    <path>Aircraft/Hurricane/Models/panel-light.xml</path>
+    <path>Aircraft/Hurricane/Models/panel-light-2.xml</path>
+    <name>Cockpit-Light-3</name>
+    <offsets>
+      <x-m> 3.32607 </x-m>
+      <y-m> 0.25    </y-m>
+      <z-m> 0.45    </z-m>
+      <pitch-deg>  -40 </pitch-deg>
+      <heading-deg>-5  </heading-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/Hurricane/Models/panel-light-mount.ac</path>
+    <name>Cockpit-Light-Mount-3</name>
+    <offsets>
+      <x-m> 3.32607 </x-m>
+      <y-m> 0.25    </y-m>
+      <z-m> 0.45    </z-m>
+      <pitch-deg>   0   </pitch-deg>
+      <heading-deg> 5   </heading-deg>
+      <roll-deg>    110 </roll-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/Hurricane/Models/dimmer-2.xml</path>
+    <name>Cockpit-Light-Dimmer-3</name>
+    <offsets>
+      <x-m> 3.32607 </x-m>
+      <y-m> 0.35   </y-m>
+      <z-m> 0.39   </z-m>
+      <roll-deg>   195 </roll-deg>
+      <heading-deg> 5  </heading-deg>
+    </offsets>
+  </model>
+
+
+  <model>
+    <path>Aircraft/Hurricane/Models/panel-light-3.xml</path>
     <name>Cockpit-Light-4</name>
     <offsets>
       <x-m>  2.99318 </x-m>
       <y-m>  0.00 </y-m>
       <z-m>  0.142383 </z-m>
-      <pitch-deg>-35</pitch-deg>
+      <pitch-deg>-45</pitch-deg>
       <heading-deg>180</heading-deg>
+    </offsets>
+  </model>
+  <model>
+    <path>Aircraft/Hurricane/Models/dimmer-3.xml</path>
+    <name>Cockpit-Light-Dimmer-4</name>
+    <offsets>
+      <x-m> 3.25  </x-m>
+      <y-m>-0.35   </y-m>
+      <z-m> 0.39   </z-m>
+      <roll-deg>    -15 </roll-deg>
+      <heading-deg> -5  </heading-deg>
     </offsets>
   </model>
 
@@ -580,8 +651,8 @@
     </condition>
     <offsets>
       <x-m> 3.75 </x-m>
-      <y-m> 0 </y-m>
-      <z-m>  0.6 </z-m>
+      <y-m> 0.0  </y-m>
+      <z-m> 0.6  </z-m>
     </offsets>
   </model>
 
@@ -1467,7 +1538,7 @@
 		</axis>
 	</animation>-->
 
-  <animation>
+  <!--<animation>
     <type>material</type>
     <object-name>Panels</object-name>
      <condition>
@@ -1483,7 +1554,7 @@
         <green>0.0</green>
         <blue>0.0</blue>
       </emission>
-    </animation>
+    </animation>-->
 
     <animation>
       <type>material</type>
@@ -1504,7 +1575,7 @@
       </emission>
     </animation>
   
-  <animation>
+  <!--<animation>
     <type>material</type>
     <object-name>Member-F-C-U</object-name>
       <condition>
@@ -1520,7 +1591,7 @@
         <green>0.0</green>
         <blue>0.0</blue>
       </emission>
-    </animation>
+    </animation>-->
 
     <animation>
       <type>material</type>
