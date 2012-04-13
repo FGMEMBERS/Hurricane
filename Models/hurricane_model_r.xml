@@ -115,7 +115,7 @@
     </offsets>
   </model>
   <model>
-    <path>Aircraft/Hurricane/Models/Instrumentation/compass.xml</path>
+    <path>Aircraft/Hurricane/Models/Instrumentation/compass-dg.xml</path>
     <offsets>
       <x-m>3.10158</x-m>
       <y-m>0</y-m>
