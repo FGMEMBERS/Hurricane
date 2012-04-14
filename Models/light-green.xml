@@ -2,13 +2,13 @@
 <!-- Light - Green Flare-->
 <PropertyList>
 
-	<path>light-green-flare.ac</path>
+  <path>light-green-flare.ac</path>
 
-	<animation>
-		<type>alpha-test</type>
-		<object-name>Green-Light-Flare</object-name>
-		<alpha-factor>0.01</alpha-factor>
-	</animation>
+  <animation>
+    <type>alpha-test</type>
+    <object-name>Green-Light-Flare</object-name>
+    <alpha-factor>0.01</alpha-factor>
+  </animation>
 
   <effect>
     <inherits-from>Effects/model-transparent</inherits-from>
@@ -20,9 +20,9 @@
   <animation>
     <type>noshadow</type>
     <object-name>Green-Light-Flare</object-name>
-   </animation>
+  </animation>
 
-	<!--<animation>
+  <!--<animation>
 		<type>billboard</type>
 		<spherical>true</spherical>
 		<object-name>Green-Light-Flare</object-name>
@@ -90,7 +90,7 @@
       <z>1.0</z>
     </axis>
   </animation>
-  
+
   <!--<animation>
     <type>flash</type>
     <object-name>Green-Light-Flare-0</object-name>
@@ -115,36 +115,36 @@
 
 
   <animation>
-		<type>dist-scale</type>
-		<object-name>Green-Light-Flare</object-name>
-		<interpolation>
-			<entry>
-				<ind>0.001</ind>
-				<dep>1</dep>
-			</entry>
-			<entry>
-				<ind>40000</ind>
-				<dep>150</dep>
-			</entry>
-			<entry>
-				<ind>80000</ind>
-				<dep>300</dep>
-			</entry>
-		</interpolation>
-	</animation>
+    <type>dist-scale</type>
+    <object-name>Green-Light-Flare</object-name>
+    <interpolation>
+      <entry>
+        <ind>0.001</ind>
+        <dep>1</dep>
+      </entry>
+      <entry>
+        <ind>40000</ind>
+        <dep>150</dep>
+      </entry>
+      <entry>
+        <ind>80000</ind>
+        <dep>300</dep>
+      </entry>
+    </interpolation>
+  </animation>
 
-	<animation>
-		<type>scale</type>
-		<object-name>Green-Light-Flare</object-name>
-		<property>/sim/time/sun-angle-rad</property>
-		<offset>-1.4</offset>
-		<x-min>1</x-min>
-		<y-min>1</y-min>
-		<z-min>1</z-min>
-		<x-factor>2</x-factor>
-		<y-factor>2</y-factor>
-		<z-factor>2</z-factor>
-	</animation>
+  <animation>
+    <type>scale</type>
+    <object-name>Green-Light-Flare</object-name>
+    <property>/sim/time/sun-angle-rad</property>
+    <offset>-1.4</offset>
+    <x-min>1</x-min>
+    <y-min>1</y-min>
+    <z-min>1</z-min>
+    <x-factor>2</x-factor>
+    <y-factor>2</y-factor>
+    <z-factor>2</z-factor>
+  </animation>
 
   <animation>
     <type>light</type>
@@ -195,17 +195,23 @@
   <animation>
     <type>select</type>
     <object-name>Green-Light-Flare</object-name>
-     <condition>
-      <or>
-        <equals>
-          <property>/controls/lighting/nav-lights</property>
-          <value>1</value>
-        </equals>
-        <equals>
-          <property>/controls/lighting/nav-lights[1]</property>
-          <value>1</value>
-        </equals>
-      </or>
+    <condition>
+      <and>
+        <or>
+          <equals>
+            <property>/controls/lighting/nav-lights</property>
+            <value>1</value>
+          </equals>
+          <equals>
+            <property>/controls/lighting/nav-lights[1]</property>
+            <value>1</value>
+          </equals>
+        </or>
+        <greater-than>
+          <property>/systems/electrical/outputs/nav-lights</property>
+          <value>10.0</value>
+        </greater-than>
+      </and>
     </condition>
   </animation>
 
@@ -227,6 +233,10 @@
         <greater-than>
           <property>/sim/time/sun-angle-rad</property>
           <value>1.4</value>
+        </greater-than>
+        <greater-than>
+          <property>/systems/electrical/outputs/nav-lights</property>
+          <value>10.0</value>
         </greater-than>
       </and>
     </condition>

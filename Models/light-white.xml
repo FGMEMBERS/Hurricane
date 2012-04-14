@@ -170,16 +170,22 @@
     <type>select</type>
     <object-name>White-Light-Flare</object-name>
     <condition>
-      <or>
-        <equals>
-          <property>/controls/lighting/nav-lights</property>
-          <value>1</value>
-        </equals>
-        <equals>
-          <property>/controls/lighting/nav-lights[1]</property>
-          <value>1</value>
-        </equals>
-      </or>
+      <and>
+        <or>
+          <equals>
+            <property>/controls/lighting/nav-lights</property>
+            <value>1</value>
+          </equals>
+          <equals>
+            <property>/controls/lighting/nav-lights[1]</property>
+            <value>1</value>
+          </equals>
+        </or>
+        <greater-than>
+          <property>/systems/electrical/outputs/nav-lights</property>
+          <value>10.0</value>
+        </greater-than>
+      </and>
     </condition>
   </animation>
 
@@ -201,6 +207,10 @@
         <greater-than>
           <property>/sim/time/sun-angle-rad</property>
           <value>1.4</value>
+        </greater-than>
+        <greater-than>
+          <property>/systems/electrical/outputs/nav-lights</property>
+          <value>10.0</value>
         </greater-than>
       </and>
     </condition>

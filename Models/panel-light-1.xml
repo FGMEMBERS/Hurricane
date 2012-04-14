@@ -4,10 +4,10 @@
 
   <path>panel-light.ac</path>
 
-   <animation>
+  <animation>
     <type>light</type>
     <light-type>spot</light-type>
-    <name>Light</name>
+    <name>Light-1</name>
     <object-name>LightVol</object-name>
     <nopreview/>
     <position>
@@ -38,41 +38,48 @@
       <b>0.1</b>
       <a>1.0</a>
     </specular>
-     <attenuation>
-       <c>1.0</c>
-       <l>0.002</l>
-       <q>0.00005</q>
-     </attenuation>
+    <attenuation>
+      <c>1.0</c>
+      <l>0.002</l>
+      <q>0.00005</q>
+    </attenuation>
     <exponent>40.0</exponent>
     <near-m>0.0001</near-m>
     <far-m>0.95</far-m>
     <cutoff>20</cutoff>
+    <dim-factor>
+      <property>/controls/lighting/panel-norm[2]</property>
+      <!-- optional begin -->
+      <!--<expression />
+       <interpolation />
+       <factor>1</factor>
+       <offset>0</offset>
+       <min>0</min>
+       <max>1</max>-->
+      <!-- optional end -->
+    </dim-factor>
   </animation>
 
   <animation>
     <type>select</type>
     <condition>
-      <greater-than>
-        <property>/controls/lighting/panel-norm[2]</property>
-        <value>0.0</value>
-      </greater-than>
       <greater-than-equals>
-        <property>systems/electrical/outputs/landing-light</property>
+        <property>/systems/electrical/outputs/instrument-lights</property>
         <value>10</value>
       </greater-than-equals>
     </condition>
-    <object-name>Light</object-name>
+    <object-name>Light-1</object-name>
   </animation>
 
-   <animation>
+  <animation>
     <type>select</type>
-    <object-name>Light</object-name>
+    <object-name>Light-1</object-name>
     <condition>
-        <greater-than>
-          <property>/sim/time/sun-angle-rad</property>
-          <value>1.4</value>
-        </greater-than>
-     </condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.4</value>
+      </greater-than>
+    </condition>
   </animation>
 
 

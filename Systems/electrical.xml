@@ -79,8 +79,8 @@
   </output>
 
   <output>
-    <name>Map Lights Power</name>
-    <prop>/systems/electrical/outputs/map-lights</prop>
+    <name>Nav Lights Power</name>
+    <prop>/systems/electrical/outputs/nav-lights</prop>
   </output>
 
   <output>
@@ -201,9 +201,9 @@
 
   <connector>
     <input>Master Bus</input>
-    <output>Map Lights Power</output>
+    <output>Nav Lights Power</output>
     <switch>
-      <prop>/controls/switches/nav-lights</prop>
+      <prop>/controls/lighting/nav-lights</prop>
       <initial-state>off</initial-state>
     </switch>
   </connector>
@@ -213,7 +213,7 @@
     <output>Instrument Lights Power</output>
     <switch>
       <prop>/controls/circuit-breakers/instrument-lights</prop>
-      <initial-state>off</initial-state>
+      <initial-state>on</initial-state>
     </switch>
   </connector>
 
