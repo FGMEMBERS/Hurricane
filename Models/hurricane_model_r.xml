@@ -324,7 +324,7 @@
     <path>Aircraft/Hurricane/Models/Instrumentation/triple.xml</path>
     <name>Triple</name>
     <offsets>
-      <x-m>3.25</x-m>
+      <x-m>3.22</x-m>
       <y-m>-0.0</y-m>
       <z-m>-0.25</z-m>
       <pitch-deg>-45</pitch-deg>
@@ -557,7 +557,7 @@
       <y-m> -0.25 </y-m>
       <z-m>  0.45</z-m>
       <pitch-deg>-40</pitch-deg>
-      <heading-deg>5</heading-deg>
+      <heading-deg>1.0</heading-deg>
     </offsets>
   </model>
   <model>
@@ -592,7 +592,7 @@
       <y-m> 0.25    </y-m>
       <z-m> 0.45    </z-m>
       <pitch-deg>  -40 </pitch-deg>
-      <heading-deg>-5  </heading-deg>
+      <heading-deg>-4.0  </heading-deg>
     </offsets>
   </model>
   <model>
