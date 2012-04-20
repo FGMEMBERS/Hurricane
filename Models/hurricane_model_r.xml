@@ -498,8 +498,8 @@
       <x-m>  2.34293 </x-m>
       <y-m>  3.18673 </y-m>
       <z-m> -0.447306</z-m>
-      <pitch-deg>-15.5</pitch-deg>
-      <heading-deg>2.5</heading-deg>
+      <pitch-deg>-25.5</pitch-deg>
+      <heading-deg>0.0</heading-deg>
     </offsets>
   </model>
 
@@ -511,7 +511,7 @@
       <y-m> -3.18673 </y-m>
       <z-m> -0.447306</z-m>
       <pitch-deg>-15.5</pitch-deg>
-      <heading-deg>-2.5</heading-deg>
+      <heading-deg>0.0</heading-deg>
     </offsets>
   </model>
 

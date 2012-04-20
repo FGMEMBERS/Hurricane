@@ -149,7 +149,7 @@
       <l>0.002</l>
       <q>0.0005</q>
     </attenuation>
-    <exponent>2.0</exponent>
+    <exponent>24.0</exponent>
     <near-m>0.0001</near-m>
     <far-m>50</far-m>
     <cutoff>90</cutoff>
