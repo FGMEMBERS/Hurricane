@@ -44,7 +44,7 @@ The reference datum for measurements is the nose.
 <airplane mass="6464">
   <!-- Approach configuration -->
   <approach speed="61"
-            aoa="12">
+            aoa="12.5">
     <control-setting axis="/controls/engines/engine[0]/throttle"
                      value="0.2"/>
     <control-setting axis="/controls/engines/engine[0]/mixture"
@@ -63,7 +63,7 @@ The reference datum for measurements is the nose.
   <!-- Cruise configuration -->
 	<cruise speed="213"
           alt="20800"
-          fuel="0.75">
+          fuel="0.9">
     <control-setting axis="/controls/engines/engine[0]/throttle"
                      value="1.0"/>
     <control-setting axis="/controls/engines/engine[0]/mixture"
@@ -301,8 +301,8 @@ The reference datum for measurements is the nose.
   </vstab>
 
   <!-- radiator 'wing' centre -->
-  <vstab x="-3.93"
-         y="-0.34"
+  <mstab x="-3.93"
+         y="-0.0"
          z="-1.09"
          dihedral="0"
          twist="0"
@@ -310,7 +310,7 @@ The reference datum for measurements is the nose.
          taper="1"
          incidence="0"
          sweep="0"
-         length="0.68"  >
+         length="0.34"  >
     <stall aoa="25"
            width="4"
            peak="1.5"/>
@@ -324,7 +324,7 @@ The reference datum for measurements is the nose.
                     prop="/engines/engine/rad-flap-norm"/>
     <control-speed control="FLAP0"
                    transition-time="3" />
-  </vstab>
+  </mstab>
 
   <!-- propeller and engine -->
   <!-- moment = radius(m)* propeller mass(kg)/2 - equation provided by Andy Ross -->
@@ -429,8 +429,8 @@ The reference datum for measurements is the nose.
                    control="BRAKE"
                    transition-time="0"
                    src0="0"
-                   src1="0.4"
-                   dst0="1"
+                   src1="1.0"
+                   dst0="0.4"
                    dst1="0.4"/>
   </gear>
   <!-- left main   dfric="0.5" sfric="0.6"dfric="0.5" sfric="0.6"-->
@@ -497,8 +497,8 @@ The reference datum for measurements is the nose.
                    control="BRAKE"
                    transition-time="0"
                    src0="0"
-                   src1="0.4"
-                   dst0="1"
+                   src1="1"
+                   dst0="0.4"
                    dst1="0.4"/>
   </gear>
   <!-- Canopy -->
@@ -618,7 +618,7 @@ Weight of contents calculated using 100 octane AVGAS density of 695 kg/m3 @ 15de
   <ballast x="-1.35"
            y="0.0"
            z="-0.45"
-           mass="250"/>
+           mass="100"/>
   <!-- 	 tail ballast to fix CG CG: x:-3.079, y:-0.000, z:-0.232-->
   <ballast x="-15.0"
            y="0.0"
