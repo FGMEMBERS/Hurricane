@@ -10,7 +10,7 @@
         <value>0</value>
       </greater-than>
       <not>
-        <property>/sim/rendering/rembrandt</property>
+        <property>/sim/rendering/rembrandt/enabled</property>
       </not>
     </condition>
     <emission>

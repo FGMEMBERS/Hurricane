@@ -30,7 +30,7 @@
         <property>/controls/lighting/panel-norm[1]</property>
         <value>0</value>
       </greater-than>
-      <property>/sim/rendering/rembrandt</property>
+      <property>/sim/rendering/rembrandt/enabled</property>
     </condition>
     <emission>
       <factor-prop>/controls/lighting/panel-norm</factor-prop>
@@ -48,7 +48,7 @@
         <value>0</value>
       </greater-than>
       <not>
-        <property>/sim/rendering/rembrandt</property>
+        <property>/sim/rendering/rembrandt/enabled</property>
       </not>
     </condition>
     <emission>
