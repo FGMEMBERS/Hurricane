@@ -442,7 +442,7 @@ The reference datum for measurements is the nose.
         compression="0.25"
         dfric="0.7"
         sfric ="0.8">
-    <control-input axis="/controls/gear/brake-left"
+    <control-input axis="/systems/pneumatic/outputs/brake"
                    control="BRAKE"
 									 transition-time="0.25"
                    src0="0"
@@ -468,7 +468,7 @@ The reference datum for measurements is the nose.
         compression="0.25"
         dfric="0.7"
         sfric ="0.8">
-    <control-input axis="/controls/gear/brake-right"
+    <control-input axis="/systems/pneumatic/outputs/brake[1]"
                    control="BRAKE"
 									 transition-time="0.25"
                    src0="0"
