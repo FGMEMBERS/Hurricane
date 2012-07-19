@@ -50,6 +50,14 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
         <selected type="bool">1</selected>
       </tank>
     </oxygen>
+		<air>
+		<tank n="0">
+			<name type="string">1</name>
+			<capacity-cu-ft type="double">0.4</capacity-cu-ft>
+			<level-cu-ft type="double">16.326</level-cu-ft>
+			<selected type="bool">1</selected>
+		</tank>
+		</air>
   </consumables>
   <!-- set up control properties ... -->
   <controls>
@@ -93,6 +101,14 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
       <lever type="double">0</lever>
       <wheels type="double">1</wheels>
     </hydraulic>
+		<pneumatic>
+			<lever type="double">1</lever>
+			<lever type="double">0</lever>
+			<lever type="double">0</lever>
+			<system>
+				<engine-pump type="bool">true</engine-pump>
+			</system>
+		</pneumatic>
     <switches>
       <fuel-gauge>0</fuel-gauge>
       <fuel-gauge-sel type="int">2</fuel-gauge-sel>
@@ -738,6 +754,9 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
     <oxygen>
       <file>Aircraft/Generic/Oxygen/oxygen.nas</file>
     </oxygen>
+		<pneumatic>
+			<file>Aircraft/Hurricane/Systems/pneumatic.nas</file>
+		</pneumatic>
     <!--<recoil>
 					<file>Aircraft/Hurricane/Models/recoil.nas</file>
 				</recoil>-->

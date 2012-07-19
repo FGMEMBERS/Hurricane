@@ -47,7 +47,7 @@
 		<pitch-offset>0</pitch-offset>
 		<fuse-range>0</fuse-range>
 		<life>10</life>
-		<trigger>controls/armament/trigger</trigger>
+		<trigger>systems/pneumatic/outputs/trigger-gun</trigger>
 		<repeat>true</repeat>
 		<delay>0.0526</delay>
 		<count>300</count>
@@ -89,7 +89,7 @@
 	<submodel>
 		<name>Browning L inner</name>
 		<model alias="../../cannon/model"/>
-		<trigger alias="../../cannon/trigger"/>
+		<trigger>systems/pneumatic/outputs/trigger-gun</trigger>
 		<speed alias="../../cannon/speed"/>
 		<cd alias="../../cannon/cd"/>
 		<weight alias="../../cannon/weight"/>
@@ -113,7 +113,7 @@
 	<submodel>
 		<name>Browning R inner</name>
 		<model alias="../../cannon/model"/>
-		<trigger alias="../../cannon/trigger"/>
+		<trigger>systems/pneumatic/outputs/trigger-gun[1]</trigger>
 		<speed alias="../../cannon/speed"/>
 		<cd alias="../../cannon/cd"/>
 		<weight alias="../../cannon/weight"/>
@@ -137,7 +137,7 @@
 	<submodel>
 		<name>Browning L inner smoke</name>
 		<model alias="../../cannon-smoke/model"/>
-		<trigger alias="../../cannon-smoke/trigger"/>
+		<trigger>systems/pneumatic/outputs/trigger-gun</trigger>
 		<speed alias="../../cannon-smoke/speed"/>
 		<eda alias="../../cannon-smoke/eda"/>
 		<buoyancy alias="../../cannon-smoke/buoyancy"/>
@@ -158,7 +158,7 @@
 	<submodel>
 		<name>Browning R inner smoke</name>
 		<model alias="../../cannon-smoke/model"/>
-		<trigger alias="../../cannon-smoke/trigger"/>
+		<trigger>systems/pneumatic/outputs/trigger-gun[1]</trigger>
 		<speed alias="../../cannon-smoke/speed"/>
 		<eda alias="../../cannon-smoke/eda"/>
 		<buoyancy alias="../../cannon-smoke/buoyancy"/>
@@ -179,7 +179,7 @@
 	<submodel>
 		<name>browning L inner centre smoke</name>
 		<model alias="../../cannon-smoke/model"/>
-		<trigger alias="../../cannon-smoke/trigger"/>
+		<trigger>systems/pneumatic/outputs/trigger-gun[2]</trigger>
 		<speed alias="../../cannon-smoke/speed"/>
 		<eda alias="../../cannon-smoke/eda"/>
 		<buoyancy alias="../../cannon-smoke/buoyancy"/>
@@ -199,7 +199,7 @@
 	<submodel>
 		<name>browning R inner centre smoke</name>
 		<model alias="../../cannon-smoke/model"/>
-		<trigger alias="../../cannon-smoke/trigger"/>
+		<trigger>systems/pneumatic/outputs/trigger-gun[3]</trigger>
 		<speed alias="../../cannon-smoke/speed"/>
 		<eda alias="../../cannon-smoke/eda"/>
 		<buoyancy alias="../../cannon-smoke/buoyancy"/>
@@ -219,7 +219,7 @@
 	<submodel>
 		<name>browning L outer centre smoke</name>
 		<model alias="../../cannon-smoke/model"/>
-		<trigger alias="../../cannon-smoke/trigger"/>
+		<trigger>systems/pneumatic/outputs/trigger-gun[4]</trigger>
 		<speed alias="../../cannon-smoke/speed"/>
 		<eda alias="../../cannon-smoke/eda"/>
 		<buoyancy alias="../../cannon-smoke/buoyancy"/>
@@ -239,7 +239,7 @@
 	<submodel>
 		<name>browning R outer centre smoke</name>
 		<model alias="../../cannon-smoke/model"/>
-		<trigger alias="../../cannon-smoke/trigger"/>
+		<trigger>systems/pneumatic/outputs/trigger-gun[5]</trigger>
 		<speed alias="../../cannon-smoke/speed"/>
 		<eda alias="../../cannon-smoke/eda"/>
 		<buoyancy alias="../../cannon-smoke/buoyancy"/>
@@ -259,7 +259,7 @@
 	<submodel>
 		<name>browning L outer smoke</name>
 		<model alias="../../cannon-smoke/model"/>
-		<trigger alias="../../cannon-smoke/trigger"/>
+		<trigger>systems/pneumatic/outputs/trigger-gun[6]</trigger>
 		<speed alias="../../cannon-smoke/speed"/>
 		<eda alias="../../cannon-smoke/eda"/>
 		<buoyancy alias="../../cannon-smoke/buoyancy"/>
@@ -279,8 +279,7 @@
 	<submodel>
 		<name>browning R center inner smoke</name>
 		<model alias="../../cannon-smoke/model"/>
-		<trigger alias="../../cannon-smoke/trigger"/>
-		<speed alias="../../cannon-smoke/speed"/>
+		<trigger>systems/pneumatic/outputs/trigger-gun[7]</trigger>
 		<eda alias="../../cannon-smoke/eda"/>
 		<buoyancy alias="../../cannon-smoke/buoyancy"/>
 		<life alias="../../cannon-smoke/life"/>
@@ -299,7 +298,7 @@
 	<submodel>
 		<name>browning L outer L smoke</name>
 		<model alias="../../cannon-smoke/model"/>
-		<trigger alias="../../cannon-smoke/trigger"/>
+		<trigger>systems/pneumatic/outputs/trigger-gun[8]</trigger>
 		<speed alias="../../cannon-smoke/speed"/>
 		<eda alias="../../cannon-smoke/eda"/>
 		<buoyancy alias="../../cannon-smoke/buoyancy"/>
@@ -319,7 +318,7 @@
 	<submodel>
 		<name>browning R outer L smoke</name>
 		<model alias="../../cannon-smoke/model"/>
-		<trigger alias="../../cannon-smoke/trigger"/>
+		<trigger>systems/pneumatic/outputs/trigger-gun[9]</trigger>
 		<speed alias="../../cannon-smoke/speed"/>
 		<eda alias="../../cannon-smoke/eda"/>
 		<buoyancy alias="../../cannon-smoke/buoyancy"/>
@@ -339,7 +338,7 @@
 	<submodel>
 		<name>browning L outer R smoke</name>
 		<model alias="../../cannon-smoke/model"/>
-		<trigger alias="../../cannon-smoke/trigger"/>
+		<trigger>systems/pneumatic/outputs/trigger-gun[10]</trigger>
 		<speed alias="../../cannon-smoke/speed"/>
 		<eda alias="../../cannon-smoke/eda"/>
 		<buoyancy alias="../../cannon-smoke/buoyancy"/>
@@ -360,7 +359,7 @@
 	<submodel>
 		<name>browning R outer R smoke</name>
 		<model alias="../../cannon-smoke/model"/>
-		<trigger alias="../../cannon-smoke/trigger"/>
+		<trigger>systems/pneumatic/outputs/trigger-gun[11]</trigger>
 		<speed alias="../../cannon-smoke/speed"/>
 		<eda alias="../../cannon-smoke/eda"/>
 		<buoyancy alias="../../cannon-smoke/buoyancy"/>
