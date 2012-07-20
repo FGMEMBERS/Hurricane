@@ -422,52 +422,52 @@ adjustCock=func{
 
 # =========================== hydraulic stuff =========================================
 
-controls.gearDown = func(x) { if (x) { hydraulicLever(-1, -x) } }
-controls.flapsDown = func(x) { if (x) { hydraulicLever(1, -x) } }
+#controls.gearDown = func(x) { if (x) { hydraulicLever(-1, -x) } }
+#controls.flapsDown = func(x) { if (x) { hydraulicLever(1, -x) } }
 
-hydraulicLever = func{             #sets the lever up-down, right-left or neutral
+#hydraulicLever = func{             #sets the lever up-down, right-left or neutral
 
-	right = arg[0]; 
-	up = arg[1];
-	lever=[0,1];
-	
-#	print("input: ",right,up);
-	
-	lever[0]= getprop("controls/hydraulic/lever[0]"); #right/left
-	lever[1]= getprop("controls/hydraulic/lever[1]"); #up/down
-	
+#	right = arg[0]; 
+#	up = arg[1];
+#	lever=[0,1];
+#	
+#	print("input: ", right, " ", up);
+#	
+#	lever[0]= getprop("controls/hydraulic/lever[0]"); #right/left
+#	lever[1]= getprop("controls/hydraulic/lever[1]"); #up/down
+#	
 #	print ("lever in: ", lever[0],lever[1]);
-		
-	if ( lever[0] == 0 or lever[0] == right) {     #
-		if (up == 1  and lever[1] < 1){
-			lever[1] = lever[1] + 1;
-		}
-		elsif ( up == -1  and lever[1] > -1){
-			lever[1] = lever[1] - 1;
-		}
-		elsif (up == 0) {
-			lever[1] = 0;
-		}
-		
-		if (lever[1] == 0) {
-			lever[0] = 0;
-		} else {
-			lever[0] = right;
-		}
-	}
-	
+#		
+#	if ( lever[0] == 0 or lever[0] == right) {     #
+#		if (up == 1  and lever[1] < 1){
+#			lever[1] = lever[1] + 1;
+#		}
+#		elsif ( up == -1  and lever[1] > -1){
+#			lever[1] = lever[1] - 1;
+#		}
+#		elsif (up == 0) {
+#			lever[1] = 0;
+#		}
+#		
+#		if (lever[1] == 0) {
+#			lever[0] = 0;
+#		} else {
+#			lever[0] = right;
+#		}
+#	}
+#	
 #	print ("lever out: ", lever[0],lever[1]);
-	
-	setprop("controls/hydraulic/lever[1]",lever[1]);
-	setprop("controls/hydraulic/lever[0]",lever[0]);
-	
-	if (lever[0] == 1 and lever[1] == -1) 
-		{ registerTimer (flapBlowin)}   # run the timer 
-		
-	if (lever[0] == -1 and lever[1] != 0) 
-		{ registerTimer (wheelsMove)}   # run the timer                    
-		
-} # end function 
+#	
+#	setprop("controls/hydraulic/lever[1]",lever[1]);
+#	setprop("controls/hydraulic/lever[0]",lever[0]);
+#	
+#	if (lever[0] == 1 and lever[1] == -1) 
+#		{ registerTimer (flapBlowin)}   # run the timer 
+#		
+#	if (lever[0] == -1 and lever[1] != 0) 
+#		{ registerTimer (wheelsMove)}   # run the timer                    
+#		
+#} # end function 
 
 flapBlowin = func{
 	flap = 0;

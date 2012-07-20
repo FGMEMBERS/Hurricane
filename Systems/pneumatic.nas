@@ -58,6 +58,8 @@ var actuator_8 = nil;
 var actuator_9 = nil;
 var actuator_10 = nil;
 var actuator_11 = nil;
+var actuator_12 = nil;
+var actuator_13 = nil;
 
 var relief = nil;
 var relief_1 = nil;
@@ -181,7 +183,7 @@ controls.fullBrakeTime = 0.001;
 					"systems/pneumatic/outputs/brake",
 					"gear/gear/position-norm",
 					1,
-					0.005,
+					0.01,
 					0,
 					1,
 					1);
@@ -191,147 +193,127 @@ controls.fullBrakeTime = 0.001;
 					"systems/pneumatic/outputs/brake[1]",
 					"gear/gear/position-norm",
 					1,
-					0.005,
+					0.01,
 					0,
 					1,
 					1);
 
-	actuator_2 = Actuator.new("gear-1",
-					"systems/pneumatic/valves/gear-assist/pressure-out-psi",
-					"systems/pneumatic/outputs/gear[1]",
-					"gear/gear[1]/position-norm",
-					1,
-					0.01,
-					0,
-					1,
-					0);
-
-	actuator_3 = Actuator.new("gear-2",
-					"systems/pneumatic/valves/gear-assist/pressure-out-psi",
-					"systems/pneumatic/outputs/gear[2]",
-					"gear/gear[2]/position-norm",
-					1,
-					0.01,
-					0,
-					1,
-					0);
-
-	actuator_4 = Actuator.new("trigger",
+	actuator_2 = Actuator.new("trigger",
 					"systems/pneumatic/valves/trigger/pressure-out-psi",
 					"systems/pneumatic/outputs/trigger-gun",
 					"systems/pneumatic/actuators/trigger/position-norm",
 					1,
-					0.001,
+					0.005,
 					0,
 					1,
 					0);
 
-	actuator_5 = Actuator.new("trigger-1",
+	actuator_3 = Actuator.new("trigger-1",
 					"systems/pneumatic/valves/trigger/pressure-out-psi",
 					"systems/pneumatic/outputs/trigger-gun[1]",
 					"systems/pneumatic/actuators/trigger-1/position-norm",
 					1,
-					0.001,
+					0.005,
 					0,
 					1,
 					0);
 
-	actuator_6 = Actuator.new("trigger-2",
+	actuator_4 = Actuator.new("trigger-2",
 					"systems/pneumatic/valves/trigger/pressure-out-psi",
 					"systems/pneumatic/outputs/trigger-gun[2]",
 					"systems/pneumatic/actuators/trigger-2/position-norm",
 					1,
-					0.001,
+					0.005,
 					0,
 					1,
 					0);
 
-	actuator_7 = Actuator.new("trigger-3",
+	actuator_5 = Actuator.new("trigger-3",
 					"systems/pneumatic/valves/trigger/pressure-out-psi",
 					"systems/pneumatic/outputs/trigger-gun[3]",
 					"systems/pneumatic/actuators/trigger-3/position-norm",
 					1,
-					0.001,
+					0.005,
 					0,
 					1,
 					0);
 
-	actuator_8 = Actuator.new("trigger-4",
+	actuator_6 = Actuator.new("trigger-4",
 					"systems/pneumatic/valves/trigger/pressure-out-psi",
 					"systems/pneumatic/outputs/trigger-gun[4]",
 					"systems/pneumatic/actuators/trigger-4/position-norm",
 					1,
-					0.001,
+					0.005,
 					0,
 					1,
 					0);
 
-	actuator_9 = Actuator.new("trigger-5",
+	actuator_7 = Actuator.new("trigger-5",
 					"systems/pneumatic/valves/trigger/pressure-out-psi",
 					"systems/pneumatic/outputs/trigger-gun[5]",
 					"systems/pneumatic/actuators/trigger-5/position-norm",
 					1,
-					0.001,
+					0.005,
 					0,
 					1,
 					0);
 
-	actuator_10 = Actuator.new("trigger-6",
+	actuator_8 = Actuator.new("trigger-6",
 					"systems/pneumatic/valves/trigger/pressure-out-psi",
 					"systems/pneumatic/outputs/trigger-gun[6]",
 					"systems/pneumatic/actuators/trigger-6/position-norm",
 					1,
-					0.001,
+					0.005,
 					0,
 					1,
 					0);
 
-	actuator_11 = Actuator.new("trigger-7",
+	actuator_9 = Actuator.new("trigger-7",
 					"systems/pneumatic/valves/trigger/pressure-out-psi",
 					"systems/pneumatic/outputs/trigger-gun[7]",
 					"systems/pneumatic/actuators/trigger-7/position-norm",
 					1,
-					0.001,
+					0.005,
 					0,
 					1,
 					0);
 
-	actuator_12 = Actuator.new("trigger-8",
+	actuator_10 = Actuator.new("trigger-8",
 					"systems/pneumatic/valves/trigger/pressure-out-psi",
 					"systems/pneumatic/outputs/trigger-gun[8]",
 					"systems/pneumatic/actuators/trigger-8/position-norm",
 					1,
-					0.001,
+					0.005,
 					0,
 					1,
 					0);
 
-	actuator_13 = Actuator.new("trigger-9",
+	actuator_11 = Actuator.new("trigger-9",
 					"systems/pneumatic/valves/trigger/pressure-out-psi",
 					"systems/pneumatic/outputs/trigger-gun[9]",
 					"systems/pneumatic/actuators/trigger-9/position-norm",
 					1,
-					0.001,
+					0.005,
 					0,
 					1,
 					0);
 
-	actuator_14 = Actuator.new("trigger-10",
+	actuator_12 = Actuator.new("trigger-10",
 					"systems/pneumatic/valves/trigger/pressure-out-psi",
 					"systems/pneumatic/outputs/trigger-gun[10]",
 					"systems/pneumatic/actuators/trigger-10/position-norm",
 					1,
-					0.001,
+					0.005,
 					0,
 					1,
 					0);
 
-	actuator_15 = Actuator.new("trigger-11",
+	actuator_13 = Actuator.new("trigger-11",
 					"systems/pneumatic/valves/trigger/pressure-out-psi",
 					"systems/pneumatic/outputs/trigger-gun[11]",
 					"systems/pneumatic/actuators/trigger-11/position-norm",
 					1,
-					0.001,
+					0.005,
 					0,
 					1,
 					0);

@@ -100,7 +100,18 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 			<lever type="double">0</lever>
 			<lever type="double">0</lever>
 			<wheels type="double">1</wheels>
+			<system>
+				<engine-pump type="bool">true</engine-pump>
+			</system>
 		</hydraulic>
+		<pneumatic>
+			<lever type="double">1</lever>
+			<lever type="double">0</lever>
+			<lever type="double">0</lever>
+			<system>
+				<engine-pump type="bool">true</engine-pump>
+			</system>
+		</pneumatic>
 		<switches>
 			<fuel-gauge>0</fuel-gauge>
 			<fuel-gauge-sel type="int">2</fuel-gauge-sel>
@@ -113,11 +124,21 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 		</lighting>
 	</controls>
 	<gear>
-		<gear n="0" type="double">0</gear>
+		<gear n="0" type="double">1</gear>
+		<gear n="1" type="double">1</gear>
+		<gear n="2" type="double">1</gear>
 	</gear>
 	<surface-positions>
 		<wing-fold-pos-norm type="double">1</wing-fold-pos-norm>
 	</surface-positions>
+	<systems>
+		<hydraulic>
+			<outputs>
+				<gear n="1" type="double">1</gear>
+				<gear n="2" type="double">1</gear>
+			</outputs>
+		</hydraulic>
+	</systems>
 	
 	<sim include="help.xml">
 		<description type="string">Hawker Hurricane IIb (Rembrandt)</description>
@@ -759,6 +780,9 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 		<pneumatic>
 			<file>Aircraft/Hurricane/Systems/pneumatic.nas</file>
 		</pneumatic>
+		<hydraulic>
+			<file>Aircraft/Hurricane/Systems/hydraulic.nas</file>
+		</hydraulic>
 		<!--<recoil>
 					<file>Aircraft/Hurricane/Models/recoil.nas</file>
 				</recoil>-->

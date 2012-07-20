@@ -68,7 +68,7 @@
 						</script>
 					</binding>
 				</action>
-				<!-- hydraulic selector  -->
+				<!-- hydraulic selector 
 				<action>
 					<name>flaps retract</name>
 					<button>0</button>
@@ -140,7 +140,7 @@
 						<command>nasal</command>
 						<script>hurricane.hydraulicLever(-1,-1)</script>
 					</binding>
-				</action>
+				</action> -->
 				<!-- cut-off pull -->
 				<action>
 					<name>cut-off pull</name>
