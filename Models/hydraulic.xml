@@ -52,6 +52,7 @@
 				<script>hydraulic.hydraulicLever(1,1)</script>
 			</binding>
 		</action>
+
 	</animation>
 
 	<animation>
@@ -80,7 +81,7 @@
 		</action>
 	</animation>
 
-<!-- animations -->
+	<!-- animations -->
 	<animation>
 		<type>rotate</type>
 		<object-name>lever</object-name>
@@ -139,6 +140,7 @@
 			<z>0</z>
 		</axis>
 	</animation>
+	
 
 	<!--<animation>
     <type>material</type>

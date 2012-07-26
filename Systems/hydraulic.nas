@@ -14,7 +14,7 @@
 # ==================================== Definiions ===========================================
 # set the maximum and minimum pressure
 MAX_PRESSURE = 1250.0;
-MIN_PRESSURE = 1000.0;
+MIN_PRESSURE = 500.0;
 
 # set the update period
 UPDATE_PERIOD = 0.3;
@@ -50,6 +50,8 @@ var actuator_3 = nil;
 var actuator_4 = nil;
 
 var relief_valve = nil;
+
+var IAS_N = props.globals.getNode("/velocities/airspeed-kt", 1);
 
 var initialize = func {
 
@@ -129,7 +131,7 @@ controls.flapsDown = func(x) { if (x) { hydraulicLever(1, -x) } }
 #
 	relief_valve = Relief.new("blow-off",
 					"systems/hydraulic/suppliers/pump-engine/output-pressure-psi",
-					"systems/hydraulic/valves/flaps/output-pressure-psi",
+					"systems/hydraulic/valves/four-way/output-pressure-psi[1]",
 					"systems/hydraulic/pressure-psi",
 					1,
 					1200,
@@ -155,8 +157,15 @@ controls.flapsDown = func(x) { if (x) { hydraulicLever(1, -x) } }
 
 	},
 	0,
-	0); # end listener
+	0);
 
+	setlistener("controls/hydraulic/lever[1]", func (n){
+
+		if (n.getValue() == 0) setprop("controls/hydraulic/lever[0]", 0);
+
+			},
+			0,
+			0); # end listener
 # =============================== start it up ===============================
 #
 print( "... done" );
@@ -361,6 +370,8 @@ Actuator = {
 		obj.props_in_pressure_N.setDoubleValue( 0 );
 		obj.props_position_norm_N = obj.props_N.getChild("position-norm", 0, 1);
 		obj.props_position_norm_N.setDoubleValue( 0 );
+		obj.props_back_pressure_N = obj.props_N.getChild("back-pressure-psi", 0, 1);
+		obj.props_back_pressure_N.setDoubleValue( 0 );
 		obj.min = min;
 		obj.max = max;
 
@@ -371,27 +382,34 @@ Actuator = {
 		var source = me.source_N.getValue();
 		var serviceable = me.props_serviceable_N.getValue();
 		var state = me.position_norm_N.getValue();
+		var airspeed = IAS_N.getValue();
 		var output = 0;
-#		print (me.name, " source ", source, " state " , state);
+		var back_pressure = 0;
+		
+		if(me.name == "flaps") back_pressure = me.getBackPressure(state);
 
-		if(source < MIN_PRESSURE and source > -MIN_PRESSURE or !serviceable)
+		var input = source - back_pressure;
+
+		if(input < MIN_PRESSURE and input > -MIN_PRESSURE or !serviceable)
 			{
 			output = state;
-			#print (me.name," low pressure ", output);
+
+#			print (me.name," low pressure ",input, " ", output);
 			}
-		elsif (source >= MIN_PRESSURE)
+		elsif (input >= MIN_PRESSURE)
 			{
-			output = source / me.max;
-			#print(me.name," max output ", output);
+			output = (input)/ me.max;
+#			output = (source - back_pressure)/ me.max;
+#			print(me.name," max output ", output);
 			output = math.max(output, state);
-			#print(me.name," output max ", output);
+#			print(me.name," output max ", output);
 			}
-		elsif(source <= - MIN_PRESSURE)
+		elsif(input <= -MIN_PRESSURE)
 			{
-			output = (source - me.min) / math.abs(me.min);
-			#print(me.name," min output ", output);
+			output = (input - me.min) / math.abs(me.min);
+#			print(me.name," min output ", output);
 			output = math.min(output, state);
-			#print(me.name," output min ", output);
+#			print(me.name," output min ", output);
 			}
 		else
 			{
@@ -402,13 +420,28 @@ Actuator = {
 		me.output_N.setDoubleValue( output );
 		me.props_in_pressure_N.setDoubleValue( source );
 		me.props_position_norm_N.setDoubleValue( state );
-
-#	    print (me.name, " output ", me.output_N.getValue());
+#	    print (me.name, " back_pressure ", back_pressure);
+		me.props_back_pressure_N.setDoubleValue( back_pressure );
 		
 	},
 	setServiceable : func (serviceable) {
 		me.props_serviceable_N.setBoolValue( serviceable ); 
 	},
+	getBackPressure : func (state) {
+		var airspeed = IAS_N.getValue();
+		
+		# An arbitrary function which provides a non-linear relationship between
+		# back pressure,  airspeed and flap extension
+		# y = 4E-05x2 - 0.4495x + 0.4504
+
+		var back_pressure = 0.00004 * (airspeed * airspeed * state) * (airspeed * airspeed * state)
+			- 0.4495 * (airspeed * airspeed * state) + 0.4504;
+		back_pressure = math.max(back_pressure, 0);
+ 
+#		print (me.name, " back_pressure ", back_pressure, " airspeed ", airspeed, " state " , state);
+		
+		return back_pressure;
+			},
 	list : [],
 };
 
@@ -427,7 +460,7 @@ Relief = {
 		obj.source_N = props.globals.getNode( source, 1 );
 		obj.source_N.setDoubleValue( 0 );
 		obj.control_N = props.globals.getNode( control, 1 );
-		obj.control_N.setDoubleValue(state);
+		obj.control_N.setDoubleValue( 0 );
 		obj.output_N = props.globals.getNode( output, 1 );
 		obj.output_N.setDoubleValue( MAX_PRESSURE );
 
@@ -438,6 +471,8 @@ Relief = {
 		obj.props_in_pressure_N.setDoubleValue( 0 );
 		obj.props_out_pressure_N = obj.props_N.getChild("output-pressure-psi", 0, 1);
 		obj.props_out_pressure_N.setDoubleValue( 0 );
+		obj.props_control_pressure_N = obj.props_N.getChild("control-pressure-psi", 0, 1);
+		obj.props_control_pressure_N.setDoubleValue( 0 );
 
 		obj.max = max;
 
@@ -463,6 +498,7 @@ Relief = {
 		me.output_N.setDoubleValue( output );
 		me.props_in_pressure_N.setDoubleValue( source );
 		me.props_out_pressure_N.setDoubleValue( output );
+		me.props_control_pressure_N.setDoubleValue( control );
 
 	#    print (me.name, " output ", me.output_N.getValue());
 		
@@ -482,18 +518,20 @@ hydraulicLever = func{             #sets the lever up-down, right-left or neutra
 	up = arg[1];
 	lever=[0,1];
 	
-#	print("input: ", right, " ", up);
+#	print("input right: ", right, " up ", up);
 	
 	lever[0]= getprop("controls/hydraulic/lever[0]"); #right/left
 	lever[1]= getprop("controls/hydraulic/lever[1]"); #up/down
 	
-#	print ("lever in: ", lever[0],lever[1], lever[]);
-		
-	if ( lever[0] == 0 or lever[0] == right) 
-		{     
+#	print ("lever in right: ", lever[0], " up ", lever[1]);
+
+	if(lever[0] != right and lever[1] == 0) lever[0] = right;
+
+	if ( lever[0] != 0) 
+		{
+#		print ("lever move right: ", lever[0]," up ", lever[1]);
 		if (up == 1) 
 			{
-#			print ("lever move: ", lever[0],lever[1]);
 			lever[1] = lever[1] + 1;
 			}
 		elsif (up == 0) 
@@ -504,29 +542,17 @@ hydraulicLever = func{             #sets the lever up-down, right-left or neutra
 			{
 			lever[1] = lever[1] - 1;
 			}
-
-		if (lever[1] == 0) 
-			{
-			lever[0] = 0;
-			} 
-		else 
-			{
-			lever[0] = right;
-			}
+		
 		}
 
-#	print ("lever out: ", lever[0],lever[1], lever[]);
+#print ("lever out: ", lever[0], " ", lever[1]);
 
-	setprop("controls/hydraulic/lever[0]",clamp(lever[0], -1, 1));
-	setprop("controls/hydraulic/lever[1]",clamp(lever[1], -1, 1));
-	
-#	if (lever[0] == 1 and lever[1] == -1) 
-#		{ registerTimer (hurricane.flapBlowin)}   # run the timer 
-		
-	if (lever[0] == -1 and lever[1] != 0) 
-		{ registerTimer (hurricane.wheelsMove)}   # run the timer                    
-		
+interpolate("controls/hydraulic/lever[0]", clamp(lever[0], -1, 1), 0.1);
+interpolate("controls/hydraulic/lever[1]", clamp(lever[1], -1, 1), 0.3);
+
 } # end function 
+
+
 # ==================== Fire it up =====================
 
 setlistener("sim/signals/fdm-initialized", initialize);
