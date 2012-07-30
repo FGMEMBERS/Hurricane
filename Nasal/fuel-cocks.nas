@@ -16,6 +16,9 @@
 
 UPDATE_PERIOD = 0.3;
 
+flag = 0;
+done = 0;
+
 # ============================== Register timer ===========================================
 
 registerTimer = func {
@@ -57,8 +60,8 @@ fuelUpdate = func {
         }else{                  # and therefore keeps the function running,
         flag = 1;               # once it has run once.
     }
-        
-    if(!initialized) { initialize(); }
+    print("update initialized ",initialized);
+#    if(!initialized) { initialize(); }
 
     AllTanks = props.globals.getNode("consumables/fuel").getChildren("tank");
 
@@ -165,11 +168,9 @@ fuelUpdate = func {
 # for, and that they have sane default values.
 flag = 0;
 done = 0;
-initialized = 0;
-
-
 
 initialize = func {
+
 
     AllEngines = props.globals.getNode("engines").getChildren("engine");
     AllTanks = props.globals.getNode("consumables/fuel").getChildren("tank");
@@ -198,9 +199,14 @@ initialize = func {
     }
     
     
-    initialized = 1;
+    initialized = 0;
+
+# =============================== start it up ===============================
+#
+	print( "... done" );
+	registerTimer();
     
-}# end func
+}# end func initialize
 
 # ================================ end Initalize ================================== 
 
@@ -219,5 +225,56 @@ initDoubleProp = func {
 # =========================== end Utility Function ================================
 
 # Fire it up
+var tanks = [];
+var engines = [];
+var fuel_freeze = nil;
 
-registerTimer();
+var freeze_fuel_listener = nil;
+var initialized = 0;
+
+    print("def initialized ",initialized);
+
+_setlistener("/sim/signals/fdm-initialized", func {
+	print ("initialising new Fuel System...", initialized);
+	initialized = 0;
+
+	if (freeze_fuel_listener == nil)
+		{
+		freeze_fuel_listener = setlistener("/sim/freeze/fuel", func(n) { fuel_freeze = n.getBoolValue() }, 1);
+		}
+
+	AllEngines = props.globals.getNode("engines").getChildren("engine");
+	foreach (var e; AllEngines)
+		{
+		e.getNode("fuel-consumed-lbs", 1).setDoubleValue(0);
+		e.getNode("out-of-fuel", 1).setBoolValue(0);
+		}
+
+	AllEnginescontrols = props.globals.getNode("controls/engines").getChildren("engine");
+	foreach(e; AllEnginescontrols)
+		{
+		if(e.getNode("mixture-lever") == nil) 
+			e.getNode("mixture-lever", 1).setDoubleValue(0);
+		}
+
+# do the following stuff once only
+    print("update initialized ",initialized);
+	if (initialized)
+		return;
+	initialized = 5;
+
+	foreach (var t; props.globals.getNode("/consumables/fuel", 1).getChildren("tank")) 
+		{
+		if (!t.getAttribute("children"))
+			continue;           # skip native_fdm.cxx generated zombie tanks
+
+		append(tanks, t);
+		t.initNode("selected", 1, "BOOL");
+		} 
+
+# =============================== start it up ===============================
+#
+	print( "... done" );
+	registerTimer();
+
+	});# end listener 
