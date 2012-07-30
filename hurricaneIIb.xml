@@ -184,7 +184,11 @@ The reference datum for measurements is the nose.
 					 lift="1.2"
 					 drag="1.6"/>
 		<control-input axis="/systems/hydraulic/outputs/flaps"
-									 control="FLAP0"/>
+									 control="FLAP0"
+									 src0="0"
+									 dst0="0"
+									 src1="1"
+									 dst1="1"/>
 		<control-output control="FLAP0"
 										prop="/surface-positions/flap-pos-norm"/>
 		<control-speed control="FLAP0"

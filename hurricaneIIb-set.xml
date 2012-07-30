@@ -626,9 +626,7 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
         <binding>
           <command>nasal</command>
           <script>
-
-            hurricane.closeCock();
-
+            fuel.openCock(-1);
           </script>
         </binding>
       </key>
@@ -638,9 +636,7 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
         <binding>
           <command>nasal</command>
           <script>
-
-            hurricane.openCock();
-
+            fuel.openCock(1);
           </script>
         </binding>
       </key>
@@ -696,38 +692,7 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
           <value type="double">1.0</value>
         </binding>
       </key>
-      <key n="115">
-        <name>s</name>
-        <desc>Fire starter.</desc>
-        <binding>
-          <command>nasal</command>
-          <script>hurricane.startCof(1);</script>
-        </binding>
-        <mod-up>
-          <binding>
-            <command>nasal</command>
-            <script>hurricane.startCof(0);</script>
-          </binding>
-        </mod-up>
-      </key>
-      <!--        <key n="111"> 
-
-          <name>o</name>
-
-          <desc>Hook Up.</desc>
-
-          <binding> 
-
-            <command>property-assign</command>
-
-            <property>controls/gear/tailhook</property>
-
-            <value type="double">0.0</value>
-
-          </binding>
-
-        </key> -->
-    </keyboard>
+		</keyboard>
   </input>
   <!-- instruments -->
   <instrumentation>
@@ -746,7 +711,7 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
   <nasal>
     <hurricane-fuel>
       <module>fuel</module>
-      <file>Aircraft/Hurricane/Nasal/fuel-cocks.nas</file>
+      <file>Aircraft/Hurricane/Systems//fuel.nas</file>
     </hurricane-fuel>
     <hurricane>
       <file>Aircraft/Hurricane/Nasal/hurricane.nas</file>
@@ -757,6 +722,9 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 		<pneumatic>
 			<file>Aircraft/Hurricane/Systems/pneumatic.nas</file>
 		</pneumatic>
+		<hydraulic>
+			<file>Aircraft/Hurricane/Systems/hydraulic.nas</file>
+		</hydraulic>
     <!--<recoil>
 					<file>Aircraft/Hurricane/Models/recoil.nas</file>
 				</recoil>-->

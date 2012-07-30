@@ -50,7 +50,7 @@
 					<binding>
 						<command>nasal</command>
 						<script>
-							hurricane.openCock();
+							fuel.openCock(1);
 						</script>
 					</binding>
 				</action>
@@ -64,83 +64,11 @@
 					<binding>
 						<command>nasal</command>
 						<script>
-							hurricane.closeCock();
+							fuel.openCock(-1);
 						</script>
 					</binding>
 				</action>
-				<!-- hydraulic selector 
-				<action>
-					<name>flaps retract</name>
-					<button>0</button>
-					<x>355</x>
-					<y>-170</y>
-					<w>25</w>
-					<h>20</h>
-					<binding>
-						<command>nasal</command>
-						<script>hurricane.hydraulicLever(1,1)</script>
-					</binding>
-				</action>
-				<action>
-					<name>flaps neutral</name>
-					<button>0</button>
-					<x>355</x>
-					<y>-190</y>
-					<w>25</w>
-					<h>20</h>
-					<binding>
-						<command>nasal</command>
-						<script>hurricane.hydraulicLever(1,0)</script>
-					</binding>
-				</action>
-				<action>
-					<name>flaps extend</name>
-					<button>0</button>
-					<x>355</x>
-					<y>-210</y>
-					<w>25</w>
-					<h>20</h>
-					<binding>
-						<command>nasal</command>
-						<script>hurricane.hydraulicLever(1,-1)</script>
-					</binding>
-				</action>
-				<action>
-					<name>gear retract</name>
-					<button>0</button>
-					<x>335</x>
-					<y>-170</y>
-					<w>25</w>
-					<h>20</h>
-					<binding>
-						<command>nasal</command>
-						<script>hurricane.hydraulicLever(-1,1)</script>
-					</binding>
-				</action>
-				<action>
-					<name>gear neutral</name>
-					<button>0</button>
-					<x>335</x>
-					<y>-190</y>
-					<w>25</w>
-					<h>20</h>
-					<binding>
-						<command>nasal</command>
-						<script>hurricane.hydraulicLever(-1,0)</script>
-					</binding>
-				</action>
-				<action>
-					<name>gear extend</name>
-					<button>0</button>
-					<x>335</x>
-					<y>-210</y>
-					<w>25</w>
-					<h>20</h>
-					<binding>
-						<command>nasal</command>
-						<script>hurricane.hydraulicLever(-1,-1)</script>
-					</binding>
-				</action> -->
+
 				<!-- cut-off pull -->
 				<action>
 					<name>cut-off pull</name>
