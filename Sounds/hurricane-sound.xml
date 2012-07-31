@@ -33,7 +33,7 @@
 		</crank>
 		<crank>
 			<name>starter</name>
-			<path>Aircraft/Hurricane/Sounds/merlin_starter.wav</path>
+			<path>Aircraft/Hurricane/Sounds/merlin_starter_long.wav</path>
 			<mode>looped</mode>
 			<property>/engines/engine/cranking</property>
 			<volume>

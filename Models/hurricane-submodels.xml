@@ -71,7 +71,7 @@
 
 	<exhaust-smoke>
 		<model>Aircraft/Hurricane/Models/Effects/exhaust.xml</model>
-		<trigger>engines/engine/cranking</trigger>
+		<trigger>engines/engine/smoking</trigger>
 		<speed>10</speed>
 		<repeat>true</repeat>
 		<delay>0.001</delay>

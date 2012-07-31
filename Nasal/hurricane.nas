@@ -565,6 +565,32 @@ var updateRain = func {
 
 # end 
 
+var engineSmoking =  func{
+
+	var starting = getprop("controls/engines/engine/starter") or 0;
+
+	if(!starting)
+		{
+		setprop("engines/engine/smoking", 0);
+		return;
+		}
+
+	var cranking = getprop("engines/engine/cranking");
+	var running = getprop("engines/engine/running");
+	var mags = getprop("controls/engines/engine/magnetos");
+
+	if (cranking and mags and !running)
+		{
+		setprop("engines/engine/smoking", 1);
+		}
+	else
+		{
+		setprop("engines/engine/smoking", 0);
+		}
+
+	registerTimer(engineSmoking);
+	}
+
 var loop = func {
 	updateBoostControl();
 	updatePilotG();
@@ -613,7 +639,7 @@ var tyresmoke_0 = aircraft.tyresmoke.new(0);
 var tyresmoke_1 = aircraft.tyresmoke.new(1);
 var tyresmoke_2 = aircraft.tyresmoke.new(2);
 
-
+props.globals.initNode("engines/engine/smoking", 0, "BOOL");
 
 var L = setlistener("/sim/signals/fdm-initialized", func {
 	removelistener(L);
@@ -672,6 +698,8 @@ setlistener("gear/gear[2]/position-norm", func {
 	},
 	1,
 	0);
+
+setlistener("controls/engines/engine/starter", func { engineSmoking() }, 0, 1);
 
 	print ("... done");
 	loop();
