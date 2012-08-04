@@ -460,9 +460,9 @@ The reference datum for measurements is the nose.
 									 src1="1"
 									 dst0="0.001"
 									 dst1="0.6"/>
-		<control-input axis="/controls/gear/brake-parking"
+		<!--<control-input axis="/controls/gear/brake-parking"
 									 control="BRAKE"
-									 split="true"/>
+									 split="true"/>-->
 		<control-input axis="/systems/hydraulic/outputs/gear[1]"
 									 control="EXTEND"/>
 		<control-speed control="EXTEND"
@@ -486,9 +486,9 @@ The reference datum for measurements is the nose.
 									 src1="1"
 									 dst0="0.001"
 									 dst1="0.6"/>
-		<control-input axis="/controls/gear/brake-parking"
+		<!--<control-input axis="/controls/gear/brake-parking"
 									 control="BRAKE"
-									 split="true"/>
+									 split="true"/>-->
 		<control-input axis="systems/hydraulic/outputs/gear[2]"
 									 control="EXTEND"/>
 		<control-speed control="EXTEND"

@@ -112,7 +112,7 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 			</system>
 		</hydraulic>
 		<pneumatic>
-			<lever type="double">1</lever>
+			<lever type="double">0</lever>
 			<lever type="double">0</lever>
 			<lever type="double">0</lever>
 			<system>
@@ -426,7 +426,7 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 					<step type="double">0.01</step>
 				</binding>
 			</key>
-			
+
 			<!--map keys for foot/handhold open/close -->
 			<key n="68">
 				<name>D</name>
