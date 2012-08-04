@@ -1,6 +1,6 @@
 ###############################################################################
 ##
-##  Hydraulic system module for FlightGear.
+##  Fuel system module for FlightGear.
 ##
 ##  Copyright (C) 2012  Vivian Meazza  (vivia.meazza(at)lineone.net)
 ##  This file is licensed under the GPL license v2 or later.
