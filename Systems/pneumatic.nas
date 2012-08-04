@@ -103,6 +103,13 @@ for (var i = 0; i < MAXTANKS; i += 1){
 #
 controls.fullBrakeTime = 0.001;
 
+controls.applyParkingBrake = func(v) {
+    if (!v) { return; }
+    var p = "/controls/gear/brake-left";
+    setprop(p, var i = !getprop(p));
+    return i;
+}
+
 #var trigger = func(b) setprop("/controls/armament/trigger", b);
 
 
