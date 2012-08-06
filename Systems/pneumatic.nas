@@ -40,11 +40,11 @@ var clamp = func(v, min, max) { v < min ? min : v > max ? max : v }
 var pressure = 0;
 var max_pressure = 0;
 var min_pressure = 0;
+
 var pump = nil;
 
 var valve = nil;
 var valve_1 = nil;
-var valve_2 = nil;
 
 var actuator = nil;
 var actuator_1 = nil;
@@ -82,12 +82,6 @@ props.globals.initNode("/controls/pneumatic/lever[1]", 0, "DOUBLE");
 props.globals.initNode("/controls/pneumatic/lever[2]", 0, "DOUBLE");
 props.globals.initNode("/systems/pneumatic/outputs/brake", 1, "DOUBLE");
 props.globals.initNode("/systems/pneumatic/outputs/brake[1]", 1, "DOUBLE");
-props.globals.initNode("/systems/pneumatic/outputs/trigger-gun", 1, "BOOL");
-props.globals.initNode("/systems/pneumatic/outputs/trigger-gun[1]", 1, "BOOL");
-props.globals.initNode("/systems/pneumatic/outputs/trigger-gun[2]", 1, "BOOL");
-props.globals.initNode("/systems/pneumatic/outputs/trigger-gun[3]", 1, "BOOL");
-props.globals.initNode("/systems/pneumatic/outputs/gear[1]", 0, "DOUBLE");
-props.globals.initNode("/systems/pneumatic/outputs/gear[2]", 0, "DOUBLE");
 props.globals.initNode("/environment/pressure-inhg", 0, "DOUBLE");
 
 for (var i = 0; i < MAXTANKS; i += 1){
@@ -96,6 +90,10 @@ for (var i = 0; i < MAXTANKS; i += 1){
 	props.globals.initNode("/consumables/air/tank["~ i ~ "]/selected", 0, "BOOL");
 	props.globals.initNode("/consumables/air/tank["~ i ~ "]/pressure-in-psi", 0, "DOUBLE");
 	props.globals.initNode("/consumables/air/tank["~ i ~ "]/pressure-psi", 0, "DOUBLE");
+	}
+	
+for (var i = 0; i < 12; i += 1){
+	props.globals.initNode("/systems/pneumatic/outputs/trigger-gun["~ i ~ "]", 1, "BOOL");
 	}
 
 ###
@@ -163,12 +161,6 @@ controls.applyParkingBrake = func(v) {
 	valve_1 = Valve.new("trigger",
 					"systems/pneumatic/pressure-psi",
 					"controls/armament/trigger",
-					1,
-					0);
-
-	valve_3 = Valve.new("gear-assist",
-					"systems/pneumatic/pressure-psi",
-					"controls/pneumatic/lever[2]",
 					1,
 					0);
 
