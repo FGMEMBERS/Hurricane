@@ -60,7 +60,7 @@
 		</marker>
 
 		<message>
-		Switch on both magnetos
+			Switch on both magnetos
 		</message>
 		<exit>
 			<condition>
@@ -72,7 +72,7 @@
 
 	<step>
 		<message>
-		Open throttle to around 1/3rd
+			Open throttle to around 1/3rd
 		</message>
 		<view>
 			<heading-offset-deg>43.3</heading-offset-deg>
@@ -89,16 +89,22 @@
 			<condition>
 				<less-than>
 					<property>/controls/engines/engine[0]/throttle</property>
-					<value>0.3</value>
+					<value>0.25</value>
 				</less-than>
 			</condition>
 		</error>
 		<exit>
 			<condition>
-				<greater-than>
-					<property>/controls/engines/engine[0]/throttle</property>
-					<value>0.3</value>
-				</greater-than>
+				<and>
+					<greater-than>
+						<property>/controls/engines/engine[0]/throttle</property>
+						<value>0.25</value>
+					</greater-than>
+					<less-than>
+						<property>/controls/engines/engine[0]/throttle</property>
+						<value>0.35</value>
+					</less-than>
+				</and>
 			</condition>
 		</exit>
 	</step>
@@ -123,7 +129,7 @@
 		<exit>
 			<condition>
 				<greater-than>
-					<property>/controls/engines/engine[0]/primer</property>
+					<property>/engines/engine[0]/primer</property>
 					<value>4</value>
 				</greater-than>
 			</condition>

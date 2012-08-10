@@ -20,10 +20,10 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 
 	<engines>
 		<engine>
-		<rpm type="double">750</rpm>
-		<rad-flap-norm type="double">0</rad-flap-norm>
-		<primer type = "int">0</primer>
-	</engine>
+			<rpm type="double">750</rpm>
+			<rad-flap-norm type="double">0</rad-flap-norm>
+			<primer type = "int">0</primer>
+		</engine>
 	</engines>
 	<consumables>
 		<fuel>
@@ -131,9 +131,12 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 		</lighting>
 	</controls>
 	<gear>
-		<gear n="0" type="double">1</gear>
-		<gear n="1" type="double">1</gear>
-		<gear n="2" type="double">1</gear>
+		<gear n="0"
+					type="double">1</gear>
+		<gear n="1"
+					type="double">1</gear>
+		<gear n="2"
+					type="double">1</gear>
 	</gear>
 	<surface-positions>
 		<wing-fold-pos-norm type="double">1</wing-fold-pos-norm>
@@ -141,22 +144,24 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 	<systems>
 		<hydraulic>
 			<outputs>
-				<gear n="1" type="double">1</gear>
-				<gear n="2" type="double">1</gear>
+				<gear n="1"
+							type="double">1</gear>
+				<gear n="2"
+							type="double">1</gear>
 			</outputs>
 		</hydraulic>
 	</systems>
-	
+
 	<sim include="help.xml">
 		<description type="string">Hawker Hurricane IIb (Rembrandt)</description>
 		<author type="string">Vivian Meazza</author>
 		<status>production</status>
-    <rating>
-      <FDM type="int">5</FDM>
-      <systems type="int">5</systems>
-      <cockpit type="int">5</cockpit>
-      <model type="int">5</model>
-    </rating>
+		<rating>
+			<FDM type="int">5</FDM>
+			<systems type="int">5</systems>
+			<cockpit type="int">5</cockpit>
+			<model type="int">5</model>
+		</rating>
 		<flight-model>yasim</flight-model>
 		<aero>hurricaneIIb</aero>
 		<startup>
@@ -294,20 +299,20 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 													 type="double">3.4</target-z-offset-m>
 			</config>
 		</view>
-		
+
 		<flaps>
 			<setting>0.00</setting>
 			<setting>1.00</setting>
 		</flaps>
-		
+
 		<alarms>
 			<gear-warn type="double">0</gear-warn>
 		</alarms>
-		
+
 		<tutorials>
 			<tutorial include="Tutorials/startup_tutorial.xml"/>
 		</tutorials>
-		
+
 		<menubar>
 			<default>
 				<menu n="10">
@@ -320,68 +325,68 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 							<property>sim/model/hurricane/show-pilot</property>
 						</binding>
 					</item>
-          <item>
-            <label>Flashlight</label>
-            <binding>
-              <command>property-toggle</command>
-              <property>controls/lighting/flashlight</property>
-            </binding>
-          </item>
+					<item>
+						<label>Flashlight</label>
+						<binding>
+							<command>property-toggle</command>
+							<property>controls/lighting/flashlight</property>
+						</binding>
+					</item>
 				</menu>
 			</default>
 		</menubar>
-    
+
 		<hurricane>
 			<show-pilot archive="y"
 									type="bool">true</show-pilot>
 		</hurricane>
 
-	<multiplay>
-		<generic>
-			<string n="0"
-							alias="/sim/submodels/path"/>
-			<int n="0"
-					 alias="/engines/engine[0]/running"/>
-			<int n="1"
-					 alias="/gear/gear[0]/tyre-smoke"/>
-			<int n="2"
-					 alias="/gear/gear[1]/tyre-smoke"/>
-			<int n="3"
-					 alias="/gear/gear[2]/tyre-smoke"/>
-			<int n="4"
-					 alias="/controls/lighting/nav-lights"/>
-			<int n="5"
-					 alias="/controls/armament/trigger"/>
-			<int n="6"
-					 alias="/controls/lighting/landing-light"/>
-			<float n="0"
-						 alias="/gear/gear[0]/sprayspeed-ms"/>
-			<float n="1"
-						 alias="/gear/gear[1]/sprayspeed-ms"/>
-			<float n="2"
-						 alias="/gear/gear[2]/sprayspeed-ms"/>
-			<float n="3"
-						 alias="/gear/gear[0]/spray-density"/>
-			<float n="4"
-						 alias="/gear/gear[1]/spray-density"/>
-			<float n="5"
-						 alias="/gear/gear[2]/spray-density"/>
-			<float n="6"
-						 alias="/position/altitude-agl-ft"/>
-			<float n="7"
-						 alias="/gear/gear/caster-angle-deg"/>
-			<float n="8"
-						 alias="/controls/engines/engine[0]/throttle"/>
-			<float n="9"
-						 alias="/gear/canopy/position-norm"/>
-			<float n="10"
-						 alias="/controls/flight/door-position-norm"/>
-			<float n="11"
-						 alias="/sim/time/hobbs/engine[0]"/>
-			<float n="12"
-						 alias="/engines/engine/rad-flap-norm"/>
-		</generic>
-	</multiplay>
+		<multiplay>
+			<generic>
+				<string n="0"
+								alias="/sim/submodels/path"/>
+				<int n="0"
+						 alias="/engines/engine[0]/running"/>
+				<int n="1"
+						 alias="/gear/gear[0]/tyre-smoke"/>
+				<int n="2"
+						 alias="/gear/gear[1]/tyre-smoke"/>
+				<int n="3"
+						 alias="/gear/gear[2]/tyre-smoke"/>
+				<int n="4"
+						 alias="/controls/lighting/nav-lights"/>
+				<int n="5"
+						 alias="/controls/armament/trigger"/>
+				<int n="6"
+						 alias="/controls/lighting/landing-light"/>
+				<float n="0"
+							 alias="/gear/gear[0]/sprayspeed-ms"/>
+				<float n="1"
+							 alias="/gear/gear[1]/sprayspeed-ms"/>
+				<float n="2"
+							 alias="/gear/gear[2]/sprayspeed-ms"/>
+				<float n="3"
+							 alias="/gear/gear[0]/spray-density"/>
+				<float n="4"
+							 alias="/gear/gear[1]/spray-density"/>
+				<float n="5"
+							 alias="/gear/gear[2]/spray-density"/>
+				<float n="6"
+							 alias="/position/altitude-agl-ft"/>
+				<float n="7"
+							 alias="/gear/gear/caster-angle-deg"/>
+				<float n="8"
+							 alias="/controls/engines/engine[0]/throttle"/>
+				<float n="9"
+							 alias="/gear/canopy/position-norm"/>
+				<float n="10"
+							 alias="/controls/flight/door-position-norm"/>
+				<float n="11"
+							 alias="/sim/time/hobbs/engine[0]"/>
+				<float n="12"
+							 alias="/engines/engine/rad-flap-norm"/>
+			</generic>
+		</multiplay>
 
 	</sim>
 
@@ -395,13 +400,11 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 				<binding>
 					<command>nasal</command>
 					<script>
-
 						hurricane.toggleBoost();
-
 					</script>
 				</binding>
 			</key>
-			
+
 			<!-- map keys for rudder trim -->
 			<key n="60">
 				<name>&lt;</name>
@@ -414,7 +417,7 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 					<step type="double">-0.01</step>
 				</binding>
 			</key>
-			
+
 			<key n="62">
 				<name>&gt;</name>
 				<desc>Rudder Trim Right</desc>
@@ -434,9 +437,7 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 				<binding>
 					<command>nasal</command>
 					<script>
-
 						hurricane.openDoor(1);
-
 					</script>
 				</binding>
 			</key>
@@ -446,9 +447,7 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 				<binding>
 					<command>nasal</command>
 					<script>
-
 						hurricane.openDoor(0);
-
 					</script>
 				</binding>
 			</key>
@@ -458,13 +457,11 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 				<binding>
 					<command>nasal</command>
 					<script>
-
 						hurricane.toggleDoor();
-
 					</script>
 				</binding>
 			</key>
-			
+
 			<key n="6">
 				<name>Ctrl-F</name>
 				<desc>Toggle Wingfold.</desc>
@@ -489,9 +486,7 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 				<binding>
 					<command>nasal</command>
 					<script>
-
 						hurricane.openCanopy(1);
-
 					</script>
 				</binding>
 			</key>
@@ -501,13 +496,11 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 				<binding>
 					<command>nasal</command>
 					<script>
-
 						hurricane.openCanopy(0);
-
 					</script>
 				</binding>
 			</key>
-			
+
 			<!-- map keys for radiator flap -->
 			<key n="72">
 				<name>H</name>
@@ -527,7 +520,7 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 					<value type="double">0.0</value>
 				</binding>
 			</key>
-			
+
 			<!-- map keys for Cancel Gear Warning  -->
 			<key n="107">
 				<name>k</name>
@@ -535,9 +528,7 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 				<binding>
 					<command>nasal</command>
 					<script>
-
 						hurricane.toggleGearWarn();
-
 					</script>
 				</binding>
 			</key>
@@ -547,9 +538,7 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 				<binding>
 					<command>nasal</command>
 					<script>
-
 						hurricane.toggleGearWarn();
-
 					</script>
 				</binding>
 			</key>
@@ -623,6 +612,7 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 					<max type="double">0.74</max>
 				</binding>
 			</key>
+			
 			<!-- map keys for mag switches  -->
 			<key n="123">
 				<name>{</name>
@@ -630,9 +620,7 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 				<binding>
 					<command>nasal</command>
 					<script>
-
 						hurricane.toggleleftMagswitch();
-
 					</script>
 				</binding>
 			</key>
@@ -642,13 +630,11 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 				<binding>
 					<command>nasal</command>
 					<script>
-
 						hurricane.togglerightMagswitch();
-
 					</script>
 				</binding>
 			</key>
-			
+
 			<!-- map keys for fuel cocks  -->
 			<key n="40">
 				<name>(</name>
@@ -670,7 +656,7 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 					</script>
 				</binding>
 			</key>
-			
+
 			<!-- map keys for priming pump -->
 			<key n="73">
 				<name>I</name>
@@ -690,7 +676,7 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 					</binding>
 				</mod-up>
 			</key>
-			
+
 			<!-- map keys for catapult launch Sea hurrcane to come someday-->
 			<key n="67">
 				<name>C</name>
@@ -700,6 +686,7 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 					<property>/controls/gear/catapult-launch-cmd</property>
 				</binding>
 			</key>
+			
 			<!-- map keys for launch-bar -->
 			<key n="76">
 				<name>L</name>
@@ -709,6 +696,7 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 					<property>/controls/gear/launchbar</property>
 				</binding>
 			</key>
+			
 			<!-- map keys for arrester hook -->
 			<key n="79">
 				<name>O</name>
@@ -719,15 +707,17 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 					<value type="double">1.0</value>
 				</binding>
 			</key>
-			
+
 		</keyboard>
 	</input>
+	
 	<!-- instruments -->
 	<instrumentation>
 		<fuel>
 			<serviceable type="bool">1</serviceable>
 		</fuel>
 	</instrumentation>
+	
 	<!-- weights -->
 	<yasim>
 		<weights>
@@ -735,6 +725,7 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 			<round-lb type="double">0.33</round-lb>
 		</weights>
 	</yasim>
+	
 	<!-- nasal stuff -->
 	<nasal>
 		<hurricane-fuel>
