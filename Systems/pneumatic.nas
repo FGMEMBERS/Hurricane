@@ -498,7 +498,7 @@ Actuator = {
 		obj.name = name;
 #		print ("name ", name);
 #       print ("source ", source);
-		#print ("output ", output);
+#		print ("output ", output);
 		obj.source_N = props.globals.getNode( source, 1 );
 		obj.source_N.setDoubleValue( 0 );
 		obj.output_N = props.globals.getNode( output, 1 );

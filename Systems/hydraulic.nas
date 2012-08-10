@@ -382,7 +382,7 @@ Actuator = {
 		var source = me.source_N.getValue();
 		var serviceable = me.props_serviceable_N.getValue();
 		var state = me.position_norm_N.getValue();
-		var airspeed = IAS_N.getValue();
+#		var airspeed = IAS_N.getValue();
 		var output = 0;
 		var back_pressure = 0;
 		
