@@ -87,10 +87,16 @@
 		<error>
 			<message>Ensure the throttle is 1/3 open{|.}</message>
 			<condition>
-				<less-than>
-					<property>/controls/engines/engine[0]/throttle</property>
-					<value>0.25</value>
-				</less-than>
+				<or>
+					<less-than>
+						<property>/controls/engines/engine[0]/throttle</property>
+						<value>0.25</value>
+					</less-than>
+					<greater-than>
+						<property>/controls/engines/engine[0]/throttle</property>
+						<value>0.35</value>
+					</greater-than>
+				</or>
 			</condition>
 		</error>
 		<exit>

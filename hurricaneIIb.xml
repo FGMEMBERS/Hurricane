@@ -261,7 +261,7 @@ The reference datum for measurements is the nose.
 				 chord="1.9"
 				 sweep="15"
 				 incidence="-1.5">
-		<stall aoa="12"
+		<stall aoa="12.5"
 					 width="32"
 					 peak="14"/>
 		<flap0 start="0"
@@ -289,7 +289,7 @@ The reference datum for measurements is the nose.
 				 chord="1.6"
 				 sweep="0"
 				 incidence="-1.5">
-		<stall aoa="12"
+		<stall aoa="12.5"
 					 width="32"
 					 peak="14"/>
 		<flap0 start="0"
