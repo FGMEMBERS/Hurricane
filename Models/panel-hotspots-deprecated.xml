@@ -40,8 +40,9 @@
 				</layer>-->
 			</layers>
 			<actions>
+				
 	<!-- altimeter hotspots -->
-				<!--<action>
+				<action>
 					<name>calibrate fine</name>
 					<button>0</button>
 					<x>-145</x>
@@ -104,9 +105,10 @@
 						<max>33.0</max>
 						<wrap>false</wrap>
 					</binding>
-				</action>-->
+				</action>
+				
 				<!-- magneto switch hotspots -->
-				<!--<action>
+				<action>
 					<name>switch up left</name>
 					<button>0</button>
 					<x>-355</x>
@@ -116,9 +118,7 @@
 					<binding>
 						<command>nasal</command>
 						<script>
-
 							hurricane.setleftMagswitch(1);
-
 						</script>
 					</binding>
 				</action>
@@ -132,9 +132,7 @@
 					<binding>
 						<command>nasal</command>
 						<script>
-
 							hurricane.setleftMagswitch(0);
-
 						</script>
 					</binding>
 				</action>
@@ -148,9 +146,7 @@
 					<binding>
 						<command>nasal</command>
 						<script>
-
 							hurricane.setrightMagswitch(1);
-
 						</script>
 					</binding>
 				</action>
@@ -164,14 +160,13 @@
 					<binding>
 						<command>nasal</command>
 						<script>
-
 							hurricane.setrightMagswitch(0);
-
 						</script>
 					</binding>
-				</action>-->
+				</action>
+				
 				<!-- navigation light switch -->
-				<!--<action>
+				<action>
 					<name>nav light up</name>
 					<button>0</button>
 					<x>-270</x>
@@ -196,9 +191,10 @@
 						<property>/controls/lighting/nav-lights</property>
 						<value type="bool">0</value>
 					</binding>
-				</action>-->
-				<!-- clock hotspots -->
-				<!--<action>
+				</action>
+				
+				<!--  clock hotspots  --> 
+				<action>
 					<name>adjust left fine</name>
 					<button>0</button>
 					<x>-330</x>
@@ -229,8 +225,8 @@
 						<max>43200</max>
 						<wrap>1</wrap>
 					</binding>
-				</action>-->
-				<!--<action>
+				</action>
+				<action>
 					<name>adjust right fine</name>
 					<button>0</button>
 					<x>-310</x>
@@ -261,9 +257,10 @@
 						<max>43200</max>
 						<wrap>1</wrap>
 					</binding>
-				</action>-->
+				</action>
+				
 				<!-- starter push -->
-				<!--<action>
+				<action>
 					<name>starter push</name>
 					<button>0</button>
 					<x>-440</x>
@@ -280,7 +277,8 @@
 							<script>controls.startEngine(0)</script>
 						</binding>
 					</mod-up>
-				</action>-->
+				</action>
+				
 				<!-- fuel gauge switches -->
 				<action>
 					<name>push to read fuel</name>
@@ -343,7 +341,7 @@
 				</action>
 				
 				<!-- gunsight switches -->
-				<!--<action>
+				<action>
 					<name>gun sight main up</name>
 					<button>0</button>
 					<x>240</x>
@@ -368,7 +366,7 @@
 						<property>/controls/switches/gun-sight-main</property>
 						<value type="bool">0</value>
 					</binding>
-				</action>-->
+				</action>
 
 				<!-- gear indicator switches -->
 				<action>
@@ -433,8 +431,9 @@
 						<value type="bool">0</value>
 					</binding>
 				</action>
+				
 				<!-- boost control cutout -->
-				<!--<action>
+				<action>
 					<name>toggle cutout</name>
 					<button>0</button>
 					<x>-420</x>
@@ -447,9 +446,10 @@
 							hurricane.toggleCutout();
 						</script>
 					</binding>
-				</action>-->  
+				</action>
+				
 				<!-- supercharger control -->
-				<!--<action>
+				<action>
 					<name>supercharger control</name>
 					<button>0</button>
 					<x>-370</x>
@@ -462,7 +462,7 @@
 							hurricane.toggleBoost();
 						</script>
 					</binding>
-				</action>-->
+				</action>
 				<!-- primer pump -->
 				<action>
 					<name>primer pump</name>
