@@ -2,8 +2,8 @@
 <!-- Hurricane IIb by Vivian Meazza -->
 <PropertyList>
 	<path>hurricane-ver-29.ac</path>
-
 	<!-- Front hotspots -->
+
 	<panel>
 		<path>Aircraft/Hurricane/Models/panel2-hotspots.xml</path>
 		<bottom-left>
