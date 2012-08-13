@@ -2,6 +2,36 @@
 <PropertyList>
   <path>nav-light-switch.ac</path>
 
+	<animation>
+		<type>pick</type>
+		<visible>false</visible>
+		<object-name>pick-up</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-assign</command>
+				<property>/controls/lighting/nav-lights</property>
+				<value type="bool">1</value>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<visible>false</visible>
+		<object-name>pick-down</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-assign</command>
+				<property>/controls/lighting/nav-lights</property>
+				<value type="bool">0</value>
+			</binding>
+		</action>
+	</animation>
+
   <animation>
     <type>rotate</type>
     <object-name>Switch</object-name>

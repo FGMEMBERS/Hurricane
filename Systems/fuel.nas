@@ -255,7 +255,8 @@ var total_gals = nil;
 var total_lbs = nil;
 var total_norm = nil;
 
-controls.startEngine = func(v = 1) {
+controls.startEngine
+ = func(v = 1) {
 
 	if (!v)
 		{
