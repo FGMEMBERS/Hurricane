@@ -40,8 +40,8 @@
 				</layer>-->
 			</layers>
 			<actions>
-				
-	<!-- altimeter hotspots -->
+
+				<!-- altimeter hotspots -->
 				<action>
 					<name>calibrate fine</name>
 					<button>0</button>
@@ -106,7 +106,7 @@
 						<wrap>false</wrap>
 					</binding>
 				</action>
-				
+
 				<!-- magneto switch hotspots -->
 				<action>
 					<name>switch up left</name>
@@ -164,7 +164,7 @@
 						</script>
 					</binding>
 				</action>
-				
+
 				<!-- navigation light switch -->
 				<action>
 					<name>nav light up</name>
@@ -192,8 +192,8 @@
 						<value type="bool">0</value>
 					</binding>
 				</action>
-				
-				<!--  clock hotspots  --> 
+
+				<!--  clock hotspots  -->
 				<action>
 					<name>adjust left fine</name>
 					<button>0</button>
@@ -258,7 +258,7 @@
 						<wrap>1</wrap>
 					</binding>
 				</action>
-				
+
 				<!-- starter push -->
 				<action>
 					<name>starter push</name>
@@ -278,7 +278,7 @@
 						</binding>
 					</mod-up>
 				</action>
-				
+
 				<!-- fuel gauge switches -->
 				<action>
 					<name>push to read fuel</name>
@@ -339,7 +339,7 @@
 						<value type="int">1</value>
 					</binding>
 				</action>
-				
+
 				<!-- gunsight switches -->
 				<action>
 					<name>gun sight main up</name>
@@ -431,7 +431,7 @@
 						<value type="bool">0</value>
 					</binding>
 				</action>
-				
+
 				<!-- boost control cutout -->
 				<action>
 					<name>toggle cutout</name>
@@ -447,7 +447,7 @@
 						</script>
 					</binding>
 				</action>
-				
+
 				<!-- supercharger control -->
 				<action>
 					<name>supercharger control</name>
