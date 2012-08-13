@@ -2,10 +2,62 @@
 <!-- Hurricane IIb by Vivian Meazza -->
 <PropertyList>
 	<path>hurricane-ver-29.ac</path>
-
 	<!-- Front hotspots -->
-	<!--  removed  -->
 
+	<panel>
+		<path>Aircraft/Hurricane/Models/panel2-hotspots.xml</path>
+		<bottom-left>
+			<x-m>3.75</x-m>
+			<y-m>-0.40</y-m>
+			<z-m>-0.10</z-m>
+		</bottom-left>
+		<bottom-right>
+			<x-m>3.75</x-m>
+			<y-m> 0.40</y-m>
+			<z-m>-0.10</z-m>
+		</bottom-right>
+		<top-left>
+			<x-m>2.75</x-m>
+			<y-m>-0.40</y-m>
+			<z-m> 0.70</z-m>
+		</top-left>
+	</panel>
+	<panel>
+		<path>Aircraft/Hurricane/Models/panel3-hotspots.xml</path>
+		<bottom-left>
+			<x-m>4</x-m>
+			<y-m>-1</y-m>
+			<z-m>-0.35</z-m>
+		</bottom-left>
+		<bottom-right>
+			<x-m>4</x-m>
+			<y-m> 1</y-m>
+			<z-m>-0.35</z-m>
+		</bottom-right>
+		<top-left>
+			<x-m>3.0</x-m>
+			<y-m>-1</y-m>
+			<z-m>-0.35</z-m>
+		</top-left>
+	</panel>
+	<panel>
+		<path>Aircraft/Hurricane/Models/panel4-hotspots.xml</path>
+		<bottom-left>
+			<x-m>3.80</x-m>
+			<y-m>-0.5</y-m>
+			<z-m>-0.60</z-m>
+		</bottom-left>
+		<bottom-right>
+			<x-m>3.00</x-m>
+			<y-m>-0.5</y-m>
+			<z-m>-0.60</z-m>
+		</bottom-right>
+		<top-left>
+			<x-m>3.80</x-m>
+			<y-m>-0.5</y-m>
+			<z-m> 0.20</z-m>
+		</top-left>
+	</panel>
 	<!-- ************* panel models ************* -->
 	<!-- blind flying instruments 
 	<model> 
