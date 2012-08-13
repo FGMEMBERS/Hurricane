@@ -1,7 +1,71 @@
 <?xml version="1.0"?>
 <PropertyList>
   <path>magneto.ac</path>
-  <animation>
+
+	<animation>
+		<type>pick</type>
+		<visible>false</visible>
+		<object-name>pick-left-up</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>
+					hurricane.setleftMagswitch(1);
+				</script>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<visible>false</visible>
+		<object-name>pick-left-down</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>
+					hurricane.setleftMagswitch(0);
+				</script>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<visible>false</visible>
+		<object-name>pick-right-up</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>
+					hurricane.setrightMagswitch(1);
+				</script>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<visible>false</visible>
+		<object-name>pick-right-down</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>
+					hurricane.setrightMagswitch(0);
+				</script>
+			</binding>
+		</action>
+	</animation>
+	<animation>
     <type>rotate</type>
     <object-name>Switch-L</object-name>
     <property>controls/engines/engine/mag-switch-left</property>

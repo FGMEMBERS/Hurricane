@@ -2,8 +2,24 @@
   <PropertyList> 
     
 	<path>cutout.ac</path>
-    
-	<animation> 
+
+		<animation>
+			<type>pick</type>
+			<visible>true</visible>
+			<object-name>knob</object-name>
+			<action>
+				<button>0</button>
+				<repeatable>true</repeatable>
+				<binding>
+					<command>nasal</command>
+					<script>
+						hurricane.toggleCutout();
+					</script>
+				</binding>
+			</action>
+		</animation>
+
+		<animation> 
       <type>translate</type>
       <object-name>knob</object-name>
       <property>controls/engines/engine/boost-control-cutout</property>
@@ -14,23 +30,6 @@
         <z>0</z>
       </axis>
     </animation>
-    
-    <!--<animation>
-      <type>material</type>
-      <condition>
-        <greater-than>
-          <property>/controls/lighting/panel-norm[1]</property>
-          <value>0</value>
-        </greater-than>
-        <property>/sim/rendering/rembrandt/enabled</property>
-      </condition>
-      <emission>
-        <factor-prop>/controls/lighting/panel-norm</factor-prop>
-        <red>0.0</red>
-        <green>0.0</green>
-        <blue>0.0</blue>
-      </emission>
-    </animation>-->
 
     <animation>
       <type>material</type>
