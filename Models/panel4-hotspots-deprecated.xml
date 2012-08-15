@@ -41,7 +41,7 @@
           </layers>
           <actions> 
             <!-- trim wheels -->
-            <action> 
+            <!--<action> 
               <name>trim-wheel-elevator-up</name>
               <button>0</button>
               <x>100</x>
@@ -68,7 +68,7 @@
                 <min type="double">-1.0</min>
                 <step type="double">-0.001</step>
               </binding>
-            </action>
+            </action>-->
             <!--  cockpit light dimmer hotspots -->
             <!--<action> 
               <name>panel brighter</name>

@@ -40,7 +40,7 @@
 			</layers>
 			<actions>
 				<!-- fuel cock -->
-				<action>
+				<!--<action>
 					<name>lever open</name>
 					<button>0</button>
 					<x>-360</x>
@@ -67,10 +67,10 @@
 							fuel.openCock(-1);
 						</script>
 					</binding>
-				</action>
+				</action>-->
 
 				<!-- cut-off pull -->
-				<action>
+				<!--<action>
 					<name>cut-off pull</name>
 					<button>0</button>
 					<x>390</x>
@@ -91,7 +91,7 @@
 							</script>
 						</binding>
 					</mod-up>
-				</action>
+				</action>-->
 			</actions>
 		</instrument>
 	</instruments>
