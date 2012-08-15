@@ -453,7 +453,7 @@ refs 3
 1 0.966979 0.869539
 kids 0
 OBJECT poly
-name "cylinder"
+name "knob"
 loc 0.00908071 -3.90623e-005 3.00133e-011
 texture "large-bezel.rgb"
 crease 61.000000
