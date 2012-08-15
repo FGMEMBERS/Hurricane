@@ -26,8 +26,8 @@ UPDATE_PERIOD = 0.3;
 
 registerTimer = func {
 
-    settimer(arg[0], UPDATE_PERIOD);
-    
+	settimer(arg[0], UPDATE_PERIOD);
+	
 }# end func
 
 #does what it says on the tin
@@ -48,15 +48,15 @@ var update = func {
 #	print("running update");
 
 	# Build a list of available tanks. An available tank is both selected and has 
-    # fuel remaining.  Note the filtering for "zero-capacity" tanks.  The FlightGear
-    # code likes to define zombie tanks that have no meaning to the FDM,
-    # so we have to take measures to ignore them here. 
-    var availableTanks = [];
+	# fuel remaining.  Note the filtering for "zero-capacity" tanks.  The FlightGear
+	# code likes to define zombie tanks that have no meaning to the FDM,
+	# so we have to take measures to ignore them here. 
+	var availableTanks = [];
 	var cap = 0.01; #  division by 0 issue
 	var contents = 0;
 	var selected = 0;
 
-    foreach(t; alltanks) {
+	foreach(t; alltanks) {
 
 		if(t.getNode("capacity-gal_us") != nil)
 			{
@@ -70,8 +70,8 @@ var update = func {
 
 		} # end foreach
 
-    # Subtract fuel from tanks, set auxilliary properties.  Set out-of-fuel
-    # when all available tanks are dry.
+	# Subtract fuel from tanks, set auxilliary properties.  Set out-of-fuel
+	# when all available tanks are dry.
 		var outOfFuel = 0;
 		var lbs = 0;
 		var ppg = 0;
@@ -105,8 +105,8 @@ var update = func {
 				} # end foreach
 
 			} #endif
-    
-    # Total fuel properties
+	
+	# Total fuel properties
 	foreach(t; alltanks) 
 		{
 		cap  += t.getNode("capacity-gal_us").getValue();
@@ -114,9 +114,9 @@ var update = func {
 		lbs  += t.getNode("level-lbs").getValue();
 		}
 
-    setprop("/consumables/fuel/total-fuel-gals", gals);
-    setprop("/consumables/fuel/total-fuel-lbs", lbs);
-    setprop("/consumables/fuel/total-fuel-norm", gals/cap);
+	setprop("/consumables/fuel/total-fuel-gals", gals);
+	setprop("/consumables/fuel/total-fuel-lbs", lbs);
+	setprop("/consumables/fuel/total-fuel-norm", gals/cap);
 
 # we use the mixture to control the engines, so set the mixture
 	var cutoff = getprop("controls/engines/engine/cutoff") or 0;
@@ -126,11 +126,11 @@ var update = func {
 	if ( outOfFuel or !cutoff )
 		{
 		mixture = 0;
-		} 
-	elsif( starter == 1 ) 
+		}
+	elsif( starter == 1 )
 		{ # mixture is controlled by start conditions
 		primer = getprop("engines/engine/primer");
-	    mixture = ( primerMixture(primer) );
+		mixture = ( primerMixture(primer) );
 		}
 	else 
 		{ # mixture is controlled by G force and mixture lever

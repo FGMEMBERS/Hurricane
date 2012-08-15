@@ -2,7 +2,7 @@
 ##
 ##  Hydraulic system module for FlightGear.
 ##
-##  Copyright (C) 2012  Vivian Meazza  (vivia.meazza(at)lineone.net)
+##  Copyright (C) 2012  Vivian Meazza  (vivian.meazza(at)lineone.net)
 ##  This file is licensed under the GPL license v2 or later.
 ##
 ###############################################################################
@@ -14,7 +14,7 @@
 # ==================================== Definiions ===========================================
 # set the maximum and minimum pressure
 MAX_PRESSURE = 1250.0;
-MIN_PRESSURE = 500.0;
+MIN_PRESSURE = 250.0;
 
 # set the update period
 UPDATE_PERIOD = 0.3;
@@ -50,6 +50,8 @@ var actuator_3 = nil;
 var actuator_4 = nil;
 
 var relief_valve = nil;
+
+var lowpass = aircraft.lowpass.new(1.1);
 
 var IAS_N = props.globals.getNode("/velocities/airspeed-kt", 1);
 
@@ -393,16 +395,22 @@ Actuator = {
 		if(input < MIN_PRESSURE and input > -MIN_PRESSURE or !serviceable)
 			{
 			output = state;
-
 #			print (me.name," low pressure ",input, " ", output);
 			}
 		elsif (input >= MIN_PRESSURE)
 			{
-			output = (input)/ me.max;
-#			output = (source - back_pressure)/ me.max;
+			output = (input)/me.max;
+
+			if(back_pressure < 100)
+				{
+				output = math.max(output, state);
 #			print(me.name," max output ", output);
-			output = math.max(output, state);
-#			print(me.name," output max ", output);
+				}
+				else
+				{
+				output = math.min(output, state);
+				}
+
 			}
 		elsif(input <= -MIN_PRESSURE)
 			{
@@ -437,7 +445,7 @@ Actuator = {
 		var back_pressure = 0.00004 * (airspeed * airspeed * state) * (airspeed * airspeed * state)
 			- 0.4495 * (airspeed * airspeed * state) + 0.4504;
 		back_pressure = math.max(back_pressure, 0);
- 
+ 		back_pressure = lowpass.filter(back_pressure);
 #		print (me.name, " back_pressure ", back_pressure, " airspeed ", airspeed, " state " , state);
 		
 		return back_pressure;
