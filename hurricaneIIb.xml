@@ -150,9 +150,9 @@ The reference datum for measurements is the nose.
 					 peak="10.64"/>
 		<flap0 start="0.00"
 					 end="1"
-					 lift="3"
-					 drag="1.7"/>
-		<control-input axis="/controls/flight/flaps"
+					 lift="2.75"
+					 drag="1.40"/>
+		<control-input axis="/systems/hydraulic/outputs/flaps"
 									 control="FLAP0"/>
 		<control-output control="FLAP0"
 										prop="/surface-positions/flap-pos-norm"/>
@@ -177,8 +177,8 @@ The reference datum for measurements is the nose.
 					 peak="10.17"/>
 		<flap0 start="0.00"
 					 end="0.457"
-					 lift="4.5"
-					 drag="1.7"/>
+					 lift="4.0"
+					 drag="1.4"/>
 		<flap1 start="0.457"
 					 end="1.0"
 					 lift="4.5"
