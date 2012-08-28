@@ -26,14 +26,10 @@
 		<z-m> 0.000 </z-m>
 	</offsets>
 
-  <effect>
-    <inherits-from>Effects/model-transparent</inherits-from>
-    <object-name>glass</object-name>
-    <!--<object-name>button-right-fast</object-name>
-    <object-name>button-right</object-name>
-    <object-name>button-left</object-name>
-    <object-name>button-left-fast</object-name>-->
-  </effect>
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>glass</object-name>
+	</effect>
 
 	<animation>
 		<type>pick</type>
@@ -188,7 +184,7 @@
 		</axis>
 	</animation>
 
-  <!--<animation>
+	<!--<animation>
     <type>material</type>
     <condition>
       <greater-than>
@@ -205,24 +201,24 @@
     </emission>
   </animation>-->
 
-  <animation>
-    <type>material</type>
-    <condition>
-      <greater-than>
-        <property>/controls/lighting/panel-norm</property>
-        <value>0</value>
-      </greater-than>
-      <not>
-        <property>/sim/rendering/rembrandt/enabled</property>
-      </not>
-    </condition>
-    <emission>
-      <factor-prop>/controls/lighting/panel-norm</factor-prop>
-      <red>0.75</red>
-      <green>0.25</green>
-      <blue>0.25</blue>
-    </emission>
-  </animation>
+	<animation>
+		<type>material</type>
+		<condition>
+			<greater-than>
+				<property>/controls/lighting/panel-norm</property>
+				<value>0</value>
+			</greater-than>
+			<not>
+				<property>/sim/rendering/rembrandt/enabled</property>
+			</not>
+		</condition>
+		<emission>
+			<factor-prop>/controls/lighting/panel-norm</factor-prop>
+			<red>0.75</red>
+			<green>0.25</green>
+			<blue>0.25</blue>
+		</emission>
+	</animation>
 
 	<animation>
 		<type>noshadow</type>

@@ -104,8 +104,8 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 			<canopy-slide type="bool">1</canopy-slide>
 		</flight>
 		<hydraulic>
-			<lever type="double">0</lever>
-			<lever type="double">0</lever>
+			<lever type="double">1</lever>
+			<lever type="double">1</lever>
 			<wheels type="double">1</wheels>
 			<system>
 				<engine-pump type="bool">true</engine-pump>
