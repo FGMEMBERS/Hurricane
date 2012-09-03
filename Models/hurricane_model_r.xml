@@ -654,7 +654,7 @@
 
 	<!-- make sure that all the rest of the aircraft is visible-->
 
-	<animation>
+	<!--<animation>
 		<type>select</type>
 		<object-name>Cover-Engine-T</object-name>
 		<object-name>Cover-Tank-T</object-name>
@@ -674,7 +674,7 @@
 				<value>0</value>
 			</greater-than-equals>
 		</condition>
-	</animation>
+	</animation>-->
 	<animation>
 		<type>select</type>
 		<object-name>Pilot</object-name>
@@ -1488,25 +1488,6 @@
       </emission>
     </animation>-->
 
-	<animation>
-		<type>material</type>
-		<condition>
-			<greater-than>
-				<property>/controls/lighting/panel-norm</property>
-				<value>0</value>
-			</greater-than>
-			<not>
-				<property>/sim/rendering/rembrandt/enabled</property>
-			</not>
-		</condition>
-		<emission>
-			<factor-prop>/controls/lighting/panel-norm</factor-prop>
-			<red>0.75</red>
-			<green>0.25</green>
-			<blue>0.25</blue>
-		</emission>
-	</animation>
-
 	<!--<animation>
     <type>material</type>
     <object-name>Member-F-C-U</object-name>
@@ -1524,25 +1505,6 @@
         <blue>0.0</blue>
       </emission>
     </animation>-->
-
-	<animation>
-		<type>material</type>
-		<condition>
-			<greater-than>
-				<property>/controls/lighting/panel-norm</property>
-				<value>0</value>
-			</greater-than>
-			<not>
-				<property>/sim/rendering/rembrandt/enabled</property>
-			</not>
-		</condition>
-		<emission>
-			<factor-prop>/controls/lighting/panel-norm</factor-prop>
-			<red>0.75</red>
-			<green>0.25</green>
-			<blue>0.25</blue>
-		</emission>
-	</animation>
 
 	<!-- ========== Dirt textures ========= -->
 

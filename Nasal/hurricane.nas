@@ -20,8 +20,8 @@ registerTimer = func {
 
 BOOST_CONTROL_AUTHORITY = 0.99; # How much can it move the throttle?
 #BOOST_CONTROL_RANGE = 1;         When does it start to engage? (psig)
-BOOST_CONTROL_LIMIT_RATED = 11.9;       # Maximum MP (psig)
-BOOST_CONTROL_LIMIT_COMBAT = 18;    # Combat limit (5 mins)
+BOOST_CONTROL_LIMIT_RATED = 9;       # Maximum MP (psig)
+BOOST_CONTROL_LIMIT_COMBAT = 12.5;    # Combat limit (5 mins)
 
 var boost_control = props.globals.getNode("/controls/engines/engine/boost-control", 1);
 var boost_pressure = props.globals.getNode("/engines/engine/boost-gauge-inhg", 1);
@@ -30,6 +30,7 @@ var boost_control_damp = props.globals.getNode("/controls/engines/engine/boost-c
 var boost_control_range = props.globals.getNode("/controls/engines/engine/boost-control-range", 1);
 var boost_control_cutout = props.globals.getNode("/controls/engines/engine/boost-control-cutout", 1);
 var mp_inhg = props.globals.getNode("/engines/engine/mp-inhg", 1);
+var throttle = props.globals.getNode("/controls/engines/engine/throttle", 1);
 
 boost_control.setDoubleValue(1); 
 boost_pressure.setDoubleValue(0); 
@@ -45,7 +46,7 @@ var toggleBoost = func{
 	var b = getprop("controls/engines/engine/boost");
 
 	if (b == 1) {
-	    b = 0.79; }
+	    b = 0.633; }
 	else  {
 	    b = 1;
 		}
@@ -70,6 +71,7 @@ var updateBoostControl = func {
 	var boost_control_range = boost_control_range.getValue();
 	var mp = (mp_inhg.getValue() * 0.491154077497) - 14.6959487755 ;
 	var cutout = boost_control_cutout.getValue();
+	var throttle = throttle.getValue();
 	var val = 0;
 
 	if(! cutout){		
@@ -84,7 +86,7 @@ var updateBoostControl = func {
 		{
 		val = 0;                             # Can't increase throttle
 		} 
-	elsif (val < -BOOST_CONTROL_AUTHORITY) 
+	elsif (val > BOOST_CONTROL_AUTHORITY) 
 		{
 		val = -BOOST_CONTROL_AUTHORITY        # limit by authority
 		}
@@ -94,15 +96,20 @@ var updateBoostControl = func {
 		}
 
 		damp = (val * n) + (damp * (1 - n)); # apply low pass filter
+		var output = 0;
 
-#  print(sprintf("mp=%0.5f, in=%0.5f, raw=%0.5f, out=%0.5f", mp, in, val, damp));
+		if ( throttle + damp <= 0) 
+			output = 0;
+		else
+			output = damp;
 
+#	print(sprintf("mp=%0.5f, in=%0.5f, raw_in=%0.5f, damped_out=%0.5f, output=%0.5f", mp, in, val, damp, output));
 		boost_pressure_psi.setDoubleValue(mp);
-		boost_control.setDoubleValue(damp);
+		boost_control.setDoubleValue(output);
 		boost_control_cutout.setBoolValue(cutout);
 }
 
-# ======================================= end Boost Controller stuff ============================
+# ======================================= end Boost Controller stuff ========================
 
 
 # ================================= magneto stuff ===========================================
