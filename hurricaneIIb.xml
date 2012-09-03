@@ -46,13 +46,13 @@ The reference datum for measurements is the nose.
 	<approach speed="61"
 						aoa="12.5">
 		<control-setting axis="/controls/engines/engine[0]/throttle"
-										 value="0.2"/>
+										 value="0.3"/>
 		<control-setting axis="/controls/engines/engine[0]/mixture"
 										 value="1.0"/>
 		<control-setting axis="/controls/engines/engine[0]/propeller-pitch"
 										 value="1"/>
 		<control-setting axis="/controls/engines/engine[0]/boost"
-										 value="0.79"/>
+										 value="0.633"/>
 		<!--<control-setting axis="/controls/flight/flaps"
 										 value="1.0"/>-->
 		<control-setting axis="/systems/hydraulic/outputs/flaps"
@@ -149,11 +149,11 @@ The reference datum for measurements is the nose.
         >
 		<stall aoa="17.5"
 					 width="27.5"
-					 peak="10.64"/>
+					 peak="4.14"/>
 		<flap0 start="0.00"
 					 end="1"
-					 lift="2.8"
-					 drag="4.5"/>
+					 lift="1.6"
+					 drag="1.3"/>
 		<control-input axis="/systems/hydraulic/outputs/flaps"
 									 control="FLAP0"/>
 		<control-output control="FLAP0"
@@ -176,14 +176,14 @@ The reference datum for measurements is the nose.
         >
 		<stall aoa="14.5"
 					 width="25.5"
-					 peak="10.17"/>
+					 peak="3.28"/>
 		<flap0 start="0.00"
 					 end="0.457"
-					 lift="2.8"
-					 drag="4.5"/>
+					 lift="2.9"
+					 drag="1.9"/>
 		<flap1 start="0.457"
 					 end="1.0"
-					 lift="4.5"
+					 lift="2.2"
 					 drag="1.6"/>
 		<control-input axis="/systems/hydraulic/outputs/flaps"
 									 control="FLAP0"
@@ -225,7 +225,7 @@ The reference datum for measurements is the nose.
 				 idrag="1.2">
 		<stall aoa="12"
 					 width="18"
-					 peak="14.4"/>
+					 peak="3.84"/>
 	</mstab>
 	<!-- tailplane 		effectiveness="1.2"-->
 	<hstab
@@ -237,12 +237,12 @@ The reference datum for measurements is the nose.
 		chord="1.382"
 		sweep="-0.5"
 		idrag="0.9">
-		<stall aoa="15"
+		<stall aoa="14"
 					 width="32"
 					 peak="6.5"/>
 		<flap0 start="0.0"
 					 end="1.05"
-					 lift="6.2"
+					 lift="8.3"
 					 drag="1.9"/>
 		<control-input axis="/controls/flight/elevator"
 									 control="FLAP0"/>
@@ -265,11 +265,11 @@ The reference datum for measurements is the nose.
 				 incidence="-1.5">
 		<stall aoa="12.5"
 					 width="32"
-					 peak="14"/>
+					 peak="12"/>
 		<flap0 start="0"
 					 end="1"
-					 lift="18"
-					 drag="3.2"/>
+					 lift="17"
+					 drag="1.5"/>
 		<control-input axis="/controls/flight/rudder"
 									 control="FLAP0"
 									 invert="true"
@@ -293,11 +293,11 @@ The reference datum for measurements is the nose.
 				 incidence="-1.5">
 		<stall aoa="12.5"
 					 width="32"
-					 peak="14"/>
+					 peak="12"/>
 		<flap0 start="0"
 					 end="1"
-					 lift="18"
-					 drag="3.2"/>
+					 lift="17"
+					 drag="1.5"/>
 		<control-input axis="/controls/flight/rudder"
 									 control="FLAP0"
 									 invert="true"
@@ -348,17 +348,17 @@ The reference datum for measurements is the nose.
 						 mass="2055"
 						 moment="60"
 						 radius="1.638"
-						 cruise-speed="237"
-						 cruise-rpm="1360"
-						 cruise-power="1190"
-						 cruise-alt="18000"
+						 cruise-speed="223"
+						 cruise-rpm="1260"
+						 cruise-power="1480"
+						 cruise-alt="13000"
 						 min-rpm="715"
-						 max-rpm="1431"
-						 gear-ratio="0.477"
-						 coarse-stop="1.9"
-						 fine-stop="0.6"
-						 takeoff-power="1250"
-						 takeoff-rpm="1431">
+						 max-rpm="1260"
+						 gear-ratio="0.42"
+						 coarse-stop="2.1"
+						 fine-stop="0.75"
+						 takeoff-power="1400"
+						 takeoff-rpm="1260">
 		<actionpt x="-0.47"
 							y="0"
 							z="0"/>
@@ -368,12 +368,12 @@ The reference datum for measurements is the nose.
 		<control-input axis="/controls/engines/engine[0]/propeller-pitch"
 									 control="ADVANCE"/>
 		<piston-engine
-			eng-power="1290"
+			eng-power="1480"
 			eng-rpm="3000"
 			displacement="1649"
 			compression="6"
-			turbo-mul="3.65"
-			wastegate-mp="55.5"
+			turbo-mul="3.615"
+			wastegate-mp="55"
 			supercharger="1"
                         >
 			<control-input axis="/controls/engines/engine[0]/throttle"
@@ -384,6 +384,8 @@ The reference datum for measurements is the nose.
 										 dst0="-1"
 										 dst1="1"
 										 control="THROTTLE"/>
+			<control-output control="THROTTLE"
+											prop="/engines/engine/throttle-setting"/>
 			<control-input axis="/controls/engines/engine[0]/starter"
 										 control="STARTER"/>
 			<control-input axis="/controls/engines/engine[0]/magnetos"

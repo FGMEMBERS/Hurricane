@@ -83,7 +83,7 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 				<mixture-lever type="double">1</mixture-lever>
 				<!--<primer type = "int">0</primer>-->
 				<primer-pump type = "bool">0</primer-pump>
-				<boost type= "double">0.70</boost>
+				<boost type= "double">0.633</boost>
 				<cutout type= "bool">0</cutout>
 				<rad-flap-norm type="double">0</rad-flap-norm>
 			</engine>
