@@ -663,7 +663,7 @@ setlistener( "controls/lighting/nav-lights", func {
 	var nav_lights_node = props.globals.getNode("controls/lighting/nav-lights", 1);
 	var generic_node = props.globals.getNode("sim/multiplay/generic/int[0]", 1);
 	generic_node.setIntValue(nav_lights_node.getValue());
-	print("nav_lights ", nav_lights_node.getValue(), "generic_node ", generic_node.getValue());
+#	print("nav_lights ", nav_lights_node.getValue(), "generic_node ", generic_node.getValue());
 	}
 ); 
 

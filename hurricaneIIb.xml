@@ -44,9 +44,11 @@ The reference datum for measurements is the nose.
 <airplane mass="6464">
 	<!-- Approach configuration -->
 	<approach speed="61"
-						aoa="12.5">
+						aoa="12">
 		<control-setting axis="/controls/engines/engine[0]/throttle"
 										 value="0.3"/>
+		<control-setting axis="/controls/engines/engine[0]/boost-control"
+										 value="0.0"/>
 		<control-setting axis="/controls/engines/engine[0]/mixture"
 										 value="1.0"/>
 		<control-setting axis="/controls/engines/engine[0]/propeller-pitch"
@@ -57,8 +59,15 @@ The reference datum for measurements is the nose.
 										 value="1.0"/>-->
 		<control-setting axis="/systems/hydraulic/outputs/flaps"
 										 value="1.0"/>
-		<control-setting axis="/controls/gear/gear-down"
-										 value="1"/>
+		<!--<control-setting axis="/controls/gear/gear-down"
+										 value="1"/>-->
+		<control-setting axis="systems/hydraulic/outputs/gear[1]"
+										 value="1.0"/>
+		<control-setting axis="systems/hydraulic/outputs/gear[2]"
+										 value="1.0"/>
+		<control-setting axis="/controls/flight/canopy-slide"
+										 value="0.0"/>
+
 		<solve-weight idx="0"
 									weight="200"/>
 	</approach>
@@ -68,16 +77,24 @@ The reference datum for measurements is the nose.
 					fuel="0.9">
 		<control-setting axis="/controls/engines/engine[0]/throttle"
 										 value="1.0"/>
+		<control-setting axis="/controls/engines/engine[0]/boost-control"
+										 value="0.0"/>
 		<control-setting axis="/controls/engines/engine[0]/mixture"
 										 value="1.0"/>
 		<control-setting axis="/controls/engines/engine[0]/propeller-pitch"
 										 value="1.0"/>
 		<control-setting axis="/controls/engines/engine[0]/boost"
 										 value="1.0"/>
-		<control-setting axis="/controls/flight/flaps"
+		<control-setting axis="/controls/hydraulic/outputs/flaps"
 										 value="0.0"/>
-		<control-setting axis="/controls/gear/gear-down"
-										 value="0"/>
+		<!--<control-setting axis="/controls/gear/gear-down"
+										 value="0"/>-->
+		<control-setting axis="systems/hydraulic/outputs/gear[1]"
+										 value="0.0"/>
+		<control-setting axis="systems/hydraulic/outputs/gear[2]"
+										 value="0.0"/>
+		<control-setting axis="/controls/flight/canopy-slide"
+										 value="0.0"/>
 		<solve-weight idx="0"
 									weight="200"/>
 	</cruise>
@@ -144,16 +161,16 @@ The reference datum for measurements is the nose.
 				 chord="3.08"
 				 sweep="-17.25"
 				 length="0.942"
-				 camber="0.161"
+				 camber="0.065"
 				 idrag="1.2"
         >
-		<stall aoa="17.5"
-					 width="27.5"
-					 peak="4.14"/>
+		<stall aoa="24.5"
+					 width="20.5"
+					 peak="1.72"/>
 		<flap0 start="0.00"
 					 end="1"
-					 lift="1.6"
-					 drag="1.3"/>
+					 lift="1.5"
+					 drag="1.545"/>
 		<control-input axis="/systems/hydraulic/outputs/flaps"
 									 control="FLAP0"/>
 		<control-output control="FLAP0"
@@ -161,30 +178,27 @@ The reference datum for measurements is the nose.
 		<control-speed control="FLAP0"
 									 transition-time="10"/>
 	</mstab>
+	<!-- 	wing, flaps section -->
 	<wing x="-3.48"
 				y="1.34"
 				z="-0.57"
-				taper="0.5"
+				taper="0.77"
 				incidence="2.0"
-				twist="-2.0"
-				length="4.314"
+				twist="-1.0"
+				length="1.972"
 				chord="2.497"
 				sweep="-3"
 				dihedral="3.5"
-				camber="0.177"
+				camber="0.069"
 				idrag="1.2"
         >
-		<stall aoa="14.5"
-					 width="25.5"
-					 peak="3.28"/>
+		<stall aoa="22"
+					 width="23"
+					 peak="1.81"/>
 		<flap0 start="0.00"
-					 end="0.457"
-					 lift="2.9"
-					 drag="1.9"/>
-		<flap1 start="0.457"
 					 end="1.0"
-					 lift="2.2"
-					 drag="1.6"/>
+					 lift="1.8"
+					 drag="1.9"/>
 		<control-input axis="/systems/hydraulic/outputs/flaps"
 									 control="FLAP0"
 									 src0="0"
@@ -195,21 +209,86 @@ The reference datum for measurements is the nose.
 										prop="/surface-positions/flap-pos-norm"/>
 		<control-speed control="FLAP0"
 									 transition-time="10"/>
-		<control-input axis="/controls/flight/aileron"
-									 control="FLAP1"
-									 split="true"/>
-		<control-input axis="/controls/flight/aileron-trim"
-									 control="FLAP1"
-									 split="true"/>
-		<control-output control="FLAP1"
-										side="left"
-										prop="/surface-positions/left-aileron-pos-norm"/>
-		<control-output  control="FLAP1"
-										 side="right"
-										 prop="/surface-positions/right-aileron-pos-norm"/>
-		<control-speed control="FLAP1"
-									 transition-time="0.1"/>
 	</wing>
+
+	<!-- 	wing, left aileron section -->
+
+	<vstab x="-3.381"
+				 y="3.305"
+				 z="-0.446"
+				 taper="0.648"
+				 incidence="1.0"
+				 twist="-1.0"
+				 length="2.344"
+				 chord="1.926"
+				 sweep="-3"
+				 dihedral="3.5"
+				 camber="0.0745"
+				 idrag="1.2"
+        >
+		<stall aoa="17.5"
+					 width="22.5"
+					 peak="1.593"/>
+		<flap0 start="0.00"
+					 end="1.0"
+					 lift="1.6"
+					 drag="1.9"/>
+		<control-input axis="/controls/flight/aileron-norm"
+									 control="FLAP0"
+									 src0="-1.0"
+									 dst0="-0.92"
+									 src1="1"
+									 dst1="0.96"
+									 />
+		<control-input axis="/controls/flight/aileron-trim"
+									 control="FLAP0"
+									 />
+		<control-output control="FLAP0"
+										prop="/surface-positions/left-aileron-pos-norm"/>
+		<control-speed control="FLAP0"
+									 transition-time="0.1"/>
+	</vstab>
+
+	<!-- 	wing, right aileron section -->
+
+	<vstab x="-3.264"
+				 y="-5.64"
+				 z="-0.299"
+				 taper="1.543"
+				 incidence="0.0"
+				 twist="1.0"
+				 length="2.344"
+				 chord="1.248"
+				 sweep="3"
+				 dihedral="-3.5"
+				 camber="0.0745"
+				 idrag="1.2"
+        >
+		<stall aoa="17.5"
+					 width="22.5"
+					 peak="1.593"/>
+		<flap0 start="0.00"
+					 end="1.0"
+					 lift="1.6"
+					 drag="1.9"/>
+		<control-input axis="/controls/flight/aileron-norm"
+									 control="FLAP0"
+									 src0="-1.0"
+									 dst0="0.86"
+									 src1="1"
+									 dst1="-1"
+									 />
+		/>
+		<control-input axis="/controls/flight/aileron-trim"
+									 control="FLAP0"
+									 />
+		<control-output control="FLAP0"
+										prop="/surface-positions/right-aileron-pos-norm"/>
+		<control-speed control="FLAP0"
+									 transition-time="0.1"/>
+	</vstab>
+
+
 	<!-- wing tip -->
 	<mstab x="-3.264"
 				 y="5.64"
@@ -221,11 +300,11 @@ The reference datum for measurements is the nose.
 				 chord="1.248"
 				 sweep="-0"
 				 length="0.43"
-				 camber="0.207"
+				 camber="0.083"
 				 idrag="1.2">
-		<stall aoa="12"
-					 width="18"
-					 peak="3.84"/>
+		<stall aoa="15"
+					 width="20"
+					 peak="4.38"/>
 	</mstab>
 	<!-- tailplane 		effectiveness="1.2"-->
 	<hstab
@@ -237,13 +316,13 @@ The reference datum for measurements is the nose.
 		chord="1.382"
 		sweep="-0.5"
 		idrag="0.9">
-		<stall aoa="14"
-					 width="32"
+		<stall aoa="12"
+					 width="33"
 					 peak="6.5"/>
 		<flap0 start="0.0"
 					 end="1.05"
-					 lift="8.3"
-					 drag="1.9"/>
+					 lift="11"
+					 drag="2.3"/>
 		<control-input axis="/controls/flight/elevator"
 									 control="FLAP0"/>
 		<control-input axis="/controls/flight/elevator-trim"
@@ -263,12 +342,12 @@ The reference datum for measurements is the nose.
 				 chord="1.9"
 				 sweep="15"
 				 incidence="-1.5">
-		<stall aoa="12.5"
-					 width="32"
-					 peak="12"/>
+		<stall aoa="16.5"
+					 width="28.5"
+					 peak="6"/>
 		<flap0 start="0"
 					 end="1"
-					 lift="17"
+					 lift="5.3"
 					 drag="1.5"/>
 		<control-input axis="/controls/flight/rudder"
 									 control="FLAP0"
@@ -291,13 +370,13 @@ The reference datum for measurements is the nose.
 				 chord="1.6"
 				 sweep="0"
 				 incidence="-1.5">
-		<stall aoa="12.5"
-					 width="32"
-					 peak="12"/>
+		<stall aoa="16.5"
+					 width="28.5"
+					 peak="6"/>
 		<flap0 start="0"
 					 end="1"
-					 lift="17"
-					 drag="1.5"/>
+					 lift="4.7"
+					 drag="1.43"/>
 		<control-input axis="/controls/flight/rudder"
 									 control="FLAP0"
 									 invert="true"
@@ -356,7 +435,7 @@ The reference datum for measurements is the nose.
 						 max-rpm="1260"
 						 gear-ratio="0.42"
 						 coarse-stop="2.1"
-						 fine-stop="0.75"
+						 fine-stop="0.70"
 						 takeoff-power="1400"
 						 takeoff-rpm="1260">
 		<actionpt x="-0.47"
