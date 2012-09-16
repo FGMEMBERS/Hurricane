@@ -425,11 +425,12 @@
 	<model>
 		<path>Aircraft/Hurricane/Models/landing-light.xml</path>
 		<name>Landing-Light-Stbd</name>
+		<!--2.4756	-0.451266	-3.18106-->
 		<offsets>
-			<x-m>  2.34293 </x-m>
-			<y-m>  3.18673 </y-m>
-			<z-m> -0.447306</z-m>
-			<pitch-deg>-25.5</pitch-deg>
+			<x-m>  2.468 </x-m>
+			<y-m>  3.18106 </y-m>
+			<z-m> -0.451266</z-m>
+			<pitch-deg>-6.0</pitch-deg>
 			<heading-deg>0.0</heading-deg>
 		</offsets>
 	</model>
@@ -438,10 +439,10 @@
 		<path>Aircraft/Hurricane/Models/landing-light.xml</path>
 		<name>Landing-Light-Port</name>
 		<offsets>
-			<x-m>  2.34293 </x-m>
-			<y-m> -3.18673 </y-m>
-			<z-m> -0.447306</z-m>
-			<pitch-deg>-15.5</pitch-deg>
+			<x-m>  2.468 </x-m>
+			<y-m> -3.18106 </y-m>
+			<z-m> -0.451266</z-m>
+			<pitch-deg>-6.0</pitch-deg>
 			<heading-deg>0.0</heading-deg>
 		</offsets>
 	</model>
@@ -696,14 +697,24 @@
 	<!-- transparencies -->
 
 	<effect>
-		<inherits-from>Effects/model-transparent</inherits-from>
-		<object-name>Exhaust-Dirt</object-name>
-		<object-name>Bottom-Oil-Streak</object-name>
-		<object-name>Antenna-HF</object-name>
+		<inherits-from>Effects/hurricaneglass-uber</inherits-from>
 		<object-name>Canopy-Front</object-name>
 		<object-name>Canopy-Main</object-name>
 		<object-name>Front-Panel-O</object-name>
 		<object-name>Front-Panel-I</object-name>
+	</effect>
+
+	<effect>
+		<inherits-from>Effects/hurricanemirror-uber</inherits-from>
+		<object-name>Light-Landing-Stbd</object-name>
+		<object-name>Light-Landing-Port</object-name>
+	</effect>
+
+	<effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<object-name>Exhaust-Dirt</object-name>
+		<object-name>Bottom-Oil-Streak</object-name>
+		<object-name>Antenna-HF</object-name>
 	</effect>
 
 	<effect>
@@ -715,6 +726,8 @@
 		<object-name>Glass-Port</object-name>
 		<object-name>Glass-Stbd</object-name>
 	</effect>
+
+
 
 	<!-- rain effects -->
 

@@ -735,6 +735,9 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 		<hurricane>
 			<file>Aircraft/Hurricane/Nasal/hurricane.nas</file>
 		</hurricane>
+		<input-filter>
+			<file>Aircraft/Hurricane/Nasal/input.nas</file>
+		</input-filter>
 		<oxygen>
 			<file>Aircraft/Generic/Oxygen/oxygen.nas</file>
 		</oxygen>
