@@ -61,13 +61,10 @@ The reference datum for measurements is the nose.
 										 value="1.0"/>
 		<!--<control-setting axis="/controls/gear/gear-down"
 										 value="1"/>-->
-		<control-setting axis="systems/hydraulic/outputs/gear[1]"
-										 value="1.0"/>
-		<control-setting axis="systems/hydraulic/outputs/gear[2]"
-										 value="1.0"/>
-		<control-setting axis="/controls/flight/canopy-slide"
-										 value="0.0"/>
-
+		<control-setting axis="systems/hydraulic/outputs/gear[1]" value="1.0"/>
+		<control-setting axis="systems/hydraulic/outputs/gear[2]" value="1.0"/>
+		<control-setting axis="/controls/flight/canopy-slide" value="0.0"/>
+		
 		<solve-weight idx="0"
 									weight="200"/>
 	</approach>
@@ -89,12 +86,9 @@ The reference datum for measurements is the nose.
 										 value="0.0"/>
 		<!--<control-setting axis="/controls/gear/gear-down"
 										 value="0"/>-->
-		<control-setting axis="systems/hydraulic/outputs/gear[1]"
-										 value="0.0"/>
-		<control-setting axis="systems/hydraulic/outputs/gear[2]"
-										 value="0.0"/>
-		<control-setting axis="/controls/flight/canopy-slide"
-										 value="0.0"/>
+		<control-setting axis="systems/hydraulic/outputs/gear[1]" value="0.0"/>
+		<control-setting axis="systems/hydraulic/outputs/gear[2]" value="0.0"/>
+		<control-setting axis="/controls/flight/canopy-slide" value="0.0"/>
 		<solve-weight idx="0"
 									weight="200"/>
 	</cruise>
@@ -178,7 +172,7 @@ The reference datum for measurements is the nose.
 		<control-speed control="FLAP0"
 									 transition-time="10"/>
 	</mstab>
-	<!-- 	wing, flaps section -->
+<!-- 	wing, flaps section -->
 	<wing x="-3.48"
 				y="1.34"
 				z="-0.57"
@@ -211,20 +205,20 @@ The reference datum for measurements is the nose.
 									 transition-time="10"/>
 	</wing>
 
-	<!-- 	wing, left aileron section -->
+<!-- 	wing, left aileron section -->
 
 	<vstab x="-3.381"
-				 y="3.305"
-				 z="-0.446"
-				 taper="0.648"
-				 incidence="1.0"
-				 twist="-1.0"
-				 length="2.344"
-				 chord="1.926"
-				 sweep="-3"
-				 dihedral="3.5"
-				 camber="0.0745"
-				 idrag="1.2"
+				y="3.305"
+				z="-0.446"
+				taper="0.648"
+				incidence="1.0"
+				twist="-1.0"
+				length="2.344"
+				chord="1.926"
+				sweep="-3"
+				dihedral="3.5"
+				camber="0.0745"
+				idrag="1.2"
         >
 		<stall aoa="17.5"
 					 width="22.5"
@@ -244,7 +238,7 @@ The reference datum for measurements is the nose.
 									 control="FLAP0"
 									 />
 		<control-output control="FLAP0"
-										prop="/surface-positions/left-aileron-pos-norm"/>
+								prop="/surface-positions/left-aileron-pos-norm"/>
 		<control-speed control="FLAP0"
 									 transition-time="0.1"/>
 	</vstab>
@@ -252,17 +246,17 @@ The reference datum for measurements is the nose.
 	<!-- 	wing, right aileron section -->
 
 	<vstab x="-3.264"
-				 y="-5.64"
-				 z="-0.299"
-				 taper="1.543"
-				 incidence="0.0"
-				 twist="1.0"
-				 length="2.344"
-				 chord="1.248"
-				 sweep="3"
-				 dihedral="-3.5"
-				 camber="0.0745"
-				 idrag="1.2"
+				y="-5.64"
+				z="-0.299"
+				taper="1.543"
+				incidence="0.0"
+				twist="1.0"
+				length="2.344"
+				chord="1.248"
+				sweep="3"
+				dihedral="-3.5"
+				camber="0.0745"
+				idrag="1.2"
         >
 		<stall aoa="17.5"
 					 width="22.5"
@@ -272,23 +266,23 @@ The reference datum for measurements is the nose.
 					 lift="1.6"
 					 drag="1.9"/>
 		<control-input axis="/controls/flight/aileron-norm"
-									 control="FLAP0"
+									control="FLAP0"
 									 src0="-1.0"
 									 dst0="0.86"
 									 src1="1"
 									 dst1="-1"
 									 />
-		/>
+									 />
 		<control-input axis="/controls/flight/aileron-trim"
 									 control="FLAP0"
 									 />
 		<control-output control="FLAP0"
-										prop="/surface-positions/right-aileron-pos-norm"/>
+								prop="/surface-positions/right-aileron-pos-norm"/>
 		<control-speed control="FLAP0"
 									 transition-time="0.1"/>
 	</vstab>
 
-
+	
 	<!-- wing tip -->
 	<mstab x="-3.264"
 				 y="5.64"
@@ -435,7 +429,7 @@ The reference datum for measurements is the nose.
 						 max-rpm="1260"
 						 gear-ratio="0.42"
 						 coarse-stop="2.1"
-						 fine-stop="0.70"
+						 fine-stop="0.75"
 						 takeoff-power="1400"
 						 takeoff-rpm="1260">
 		<actionpt x="-0.47"
