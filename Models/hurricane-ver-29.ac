@@ -103497,7 +103497,7 @@ kids 0
 OBJECT poly
 name "Canopy-Main"
 loc -0.11351 0.262218 0
-texture "D:/Git_New/my_fgdata/Aircraft/Spitfire/Models/blank.png"
+texture "blank.png"
 crease 180.000000
 numvert 78
 3.99707 0.464136 -0.218976
@@ -107269,7 +107269,7 @@ refs 5
 kids 0
 OBJECT poly
 name "Glass-Stbd"
-texture "hurricane-iib.rgb"
+texture "blank.png"
 crease 180.000000
 numvert 6
 -0.0530572 -0.0234772 0.110915
@@ -107282,22 +107282,22 @@ numsurf 2
 SURF 0x10
 mat 16
 refs 4
-1 0.54918 0.775285
-3 0.550115 0.78718
-2 0.54533 0.78718
-0 0.544281 0.775285
+1 1 0.684668
+3 0 0.714549
+2 0 0.302405
+0 1 0.25144
 SURF 0x10
 mat 16
 refs 4
-0 0.822803 0.774449
-2 0.82172 0.786843
-5 0.8173 0.786843
-4 0.81831 0.774448
+0 1 0.25144
+2 0 0.302405
+5 0 0.0696579
+4 1 0
 kids 0
 OBJECT poly
 name "Glass-Port"
 loc -2.38419e-006 -5.36442e-007 6.37346
-texture "hurricane-iib.rgb"
+texture "blank.png"
 crease 180.000000
 numvert 6
 -0.0530577 -0.0234776 -0.110915
@@ -107310,17 +107310,17 @@ numsurf 2
 SURF 0x10
 mat 15
 refs 4
-2 0.549413 0.432148
-1 0.548463 0.443843
-0 0.543484 0.443842
-3 0.544549 0.432148
+2 1 0.714552
+1 0 0.684671
+0 0 0.251439
+3 1 0.302405
 SURF 0x10
 mat 15
 refs 4
-3 0.82172 0.418325
-0 0.822803 0.430721
-4 0.81831 0.430721
-5 0.8173 0.418325
+3 1 0.302405
+0 0 0.251439
+4 0 0
+5 1 0.0696574
 kids 0
 OBJECT group
 name "Canopy-Front-Assmbly"
@@ -109667,7 +109667,7 @@ kids 0
 OBJECT poly
 name "Front-Panel-O"
 loc 0.0303357 0.051432 0.0282018
-texture "D:/Git_New/my_fgdata/Aircraft/Spitfire/Models/blank.png"
+texture "blank.png"
 crease 61.000000
 numvert 14
 -0.21057 -0.140334 0.0979255
@@ -109761,7 +109761,7 @@ kids 0
 OBJECT poly
 name "Front-Panel-I"
 loc 0.0303376 0.0514317 0.0293478
-texture "D:/Git_New/my_fgdata/Aircraft/Spitfire/Models/blank.png"
+texture "blank.png"
 crease 61.000000
 numvert 14
 0.0704024 0.0918276 0.00746062
@@ -109855,7 +109855,7 @@ kids 0
 OBJECT poly
 name "Canopy-Front"
 loc -0.0940804 0.235125 -0.0205715
-texture "D:/Git_New/my_fgdata/Aircraft/Spitfire/Models/blank.png"
+texture "blank.png"
 crease 180.000000
 numvert 52
 0.0658751 -0.189916 0.310493
