@@ -97,6 +97,7 @@ May 2005 Vivian Meazza, vivian.meazza at lineone.net
 			</canopy>
 		</gear>
 		<flight>
+			<aileron-trim>-0.06</aileron-trim>
 			<flaps-alternate-extension type="double">1</flaps-alternate-extension>
 			<elevator-trim>0</elevator-trim>
 			<door-position-norm type="double">1</door-position-norm>
