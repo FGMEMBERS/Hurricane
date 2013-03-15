@@ -89917,7 +89917,7 @@ name "bezel"
 loc 0.00222802 -0.0776603 -0.000792678
 data 6
 Circle
-texture "D:/Git_New/fgdata/Aircraft/Spitfire/Models/compass-p11.png"
+texture "compass-p11.png"
 crease 30.000000
 numvert 160
 0.0447049 0.149292 -0.044705
@@ -91003,7 +91003,7 @@ name "lubbers-line"
 loc -0.0481248 -0.0941043 -0.000792678
 data 6
 Circle
-texture "D:/Git_New/fgdata/Aircraft/Spitfire/Models/compass-p11.png"
+texture "compass-p11.png"
 crease 30.000000
 numvert 4
 0 0.161429 0.0033275
@@ -91223,7 +91223,7 @@ name "card"
 loc 0.00222802 -0.0440167 -0.000792678
 data 10
 Circle.003
-texture "D:/Git_New/fgdata/Aircraft/Spitfire/Models/compass-p11.png"
+texture "compass-p11.png"
 crease 30.000000
 numvert 33
 0 0.104416 0
@@ -91458,7 +91458,7 @@ name "housing"
 loc 0.00222802 -0.0776603 -0.000792678
 data 12
 Cylinder.001
-texture "D:/Git_New/fgdata/Aircraft/Spitfire/Models/large-bezel.png"
+texture "large-bezel.png"
 crease 30.000000
 numvert 386
 0 0.129992 0
