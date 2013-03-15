@@ -298,6 +298,7 @@
 			<roll-deg>-9</roll-deg>
 		</offsets>
 	</model>
+  
 	<model>
 		<path>Aircraft/Hurricane/Models/throttle.xml</path>
 		<offsets>

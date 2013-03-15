@@ -1,6 +1,38 @@
 <?xml version="1.0"?>
   <PropertyList> 
     <path>throttle.ac</path>
+
+    <!-- Throttle -->
+    <animation>
+      <type>slider</type>
+      <object-name>Throttle</object-name>
+      <visible>true</visible>
+
+      <drag-direction>vertical</drag-direction>
+      <!-- no translation, we handle that seperately -->
+
+      <action>
+        <binding>
+          <command>property-adjust</command>
+          <property>controls/engines/engine/throttle</property>
+          <factor>0.05</factor>
+          <min>0</min>
+          <max>1</max>
+          <wrap>0</wrap>
+        </binding>
+      </action>
+
+      <hovered>
+        <binding>
+          <command>set-tooltip</command>
+          <label>Throttle: %3d%%</label>
+          <tooltip-id>throttle</tooltip-id>
+          <mapping>percent</mapping>
+          <property>controls/engines/engine[0]/throttle</property>
+        </binding>
+      </hovered>
+    </animation>
+    
     <animation> 
       <type>rotate</type>
       <object-name>Throttle</object-name>

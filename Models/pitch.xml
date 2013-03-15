@@ -1,6 +1,39 @@
 <?xml version="1.0"?>
 <PropertyList>
   <path>pitch.ac</path>
+
+  <!-- Prop -->
+  <animation>
+    <type>slider</type>
+    <object-name>Prop</object-name>
+    <visible>true</visible>
+
+    <drag-direction>vertical</drag-direction>
+    <!-- no translation, we handle that seperately -->
+
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/engines/engine[0]/propeller-pitch</property>
+        <factor>0.05</factor>
+        <min>0</min>
+        <max>1</max>
+        <wrap>0</wrap>
+      </binding>
+    </action>
+
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <label>Prop Control: %3d%%</label>
+        <tooltip-id>prop</tooltip-id>
+        <mapping>percent</mapping>
+        <property>controls/engines/engine[0]/propeller-pitch</property>
+      </binding>
+
+    </hovered>
+  </animation>
+
   <animation>
     <type>rotate</type>
     <object-name>Prop</object-name>

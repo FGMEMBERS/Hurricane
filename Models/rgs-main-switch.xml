@@ -4,7 +4,7 @@
 
 	<animation>
 		<type>pick</type>
-		<visible>false</visible>
+		<visible>true</visible>
 		<object-name>pick-up</object-name>
 		<action>
 			<button>0</button>
@@ -15,6 +15,17 @@
 				<value type="bool">1</value>
 			</binding>
 		</action>
+
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <label>Reflector Gun Sight: %s</label>
+        <tooltip-id>rgs-on</tooltip-id>
+        <mapping>on-off</mapping>
+        <property>/controls/switches/gun-sight-main</property>
+      </binding>
+    </hovered>
+    
 	</animation>
 
 	<animation>
