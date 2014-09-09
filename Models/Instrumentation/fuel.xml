@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<!-- fuel contents -->
+<PropertyList>
+	<path>fuel.ac</path>
+
+	<animation>
+		<type>pick</type>
+		<visible>true</visible>
+		<object-name>button</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-assign</command>
+				<property>/controls/switches/fuel-gauge</property>
+				<value type="bool">1</value>
+			</binding>
+			<mod-up>
+				<binding>
+					<command>property-assign</command>
+					<property>/controls/switches/fuel-gauge</property>
+					<value type="bool">0</value>
+				</binding>
+			</mod-up>
+		</action>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<visible>false</visible>
+		<object-name>pick-port</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-assign</command>
+				<property>/controls/switches/fuel-gauge-sel</property>
+				<value type="int">0</value>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<visible>false</visible>
+		<object-name>pick-stbd</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-assign</command>
+				<property>/controls/switches/fuel-gauge-sel</property>
+				<value type="int">1</value>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<visible>false</visible>
+		<object-name>pick-centre</object-name>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-assign</command>
+				<property>/controls/switches/fuel-gauge-sel</property>
+				<value type="int">2</value>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>pointer</object-name>
+		<property>/controls/switches/fuel-gauge-sel</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>45</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>-45</dep>
+			</entry>
+			<entry>
+				<ind>2</ind>
+				<dep>0</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.03</y-m>
+			<z-m>0.08</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Needle2</object-name>
+		<property>instrumentation/fuel/contents-gal_us</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>24.01</ind>
+				<dep>45</dep>
+			</entry>
+			<entry>
+				<ind>48.03</ind>
+				<dep>90</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0.02</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>Needle1</object-name>
+		<condition>
+			<not>
+				<property>controls/switches/fuel-gauge</property>
+			</not>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>Needle2</object-name>
+		<condition>
+			<property>controls/switches/fuel-gauge</property>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<condition>
+			<greater-than>
+				<property>/controls/lighting/panel-norm</property>
+				<value>0</value>
+			</greater-than>
+			<not>
+				<property>/sim/rendering/rembrandt/enabled</property>
+			</not>
+		</condition>
+		<emission>
+			<factor-prop>/controls/lighting/panel-norm</factor-prop>
+			<red>0.75</red>
+			<green>0.25</green>
+			<blue>0.25</blue>
+		</emission>
+	</animation>
+	
+	<!-- *** LoD *** -->
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>5</max-m>
+	</animation>
+</PropertyList>

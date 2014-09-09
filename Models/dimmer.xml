@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<PropertyList>
+	<path>dimmer.ac</path>
+
+  <animation>
+    <type>material</type>
+    <condition>
+      <greater-than>
+        <property>/controls/lighting/panel-norm</property>
+        <value>0</value>
+      </greater-than>
+      <not>
+        <property>/sim/rendering/rembrandt/enabled</property>
+      </not>
+    </condition>
+    <emission>
+      <factor-prop>/controls/lighting/panel-norm</factor-prop>
+      <red>0.75</red>
+      <green>0.25</green>
+      <blue>0.25</blue>
+    </emission>
+  </animation>
+  
+	<animation>
+		<type>rotate</type>
+		<object-name>Knob</object-name>
+		<property>controls/lighting/panel-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0.0</ind>
+				<dep>-160</dep>
+			</entry>
+			<entry>
+				<ind>1.0</ind>
+				<dep>160</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>pick</type>
+		<object-name>Increase</object-name>
+		<visible>false</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>/controls/lighting/panel-norm</property>
+				<step>0.1</step>
+				<min>0</min>
+				<max>1</max>
+				<wrap>0</wrap>
+			</binding>
+      <binding>
+        <command>property-adjust</command>
+        <property>/controls/lighting/panel-norm[1]</property>
+        <step>0.1</step>
+        <min>0</min>
+        <max>1</max>
+        <wrap>0</wrap>
+      </binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>pick</type>
+		<object-name>Decrease</object-name>
+		<visible>false</visible>
+		<action>
+			<button>0</button>
+			<repeatable>false</repeatable>
+			<binding>
+				<command>property-adjust</command>
+				<property>/controls/lighting/panel-norm</property>
+				<step>-0.1</step>
+				<min>0</min>
+				<max>1</max>
+				<wrap>0</wrap>
+			</binding>
+      <binding>
+        <command>property-adjust</command>
+        <property>/controls/lighting/panel-norm[1]</property>
+        <step>-0.1</step>
+        <min>0</min>
+        <max>1</max>
+        <wrap>0</wrap>
+      </binding>
+		</action>
+	</animation>
+	
+	
+</PropertyList>
+

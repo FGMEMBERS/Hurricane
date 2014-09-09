@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<!-- Light - Red Flare-->
+<PropertyList>
+
+	<path>light-red-flare.ac</path>
+
+	<animation>
+		<type>alpha-test</type>
+		<object-name>Red-Light-Flare</object-name>
+		<alpha-factor>0.01</alpha-factor>
+	</animation>
+
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>Red-Light-Flare</object-name>
+  </effect>
+
+	<!--<animation>
+		<type>billboard</type>
+		<spherical>true</spherical>
+		<object-name>Red-Light-Flare</object-name>
+	</animation>-->
+
+  <animation>
+    <type>flash</type>
+    <object-name>Red-Light-Flare-0</object-name>
+    <offset>0.0</offset>
+    <factor>1.0</factor>
+    <power>2.0</power>
+    <two-sides type="bool">false</two-sides>
+    <min>0.0</min>
+    <max>2.0</max>
+    <center>
+      <x-m>0.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+    <axis>
+      <x>-1.0</x>
+      <y>-0.25</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>flash</type>
+    <object-name>Red-Light-Flare-1</object-name>
+    <offset>0.0</offset>
+    <factor>1.0</factor>
+    <power>2.0</power>
+    <two-sides type="bool">false</two-sides>
+    <min>0.0</min>
+    <max>2.0</max>
+    <center>
+      <x-m>0.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+    <axis>
+      <x>-0.3</x>
+      <y>-1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>flash</type>
+    <object-name>Red-Light-Flare-2</object-name>
+    <offset>0.0</offset>
+    <factor>1.0</factor>
+    <power>1.0</power>
+    <two-sides type="bool">true</two-sides>
+    <min>0.0</min>
+    <max>2.0</max>
+    <center>
+      <x-m>0.0</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.0</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>0.0</y>
+      <z>1.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>dist-scale</type>
+    <object-name>Red-Light-Flare</object-name>
+    <interpolation>
+      <entry>
+        <ind>0.001</ind>
+        <dep>1</dep>
+      </entry>
+      <entry>
+        <ind>40000</ind>
+        <dep>150</dep>
+      </entry>
+      <entry>
+        <ind>80000</ind>
+        <dep>300</dep>
+      </entry>
+    </interpolation>
+  </animation>
+
+  <animation>
+		<type>scale</type>
+		<object-name>Red-Light-Flare</object-name>
+		<property>/sim/time/sun-angle-rad</property>
+		<offset>-1.4</offset>
+		<x-min>1</x-min>
+		<y-min>1</y-min>
+		<z-min>1</z-min>
+		<x-factor>2</x-factor>
+		<y-factor>2</y-factor>
+		<z-factor>2</z-factor>
+	</animation>
+	
+  <animation>
+    <type>light</type>
+    <light-type>spot</light-type>
+    <name>LightNavPort</name>
+    <object-name>LightVolNavPort</object-name>
+    <nopreview/>
+    <position>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </position>
+    <direction>
+      <x> -1.0</x>
+      <y> -1.19175359</y>
+      <z> 0.0</z>
+    </direction>
+    <diffuse>
+      <r>0.7</r>
+      <g>0.2</g>
+      <b>0.2</b>
+      <a>1.0</a>
+    </diffuse>
+    <specular>
+      <r>0.7</r>
+      <g>0.7</g>
+      <b>0.7</b>
+      <a>1.0</a>
+    </specular>
+    <attenuation>
+      <c>1.0</c>
+      <l>0.002</l>
+      <q>0.0005</q>
+    </attenuation>
+    <exponent>24.0</exponent>
+    <near-m>0.0001</near-m>
+    <far-m>50</far-m>
+    <cutoff>90</cutoff>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>Red-Light-Flare</object-name>
+     <condition>
+       <and>
+      <or>
+        <equals>
+          <property>/controls/lighting/nav-lights</property>
+          <value>1</value>
+        </equals>
+        <equals>
+          <property>/controls/lighting/nav-lights[1]</property>
+          <value>1</value>
+        </equals>
+      </or>
+       <greater-than>
+         <property>/systems/electrical/outputs/nav-lights</property>
+         <value>10.0</value>
+       </greater-than>
+       </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>LightNavPort</object-name>
+    <condition>
+      <and>
+        <or>
+          <equals>
+            <property>/controls/lighting/nav-lights</property>
+            <value>1</value>
+          </equals>
+          <equals>
+            <property>/controls/lighting/nav-lights[1]</property>
+            <value>1</value>
+          </equals>
+        </or>
+        <greater-than>
+          <property>/sim/time/sun-angle-rad</property>
+          <value>1.4</value>
+        </greater-than>
+        <greater-than>
+          <property>/systems/electrical/outputs/nav-lights</property>
+          <value>10.0</value>
+        </greater-than>
+      </and>
+    </condition>
+  </animation>
+
+	<!--    *** LoD *** 
+    <animation> 
+      <type>range</type>
+      <object-name>Red-Flare</object-name>
+      <min-m>0</min-m>
+      <max-m>5000</max-m>
+    </animation>-->
+
+</PropertyList>

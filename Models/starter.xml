@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<PropertyList>
+	<path>starter.ac</path>
+
+	<animation>
+		<type>pick</type>
+		<visible>true</visible>
+		<object-name>starter-button</object-name>
+		<action>
+			<name>adjust right fine</name>
+			<button>0</button>
+			<repeatable>true</repeatable>
+			<binding>
+				<command>nasal</command>
+				<script>controls.startEngine(1)</script>
+			</binding>
+			<mod-up>
+				<binding>
+					<command>nasal</command>
+					<script>controls.startEngine(0)</script>
+				</binding>
+			</mod-up>
+		</action>
+	</animation>
+
+	<animation>
+		<type>material</type>
+		<condition>
+			<greater-than>
+				<property>/controls/lighting/panel-norm</property>
+				<value>0</value>
+			</greater-than>
+			<not>
+				<property>/sim/rendering/rembrandt/enabled</property>
+			</not>
+		</condition>
+		<emission>
+			<factor-prop>/controls/lighting/panel-norm</factor-prop>
+			<red>0.75</red>
+			<green>0.25</green>
+			<blue>0.25</blue>
+		</emission>
+	</animation>
+
+	<!-- *** LoD *** -->
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>5</max-m>
+	</animation>
+</PropertyList>
