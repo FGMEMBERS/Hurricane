@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+    <!DOCTYPE PropertyList SYSTEM "panel.dtd">
+    <!--    This part should be the same for any 3D panel.  Customize the actions section -->
+    <PropertyList> 
+      <name>Hurricane Panel Hotspots</name>
+      <background>Aircraft/Hurricane/Models/transparent-bg.rgb</background>
+      <w>1024</w>
+      <h>768</h>
+      <y-offset>0</y-offset>
+      <instruments> 
+        <instrument> 
+          <name>Port Wall Controls</name>
+          <x>512</x>
+          <y>384</y>
+          <w>1024</w>
+          <h>768</h>
+          <w-base>1024</w-base>
+          <h-base>1024</h-base>
+          <layers> 
+            <layer> 
+              <name>background</name>
+              <texture> 
+                <path>Aircraft/Hurricane/Models/transparent-bg.rgb</path>
+                <x1>0.0</x1>
+                <y1>0.0</y1>
+                <x2>1.0</x2>
+                <y2>1.0</y2>
+              </texture>
+            </layer>
+            <!-- 
+            <layer> 
+              <name>grid</name>
+              <texture> 
+                <path>Aircraft/Hurricane/Models/hotspotgrid.rgb</path>
+                <x1>0.0</x1>
+                <y1>0.0</y1>
+                <x2>1.0</x2>
+                <y2>1.0</y2>
+              </texture>
+            </layer>-->
+          </layers>
+          <actions> 
+            <!-- trim wheels -->
+            <action> 
+              <name>trim-wheel-elevator-up</name>
+              <button>0</button>
+              <x>100</x>
+              <y>-450</y>
+              <w>150</w>
+              <h>250</h>
+              <binding> 
+                <command>property-adjust</command>
+                <property>/controls/flight/elevator-trim</property>
+                <max type="double">1.0</max>
+                <step type="double">0.001</step>
+              </binding>
+            </action>
+            <action> 
+              <name>trim-wheel-elevator-down</name>
+              <button>0</button>
+              <x>-50</x>
+              <y>-450</y>
+              <w>150</w>
+              <h>250</h>
+              <binding> 
+                <command>property-adjust</command>
+                <property>/controls/flight/elevator-trim</property>
+                <min type="double">-1.0</min>
+                <step type="double">-0.001</step>
+              </binding>
+            </action>
+            <!--  cockpit light dimmer hotspots -->
+            <!--<action> 
+              <name>panel brighter</name>
+              <button>0</button>
+              <x>-350</x>
+              <y>370</y>
+              <w>30</w>
+              <h>60</h>
+              <binding> 
+                <command>property-adjust</command>
+                <property>/controls/lighting/panel-norm</property>
+                <step>0.1</step>
+                <min>0</min>
+                <max>1</max>
+                <wrap>0</wrap>
+              </binding>
+            </action>
+            <action> 
+              <name>panel dimmer</name>
+              <button>0</button>
+              <x>-380</x>
+              <y>370</y>
+              <w>30</w>
+              <h>60</h>
+              <binding> 
+                <command>property-adjust</command>
+                <property>/controls/lighting/panel-norm</property>
+                <step>-0.1</step>
+                <min>0</min>
+                <max>1</max>
+                <wrap>0</wrap>
+              </binding>
+            </action>-->
+          </actions>
+        </instrument>
+      </instruments>
+    </PropertyList>
+  

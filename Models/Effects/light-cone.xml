@@ -4,7 +4,7 @@
 
 	<path>light-cone.ac</path>
 
-  <effect>
+	<effect>
 		<inherits-from>Effects/light-cone</inherits-from>
 		<object-name>Cone</object-name>
 	</effect>

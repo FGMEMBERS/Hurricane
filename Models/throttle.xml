@@ -1,38 +1,6 @@
 <?xml version="1.0"?>
   <PropertyList> 
     <path>throttle.ac</path>
-
-    <!-- Throttle -->
-    <animation>
-      <type>slider</type>
-      <object-name>Throttle</object-name>
-      <visible>true</visible>
-
-      <drag-direction>vertical</drag-direction>
-      <!-- no translation, we handle that seperately -->
-
-      <action>
-        <binding>
-          <command>property-adjust</command>
-          <property>controls/engines/engine/throttle</property>
-          <factor>0.05</factor>
-          <min>0</min>
-          <max>1</max>
-          <wrap>0</wrap>
-        </binding>
-      </action>
-
-      <hovered>
-        <binding>
-          <command>set-tooltip</command>
-          <label>Throttle: %3d%%</label>
-          <tooltip-id>throttle</tooltip-id>
-          <mapping>percent</mapping>
-          <property>controls/engines/engine[0]/throttle</property>
-        </binding>
-      </hovered>
-    </animation>
-    
     <animation> 
       <type>rotate</type>
       <object-name>Throttle</object-name>
@@ -53,40 +21,13 @@
         <z>0</z>
       </axis>
     </animation>
-    
-    <!--<animation>
+    <animation> 
       <type>material</type>
-      <condition>
-        <greater-than>
-          <property>/controls/lighting/panel-norm[1]</property>
-          <value>0</value>
-        </greater-than>
-        <property>/sim/rendering/rembrandt/enabled</property>
-      </condition>
-      <emission>
+      <emission> 
         <factor-prop>/controls/lighting/panel-norm</factor-prop>
-        <red>0.0</red>
-        <green>0.0</green>
-        <blue>0.0</blue>
-      </emission>
-    </animation>-->
-
-    <animation>
-      <type>material</type>
-      <condition>
-        <greater-than>
-          <property>/controls/lighting/panel-norm</property>
-          <value>0</value>
-        </greater-than>
-        <not>
-          <property>/sim/rendering/rembrandt/enabled</property>
-        </not>
-      </condition>
-      <emission>
-        <factor-prop>/controls/lighting/panel-norm</factor-prop>
-        <red>0.75</red>
-        <green>0.25</green>
-        <blue>0.25</blue>
+        <red>0.3</red>
+        <green>0.025</green>
+        <blue>0.025</blue>
       </emission>
     </animation>
   </PropertyList>

@@ -1,7 +1,7 @@
 AC3Db
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 10  trans 0
 MATERIAL "ac3dmat13" rgb 0.533 0.533 0.533  amb 0.533 0.533 0.533  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.5 0.5 0.5  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 10  trans 0
 OBJECT world
 kids 3
 OBJECT poly
@@ -453,7 +453,7 @@ refs 3
 1 0.966979 0.869539
 kids 0
 OBJECT poly
-name "knob"
+name "cylinder"
 loc 0.00908071 -3.90623e-005 3.00133e-011
 texture "large-bezel.rgb"
 crease 61.000000

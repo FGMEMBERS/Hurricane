@@ -24,11 +24,11 @@
       </key>
       <key> 
         <name>h/H</name>
-        <desc>radiator flap up/down</desc>
+        <desc>cycle HUD</desc>
       </key>
       <key> 
         <name>k/K</name>
-        <desc>toggle gear warning</desc>
+        <desc>Primer</desc>
       </key>
       <key> 
         <name>u/U</name>
@@ -44,7 +44,7 @@
       </key>
       <key> 
         <name>I</name>
-        <desc>operate priming pump</desc>
+        <desc>Shift HUD</desc>
       </key>
       <key> 
         <name>( )</name>

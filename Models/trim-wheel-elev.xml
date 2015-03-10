@@ -1,65 +1,24 @@
 <?xml version="1.0"?>
-<PropertyList>
-	<path>trim-wheel-elev.ac</path>
-
-	<animation>
-		<type>pick</type>
-		<visible>false</visible>
-		<object-name>pick-up</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>true</repeatable>
-			<binding>
-				<command>property-adjust</command>
-				<property>/controls/flight/elevator-trim</property>
-				<step type="double">-0.001</step>
-			</binding>
-		</action>
-	</animation>
-
-	<animation>
-		<type>pick</type>
-		<visible>false</visible>
-		<object-name>pick-down</object-name>
-		<action>
-			<button>0</button>
-			<repeatable>true</repeatable>
-			<binding>
-				<command>property-adjust</command>
-				<property>/controls/flight/elevator-trim</property>
-				<step type="double">0.001</step>
-			</binding>
-		</action>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>cylinder</object-name>
-		<property>controls/flight/elevator-trim</property>
-		<factor>1440</factor>
-		<axis>
-			<x>0</x>
-			<y>-1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-
-	<animation>
-		<type>material</type>
-		<condition>
-			<greater-than>
-				<property>/controls/lighting/panel-norm</property>
-				<value>0</value>
-			</greater-than>
-			<not>
-				<property>/sim/rendering/rembrandt/enabled</property>
-			</not>
-		</condition>
-		<emission>
-			<factor-prop>/controls/lighting/panel-norm</factor-prop>
-			<red>0.75</red>
-			<green>0.25</green>
-			<blue>0.25</blue>
-		</emission>
-	</animation>
-</PropertyList>
+  <PropertyList> 
+    <path>trim-wheel-elev.ac</path>
+    <animation> 
+      <type>rotate</type>
+      <object-name>cylinder</object-name>
+      <property>controls/flight/elevator-trim</property>
+      <factor>1440</factor>
+      <axis> 
+        <x>0</x>
+        <y>-1</y>
+        <z>0</z>
+      </axis>
+    </animation>
+	<animation> 
+      <type>material</type>
+      <emission> 
+        <factor-prop>controls/lighting/panel-norm</factor-prop>
+        <red>0.3</red>
+        <green>0.025</green>
+        <blue>0.025</blue>
+      </emission>
+    </animation>
+  </PropertyList>

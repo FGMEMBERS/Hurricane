@@ -7,7 +7,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>switch</object-name>
-		<property>controls/switches/landing-lights</property>
+		<property>controls/lighting/landing-light</property>
 		<offset-deg>0</offset-deg>
 		<factor>-30</factor>
 		<axis>
@@ -33,11 +33,6 @@
 				<property>controls/lighting/landing-light</property>
 				<value>1</value>
 			</binding>
-			<binding>
-				<command>property-assign</command>
-				<property>controls/switches/landing-lights</property>
-				<value>1</value>
-			</binding>
 		</action>
 	</animation>
 	<animation>
@@ -52,11 +47,6 @@
 				<property>controls/lighting/landing-light</property>
 				<value>0</value>
 			</binding>
-			<binding>
-				<command>property-assign</command>
-				<property>controls/switches/landing-lights</property>
-				<value>0</value>
-			</binding>
 		</action>
 	</animation>
 	<animation>
@@ -69,51 +59,23 @@
 			<binding>
 				<command>property-assign</command>
 				<property>controls/lighting/landing-light</property>
-				<value>2</value>
-			</binding>
-			<binding>
-				<command>property-assign</command>
-				<property>controls/switches/landing-lights</property>
 				<value>-1</value>
 			</binding>
 		</action>
 	</animation>
 
-  <!--<animation>
-    <type>material</type>
-    <condition>
-      <greater-than>
-        <property>/controls/lighting/panel-norm[1]</property>
-        <value>0</value>
-      </greater-than>
-      <property>/sim/rendering/rembrandt/enabled</property>
-    </condition>
-    <emission>
-      <factor-prop>/controls/lighting/panel-norm</factor-prop>
-      <red>0.0</red>
-      <green>0.0</green>
-      <blue>0.0</blue>
-    </emission>
-  </animation>-->
-
-  <animation>
-    <type>material</type>
-    <condition>
-      <greater-than>
-        <property>/controls/lighting/panel-norm</property>
-        <value>0</value>
-      </greater-than>
-      <not>
-        <property>/sim/rendering/rembrandt/enabled</property>
-      </not>
-    </condition>
-    <emission>
-      <factor-prop>/controls/lighting/panel-norm</factor-prop>
-      <red>0.75</red>
-      <green>0.25</green>
-      <blue>0.25</blue>
-    </emission>
-  </animation>
+	<animation>
+		<type>material</type>
+		<object-name>switch</object-name>
+		<object-name>sphere</object-name>
+		<object-name>cylinder</object-name>
+		<emission>
+			<factor-prop>/controls/lighting/panel-norm</factor-prop>
+			<red>0.75</red>
+			<green>0.25</green>
+			<blue>0.25</blue>
+		</emission>
+	</animation>
 
 	<!-- *** LoD *** -->
 	<animation>
